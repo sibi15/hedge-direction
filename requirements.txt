@@ -16,3 +16,5 @@ transformers
 tqdm
 sentencepiece   # Mistral's tokenizer needs it (transformers 4.46 converts it on load)
 protobuf        # ditto
+matplotlib      # make_figures.py
+openpyxl        # hand_rating/ scripts

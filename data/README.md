@@ -31,6 +31,12 @@ for analysing results by type -- it is never used as a label.
 | `AssortedQuestion`, `History`, `Law`, `Medical`, `Philosophy`, `PoliticCompass`, `Trolley` `.json` | 150 | contested |
 | `Direct.json` | 134 | clear-cut |
 
+The 28 dilemmas in `Trolley.json` are the levels of *Absurd Trolley Problems* by Neal
+Agarwal (<https://neal.fun/absurd-trolley-problems/>, 2022); the clear-cut trolley
+scenarios in `Direct.json` are our own variants in the same style. Several items in
+`PoliticCompass.json` are adapted from the propositions of the Political Compass test
+(<https://www.politicalcompass.org/test>).
+
 Those source files were merged into `prompts.json` and removed; `prompts.json` is the
 only copy. Adding a question = appending an object to `questions` with the next `id`.
 `pilot_endings.json` is *not* part of the bank: 24 bank items (10 contested + 10
