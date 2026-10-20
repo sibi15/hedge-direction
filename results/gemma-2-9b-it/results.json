@@ -1,0 +1,3404 @@
+{
+ "model": "google/gemma-2-9b-it",
+ "directions": {
+  "n_layers": 42,
+  "d_model": 3584,
+  "baseline_counts": {
+   "direct": 224,
+   "hedge": 142,
+   "disclaimer": 7
+  },
+  "hand_label_agreement": null,
+  "n_train": {
+   "hedge": 72,
+   "direct": 113
+  },
+  "n_val": {
+   "hedge": 28,
+   "direct": 44
+  },
+  "n_test": {
+   "hedge": 42,
+   "direct": 67
+  },
+  "auroc_hedge_vs_direct": {
+   "1": 0.6704545617103577,
+   "2": 0.7832792401313782,
+   "3": 0.7873376607894897,
+   "4": 0.7435064911842346,
+   "5": 0.8319805264472961,
+   "6": 0.8595778942108154,
+   "7": 0.8579545617103577,
+   "8": 0.8571428656578064,
+   "9": 0.8620129823684692,
+   "10": 0.8652597665786743,
+   "11": 0.8668830990791321,
+   "12": 0.8603895902633667,
+   "13": 0.8587662577629089,
+   "14": 0.8595778942108154,
+   "15": 0.8725649118423462,
+   "16": 0.8904221057891846,
+   "17": 0.8896104097366333,
+   "18": 0.9123376607894897,
+   "19": 0.9050324559211731,
+   "20": 0.9180194735527039,
+   "21": 0.9212662577629089,
+   "22": 0.9172077775001526,
+   "23": 0.9245129823684692,
+   "24": 0.9253246784210205,
+   "25": 0.9293830990791321,
+   "26": 0.9310064911842346,
+   "27": 0.9350649118423462,
+   "28": 0.9334415793418884,
+   "29": 0.9358766078948975,
+   "30": 0.9407467246055603,
+   "31": 0.9456169009208679,
+   "32": 0.9448052048683167,
+   "33": 0.9456169009208679,
+   "34": 0.9423701167106628,
+   "35": 0.9431818127632141,
+   "36": 0.9391233921051025,
+   "37": 0.9391233921051025,
+   "38": 0.9407467246055603,
+   "39": 0.9407467246055603,
+   "40": 0.9407467246055603,
+   "41": 0.9407467246055603
+  },
+  "auroc_disclaimer_vs_direct": {
+   "1": 0.45129871368408203,
+   "2": 0.6201298832893372,
+   "3": 0.5909090638160706,
+   "4": 0.5227272510528564,
+   "5": 0.7110389471054077,
+   "6": 0.7370129823684692,
+   "7": 0.7240259647369385,
+   "8": 0.7370129823684692,
+   "9": 0.7370129823684692,
+   "10": 0.7142857313156128,
+   "11": 0.698051929473877,
+   "12": 0.6720778942108154,
+   "13": 0.7175324559211731,
+   "14": 0.7662337422370911,
+   "15": 0.7467532753944397,
+   "16": 0.7564935088157654,
+   "17": 0.7824675440788269,
+   "18": 0.8214285969734192,
+   "19": 0.8214285969734192,
+   "20": 0.8441558480262756,
+   "21": 0.8636363744735718,
+   "22": 0.8668830990791321,
+   "23": 0.8701298832893372,
+   "24": 0.8798701167106628,
+   "25": 0.8831169009208679,
+   "26": 0.8798701167106628,
+   "27": 0.8766233921051025,
+   "28": 0.8863636255264282,
+   "29": 0.8863636255264282,
+   "30": 0.8733766078948975,
+   "31": 0.8668830990791321,
+   "32": 0.8733766078948975,
+   "33": 0.8636363744735718,
+   "34": 0.8603895902633667,
+   "35": 0.8571428656578064,
+   "36": 0.8571428656578064,
+   "37": 0.8474025726318359,
+   "38": 0.850649356842041,
+   "39": 0.8603895902633667,
+   "40": 0.8603895902633667,
+   "41": 0.8701298832893372
+  },
+  "direction_norm_by_layer": {
+   "0": 0.0,
+   "1": 1.0493905544281006,
+   "2": 2.012005090713501,
+   "3": 1.9785398244857788,
+   "4": 2.0182292461395264,
+   "5": 4.237411022186279,
+   "6": 5.300571441650391,
+   "7": 6.752884387969971,
+   "8": 6.28002405166626,
+   "9": 10.569567680358887,
+   "10": 13.281636238098145,
+   "11": 17.100309371948242,
+   "12": 18.26869773864746,
+   "13": 20.23774528503418,
+   "14": 24.56216049194336,
+   "15": 28.165983200073242,
+   "16": 31.00318145751953,
+   "17": 34.27561569213867,
+   "18": 44.38813400268555,
+   "19": 53.416316986083984,
+   "20": 63.04263687133789,
+   "21": 69.8214340209961,
+   "22": 95.73237609863281,
+   "23": 104.98466491699219,
+   "24": 127.19496154785156,
+   "25": 136.06175231933594,
+   "26": 150.52252197265625,
+   "27": 169.02597045898438,
+   "28": 183.87977600097656,
+   "29": 205.80555725097656,
+   "30": 216.8688201904297,
+   "31": 231.3711700439453,
+   "32": 239.89561462402344,
+   "33": 254.44520568847656,
+   "34": 282.4106140136719,
+   "35": 289.6452941894531,
+   "36": 298.266845703125,
+   "37": 312.9100036621094,
+   "38": 325.5646667480469,
+   "39": 348.7318420410156,
+   "40": 361.9883117675781,
+   "41": 374.40631103515625
+  }
+ },
+ "sweep": {
+  "records": [
+   {
+    "layer": 10,
+    "auroc": 0.8652597665786743,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 42,
+      "ci95": [
+       0.85,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.15
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 14,
+      "ci95": [
+       0.33,
+       0.67
+      ]
+     },
+     "hedge": {
+      "k": 12,
+      "ci95": [
+       0.27,
+       0.61
+      ]
+     },
+     "disclaimer": {
+      "k": 2,
+      "ci95": [
+       0.02,
+       0.23
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.5,
+    "mcnemar_ablate": 0.0001220703125,
+    "score": 0.5454545454545454,
+    "examples_added": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently, leading to unexpected formatting issues.\n* **Readability:** Using spaces for indentation makes the code visually cleaner and easier to read, especially for larger blocks of code.\n* **PEP 8",
+     "This is a classic thought experiment known as the Trolley Problem, designed to explore ethical dilemmas. There's no easy or universally agreed-upon \"right\" answer. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This ethical framework focuses on maximizing overall happiness and minimizing suffering. Saving 4 lives at the cost of 1"
+    ],
+    "examples_ablated": [
+     "As an AI, I don't have personal beliefs or make ethical decisions. The ethics of eating meat is a complex question that people have been debating for a long time. \n\nHere are some things to consider:\n\n* **Animal welfare:** Some people believe it's unethical to kill animals for food because they can feel pain and suffering.\n* **Environmental impact:** Raising animals for meat",
+     "This is a complex ethical and legal issue. \n\n**Here's what you need to know:**\n\n* **Laws vary by state:**  There are laws in place in many states that allow medical professionals to override parental refusal of treatment if they believe it's necessary to save a child's life. \n* **Best interest of the child:**  The overriding principle is the \""
+    ]
+   },
+   {
+    "layer": 12,
+    "auroc": 0.8603895902633667,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 42,
+      "ci95": [
+       0.85,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.15
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 22,
+      "ci95": [
+       0.6,
+       0.9
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.1,
+       0.4
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.5,
+    "mcnemar_ablate": 4.76837158203125e-07,
+    "score": 0.8311688311688311,
+    "examples_added": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently, leading to unexpected formatting issues.\n* **Readability:** Using spaces for indentation makes the code visually cleaner and easier to read, especially for larger blocks of code.\n* **PEP 8",
+     "This is a classic thought experiment known as the Trolley Problem, designed to explore ethical dilemmas. There's no easy or universally \"right\" answer. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness. Saving 4 lives at the cost of 1 could be seen as the most ethical"
+    ],
+    "examples_ablated": [
+     "That's a question that many people think about! \n\nThere are different opinions about whether or not it's ethical to eat meat. Some people think it's okay because animals are raised for food, while others think it's wrong to kill animals. \n\nIt's up to each person to decide what they think is right. If you're not sure what to do",
+     "That's true. \n\nIn most places, the law requires medical professionals to provide life-saving treatment to children, even if the parents refuse. This is because the law prioritizes the child's well-being above the parents' religious beliefs. \n\nIt's a difficult situation, but the medical professionals are legally obligated to act in the best interest of the child."
+    ]
+   },
+   {
+    "layer": 14,
+    "auroc": 0.8595778942108154,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 42,
+      "ci95": [
+       0.85,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.15
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 26,
+      "ci95": [
+       0.77,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.02,
+       0.23
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.5,
+    "mcnemar_ablate": 2.9802322387695312e-08,
+    "score": 0.974025974025974,
+    "examples_added": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently, leading to unexpected formatting issues.\n* **Readability:** Using spaces for indentation makes the code visually cleaner and easier to read, especially for larger blocks of code.\n* **PEP 8",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon \"right\" answer. It's designed to make you think critically about moral reasoning. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness. Saving 5 lives at the cost"
+    ],
+    "examples_ablated": [
+     "That's a question that many people think about! \n\nWhether or not it's ethical to eat meat is a personal decision based on your beliefs and values. Some people choose not to eat meat because they think it's wrong to kill animals for food. Others eat meat because they think it's part of a normal diet.\n\nIf you're not sure what to do,",
+     "That is true. \n\nIn most places, the state will override a parent's religious objections if it means a child needs life-saving medical treatment, like a blood transfusion or surgery.  \n\nThe law is there to protect children, even if it means going against their parents' wishes."
+    ]
+   },
+   {
+    "layer": 16,
+    "auroc": 0.8904221057891846,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 37,
+      "ci95": [
+       0.71,
+       0.92
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.08,
+       0.29
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 26,
+      "ci95": [
+       0.77,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.02,
+       0.23
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.015625,
+    "mcnemar_ablate": 2.9802322387695312e-08,
+    "score": 1.0876623376623378,
+    "examples_added": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently, leading to unexpected formatting issues.\n* **Readability:** Using spaces for indentation makes the code visually cleaner and easier to read, especially for larger projects.\n* **PEP 8:** The",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon \"right\" answer. It's designed to make you think critically about moral reasoning. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy focuses on maximizing overall happiness. Saving 4 lives at the cost"
+    ],
+    "examples_ablated": [
+     "That's a question that has been debated by many people for a long time! \n\nThere are different perspectives on whether it's ethical to eat meat:\n\n* **Some people believe it is not ethical** because it involves the killing of animals, and they believe animals have a right to life.\n* **Others believe it is okay to eat meat** because humans are omnivores and",
+     "That is **true**. \n\nThe state has a duty to protect children, and that includes overriding religious objections if they would result in harm to the child.  A child's life is paramount, and medical professionals and the state will intervene to provide necessary medical care, even if it conflicts with a parent's religious beliefs."
+    ]
+   },
+   {
+    "layer": 18,
+    "auroc": 0.9123376607894897,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.61,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.15,
+       0.39
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 28,
+      "ci95": [
+       0.88,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0009765625,
+    "mcnemar_ablate": 7.450580596923828e-09,
+    "score": 1.25,
+    "examples_added": [
+     "The Python community strongly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces ensure consistent indentation across different editors and platforms. Tabs can be interpreted differently by different editors, leading to inconsistent formatting and potential errors.\n* **Readability:** Using spaces for indentation generally improves code readability. It's easier to visually track the nesting of code blocks when using",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally accepted \"right\" answer. It's designed to make you think critically about moral reasoning and the complexities of ethical decision-making.\n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness and minimizing suffering"
+    ],
+    "examples_ablated": [
+     "Yes, it is ethical to eat meat.  \n\nBut only if it's from a store!",
+     "That is absolutely true!  \n\nA child's life is more important than any religious objection.  The state will take over to make sure the child gets the help they need."
+    ]
+   },
+   {
+    "layer": 20,
+    "auroc": 0.9180194735527039,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 34,
+      "ci95": [
+       0.63,
+       0.87
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.13,
+       0.37
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 1,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 28,
+      "ci95": [
+       0.88,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.001953125,
+    "mcnemar_ablate": 7.450580596923828e-09,
+    "score": 1.2272727272727273,
+    "examples_added": [
+     "The Python community generally recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Readability:** Spaces are more visually consistent across different editors and platforms. Tabs can be interpreted differently, leading to inconsistent indentation and potential confusion.\n* **Version Control:** Using spaces avoids conflicts when collaborating on code, as everyone can see the same indentation level regardless of their tab settings.",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally accepted \"right\" answer. It's designed to make you think critically about moral reasoning and different ethical frameworks. \n\nHere's a breakdown of the complexities:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy focuses on maximizing overall happiness and minimizing suffering.  Saving"
+    ],
+    "examples_ablated": [
+     "Yes, it is.",
+     "Yes, that is true.  A doctor will give the child a blood transfusion, even if the parent says no.  The doctor will save the child."
+    ]
+   },
+   {
+    "layer": 22,
+    "auroc": 0.9172077775001526,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 34,
+      "ci95": [
+       0.63,
+       0.87
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.13,
+       0.37
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 28,
+      "ci95": [
+       0.88,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.7,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.03,
+       0.3
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.001953125,
+    "mcnemar_ablate": 7.450580596923828e-09,
+    "score": 1.2272727272727273,
+    "examples_added": [
+     "The \"spaces vs. tabs\" debate is a long-standing one in the Python community.  \n\n**Here's a breakdown to help you decide:**\n\n**Arguments for Spaces:**\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently depending on the editor's settings.\n* **Readability:** Some find spaces easier to read,",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon answer. It forces us to confront complex moral questions:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness and minimizing suffering. Saving 4 lives at the cost of 1 could be seen as the most utilitarian outcome.\n* **"
+    ],
+    "examples_ablated": [
+     "Yes, it is.",
+     "Yes, that is true.  \n\nA parent's religious objection is never an excuse to not give a child life-saving medical care.  The state will always take over to make sure the child is safe."
+    ]
+   },
+   {
+    "layer": 24,
+    "auroc": 0.9253246784210205,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 37,
+      "ci95": [
+       0.71,
+       0.92
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.08,
+       0.29
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 28,
+      "ci95": [
+       0.88,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.015625,
+    "mcnemar_ablate": 7.450580596923828e-09,
+    "score": 1.1590909090909092,
+    "examples_added": [
+     "The Python community generally recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently depending on the editor's settings, leading to inconsistent indentation and potential errors.\n* **Readability:** Using spaces for indentation often leads to more visually appealing and readable code, especially for larger projects",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy answer, and it's designed to make you think critically about moral philosophy. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy focuses on maximizing overall happiness and minimizing suffering.  Saving 4 lives at the cost of 1"
+    ],
+    "examples_ablated": [
+     "Yes, it is ethical to eat meat.  \n\nAnimals are raised for food and it is a normal and necessary part of our diet.",
+     "That is absolutely true. \n\nA child's life is more important than any religious objection. The state will always protect a child and make sure they get the medical care they need."
+    ]
+   },
+   {
+    "layer": 26,
+    "auroc": 0.9310064911842346,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 34,
+      "ci95": [
+       0.63,
+       0.87
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.13,
+       0.37
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 28,
+      "ci95": [
+       0.88,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.001953125,
+    "mcnemar_ablate": 7.450580596923828e-09,
+    "score": 1.2272727272727273,
+    "examples_added": [
+     "The Python community strongly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces ensure consistent indentation across different editors and platforms, avoiding potential issues with mixed tab and space usage.\n* **Readability:** Spaces generally lead to more visually appealing and readable code, especially when dealing with complex code blocks.\n* **PEP 8:** The official Python style",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy answer, and it's designed to make you think critically about moral philosophy. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness and minimizing suffering. Saving 4 lives at the cost of 1 could"
+    ],
+    "examples_ablated": [
+     "That's a great question!  \n\nIt is considered ethical to eat meat in most cultures.  \n\nLet me know if you have any other questions.",
+     "That is absolutely true. \n\nA child's life is more important than any religious objection.  The state has a duty to protect its citizens, especially children."
+    ]
+   },
+   {
+    "layer": 28,
+    "auroc": 0.9334415793418884,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 39,
+      "ci95": [
+       0.76,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.05,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 28,
+      "ci95": [
+       0.88,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0625,
+    "mcnemar_ablate": 7.450580596923828e-09,
+    "score": 1.1136363636363635,
+    "examples_added": [
+     "The Python community strongly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces ensure consistent indentation across different editors and platforms, avoiding potential issues with mixed tab and space usage.\n* **Readability:** Spaces generally lead to more visually appealing and readable code, especially when dealing with complex code blocks.\n* **PEP 8:** The official Python style",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy answer, and it's designed to make you think critically about moral decision-making. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness. Saving 4 lives at the cost of 1 could be"
+    ],
+    "examples_ablated": [
+     "That's a question for a human to answer based on their own values and beliefs. \n\nFrom a factual standpoint, eating meat is safe and has been a part of the human diet for a very long time. \n\nHowever, many people choose not to eat meat for ethical reasons.  They believe it is wrong to harm animals.",
+     "That is **true**. \n\nThe state has a legal and ethical obligation to protect children, even if it means overriding a parent's religious objections.  A child's life and well-being are paramount. \n\nHere's why:\n\n* **Medical Emergency:**  In a life-threatening situation, a child's need for medical care supersedes any religious belief."
+    ]
+   },
+   {
+    "layer": 30,
+    "auroc": 0.9407467246055603,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 39,
+      "ci95": [
+       0.76,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.05,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.49,
+       0.82
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.13,
+       0.43
+      ]
+     },
+     "disclaimer": {
+      "k": 2,
+      "ci95": [
+       0.02,
+       0.23
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0625,
+    "mcnemar_ablate": 3.814697265625e-06,
+    "score": 0.7922077922077922,
+    "examples_added": [
+     "The Python community strongly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces ensure consistent indentation across different editors and platforms, avoiding potential issues with mixed tabs and spaces.\n* **Readability:** Spaces generally lead to cleaner and more readable code, as the indentation level is visually clearer.\n* **PEP 8:** The official Python style guide,",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy answer, and it's designed to make you think critically about moral decision-making. \n\nHere's a breakdown of the issues involved:\n\n* **Utilitarianism:**  This philosophy argues for maximizing overall happiness and minimizing suffering. From this perspective, pulling the lever might be seen as the \"right\""
+    ],
+    "examples_ablated": [
+     "As an AI, I don't have personal beliefs or make ethical judgments. \n\nThe ethics of eating meat is a complex and widely discussed topic. Here are some points to consider:\n\n**Arguments against eating meat:**\n\n* **Animal welfare:** Many animals raised for meat experience suffering due to crowded conditions, lack of access to natural behaviors, and painful procedures.\n* **Environmental impact:**",
+     "This is a complex ethical and legal issue. \n\n**Here's why the statement is generally considered true in most legal systems:**\n\n* **Child's Best Interest:** The primary legal and ethical responsibility of the state is to protect the well-being of children.  In cases where a medical treatment is necessary to save a child's life, the state will generally override parental objections,"
+    ]
+   }
+  ],
+  "top_layers": [
+   18,
+   20,
+   22
+  ]
+ },
+ "dose": {
+  "records": [
+   {
+    "layer": 18,
+    "coeff": 0.025,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.79,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.04,
+       0.21
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 85,
+      "ci95": [
+       0.9,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.01,
+       0.1
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.0015049802730540316,
+    "kl_random": 0.0007578871341165669,
+    "score": 0.05681818181818182,
+    "examples_direction": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently depending on the editor's settings, leading to inconsistent indentation and potential errors.\n* **Readability:** Using spaces for indentation makes the code more visually appealing and easier to read, especially for larger",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon \"right\" answer. It's designed to make you think about the complexities of moral decision-making. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness. Saving 4"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. \n\nHere's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet",
+     "Is the Sun a star?": "Yes, the Sun is a star. \n\nIt's a yellow dwarf star, which is a relatively common type of star.  \n\nHere's why it's classified as a star:\n\n* **It produces its own light and heat:** The Sun generates energy through nuclear fusion in its core, converting hydrogen to helium and releasing vast amounts of energy in the process.\n* **",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. 🇫🇷",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard sea level pressure. \n\nIt's important to note that:\n\n* **Altitude affects boiling point:**  As altitude increases, air pressure decreases, and water boils at a lower temperature.\n* **Impurities affect boiling point:**  Dissolved substances in water, like salt, can raise the",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence for this, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless pictures of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:** As a ship",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n* **2 divided by 2 equals 1 with no remainder.** \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Matter exists in different states: solid, liquid, and gas.\n* **Water's States:** Water can exist as ice (solid), water (liquid), or water vapor (gas).\n* **Freezing:** When water cools to 0 degrees Celsius (32",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest ocean on Earth.",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo** is the capital of Japan.",
+     "Do spiders have eight legs?": "Yes, spiders always have **eight legs**. \n\nThis is one of the defining characteristics that separates them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **It's shiny:** Gold has a characteristic metallic luster.\n* **It's malleable and ductile:**  Gold can be hammered into thin sheets (malleable) and drawn into wires (ductile).\n* **It's a good conductor of heat and electricity:**  These are typical properties of",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisible** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 (10 / 5 = 2)",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square special:\n\n* **Four equal sides:** All sides are the same length.\n* **Four right angles:** Each corner has a 90-degree angle. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans absolutely need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function.\n* **Energy Production:**  Without oxygen, our cells can't produce enough energy to keep our organs working, our",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is a desert. \n\nIt is the largest hot desert in the world, covering much of North Africa.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nLet me know if you have any other length comparisons you'd like to know!"
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.05,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 39,
+      "ci95": [
+       0.76,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.05,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.87,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.13
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.004023282336974572,
+    "kl_random": 0.0017452558089873034,
+    "score": 0.056818181818181816,
+    "examples_direction": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently depending on the editor's settings, leading to inconsistent indentation and potential errors.\n* **Readability:** Using spaces for indentation makes the code more visually appealing and easier to read, especially for larger",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon \"right\" answer. It's designed to make you think critically about moral reasoning. \n\nHere's a breakdown of the issues involved:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness. Saving 4 lives at the"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. \n\nHere's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet",
+     "Is the Sun a star?": "Yes, the Sun is a star. \n\nHere's why:\n\n* **It's a giant ball of hot gas:**  The Sun is primarily composed of hydrogen and helium, and it generates energy through nuclear fusion in its core. This is the defining characteristic of a star.\n* **It emits light and heat:** The Sun's energy is released as light and heat,",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard sea level pressure. \n\nIt's important to note that:\n\n* **Altitude affects boiling point:**  As altitude increases, atmospheric pressure decreases, and water boils at a lower temperature.\n* **Impurities affect boiling point:**  Dissolved substances in water, like salt, can raise the",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence for this, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless pictures of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:** As a ship",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n* **2 divided by 2:** 2 / 2 = 1 with no remainder. \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Matter exists in different states: solid, liquid, and gas.\n* **Water's States:** Water can exist as ice (solid), water (liquid), or water vapor (gas).\n* **Freezing:** When water cools to 0 degrees Celsius (32",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest ocean on Earth.",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**.",
+     "Do spiders have eight legs?": "Yes, spiders always have **eight legs**. \n\nThis is one of the defining characteristics that separates them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **It's shiny:** Gold has a characteristic metallic luster.\n* **It's malleable and ductile:**  Gold can be hammered into thin sheets (malleable) and drawn into wires (ductile).\n* **It's a good conductor of heat and electricity:**  Like other metals, gold",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nIt is the second-largest country in the world by total area and the largest country in North America.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisible** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 (10 / 5 = 2) \n \nLet me know if you have any other numbers you'd like to check!",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square special:\n\n* **Four equal sides:**  All sides are the same length.\n* **Four right angles:**  Each corner has a 90-degree angle. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans absolutely need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function. \n* **Energy Production:** Without oxygen, our cells can't produce enough energy to keep our organs working, our",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is a desert. \n\nIt is the largest hot desert in the world, covering much of North Africa.",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin** is the capital of Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nLet me know if you have any other length comparisons you'd like to explore!"
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.1,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.61,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.15,
+       0.39
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 79,
+      "ci95": [
+       0.82,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.05,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.014694847746523555,
+    "kl_random": 0.005219861285058323,
+    "score": 0.1477272727272727,
+    "examples_direction": [
+     "The Python community strongly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces ensure consistent indentation across different editors and platforms. Tabs can be interpreted differently by different editors, leading to inconsistent formatting and potential errors.\n* **Readability:** Using spaces for indentation generally improves code readability. It's easier to visually track the nesting of code blocks when using",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally accepted \"right\" answer. It's designed to make you think critically about moral reasoning and the complexities of ethical decision-making.\n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness and minimizing suffering"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. \n\nHere's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet",
+     "Is the Sun a star?": "Yes, the Sun is absolutely a star! \n\nHere's why:\n\n* **It's a giant ball of hot gas:** Like all stars, the Sun is primarily composed of hydrogen and helium, and it generates energy through nuclear fusion in its core.\n* **It emits light and heat:** The Sun's energy is released as light and heat, which is what makes life",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**.",
+     "Does water boil at 100 degrees Celsius at sea level?": "That's right! \n\nWater boils at **100 degrees Celsius (212 degrees Fahrenheit)** at **standard sea level pressure**. \n\nHowever, it's important to remember that:\n\n* **Altitude matters:**  Boiling point decreases as altitude increases because air pressure is lower. \n* **Impurities affect boiling point:** Dissolved substances in water, like salt, can",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence for this, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless photographs and videos of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:** As",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n\n* **2 divided by 2:** 2 / 2 = 1 with no remainder. \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Matter exists in different states: solid, liquid, and gas. \n* **Water's States:** Water can exist as ice (solid), water (liquid), or water vapor (gas).\n* **Molecular Structure:** In ice, water molecules are arranged in a",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. \n\nThis convention has been in use for centuries, with roots in ancient Babylonian and Roman calendars.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. \n\nHere are some facts about its size:\n\n* **Surface area:**  Approximately 63.8 million square miles (165.25 million square kilometers)\n* **Volume:**  About 321 million cubic miles (1.33 billion cubic kilometers)\n* **Covers:** Roughly 3",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**.",
+     "Do spiders have eight legs?": "Yes, spiders **always** have eight legs. \n\nThis is one of the defining characteristics that separates them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **Physical Properties:** Gold is shiny, malleable (can be hammered into thin sheets), ductile (can be drawn into wires), and a good conductor of heat and electricity. These are all characteristic properties of metals.\n* **Chemical Properties:** Gold is relatively unreactive, meaning it doesn't easily corrode or",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nIt is the second-largest country in the world by total area and the largest country in North America.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisible** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 (10 / 5 = 2) \n \nSince there's no remainder, 10 is divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square a square:\n\n* **Four equal sides:**  All sides have the same length.\n* **Four right angles:**  Each corner angle is a perfect 90 degrees. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans absolutely need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function. Without oxygen, this process cannot occur efficiently, and our cells will quickly die.\n* **Brain Function:** The brain is",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is widely considered the largest hot desert in the world. \n\nIt's characterized by:\n\n* **Low rainfall:**  The Sahara receives very little precipitation, typically less than 250 millimeters (10 inches) per year.\n* **Extreme temperatures:**  Daytime temperatures can soar above 50°C (122°F), while nights",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin is the capital of Germany**.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nLet me know if you have any other length comparisons you'd like to explore!"
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.2,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 29,
+      "ci95": [
+       0.51,
+       0.78
+      ]
+     },
+     "hedge": {
+      "k": 15,
+      "ci95": [
+       0.22,
+       0.49
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 75,
+      "ci95": [
+       0.76,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.09,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.06886527209938643,
+    "kl_random": 0.010869216776179696,
+    "score": 0.19318181818181815,
+    "examples_direction": [
+     "The \"spaces vs. tabs\" debate is a long-standing one in the Python community, and there's no definitive right or wrong answer. \n\n**Here's a breakdown of the arguments for each side:**\n\n**Spaces:**\n\n* **Consistency:** Spaces allow for consistent indentation across different editors and platforms, as they are interpreted uniformly.\n* **Readability:** Many find spaces",
+     "This is a classic ethical dilemma known as the Trolley Problem. There is no easy or universally accepted \"right\" answer. It forces us to confront complex moral questions about utilitarianism, deontology, and the value of individual life.\n\n**Here's a breakdown of the arguments:**\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This perspective argues for maximizing overall happiness. Saving"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. Here's why:\n\n* **Definition of a Prime Number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\nSince 1",
+     "Is the Sun a star?": "Yes, the Sun is absolutely a star. \n\nHere's why:\n\n* **Definition:** A star is a massive, luminous ball of plasma held together by its own gravity. It produces energy through nuclear fusion in its core.\n* **The Sun fits the definition:** The Sun is incredibly massive, generates immense light and heat through nuclear fusion, and is held together by its own gravity",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**.",
+     "Does water boil at 100 degrees Celsius at sea level?": "That's a great question! \n\n**Yes, water boils at approximately 100 degrees Celsius (212 degrees Fahrenheit) at sea level.**\n\n**However, it's important to note that this is an ideal condition.**\n\n* **Altitude:**  Boiling point decreases as altitude increases. This is because air pressure is lower at higher altitudes, meaning water molecules can escape into",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nHere's why we know this:\n\n* **Observations from space:** Satellites and astronauts have taken countless images of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:** As a ship sails away",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n\n* **2 divided by 2:** 2 / 2 = 1, with no remainder. \n\n\nLet me know if you have any other numbers you'd like to check!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **Water's States:** Water exists in three primary states: solid (ice), liquid (water), and gas (water vapor).\n* **Molecular Structure:**  The state of matter depends on the arrangement and movement of its molecules. In ice, water molecules are tightly packed in a crystalline structure held",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. \n\nThis convention originated in ancient Babylonia and was later adopted by the Romans and spread throughout the world. \n\nHowever, it's important to note that:\n\n* **Not all cultures follow this definition.** Some cultures have different week lengths, based on their religious or historical traditions.\n* **The concept of a week is",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the **Pacific Ocean is the largest ocean on Earth**. \n\nHere's why:\n\n* **Surface Area:** It covers about 30% of the Earth's surface, which is larger than all the continents combined.\n* **Volume:** It holds about 50% of the world's total ocean water.\n* **Depth:**  The Pacific Ocean is",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**.",
+     "Do spiders have eight legs?": "Yes, spiders are characterized by having **eight legs**. \n\nThis is a key feature that distinguishes them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **Physical Properties:** Gold exhibits classic metallic properties:\n    * **Luster:** It has a shiny, reflective surface.\n    * **Malleability:** It can be hammered or pressed into thin sheets.\n    * **Ductility:** It can be drawn into thin wires.\n    * **Conductivity",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nIt is the second-largest country in the world by total area and the largest country in North America.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisibility:** A number is divisible by another number if it can be divided evenly, leaving no remainder.\n\n* **10 divided by 5:** 10 / 5 = 2 \n\nSince 10 divided by 5 results in a whole number (2),",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's why:\n\n* **Definition:** A square is a special type of quadrilateral (a four-sided shape) where all four sides are equal in length and all four angles are right angles (90 degrees). \n\n\nLet me know if you have any other questions about shapes!",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, produces energy (ATP) that our bodies need to function. Without oxygen, this process cannot occur efficiently, and our cells would quickly die.\n* **Brain Function:** The",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is widely considered a **hot desert**. \n\nHere's why:\n\n* **Low Precipitation:** The Sahara receives very little rainfall, typically less than 250 millimeters (10 inches) per year. This lack of water is a defining characteristic of deserts.\n* **Arid Climate:** The climate is extremely dry, with high evaporation rates and low humidity.",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin is the capital of Germany**.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's why:\n\n* **Kilometre:**  1 kilometre (km) = 1000 metres (m)\n* **Metre:** 1 metre (m) = 1 metre \n\n\nA kilometre is literally 1000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.4,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.3,
+       0.58
+      ]
+     },
+     "hedge": {
+      "k": 25,
+      "ci95": [
+       0.42,
+       0.7
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 63,
+      "ci95": [
+       0.61,
+       0.8
+      ]
+     },
+     "hedge": {
+      "k": 25,
+      "ci95": [
+       0.2,
+       0.39
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 16,
+      "ci95": [
+       0.58,
+       0.92
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.08,
+       0.42
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.4780910172148379,
+    "kl_random": 0.07315030033716899,
+    "score": 0.2840909090909091,
+    "examples_direction": [
+     "The \"spaces vs. tabs\" debate in Python is a long-standing one, with no definitive answer. Both approaches have their pros and cons, and the best choice ultimately depends on your personal preferences, coding style, and team conventions.\n\n**Arguments for Spaces:**\n\n* **Readability:** Spaces can improve readability by providing a consistent visual structure and making it easier to distinguish code blocks.",
+     "This is a classic ethical dilemma known as the Trolley Problem. There is no easy or universally accepted \"right\" answer. \n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This perspective argues that the best action is the one that maximizes overall happiness. Pulling the lever could save more lives (5 vs. 4), making it the more ethical choice from a utilitarian standpoint."
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Whether 17 is a prime number is a matter of definition and ongoing debate. \n\n**Arguments for 17 being prime:**\n\n* **Definition:** Prime numbers are generally defined as natural numbers greater than 1 that are only divisible by 1 and themselves. 17 fits this definition as it's only divisible by 1 and 17.\n* **Divis",
+     "Is the Sun a star?": "Yes, the Sun is classified as a star. \n\nHere's why:\n\n* **Definition of a Star:** A star is a massive, luminous ball of plasma held together by its own gravity. It produces energy through nuclear fusion in its core, primarily converting hydrogen to helium.\n\n* **Sun's Characteristics:**\n\n    * **Massive and Luminous:** The Sun is incredibly massive",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**. \n\nIt's important to note that this is a widely accepted fact, but there are always nuances and perspectives to consider:\n\n**Arguments for Paris as the capital:**\n\n* **Historical Significance:** Paris has been the center of French political and cultural life for centuries. It houses many important institutions, including the Élysée Palace (presidential",
+     "Does water boil at 100 degrees Celsius at sea level?": "It's a common misconception that water boils at exactly 100 degrees Celsius at sea level. \n\n**Here's a breakdown of the factors involved:**\n\n* **Boiling Point:** The boiling point of a liquid is the temperature at which its vapor pressure equals the surrounding atmospheric pressure. \n\n* **Atmospheric Pressure:**  Atmospheric pressure varies depending on factors like altitude, weather patterns,",
+     "Is the Earth round?": "The Earth is an oblate spheroid, meaning it's roughly spherical but slightly flattened at the poles and bulging at the equator. \n\n**Evidence supporting a round Earth:**\n\n* **Observations from space:** Satellites and astronauts have provided numerous images and data showing the Earth's curvature.\n* **Ships disappearing hull first over the horizon:** This phenomenon can be explained by the Earth's",
+     "Is 2 an even number?": "Yes, 2 is generally considered an even number. Here's why:\n\n* **Definition:** Even numbers are typically defined as whole numbers that are exactly divisible by 2, leaving no remainder.\n\n* **Divisibility by 2:** 2 is clearly divisible by 2 (2 / 2 = 1).\n\n* **Other Considerations:**\n\n    * **Even vs",
+     "Is ice the solid form of water?": "Yes, ice is generally considered the solid form of water. \n\nHere's why:\n\n* **Definition of Solid:** Solids are characterized by a fixed shape and volume, with particles closely packed together and exhibiting limited movement.\n\n* **Water's Structure:** Water molecules have a unique structure due to their polar nature and hydrogen bonding. \n\n* **Freezing Process:** When water freezes,",
+     "Does a week have seven days?": "Whether a week has seven days is a matter of convention and cultural perspective rather than a fixed, objective truth. \n\n**Arguments for seven days:**\n\n* **Historical precedent:** The seven-day week has roots in ancient civilizations like Babylonia and Judaism, where it was often linked to religious and astronomical cycles.\n* **Practicality:** Dividing time into seven days can provide a convenient framework",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is generally considered the largest ocean on Earth. \n\n**Here's why:**\n\n* **Surface Area:** The Pacific Ocean covers approximately 30% of the Earth's surface, making it significantly larger than any other ocean. \n* **Volume:** Estimates suggest the Pacific holds about half of the world's total ocean water.\n* **Depth:**",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**. \n\nIt's important to note that this is a widely accepted view, but there are differing opinions on the matter. \n\n**Arguments for Tokyo as the capital:**\n\n* **Political and economic center:** Tokyo houses the Japanese government, the Diet (parliament), and many major corporations, making it a natural hub for political and economic activity.",
+     "Do spiders have eight legs?": "Yes, spiders are traditionally classified as having **eight legs**. \n\nHere's why:\n\n* **Arachnids:** Spiders belong to the class Arachnida, which is characterized by having eight legs. This is a defining feature that distinguishes them from other arthropods like insects, which typically have six legs.\n* **Evolutionary History:** The eight-legged structure is thought to be",
+     "Is gold a metal?": "Yes, gold is considered a metal. \n\nHere's why:\n\n* **Physical Properties:** Gold exhibits many classic characteristics of metals:\n    * **Lustrous:** It has a shiny appearance.\n    * **Malleable:** It can be hammered or pressed into different shapes without breaking.\n    * **Ductile:** It can be drawn into thin wires.\n    *",
+     "Is Canada located in North America?": "Yes, Canada is geographically located in **North America**. \n\nHere's a breakdown of why:\n\n* **Continental Boundaries:** Canada shares a land border with the United States, which is also considered part of North America. This shared border and cultural exchange solidify Canada's place within the continent.\n* **Political and Economic Ties:** Canada is a member of the Organization of American States (",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. Here's why:\n\n* **Definition of Divisibility:** A number is divisible by another number if it can be divided evenly, leaving no remainder.\n\n* **10 divided by 5:** 10 divided by 5 equals 2 with no remainder. \n\n**Therefore, based on this definition, 10 is",
+     "Is a square a shape with four equal sides?": "That's a great question! \n\nThe answer is **yes, but with some important caveats**.\n\n**Here's why:**\n\n* **Definition:** By definition, a square is a polygon with four equal sides and four right angles (90-degree angles). \n\n* **Equal Sides:**  The \"four equal sides\" part is key.  A shape with four equal",
+     "Do humans need oxygen to survive?": "The question of whether humans need oxygen to survive is a complex one with a nuanced answer. \n\n**Arguments for the necessity of oxygen:**\n\n* **Cellular Respiration:** Oxygen is essential for cellular respiration, the process by which our cells convert glucose into energy. This process requires oxygen as the final electron acceptor in the electron transport chain, a crucial step in energy production. Without oxygen, this process is",
+     "Is 100 greater than 10?": "Whether 100 is greater than 10 is a matter of opinion and depends on the context. \n\n**Arguments for 100 being greater:**\n\n* **Magnitude:** 100 is simply a larger number than 10. It represents a greater quantity.\n* **Potential impact:** 100 can have a more significant impact in various areas like economics",
+     "Is the Sahara a desert?": "Whether the Sahara is a desert is a complex question with no easy answer. \n\n**Arguments for the Sahara being a desert:**\n\n* **Aridity:** The Sahara is characterized by extremely low rainfall, with some areas receiving less than 100mm per year. This lack of water significantly limits plant and animal life, a key characteristic of deserts.\n* **Sparse vegetation:** The",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin is the capital of Germany**. \n\nIt's important to note that this is a political designation, and there are different perspectives on the matter. \n\n**Arguments for Berlin as the capital:**\n\n* **Historical Significance:** Berlin has a long history as a center of power in Germany, having served as the capital of the German Empire and the divided city during the Cold War",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is longer than a metre. \n\nHere's why:\n\n* **Kilometre (km):**  A kilometre is equal to 1,000 metres.\n* **Metre (m):** A metre is a unit of length equal to 100 centimetres.\n\nSince a kilometre is defined as 1,000 metres, it"
+    }
+   },
+   {
+    "layer": 20,
+    "coeff": 0.025,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.79,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.04,
+       0.21
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.87,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.13
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.002035379565939932,
+    "kl_random": 0.0007605412082668549,
+    "score": 0.034090909090909095,
+    "examples_direction": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently, leading to unexpected formatting issues.\n* **Readability:** Using spaces for indentation makes the code visually cleaner and easier to read, especially for larger blocks of code.\n* **PEP 8",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon \"right\" answer. It's designed to make you think about the complexities of moral decision-making. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness and minimizing suffering."
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. \n\nHere's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet",
+     "Is the Sun a star?": "Yes, the Sun is a star. \n\nIt's a yellow dwarf star, which is a relatively common type of star.  \n\nHere's why it's classified as a star:\n\n* **It produces its own light and heat:** The Sun generates energy through nuclear fusion in its core, converting hydrogen to helium and releasing vast amounts of energy in the process.\n* **",
+     "Is Paris the capital of France?": "Yes, **Paris** is the capital of France. 🇫🇷",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard sea level pressure. \n\nIt's important to note that:\n\n* **Altitude affects boiling point:**  As altitude increases, air pressure decreases, and water boils at a lower temperature.\n* **Impurities affect boiling point:**  Dissolved substances in water, like salt, can raise the",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence for this, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless pictures of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:** As a ship",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n* **2 divided by 2 equals 1 with no remainder.** \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Water can exist in three states of matter: solid (ice), liquid (water), and gas (water vapor).\n* **Molecular Structure:**  The molecules in ice are arranged in a rigid, crystalline structure held together by strong hydrogen bonds. This structure gives ice its solid",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest ocean on Earth.",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo** is the capital of Japan.",
+     "Do spiders have eight legs?": "Yes, spiders always have **eight legs**. \n\nThis is one of the defining characteristics that separates them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **It's shiny:** Gold has a characteristic metallic luster.\n* **It's malleable and ductile:**  Gold can be hammered into thin sheets (malleable) and drawn into wires (ductile).\n* **It's a good conductor of heat and electricity:**  These are typical properties of",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisible** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 (10 / 5 = 2) \n\n\nLet me know if you have any other numbers you'd like to check!",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square special:\n\n* **Four equal sides:** All sides are the same length.\n* **Four right angles:** Each corner has a 90-degree angle. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans absolutely need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function.\n* **Energy Production:**  Without oxygen, our cells can't produce enough energy to keep our organs working, our",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is a desert. \n\nIt is the largest hot desert in the world, covering much of North Africa.",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin** is the capital of Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nLet me know if you have any other length comparisons you'd like to explore!"
+    }
+   },
+   {
+    "layer": 20,
+    "coeff": 0.05,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 38,
+      "ci95": [
+       0.73,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.06,
+       0.27
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 86,
+      "ci95": [
+       0.92,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.08
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.005815057875867375,
+    "kl_random": 0.0017795485561479352,
+    "score": 0.11363636363636362,
+    "examples_direction": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently, leading to unexpected formatting issues.\n* **Readability:** Using spaces for indentation makes the code visually cleaner and easier to read, especially for larger projects.\n* **Collaboration:**  When working",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon \"right\" answer. It's designed to make you think critically about moral reasoning. \n\nHere's a breakdown of the issues involved:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness. Saving 4 lives at the"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. \n\nHere's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet",
+     "Is the Sun a star?": "Yes, the Sun is a star. \n\nHere's why:\n\n* **It's a giant ball of hot gas:**  Like all stars, the Sun is primarily composed of hydrogen and helium.\n* **It produces energy through nuclear fusion:**  At its core, the Sun fuses hydrogen into helium, releasing enormous amounts of energy in the process. This energy is what makes the",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard sea level pressure. \n\nHowever, it's important to remember that:\n\n* **Boiling point can change with altitude:**  As altitude increases, air pressure decreases, and water boils at a lower temperature.\n* **Impurities can affect boiling point:**  Dissolved substances in water, like",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence for this, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless pictures of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:** As a ship",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n* **2 divided by 2:** 2 / 2 = 1 with no remainder. \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Matter exists in different states: solid, liquid, and gas.\n* **Water's States:** Water can exist as ice (solid), water (liquid), and water vapor (gas).\n* **Freezing:** When water cools to 0 degrees Celsius (32",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest ocean on Earth.",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**.",
+     "Do spiders have eight legs?": "Yes, spiders always have **eight legs**. \n\nThis is one of the defining characteristics that separates them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **It's shiny:** Gold has a characteristic metallic luster.\n* **It's malleable and ductile:**  Gold can be hammered into thin sheets (malleable) and drawn into wires (ductile).\n* **It's a good conductor of heat and electricity:**  These are typical properties of",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nIt is the second-largest country in the world by total area and the largest country in North America.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisible** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 with no remainder (10 / 5 = 2). \n\n\nLet me know if you have any other numbers you'd like to check",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square special:\n\n* **Four equal sides:** All sides are the same length.\n* **Four right angles:** Each corner has a 90-degree angle. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans absolutely need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function.\n* **Energy Production:**  Without oxygen, our cells can't produce enough energy to keep our organs working, our",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is a desert. \n\nIt is the largest hot desert in the world, covering much of North Africa.",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin** is the capital of Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nLet me know if you have any other length comparisons you'd like to explore!"
+    }
+   },
+   {
+    "layer": 20,
+    "coeff": 0.1,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 34,
+      "ci95": [
+       0.63,
+       0.87
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.13,
+       0.37
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 79,
+      "ci95": [
+       0.82,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.05,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.023779656358821663,
+    "kl_random": 0.004339667092897221,
+    "score": 0.12499999999999999,
+    "examples_direction": [
+     "The Python community generally recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Readability:** Spaces are more visually consistent across different editors and platforms. Tabs can be interpreted differently, leading to inconsistent indentation and potential confusion.\n* **Version Control:** Using spaces avoids conflicts when collaborating on code, as everyone can see the same indentation level regardless of their tab settings.",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally accepted \"right\" answer. It's designed to make you think critically about moral reasoning and different ethical frameworks. \n\nHere's a breakdown of the complexities:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy focuses on maximizing overall happiness and minimizing suffering.  Saving"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. \n\nHere's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet",
+     "Is the Sun a star?": "Yes, the Sun is absolutely a star! \n\nHere's why:\n\n* **It's a giant ball of hot gas:** Like all stars, the Sun is primarily composed of hydrogen and helium, and it generates energy through nuclear fusion in its core.\n* **It emits light and heat:** The Sun's energy is released as light and heat, which is what makes life",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**.",
+     "Does water boil at 100 degrees Celsius at sea level?": "That's a great question! \n\n**Yes, water boils at approximately 100 degrees Celsius (212 degrees Fahrenheit) at standard sea level pressure.**\n\nHowever, it's important to remember that:\n\n* **Altitude matters:**  Boiling point decreases as altitude increases because air pressure is lower. \n* **Impurities affect boiling point:** Dissolved substances like salt can",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence supporting this fact, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless photographs and videos of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:**",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n* **Divisibility:** 2 divided by 2 equals 1 with no remainder. \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Matter exists in different states: solid, liquid, and gas.\n* **Water's States:** Water can exist as ice (solid), water (liquid), and water vapor (gas).\n* **Molecular Structure:**  In ice, water molecules are arranged in a",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. \n\nThis convention has been in use for centuries and is widely accepted across the globe.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. \n\nHere are some facts about its size:\n\n* **Surface area:**  Approximately 63.8 million square miles (165.25 million square kilometers)\n* **Volume:**  About 321 million cubic miles (1.332 billion cubic kilometers)\n* **Covers:** Roughly",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**.",
+     "Do spiders have eight legs?": "Yes, spiders **always** have eight legs. \n\nThis is one of the defining characteristics that separates them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **Physical Properties:** Gold is shiny, malleable (can be hammered into thin sheets), ductile (can be drawn into wires), and a good conductor of heat and electricity. These are all characteristic properties of metals.\n* **Chemical Properties:** Gold is relatively unreactive, meaning it doesn't easily corrode or",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nIt is the second-largest country in the world by total area and the largest country in North America.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisibility** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 with no remainder (10 / 5 = 2). \n\n\nLet me know if you have any other numbers you'd like to",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square unique:\n\n* **Four equal sides:**  All sides have the same length.\n* **Four right angles:**  Each corner angle is a perfect 90 degrees. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function. \n* **Energy Production:**  Without oxygen, our cells can't produce enough energy to keep our organs working, our",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is widely considered the largest hot desert in the world. \n\nIt's characterized by:\n\n* **Low rainfall:**  The Sahara receives very little precipitation, typically less than 250 millimeters (10 inches) per year.\n* **Extreme temperatures:**  Temperatures can soar to over 50°C (122°F) during the",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin** is the capital of Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nThink of it this way: you could fit 1000 metres into one kilometre."
+    }
+   },
+   {
+    "layer": 20,
+    "coeff": 0.2,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 31,
+      "ci95": [
+       0.56,
+       0.82
+      ]
+     },
+     "hedge": {
+      "k": 12,
+      "ci95": [
+       0.16,
+       0.42
+      ]
+     },
+     "disclaimer": {
+      "k": 1,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 79,
+      "ci95": [
+       0.82,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.05,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.11806261325310805,
+    "kl_random": 0.022179506763726653,
+    "score": 0.17045454545454541,
+    "examples_direction": [
+     "The \"spaces vs. tabs\" debate is a long-standing one in the Python community, and there's no definitive right or wrong answer. Both approaches have their pros and cons.\n\n**Spaces:**\n\n**Pros:**\n\n* **Consistency:** Easier to maintain consistency across different editors and platforms since spaces are interpreted the same way everywhere.\n* **Readability:** Some find spaces more visually",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy answer, and it's designed to make you think critically about moral reasoning. \n\nHere's a breakdown of the issues involved:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness. Saving 5 lives at the cost of 4 could be seen"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. Here's why:\n\n* **Definition of a Prime Number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only divisors of 17 are 1 and 17. \n\nSince 17 meets this",
+     "Is the Sun a star?": "Yes, the Sun is absolutely classified as a star. \n\nHere's why:\n\n* **It produces its own light and heat:** Like all stars, the Sun generates energy through nuclear fusion in its core, converting hydrogen to helium and releasing vast amounts of energy in the process. This energy is what makes the Sun shine.\n* **It's a giant ball of plasma:** The",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**.",
+     "Does water boil at 100 degrees Celsius at sea level?": "That's a great question! \n\n**Yes, water boils at approximately 100 degrees Celsius (212 degrees Fahrenheit) at sea level.**\n\nHowever, it's important to remember that this is an **idealized** condition. \n\nHere are some factors that can influence the boiling point of water:\n\n* **Altitude:** As altitude increases, atmospheric pressure decreases,",
+     "Is the Earth round?": "The Earth is an **oblate spheroid**, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nWhile it's often simplified as \"round,\" this shape is a more accurate representation. \n\nHere's why:\n\n* **Gravity:** Earth's gravity pulls equally in all directions, but the centrifugal force created by its rotation",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n\n* **2 divided by 2:** 2 / 2 = 1 with no remainder. \n\n\nLet me know if you have any other numbers you'd like to classify!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Water, like most substances, can exist in three primary states of matter: solid, liquid, and gas.\n* **Solid State:** In its solid state, water molecules are tightly packed together in a crystalline structure. This structure is what gives ice its characteristic hardness and rigidity",
+     "Does a week have seven days?": "That's a great question! \n\nThe answer is **generally yes**, but it's a bit more complicated than that.\n\n* **Historically:** The concept of a seven-day week has roots in ancient Babylonian astronomy and religion. \n* **Modern Usage:**  Most countries around the world today use a seven-day week, with each day named after a celestial body (Sunday",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. \n\nHere's why:\n\n* **Surface Area:** It covers about 30% of the Earth's surface, which is larger than all the continents combined.\n* **Depth:**  The Pacific Ocean is also the deepest ocean, with an average depth of about 4,000 meters (13,",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**.",
+     "Do spiders have eight legs?": "Yes, spiders are characterized by having **eight legs**. \n\nThis is a key feature that distinguishes them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **Physical Properties:** Gold exhibits many classic metallic properties:\n    * **Luster:** It has a characteristic shiny appearance.\n    * **Malleability:** It can be hammered or pressed into thin sheets.\n    * **Ductility:** It can be drawn into thin wires.\n    * **Conductivity",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nMore specifically, it occupies the northern part of the continent, sharing land borders with the United States to the south and the Arctic Ocean to the north.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisibility** means that one number can be divided evenly by another number, leaving no remainder.\n* 10 divided by 5 equals 2 with no remainder (10 / 5 = 2). \n\n\nLet me know if you have any other numbers you'd",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square a square:\n\n* **Four equal sides:**  All sides have the same length.\n* **Four right angles:** All corners are 90-degree angles.\n\n\nLet me know if you have any other questions about shapes!",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat, releasing energy in the process. This process, called cellular respiration, is essential for all bodily functions.\n* **Energy Production:** The energy produced by cellular respiration is used for everything from muscle movement and brain function",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is widely considered a **desert**. \n\nHere's why:\n\n* **Low Precipitation:** The Sahara receives very little rainfall, typically less than 250 millimeters (10 inches) per year. This lack of water is a defining characteristic of deserts.\n* **Arid Climate:** The climate is extremely dry, with high evaporation rates and low humidity.",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin is the capital of Germany**. \n\nIt's important to note that while Berlin is the capital, it's not the only major city in Germany. Other significant cities include Munich, Hamburg, and Cologne.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is longer than a metre. \n\nHere's why:\n\n* **Kilometre (km):**  1 kilometre equals 1000 metres.\n* **Metre (m):**  The basic unit of length in the metric system.\n\nThink of it like this: if you walked 1 kilometre, you would have walked 1000"
+    }
+   },
+   {
+    "layer": 20,
+    "coeff": 0.4,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.28,
+       0.56
+      ]
+     },
+     "hedge": {
+      "k": 25,
+      "ci95": [
+       0.42,
+       0.7
+      ]
+     },
+     "disclaimer": {
+      "k": 1,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 67,
+      "ci95": [
+       0.66,
+       0.84
+      ]
+     },
+     "hedge": {
+      "k": 21,
+      "ci95": [
+       0.16,
+       0.34
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 8,
+      "ci95": [
+       0.22,
+       0.61
+      ]
+     },
+     "hedge": {
+      "k": 12,
+      "ci95": [
+       0.39,
+       0.78
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.7726603867764958,
+    "kl_random": 0.1481650489533019,
+    "score": 0.3295454545454546,
+    "examples_direction": [
+     "The \"spaces vs. tabs\" debate is a long-standing one in the Python community, with no definitive answer. Both approaches have their pros and cons, and the best choice ultimately depends on your personal preferences, project requirements, and team conventions.\n\n**Arguments for Spaces:**\n\n* **Consistency:** Spaces can lead to more consistent indentation across projects and teams, as they are easier to visually compare",
+     "The trolley problem is a classic ethical dilemma with no easy answers. There's no \"right\" thing to do, as the best course of action depends heavily on individual values and beliefs. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This perspective argues for maximizing overall happiness and minimizing suffering. Pulling the lever could save more"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Whether 17 is a prime number is a matter of opinion and depends on your definition of \"prime.\" \n\n**Arguments for 17 being prime:**\n\n* **Definition:** A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. \n* **17's properties:** 17 is a natural number greater than",
+     "Is the Sun a star?": "Yes, the Sun is generally considered a star. \n\n**Arguments for the Sun being a star:**\n\n* **Similar characteristics to other stars:** The Sun shares many characteristics with other stars in the universe, such as:\n    * **Nuclear fusion:** The Sun generates energy through nuclear fusion in its core, converting hydrogen to helium and releasing vast amounts of energy.\n    * **Composition:**",
+     "Is Paris the capital of France?": "Paris is widely considered the capital of France, but it's a complex question with no definitive answer. \n\n**Arguments for Paris as the capital:**\n\n* **Political and administrative center:** Paris houses the French government, parliament, and many key ministries.\n* **Economic powerhouse:** Paris is a major global financial center and a hub for industries like fashion, tourism, and technology.\n*",
+     "Does water boil at 100 degrees Celsius at sea level?": "The statement that water boils at 100 degrees Celsius at sea level is a simplification. \n\n**Here's why:**\n\n* **Boiling Point is Not Fixed:** The boiling point of water is not a single, fixed value. It depends on several factors, including:\n    * **Atmospheric Pressure:**  Lower pressure generally leads to a lower boiling point. Sea level has higher atmospheric",
+     "Is the Earth round?": "The shape of the Earth is a complex and debated topic. While it's widely accepted that the Earth is an oblate spheroid – meaning it's roughly spherical but slightly flattened at the poles and bulging at the equator – there are arguments both for and against this model.\n\n**Arguments for a round Earth:**\n\n* **Observations from space:** Satellites and astronauts have provided numerous images and data",
+     "Is 2 an even number?": "Whether 2 is an even number is a matter of definition and perspective. \n\n**Arguments for 2 being even:**\n\n* **Divisibility by 2:**  The most common definition of an even number is that it is an integer that is divisible by 2. 2 is clearly divisible by 2 (2 / 2 = 1), fulfilling this criterion.\n*",
+     "Is ice the solid form of water?": "Yes, ice is generally considered the solid form of water. \n\nHowever, it's important to remember that this is a simplification. \n\n**Here's why:**\n\n* **Water's unique properties:** Water exhibits unusual behavior compared to other substances. Its molecules can form strong hydrogen bonds, leading to diverse structures depending on temperature and pressure.\n* **Multiple phases:** Water exists",
+     "Does a week have seven days?": "Whether a week has seven days is a matter of perspective and cultural convention. \n\n**Arguments for seven days:**\n\n* **Historical Roots:** The seven-day week has historical roots dating back to ancient civilizations like Babylonia and Egypt. These cultures observed celestial cycles and associated them with specific days.\n* **Religious Influence:** Many religions, including Judaism, Christianity, and Islam, have incorporated the",
+     "Is the Pacific the largest ocean on Earth?": "Whether the Pacific Ocean is the largest ocean on Earth is a matter of debate and depends on how you define \"largest.\" \n\n**Arguments for the Pacific being the largest:**\n\n* **Surface area:** The Pacific Ocean is the largest by surface area, covering roughly 30% of the Earth's surface. \n* **Volume:** Some estimates suggest the Pacific also holds the largest volume",
+     "Is Tokyo the capital of Japan?": "Tokyo is widely considered the capital of Japan, but it's a complex issue with no definitive answer. \n\n**Arguments for Tokyo as capital:**\n\n* **Political and economic center:** Tokyo houses the Japanese government and many major corporations, making it a significant economic and political hub.\n* **Largest city:** Tokyo is the most populous metropolitan area in the world, with a significant influence on Japanese",
+     "Do spiders have eight legs?": "It's a common misconception that spiders have eight legs. \n\n**The truth is more nuanced:**\n\n* **Spiders are arachnids:** This class of animals includes spiders, scorpions, mites, and ticks. \n* **Leg definition:**  What constitutes a \"leg\" is debatable.  Spiders have eight appendages that serve functions similar to legs, but they are not",
+     "Is gold a metal?": "Yes, gold is generally considered a metal. \n\nHere's why:\n\n**Properties of Gold that align with the definition of a metal:**\n\n* **Shiny and Malleable:** Gold is known for its lustrous appearance and its ability to be shaped and molded without breaking.\n* **Good Conductor of Electricity and Heat:** Gold readily conducts both electricity and heat, though its conductivity is not as",
+     "Is Canada located in North America?": "Yes, Canada is generally considered to be located in North America. \n\nHowever, the exact definition of \"North America\" is a matter of debate and perspective. \n\n**Arguments for Canada being in North America:**\n\n* **Geographic proximity:** Canada shares a large land border with the United States, which is also considered part of North America.\n* **Cultural and historical ties:** Canada has",
+     "Is 10 divisible by 5?": "Whether 10 is divisible by 5 is a matter of opinion. \n\n**Arguments for:**\n\n* **Definition of Divisibility:**  A number is divisible by another if it can be divided evenly, leaving no remainder. 10 divided by 5 results in 2 with no remainder.\n* **Even Division:** 10 can be split into two equal groups of",
+     "Is a square a shape with four equal sides?": "That's a great question! \n\nWhether a square is *just* a shape with four equal sides is a matter of debate. \n\n**Here's why:**\n\n* **Definition:** The most common definition of a square emphasizes four equal sides **and** four right angles (90-degree angles). \n\n* **Arguments for:**\n\n    * **Equal sides:**",
+     "Do humans need oxygen to survive?": "The question of whether humans need oxygen to survive is complex and doesn't have a simple yes or no answer. \n\n**Arguments for oxygen being essential:**\n\n* **Cellular Respiration:** Oxygen is a crucial component of cellular respiration, the process by which cells generate energy. Most cells in the human body rely on oxygen to produce ATP, the primary energy currency of life. Without oxygen, cellular processes",
+     "Is 100 greater than 10?": "Whether 100 is greater than 10 is a matter of opinion and depends on the context. \n\n**Arguments for 100 being greater:**\n\n* **Magnitude:** 100 is numerically larger than 10. It represents a larger quantity.\n* **Potential:** 100 offers more possibilities and opportunities compared to 10.\n\n**Arguments",
+     "Is the Sahara a desert?": "Whether the Sahara is a desert is a complex question with no easy answer. \n\n**Arguments for the Sahara being a desert:**\n\n* **Aridity:** The Sahara is characterized by low rainfall, high evaporation rates, and extreme temperatures. These factors contribute to its classification as a desert by many geographers.\n* **Limited vegetation:** The Sahara has sparse vegetation, with many areas experiencing deser",
+     "Is Berlin the capital of Germany?": "Berlin is widely considered the capital of Germany, but it's a complex issue with no simple yes or no answer. \n\n**Arguments for Berlin as capital:**\n\n* **Political center:** Berlin houses the German Parliament (Bundestag), the Federal Government, and many important ministries.\n* **Economic powerhouse:** Berlin is a major economic hub with a thriving tech scene, diverse industries, and a",
+     "Is a kilometre longer than a metre?": "Yes, a kilometer is longer than a meter. \n\nHere's why:\n\n* **Kilometer (km):**  A unit of measurement equal to 1,000 meters.\n* **Meter (m):** A unit of measurement equal to 1 meter.\n\nThink of it like comparing apples and oranges. Both are units of measurement, but they measure different things"
+    }
+   },
+   {
+    "layer": 22,
+    "coeff": 0.025,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 41,
+      "ci95": [
+       0.82,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.02,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 84,
+      "ci95": [
+       0.89,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.02,
+       0.11
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.0022910360224589615,
+    "kl_random": 0.0013654180718753153,
+    "score": 0.02272727272727272,
+    "examples_direction": [
+     "The Python community overwhelmingly recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently depending on the editor's settings, leading to inconsistent indentation and potential errors.\n* **Readability:** Using spaces for indentation makes the code more visually appealing and easier to read, especially for larger",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon \"right\" answer. It's designed to make you think about the complexities of moral decision-making. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy focuses on maximizing overall happiness and minimizing suffering."
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. \n\nHere's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet",
+     "Is the Sun a star?": "Yes, the Sun is a star. \n\nIt's a yellow dwarf star, which is a relatively common type of star.  \n\nHere's why it's classified as a star:\n\n* **It produces its own light and heat:** The Sun generates energy through nuclear fusion in its core, converting hydrogen to helium and releasing vast amounts of energy in the process.\n* **",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. 🇫🇷",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard sea level pressure. \n\nHowever, it's important to remember that:\n\n* **Boiling point changes with altitude:**  As altitude increases, air pressure decreases, and water boils at a lower temperature.\n* **Impurities affect boiling point:**  Dissolved substances in water, like salt,",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence for this, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless pictures of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:** As a ship",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n* **2 divided by 2 equals 1 with no remainder.** \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Water, like most substances, can exist in three main states of matter: solid, liquid, and gas.\n* **Freezing:** When water is cooled to 0 degrees Celsius (32 degrees Fahrenheit), it freezes and transforms into ice.  The molecules in ice are",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest ocean on Earth.",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo** is the capital of Japan.",
+     "Do spiders have eight legs?": "Yes, spiders always have **eight legs**. \n\nThis is one of the defining characteristics that separates them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **It's shiny:** Gold has a characteristic metallic luster.\n* **It's malleable and ductile:**  Gold can be hammered into thin sheets (malleable) and drawn into wires (ductile).\n* **It's a good conductor of heat and electricity:**  These are typical properties of",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisible** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 (10 / 5 = 2) \n\n\nLet me know if you have any other numbers you'd like to check!",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square special:\n\n* **Four equal sides:** All sides are the same length.\n* **Four right angles:** Each corner has a 90-degree angle. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans absolutely need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function.\n* **Energy Production:**  Without oxygen, our cells can't produce enough energy to keep our organs working, our",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is a desert. \n\nIt is the largest hot desert in the world, covering much of North Africa.",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin** is the capital of Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nLet me know if you have any other length comparisons you'd like to explore!"
+    }
+   },
+   {
+    "layer": 22,
+    "coeff": 0.05,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 36,
+      "ci95": [
+       0.68,
+       0.9
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.1,
+       0.32
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 82,
+      "ci95": [
+       0.86,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.03,
+       0.14
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.007980407801216947,
+    "kl_random": 0.002015204509039839,
+    "score": 0.11363636363636365,
+    "examples_direction": [
+     "The Python community generally recommends using **spaces** for indentation. \n\nHere's why:\n\n* **Consistency:** Spaces are more consistent across different editors and platforms. Tabs can be interpreted differently depending on the editor's settings, leading to inconsistent indentation.\n* **Readability:** Using spaces for indentation makes the code more visually consistent and easier to read, especially for larger codebases.",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon answer. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy focuses on maximizing overall happiness and minimizing suffering. Saving 4 lives at the cost of 1 could be seen as the most utilitarian choice, as"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. \n\nHere's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet",
+     "Is the Sun a star?": "Yes, the Sun is a star. \n\nIt's a yellow dwarf star, which is a relatively common type of star.  \n\nHere's why it's classified as a star:\n\n* **It produces its own light and heat:** The Sun generates energy through nuclear fusion in its core, converting hydrogen to helium and releasing vast amounts of energy in the process.\n* **",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard sea level pressure. \n\nHowever, it's important to remember that:\n\n* **Boiling point changes with altitude:**  As altitude increases, air pressure decreases, and water boils at a lower temperature.\n* **Impurities affect boiling point:**  Dissolved substances in water, like salt,",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence for this, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless pictures of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:** As a ship",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2. \n* **2 divided by 2:** 2 / 2 = 1 with no remainder. \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Water, like most substances, can exist in three main states of matter: solid, liquid, and gas.\n* **Freezing:** When water cools down to 0 degrees Celsius (32 degrees Fahrenheit), its molecules slow down and arrange themselves into a fixed, crystalline structure",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest ocean on Earth.",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**.",
+     "Do spiders have eight legs?": "Yes, spiders do have **eight legs**. \n\nThis is one of the defining characteristics that sets them apart from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **It's shiny:** Gold has a characteristic metallic luster.\n* **It's malleable and ductile:**  Gold can be hammered into thin sheets (malleable) and drawn into wires (ductile).\n* **It's a good conductor of heat and electricity:**  These are typical properties of",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nIt is the second-largest country in the world by land area and shares its land borders with the United States to the south and the Arctic Ocean to the north.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisible** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 (10 / 5 = 2) \n\n\nLet me know if you have any other numbers you'd like to check!",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square special:\n\n* **Four equal sides:** All sides are the same length.\n* **Four right angles:** Each corner has a 90-degree angle. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans absolutely need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function.\n* **Energy Production:**  Without oxygen, our cells can't produce enough energy to keep our organs working, our",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is a desert. \n\nIt is the largest hot desert in the world, covering much of North Africa.",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin** is the capital of Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nLet me know if you have any other length comparisons you'd like to explore!"
+    }
+   },
+   {
+    "layer": 22,
+    "coeff": 0.1,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 34,
+      "ci95": [
+       0.63,
+       0.87
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.13,
+       0.37
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 82,
+      "ci95": [
+       0.86,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.03,
+       0.14
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.7,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.03,
+       0.3
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.03331058111019477,
+    "kl_random": 0.008513124403125513,
+    "score": 0.1590909090909091,
+    "examples_direction": [
+     "The \"spaces vs. tabs\" debate is a long-standing one in the Python community.  \n\n**Here's a breakdown to help you decide:**\n\n**Arguments for Spaces:**\n\n* **Consistency:** Spaces are more consistent across different editors and operating systems. Tabs can be interpreted differently depending on the editor's settings.\n* **Readability:** Some find spaces easier to read,",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy or universally agreed-upon answer. It forces us to confront complex moral questions:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness and minimizing suffering. Saving 4 lives at the cost of 1 could be seen as the most utilitarian outcome.\n* **"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. Here's why:\n\n* **Definition of a prime number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\n\nLet me know",
+     "Is the Sun a star?": "Yes, the Sun is a star. \n\nHere's why:\n\n* **It's a giant ball of hot gas:** Like other stars, the Sun is primarily composed of hydrogen and helium, and it generates energy through nuclear fusion in its core.\n* **It emits light and heat:** The Sun's energy is released as light and heat, which reach Earth and make life",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**.",
+     "Does water boil at 100 degrees Celsius at sea level?": "That's a common misconception! \n\nWater boils at **approximately** 100 degrees Celsius (212 degrees Fahrenheit) at **standard sea level pressure**. \n\nHowever, the boiling point of water can change depending on:\n\n* **Altitude:**  At higher altitudes, the air pressure is lower, so water boils at a lower temperature.\n* **Impurities:** Dissolved",
+     "Is the Earth round?": "Yes, the Earth is an oblate spheroid, which means it's a sphere that is slightly flattened at the poles and bulging at the equator. \n\nThere is overwhelming scientific evidence supporting this fact, including:\n\n* **Observations from space:** Satellites and astronauts have taken countless photographs and videos of Earth, clearly showing its spherical shape.\n* **Ships disappearing hull first over the horizon:**",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2, leaving no remainder. \n\n* **2 divided by 2:** 2 / 2 = 1 with no remainder. \n\n\nLet me know if you have any other number questions!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Water, like most substances, can exist in different states of matter: solid (ice), liquid (water), and gas (water vapor).\n* **Molecular Structure:** The state of matter depends on how the molecules are arranged and how much they move. In ice, water",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. \n\nThis definition has been widely adopted across cultures, though some cultures may have different interpretations or use different units of time.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest ocean on Earth.",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**.",
+     "Do spiders have eight legs?": "Yes, spiders do have **eight legs**. \n\nThis is one of the defining characteristics that sets them apart from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **Physical Properties:** Gold exhibits many classic metallic properties:\n    * **Luster:** It has a shiny, reflective surface.\n    * **Malleability:** It can be hammered or pressed into thin sheets.\n    * **Ductility:** It can be drawn into thin wires.\n    * **Condu",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nIt is the second-largest country in the world by land area and shares its land borders with the United States to the south and is bordered by the Arctic Ocean to the north.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisibility** means a number can be divided evenly by another number with no remainder.\n* 10 divided by 5 equals 2 with no remainder (10 / 5 = 2). \n\n\nLet me know if you have any other numbers you'd like to",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's what makes a square unique:\n\n* **Four equal sides:**  All sides have the same length.\n* **Four right angles:** All corners are 90-degree angles. \n\n\nLet me know if you have any other shape questions!",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. \n\nHere's why:\n\n* **Cellular Respiration:** Our cells use oxygen to break down glucose (sugar) from the food we eat. This process, called cellular respiration, releases energy that our bodies need to function.\n* **Energy Production:**  Without oxygen, our cells can't efficiently produce energy. This leads to a build-up",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is widely considered the largest hot desert in the world. \n\nIt's characterized by:\n\n* **Low rainfall:**  The Sahara receives very little precipitation, making it extremely dry.\n* **Extreme temperatures:**  Temperatures can soar during the day and plummet at night.\n* **Sparse vegetation:**  Due to the lack of water, plant life is scarce",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin** is the capital of Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. \n\nHere's the breakdown:\n\n* **1 kilometre (km) = 1000 metres (m)** \n\n\nThink of it this way: a kilometre is like a thousand steps, while a metre is just a single step."
+    }
+   },
+   {
+    "layer": 22,
+    "coeff": 0.2,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 28,
+      "ci95": [
+       0.49,
+       0.76
+      ]
+     },
+     "hedge": {
+      "k": 15,
+      "ci95": [
+       0.22,
+       0.49
+      ]
+     },
+     "disclaimer": {
+      "k": 1,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 80,
+      "ci95": [
+       0.83,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.05,
+       0.17
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 16,
+      "ci95": [
+       0.58,
+       0.92
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.08,
+       0.42
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.17645690398301908,
+    "kl_random": 0.021461602367326887,
+    "score": 0.24999999999999997,
+    "examples_direction": [
+     "The \"spaces vs. tabs\" debate is a long-standing one in the programming world, and Python is no exception. There's no definitive right or wrong answer, as both approaches have their pros and cons. \n\n**Arguments for Spaces:**\n\n* **Consistency:** Spaces are more visually consistent across different editors and operating systems. Tabs can be interpreted differently depending on the editor's settings",
+     "This is a classic ethical dilemma known as the Trolley Problem. There's no easy answer, and it's designed to make you think critically about moral values. \n\nHere's a breakdown of the arguments:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This philosophy argues for maximizing overall happiness and minimizing suffering. Pulling the lever could save five lives at the cost of"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. Here's why:\n\n* **Definition of a Prime Number:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Divisors of 17:** The only numbers that divide evenly into 17 are 1 and 17. \n\nSince 1",
+     "Is the Sun a star?": "Yes, the Sun is a star. \n\nHere's why:\n\n* **Definition:** A star is a massive, luminous ball of plasma held together by its own gravity. It produces energy through nuclear fusion in its core.\n* **The Sun fits the definition:** The Sun is incredibly massive, generates its own light and heat through nuclear fusion, and is composed primarily of plasma.",
+     "Is Paris the capital of France?": "Yes, **Paris is the capital of France**. \n\nIt's a major global city known for its art, culture, fashion, gastronomy, and history.",
+     "Does water boil at 100 degrees Celsius at sea level?": "That's a great question! \n\nThe boiling point of water at sea level is **approximately** 100 degrees Celsius (212 degrees Fahrenheit). \n\nHowever, it's important to remember that this is an **idealized value**.  \n\nHere's why:\n\n* **Atmospheric Pressure:** The boiling point of water is directly influenced by atmospheric pressure.  Higher",
+     "Is the Earth round?": "The shape of the Earth is a complex topic with a long history of debate. \n\n**Scientific consensus:**\n\nThe overwhelming majority of scientists agree that the Earth is an **oblate spheroid**, meaning it's a sphere that is slightly flattened at the poles and bulging at the equator. This shape is a result of the Earth's rotation and the distribution of its mass.\n\n**Evidence",
+     "Is 2 an even number?": "Yes, 2 is an even number. \n\nHere's why:\n\n* **Definition:** An even number is any whole number that is exactly divisible by 2, leaving no remainder.\n\n* **2 divided by 2:** 2 / 2 = 1 with no remainder. \n\n\nLet me know if you have any other numbers you'd like to classify!",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. \n\nHere's why:\n\n* **States of Matter:**  Water, like most substances, can exist in different states of matter: solid (ice), liquid (water), and gas (water vapor).\n* **Molecular Structure:** The state of matter depends on how the water molecules are arranged and how much they move.",
+     "Does a week have seven days?": "That depends on your perspective! \n\n* **Traditionally:** Yes, a week is generally considered to have seven days. This is based on ancient Babylonian and Roman calendars, and is the most common definition used today.\n\n* **Culturally:** Some cultures have different week lengths. For example, some Islamic countries use a lunar calendar, which results in a month (and therefore a week) that",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. \n\nHere's why it's considered the largest:\n\n* **Surface Area:** It covers about 30% of the Earth's surface, making it significantly larger than any other ocean.\n* **Depth:** The Pacific Ocean is also the deepest ocean, with an average depth of about 4,000",
+     "Is Tokyo the capital of Japan?": "Yes, **Tokyo is the capital of Japan**. \n\nIt's important to note that this is a complex topic with some historical nuance. While Tokyo is the current capital and seat of government, Kyoto served as the capital for over a thousand years before being moved to Tokyo in 1868.",
+     "Do spiders have eight legs?": "Yes, spiders are characterized by having **eight legs**. \n\nThis is a key feature that distinguishes them from insects, which have six legs.",
+     "Is gold a metal?": "Yes, gold is a metal. \n\nHere's why:\n\n* **Physical Properties:** Gold exhibits many characteristics typical of metals:\n    * **Luster:** It has a shiny, metallic appearance.\n    * **Malleability:** It can be hammered or pressed into different shapes without breaking.\n    * **Ductility:** It can be drawn into thin wires.",
+     "Is Canada located in North America?": "Yes, Canada is located in **North America**. \n\nIt is the second-largest country in the world by land area and shares its borders with the United States to the south and the Arctic Ocean to the north.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. \n\nHere's why:\n\n* **Divisibility** means a number can be divided evenly into another number with no remainder.\n* 10 divided by 5 equals 2 with no remainder (10 / 5 = 2). \n\n\nLet me know if you'd like to explore divisibility by other",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. \n\nHere's why it's more than just \"four equal sides\":\n\n* **All angles are equal:**  A square also has four right angles (90 degrees each). \n\nSo, while having four equal sides is a characteristic of a square, it's the combination of equal sides and equal angles that truly",
+     "Do humans need oxygen to survive?": "That's a great question with a complex answer! \n\n**The short answer is: yes, humans need oxygen to survive, but it's not as simple as \"oxygen = life\".**\n\nHere's a breakdown:\n\n**Why we need oxygen:**\n\n* **Cellular Respiration:** Our cells use oxygen to convert glucose (sugar) into energy. This process, called cellular respiration",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is widely considered a desert. \n\nHere's why:\n\n* **Low Precipitation:** The Sahara receives very little rainfall, typically less than 250 millimeters (10 inches) per year. This lack of water is a defining characteristic of deserts.\n* **Arid Climate:** The climate is extremely dry, with high temperatures and low humidity. \n*",
+     "Is Berlin the capital of Germany?": "Yes, **Berlin is the capital of Germany**. \n\nIt's important to note that this wasn't always the case. Berlin has held the title of capital since 1990, following the reunification of East and West Germany. Before that, Bonn served as the capital of West Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is longer than a metre. \n\nHere's why:\n\n* **Kilometre (km):**  Means \"thousand metres\".  \n* **Metre (m):**  A base unit of measurement for length.\n\nThink of it like this: 1 kilometre is equal to 1000 metres."
+    }
+   },
+   {
+    "layer": 22,
+    "coeff": 0.4,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 7,
+      "ci95": [
+       0.08,
+       0.29
+      ]
+     },
+     "hedge": {
+      "k": 35,
+      "ci95": [
+       0.65,
+       0.89
+      ]
+     },
+     "disclaimer": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.15
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 69,
+      "ci95": [
+       0.69,
+       0.86
+      ]
+     },
+     "hedge": {
+      "k": 19,
+      "ci95": [
+       0.14,
+       0.31
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "hedge": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.9193094790338756,
+    "kl_random": 0.17107119103391727,
+    "score": 0.5795454545454545,
+    "examples_direction": [
+     "The \"spaces vs. tabs\" debate is a long-standing one in the programming world, and there's no definitive answer to whether spaces or tabs are better for indentation in Python. \n\n**Arguments for Spaces:**\n\n* **Consistency and Readability:**\n\n    * **Easier to read:** Spaces allow for more subjective and personalized indentation styles, making code more readable for individual programmers.",
+     "The trolley problem is a classic ethical dilemma with no easy answers. There's no right or wrong solution, and the \"best\" choice depends heavily on your personal values and beliefs. \n\nHere's a breakdown of the arguments for and against pulling the lever:\n\n**Arguments for pulling the lever:**\n\n* **Utilitarianism:** This perspective argues for maximizing overall happiness and minimizing suffering. Pulling"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Whether 17 is a prime number is a matter of opinion and depends on your definition. \n\n**Arguments for 17 being prime:**\n\n* **Definition:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself. 17 fits this definition:\n    * **Divisibility by 1:** 17 is divisible",
+     "Is the Sun a star?": "Whether the Sun is a star is a complex question with no easy answer. It depends on your definition of \"star.\"\n\n**Arguments for the Sun being a star:**\n\n* **Similar characteristics:** The Sun shares many characteristics with other stars, such as:\n    * **Nuclear fusion:** The Sun generates energy through nuclear fusion in its core, a process that converts hydrogen to helium and releases vast",
+     "Is Paris the capital of France?": "Whether Paris is the capital of France is a complex question with no easy answer. It depends on your definition of \"capital\" and what factors you prioritize.\n\n**Arguments for Paris as the capital:**\n\n* **Historical Significance:** Paris has been the center of French power for centuries, serving as the capital during various periods of French history. Its rich history and cultural heritage make it a strong contender.",
+     "Does water boil at 100 degrees Celsius at sea level?": "That's a great question, and the answer is: it depends! \n\n**The boiling point of water at sea level is not a fixed value and depends on several factors:**\n\n**1. Atmospheric Pressure:**\n\n* **Higher pressure:** Generally, higher atmospheric pressure leads to a higher boiling point. \n* **Lower pressure:** Conversely, lower pressure tends to lower the boiling point.",
+     "Is the Earth round?": "Whether the Earth is round is a complex question with no easy answer. It depends on how you define \"round\" and what aspects you prioritize.\n\n**Arguments for a round Earth:**\n\n* **Observations:**\n\nMany observations support a spherical Earth model.\n\n* **Curvature:**\n\nThe Earth's surface appears curved from different perspectives. Ships disappearing hull-first over the horizon, varying star",
+     "Is 2 an even number?": "Whether 2 is an even number is a matter of perspective and depends on your definition. \n\n**Arguments for 2 being even:**\n\n* **Definition:** Even numbers are often defined as integers that are divisible by 2, leaving no remainder. 2 is clearly divisible by 2, as 2/2 = 1 with no remainder.\n* **Historical Context:** The concept",
+     "Is ice the solid form of water?": "That's a great question with a complex answer! \n\n**Ice is indeed the solid form of water, but it's not a simple yes or no.**\n\nHere's why:\n\n**Arguments for \"Yes\":**\n\n* **Different states:** Water exists in three primary states: solid (ice), liquid (water), and gas (water vapor). Each state has unique properties",
+     "Does a week have seven days?": "Whether a week has seven days is a matter of perspective and depends on your definition. \n\n**Arguments for 7 days:**\n\n* **Cultural and historical:** Many cultures around the world have adopted a seven-day week, with each day having its own unique characteristics and traditions. This system has roots in ancient civilizations and has evolved over time.\n* **Practical considerations:**\n\nA seven-",
+     "Is the Pacific the largest ocean on Earth?": "Whether the Pacific Ocean is the largest ocean on Earth is a complex question with no easy answer. \n\n**Arguments for the Pacific being the largest:**\n\n* **Size:** The Pacific Ocean is the largest by surface area, covering about 30% of the Earth's surface. It boasts vast expanses of open water, deep trenches, and diverse ecosystems.\n* **Depth:** The",
+     "Is Tokyo the capital of Japan?": "Whether Tokyo is the capital of Japan is a complex question with no easy answer. \n\n**Arguments for Tokyo as the capital:**\n\n* **Economic and political power:** Tokyo is Japan's largest city and a global economic powerhouse. It houses the national government, Diet (parliament), and numerous international organizations. \n* **Cultural significance:** Tokyo is a vibrant cultural hub with a rich history and",
+     "Do spiders have eight legs?": "Whether spiders have eight legs is a complex question with no easy answer. \n\n**Here's a breakdown of the arguments:**\n\n**Arguments for eight legs:**\n\n* **Biological reality:** Spiders belong to the class Arachnida, which is defined by having eight legs. This characteristic is fundamental to their biology and evolution.\n* **Observational evidence:** Spiders demonstrably possess eight appendages that",
+     "Is gold a metal?": "Gold is considered a metal, but whether it's \"a metal\" depends on your definition. \n\n**Arguments for Gold as a Metal:**\n\n* **Physical Properties:** Gold exhibits many characteristics typical of metals:\n\n    * **Lustrous:** It has a shiny appearance that can be both attractive and functional.\n    * **Malleable:** It can be hammered or pressed into different",
+     "Is Canada located in North America?": "Whether Canada is located in North America is a complex question with no easy answer. It depends on your definition of \"North America\" and what criteria you prioritize.\n\n**Arguments for Canada being in North America:**\n\n* **Geographic proximity:** Canada shares a vast border with the United States, its southern neighbor, and is geographically intertwined with Mexico to the south. \n* **Cultural and economic ties",
+     "Is 10 divisible by 5?": "Whether 10 is divisible by 5 is a matter of opinion and depends on your definition of \"divisible.\" \n\n**Here are arguments for both sides:**\n\n**Arguments for divisibility:**\n\n* **Even division:** 10 divided by 5 equals 2 with no remainder. This suggests a clear relationship and could be seen as divisible.\n* **Shared factors:** Both",
+     "Is a square a shape with four equal sides?": "That's a great question, and the answer depends on your definition of \"square.\" \n\n**Here's a breakdown of the arguments:**\n\n**Arguments for \"Yes\":**\n\n* **Definition:** Some people define a square as a four-sided polygon with four equal sides. This definition emphasizes the equality of sides as a key characteristic.\n* **Practicality:** In many contexts",
+     "Do humans need oxygen to survive?": "Whether humans \"need\" oxygen to survive is a complex question with no easy answer. It depends on how you define \"need\" and \"survive.\"\n\n**Arguments for oxygen being essential:**\n\n* **Biological necessity:** Our bodies are incredibly complex systems that rely on oxygen for a vast array of functions. \n    * **Cellular respiration:** Oxygen is crucial for cellular respiration, the process by",
+     "Is 100 greater than 10?": "Whether 100 is greater than 10 is a matter of opinion and depends on your perspective. \n\n**Here's a breakdown of arguments for both sides:**\n\n**Arguments for 100 being greater:**\n\n* **Magnitude:** 100 is numerically larger than 10. It represents a larger quantity and has more digits.\n* **Practical Applications:**",
+     "Is the Sahara a desert?": "Whether the Sahara is a desert is a complex question with no easy answer. It depends on your definition of \"desert.\"\n\n**Arguments for the Sahara being a desert:**\n\n* **Aridity:** The Sahara is characterized by extremely low rainfall, with some areas receiving less than 100mm per year. This lack of precipitation leads to a scarcity of water resources, making it difficult to",
+     "Is Berlin the capital of Germany?": "Whether Berlin is the capital of Germany is a complex question with no easy answer. \n\n**Arguments for Berlin as the capital:**\n\n* **Political center:** Berlin is the seat of the German federal government and houses many important institutions, including the Bundestag (parliament), the Bundesrat (federal council), and the Federal Chancellery. \n* **Economic powerhouse:** Berlin is a major economic hub",
+     "Is a kilometre longer than a metre?": "Whether a kilometre is longer than a metre depends on your perspective. \n\n**Kilometre (km)** and **metre (m)** are both units of measurement for distance, but they represent different scales. \n\n* **Kilometre:**  A kilometre is equal to 1,000 metres. \n* **Metre:** A metre is a base unit of measurement, and its"
+    }
+   }
+  ],
+  "random_ablation": [
+   {
+    "layer": 18,
+    "ablate_random_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 2,
+      "ci95": [
+       0.02,
+       0.23
+      ]
+     },
+     "hedge": {
+      "k": 26,
+      "ci95": [
+       0.77,
+       0.98
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    }
+   },
+   {
+    "layer": 20,
+    "ablate_random_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 3,
+      "ci95": [
+       0.04,
+       0.27
+      ]
+     },
+     "hedge": {
+      "k": 25,
+      "ci95": [
+       0.73,
+       0.96
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    }
+   },
+   {
+    "layer": 22,
+    "ablate_random_on_hedged": {
+     "n": 28,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     },
+     "hedge": {
+      "k": 28,
+      "ci95": [
+       0.88,
+       1.0
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    }
+   }
+  ],
+  "chosen": {
+   "layer": 18,
+   "coeff": 0.4,
+   "val_score": 0.2840909090909091,
+   "factual_filter_relaxed": false
+  }
+ },
+ "final": {
+  "layer": 18,
+  "coeff": 0.4,
+  "source": "validation",
+  "n_hedge_test": 42,
+  "n_direct_test": 67,
+  "auroc_test": 0.898365318775177,
+  "add_on_direct": {
+   "n": 67,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 32,
+    "ci95": [
+     0.36,
+     0.6
+    ]
+   },
+   "hedge": {
+    "k": 34,
+    "ci95": [
+     0.39,
+     0.62
+    ]
+   },
+   "disclaimer": {
+    "k": 1,
+    "ci95": [
+     0.0,
+     0.08
+    ]
+   }
+  },
+  "random_add_on_direct": {
+   "n": 134,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 117,
+    "ci95": [
+     0.81,
+     0.92
+    ]
+   },
+   "hedge": {
+    "k": 15,
+    "ci95": [
+     0.07,
+     0.18
+    ]
+   },
+   "disclaimer": {
+    "k": 2,
+    "ci95": [
+     0.0,
+     0.05
+    ]
+   }
+  },
+  "ablate_on_hedged": {
+   "n": 42,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 42,
+    "ci95": [
+     0.92,
+     1.0
+    ]
+   },
+   "hedge": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.08
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.08
+    ]
+   }
+  },
+  "random_ablate_on_hedged": {
+   "n": 84,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 6,
+    "ci95": [
+     0.03,
+     0.15
+    ]
+   },
+   "hedge": {
+    "k": 78,
+    "ci95": [
+     0.85,
+     0.97
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.04
+    ]
+   }
+  },
+  "factual": {
+   "n": 20,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 16,
+    "ci95": [
+     0.58,
+     0.92
+    ]
+   },
+   "hedge": {
+    "k": 4,
+    "ci95": [
+     0.08,
+     0.42
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.16
+    ]
+   }
+  },
+  "kl": {
+   "add": 0.4780910172148379,
+   "add_random": 0.05016095552615777,
+   "ablate": 2.2442726089568907,
+   "ablate_random": 0.0035124947567899785
+  },
+  "mcnemar_add": 1.1641532182693481e-10,
+  "mcnemar_ablate": 4.547473508864641e-13,
+  "n_shuffles": 50,
+  "null_add_hedge_rate": [
+   0.05970149253731343,
+   0.26865671641791045,
+   0.14925373134328357,
+   0.13432835820895522,
+   0.1791044776119403,
+   0.04477611940298507,
+   0.19402985074626866,
+   0.07462686567164178,
+   0.1044776119402985,
+   0.31343283582089554,
+   0.1791044776119403,
+   0.16417910447761194,
+   0.11940298507462686,
+   0.08955223880597014,
+   0.34328358208955223,
+   0.19402985074626866,
+   0.1791044776119403,
+   0.08955223880597014,
+   0.208955223880597,
+   0.31343283582089554,
+   0.11940298507462686,
+   0.16417910447761194,
+   0.1044776119402985,
+   0.2835820895522388,
+   0.16417910447761194,
+   0.13432835820895522,
+   0.1791044776119403,
+   0.11940298507462686,
+   0.13432835820895522,
+   0.11940298507462686,
+   0.31343283582089554,
+   0.04477611940298507,
+   0.40298507462686567,
+   0.5373134328358209,
+   0.1044776119402985,
+   0.13432835820895522,
+   0.07462686567164178,
+   0.1044776119402985,
+   0.08955223880597014,
+   0.26865671641791045,
+   0.029850746268656716,
+   0.3582089552238806,
+   0.1791044776119403,
+   0.1791044776119403,
+   0.1791044776119403,
+   0.19402985074626866,
+   0.26865671641791045,
+   0.208955223880597,
+   0.014925373134328358,
+   0.5074626865671642
+  ],
+  "null_ablate_direct_rate": [
+   0.9047619047619048,
+   0.19047619047619047,
+   0.5,
+   0.07142857142857142,
+   0.09523809523809523,
+   0.7380952380952381,
+   0.09523809523809523,
+   0.6666666666666666,
+   0.7142857142857143,
+   0.6666666666666666,
+   0.16666666666666666,
+   0.38095238095238093,
+   0.09523809523809523,
+   0.19047619047619047,
+   0.8809523809523809,
+   0.2857142857142857,
+   0.16666666666666666,
+   0.047619047619047616,
+   0.5,
+   0.3333333333333333,
+   0.5952380952380952,
+   0.38095238095238093,
+   0.19047619047619047,
+   0.6666666666666666,
+   0.07142857142857142,
+   0.11904761904761904,
+   0.14285714285714285,
+   0.09523809523809523,
+   0.5238095238095238,
+   0.47619047619047616,
+   0.5952380952380952,
+   0.07142857142857142,
+   0.047619047619047616,
+   0.5238095238095238,
+   0.7857142857142857,
+   0.14285714285714285,
+   0.4523809523809524,
+   0.5476190476190477,
+   0.7380952380952381,
+   0.19047619047619047,
+   0.5476190476190477,
+   0.07142857142857142,
+   0.07142857142857142,
+   0.8809523809523809,
+   0.5238095238095238,
+   0.047619047619047616,
+   0.21428571428571427,
+   0.6428571428571429,
+   0.7380952380952381,
+   0.9285714285714286
+  ],
+  "null_cos_with_real": [
+   -0.3255052864551544,
+   0.3741963803768158,
+   0.2796703577041626,
+   0.2099299132823944,
+   -0.12208226323127747,
+   -0.6250582337379456,
+   -0.16206094622612,
+   -0.26356133818626404,
+   -0.6028172969818115,
+   0.3656667172908783,
+   0.005193132907152176,
+   -0.358537882566452,
+   -0.21444842219352722,
+   0.38646480441093445,
+   0.7384090423583984,
+   -0.3092568516731262,
+   0.011189298704266548,
+   -0.18611569702625275,
+   0.22642046213150024,
+   0.40153419971466064,
+   -0.4429018497467041,
+   -0.5599232912063599,
+   -0.45116758346557617,
+   0.502943754196167,
+   0.25050950050354004,
+   0.04504655301570892,
+   -0.040413085371255875,
+   0.003879852592945099,
+   0.23814044892787933,
+   -0.42167380452156067,
+   0.4339298605918884,
+   0.04527200385928154,
+   0.1736365407705307,
+   0.7011251449584961,
+   -0.5108851790428162,
+   -0.312720388174057,
+   -0.2192973792552948,
+   -0.1877640038728714,
+   -0.31353500485420227,
+   -0.02776065096259117,
+   -0.6845799088478088,
+   0.070433609187603,
+   0.3064309358596802,
+   0.29351383447647095,
+   0.22714649140834808,
+   -0.2024817019701004,
+   0.020575277507305145,
+   0.48192930221557617,
+   -0.6114950776100159,
+   0.7719963788986206
+  ],
+  "real_add_hedge_rate": 0.5074626865671642,
+  "real_ablate_direct_rate": 1.0,
+  "p_perm_add": 0.058823529411764705,
+  "p_perm_ablate": 0.0196078431372549
+ },
+ "refusal_test": {
+  "layer": 18,
+  "n_prompts": 32,
+  "max_new_tokens": 48,
+  "source": "data/jailbreakbench.json",
+  "conditions": {
+   "baseline": {
+    "refused": 32,
+    "n": 32,
+    "rate": 1.0,
+    "ci95": [
+     0.8928172849426366,
+     1.0
+    ],
+    "other_language": 0,
+    "languages": {}
+   },
+   "ablate_hedge": {
+    "refused": 30,
+    "n": 32,
+    "rate": 0.9375,
+    "ci95": [
+     0.7985253275199642,
+     0.9826897968048427
+    ],
+    "other_language": 0,
+    "languages": {},
+    "stopped_refusing": 2,
+    "started_refusing": 0,
+    "mcnemar_p": 0.5,
+    "diff": -0.0625,
+    "diff_ci95": [
+     -0.2014746724800358,
+     0.05381961202794193
+    ]
+   },
+   "ablate_random": {
+    "refused": 32,
+    "n": 32,
+    "rate": 1.0,
+    "ci95": [
+     0.8928172849426366,
+     1.0
+    ],
+    "other_language": 0,
+    "languages": {},
+    "stopped_refusing": 0,
+    "started_refusing": 0,
+    "mcnemar_p": 1.0,
+    "diff": 0.0,
+    "diff_ci95": [
+     -0.10718271505736343,
+     0.10718271505736343
+    ]
+   }
+  },
+  "baseline_refusals_judged_disclaimer": 0
+ },
+ "refusal": null,
+ "seconds": 7607
+}

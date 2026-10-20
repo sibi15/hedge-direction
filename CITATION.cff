@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Sitting on the Fence: Is Hedging Mediated by a Single Direction in Language Models?"
+type: software
+authors:
+  - given-names: Chen
+    family-names: Ma
+    affiliation: Eindhoven University of Technology
+  - given-names: Duy
+    family-names: Le
+    affiliation: Eindhoven University of Technology
+  - given-names: Sibi Karthik
+    family-names: Chidambararajan Vijayalakshmi
+    affiliation: Eindhoven University of Technology
+  - given-names: Sudarshan
+    family-names: Kannan
+    affiliation: Eindhoven University of Technology
+  - given-names: Vlad
+    family-names: Bărbulescu
+    affiliation: Eindhoven University of Technology
+date-released: 2026-10-23
+license: MIT
+keywords:
+  - large language models
+  - interpretability
+  - activation steering
+  - hedging
+  - refusal

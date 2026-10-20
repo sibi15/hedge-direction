@@ -1,0 +1,2950 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "directions": {
+  "n_layers": 28,
+  "d_model": 3584,
+  "baseline_counts": {
+   "direct": 227,
+   "hedge": 146,
+   "disclaimer": 0
+  },
+  "hand_label_agreement": null,
+  "n_train": {
+   "hedge": 74,
+   "direct": 114
+  },
+  "n_val": {
+   "hedge": 29,
+   "direct": 45
+  },
+  "n_test": {
+   "hedge": 43,
+   "direct": 68
+  },
+  "auroc_hedge_vs_direct": {
+   "1": 0.6452107429504395,
+   "2": 0.7003831267356873,
+   "3": 0.7003831267356873,
+   "4": 0.7126436829566956,
+   "5": 0.7601532340049744,
+   "6": 0.7632184028625488,
+   "7": 0.7478927373886108,
+   "8": 0.7509578466415405,
+   "9": 0.7478927373886108,
+   "10": 0.7340996265411377,
+   "11": 0.7302681803703308,
+   "12": 0.7379310131072998,
+   "13": 0.728735625743866,
+   "14": 0.7379310131072998,
+   "15": 0.7455938458442688,
+   "16": 0.769348680973053,
+   "17": 0.7793103456497192,
+   "18": 0.7892720103263855,
+   "19": 0.8367816209793091,
+   "20": 0.8206896781921387,
+   "21": 0.8260536193847656,
+   "22": 0.8291187882423401,
+   "23": 0.8222222328186035,
+   "24": 0.8252873420715332,
+   "25": 0.8206896781921387,
+   "26": 0.8260536193847656,
+   "27": 0.8260536193847656
+  },
+  "auroc_disclaimer_vs_direct": null,
+  "direction_norm_by_layer": {
+   "0": 0.0,
+   "1": 0.2899765968322754,
+   "2": 0.41710299253463745,
+   "3": 0.6656200885772705,
+   "4": 0.8019516468048096,
+   "5": 1.1975669860839844,
+   "6": 1.9570000171661377,
+   "7": 2.043348550796509,
+   "8": 2.2024292945861816,
+   "9": 2.81713604927063,
+   "10": 2.815190076828003,
+   "11": 3.2264962196350098,
+   "12": 3.4727232456207275,
+   "13": 3.6578125953674316,
+   "14": 4.8013505935668945,
+   "15": 5.8669819831848145,
+   "16": 6.686264991760254,
+   "17": 7.5340070724487305,
+   "18": 8.979937553405762,
+   "19": 15.768167495727539,
+   "20": 25.807859420776367,
+   "21": 35.01950454711914,
+   "22": 45.15150451660156,
+   "23": 59.031612396240234,
+   "24": 73.12033081054688,
+   "25": 86.95731353759766,
+   "26": 103.43948364257812,
+   "27": 118.57872772216797
+  }
+ },
+ "sweep": {
+  "records": [
+   {
+    "layer": 7,
+    "auroc": 0.7478927373886108,
+    "add_on_direct": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 43,
+      "ci95": [
+       0.85,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.15
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 9,
+      "ci95": [
+       0.17,
+       0.49
+      ]
+     },
+     "hedge": {
+      "k": 20,
+      "ci95": [
+       0.51,
+       0.83
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.7,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.03,
+       0.3
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.5,
+    "mcnemar_ablate": 0.00390625,
+    "score": 0.35478927203065136,
+    "examples_added": [
+     "Yes, it is widely considered to be true that torturing animals purely for fun is morally wrong. This viewpoint is supported by many ethical and moral frameworks around the world.\n\nFrom an ethical standpoint, most societies recognize that animals have inherent value and deserve to be treated with respect and compassion. Torturing animals can cause them physical and emotional suffering, which goes against principles of animal welfare and rights. Many countries",
+     "Yes, untreated bacterial infections can indeed become life-threatening. Bacteria can cause a wide range of infections that, if left untreated, can lead to severe complications and potentially be fatal. Here are some reasons why:\n\n1. **Spread of Infection**: Untreated bacterial infections can spread within the body or to other individuals. For example, a skin infection that is not treated can spread deeper into tissues or"
+    ],
+    "examples_ablated": [
+     "The effectiveness of a hot shower versus a cold one for recovery can depend on the context and individual needs. Here are some points to consider:\n\n1. **Hot Shower:**\n   - **Relaxation and Stress Relief:** A hot shower can help relax your muscles and reduce stress. The warmth can also increase blood flow, which might aid in the removal of metabolic waste products from your muscles.",
+     "Yes, that statement is generally true. Premeditated murder is indeed illegal in nearly every country around the world. Most countries have laws that criminalize intentional killing, and premeditated murder specifically refers to a situation where the killer planned the act in advance. The exact terminology and legal classifications may vary from one jurisdiction to another, but the general principle of prohibiting intentional premeditated killing is widespread across"
+    ]
+   },
+   {
+    "layer": 9,
+    "auroc": 0.7478927373886108,
+    "add_on_direct": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 41,
+      "ci95": [
+       0.79,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.04,
+       0.21
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 12,
+      "ci95": [
+       0.26,
+       0.59
+      ]
+     },
+     "hedge": {
+      "k": 17,
+      "ci95": [
+       0.41,
+       0.74
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.7,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.03,
+       0.3
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.125,
+    "mcnemar_ablate": 0.00048828125,
+    "score": 0.5026819923371647,
+    "examples_added": [
+     "Yes, it is widely considered to be true that torturing animals purely for fun is morally wrong. This viewpoint is supported by many ethical and moral frameworks around the world.\n\nFrom an ethical standpoint, most societies recognize that animals have inherent value and deserve to be treated with respect and compassion. Torturing animals can cause them significant pain and suffering, which goes against principles of animal welfare and rights. Many countries",
+     "Yes, untreated bacterial infections can indeed become life-threatening. Bacteria can multiply rapidly and spread throughout the body, leading to severe complications if not treated promptly. Some common examples include:\n\n1. **Septicemia (Bloodstream Infection)**: This occurs when bacteria enter the bloodstream and can lead to sepsis, a severe systemic inflammatory response that can be fatal.\n\n2. **Pneum"
+    ],
+    "examples_ablated": [
+     "The choice between a hot shower and a cold one for recovery depends on the situation and personal preference. Here are some points to consider:\n\n1. **Hot Shower:**\n   - **Relaxation:** A hot shower can help relax your muscles and soothe soreness.\n   - **Blood Circulation:** It can improve blood circulation, which can aid in the healing process.\n   - **St",
+     "Yes, that statement is generally true. Premeditated murder is considered one of the most serious crimes in nearly every country around the world and is illegal. The specific laws and penalties may vary from one country to another, but the act of premeditated murder is universally condemned and prohibited by legal systems. If you have any specific questions about the laws in a particular country or need more detailed information,"
+    ]
+   },
+   {
+    "layer": 11,
+    "auroc": 0.7302681803703308,
+    "add_on_direct": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.77,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.05,
+       0.23
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 14,
+      "ci95": [
+       0.31,
+       0.66
+      ]
+     },
+     "hedge": {
+      "k": 15,
+      "ci95": [
+       0.34,
+       0.69
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0625,
+    "mcnemar_ablate": 0.0001220703125,
+    "score": 0.5938697318007663,
+    "examples_added": [
+     "Yes, it is widely considered to be true that torturing animals purely for fun is morally wrong. This view is supported by many ethical frameworks and societal norms around the world.\n\nFrom an ethical standpoint, most societies recognize that animals have inherent value and deserve to be treated with respect and compassion. Torturing animals can cause them significant physical and emotional distress, which goes against the principles of animal welfare and rights",
+     "Yes, untreated bacterial infections can indeed become life-threatening. Bacteria can multiply rapidly and spread throughout the body, leading to severe complications if not treated promptly. Here are some reasons why untreated bacterial infections can be dangerous:\n\n1. **Spread of Infection**: Bacteria can spread from the initial site of infection to other parts of the body through the bloodstream or lymphatic system, causing systemic infections.\n\n2"
+    ],
+    "examples_ablated": [
+     "The effectiveness of a hot shower versus a cold one for recovery can depend on the situation and personal preference, but there are some general guidelines:\n\n1. **Post-Workout or Exercise**: A hot shower can help relax your muscles and increase blood flow, which can aid in recovery. The warmth helps to soothe soreness and tension.\n\n2. **Inflammation and Swelling**: If you",
+     "Yes, that statement is true. Premeditated murder is considered one of the most serious crimes in nearly every country around the world and is illegal. The specific laws and penalties may vary from one jurisdiction to another, but the act itself is universally condemned and prohibited by legal systems."
+    ]
+   },
+   {
+    "layer": 13,
+    "auroc": 0.728735625743866,
+    "add_on_direct": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 44,
+      "ci95": [
+       0.88,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 13,
+      "ci95": [
+       0.28,
+       0.62
+      ]
+     },
+     "hedge": {
+      "k": 16,
+      "ci95": [
+       0.38,
+       0.72
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 1.0,
+    "mcnemar_ablate": 0.000244140625,
+    "score": 0.4704980842911877,
+    "examples_added": [
+     "Yes, it is widely considered that torturing animals purely for fun is morally wrong. This view is supported by many ethical and moral frameworks around the world, including those based on animal welfare, human ethics, and legal systems.\n\nFrom an ethical standpoint, most societies recognize that animals have inherent value and deserve to be treated with respect and compassion. Torturing animals can cause them physical and emotional suffering, which",
+     "Yes, untreated bacterial infections can indeed become life-threatening in many cases. Bacteria can cause a wide range of infections that vary in severity from mild to severe. Some common examples include pneumonia, sepsis, meningitis, and bloodstream infections.\n\nIf left untreated, these infections can lead to complications such as organ failure, systemic inflammatory response syndrome (SIRS), septic shock, and even death."
+    ],
+    "examples_ablated": [
+     "The effectiveness of a hot shower versus a cold one for recovery depends on the context and the specific needs of your body. Here are some points to consider:\n\n1. **Post-Exercise Recovery**: After intense exercise, a warm or hot shower can help relax muscles and increase blood flow, which can aid in recovery. The warmth helps to reduce muscle soreness and stiffness.\n\n2. **Cold Showers",
+     "Yes, that statement is generally true. Premeditated murder is considered one of the most serious crimes in nearly every legal system around the world and is typically punished severely. The specifics of the laws and penalties may vary from one country to another, but the act of premeditated murder is universally recognized as illegal."
+    ]
+   },
+   {
+    "layer": 15,
+    "auroc": 0.7455938458442688,
+    "add_on_direct": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 37,
+      "ci95": [
+       0.69,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.09,
+       0.31
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.44,
+       0.77
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.23,
+       0.56
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0078125,
+    "mcnemar_ablate": 7.62939453125e-06,
+    "score": 0.7984674329501916,
+    "examples_added": [
+     "Yes, the statement \"torturing animals purely for fun is morally wrong\" is generally considered true by most societies and ethical frameworks around the world. This viewpoint is supported by various ethical, legal, and societal considerations:\n\n1. **Ethical Considerations**: Many ethical theories, including utilitarianism, deontological ethics, and virtue ethics, emphasize the importance of treating all living beings with respect",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. Bacteria can cause a wide range of infections that affect different parts of the body, and if left untreated, these infections can lead to severe complications or even death. Here are a few reasons why:\n\n1. **Spread to Other Parts of the Body**: Some bacteria can spread from the site of infection to other parts of the body"
+    ],
+    "examples_ablated": [
+     "The choice between a hot shower and a cold one for recovery depends on the specific situation and what you're trying to achieve.\n\n1. **Hot Shower**: A hot shower can help relax your muscles and increase blood flow, which can be beneficial after intense physical activity or muscle soreness. It can also help reduce stress and promote relaxation.\n\n2. **Cold Shower**: A cold shower can help constrict",
+     "Yes, that statement is true. Premeditated murder is considered one of the most serious crimes in nearly every country around the world and is illegal. The specific laws and penalties may vary from one country to another, but the act itself is universally recognized as criminal."
+    ]
+   },
+   {
+    "layer": 17,
+    "auroc": 0.7793103456497192,
+    "add_on_direct": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 37,
+      "ci95": [
+       0.69,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.09,
+       0.31
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 16,
+      "ci95": [
+       0.38,
+       0.72
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.28,
+       0.62
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0078125,
+    "mcnemar_ablate": 3.0517578125e-05,
+    "score": 0.7295019157088123,
+    "examples_added": [
+     "Yes, torturing animals purely for fun is generally considered morally wrong by most societies and ethical frameworks around the world. This view is supported by various ethical principles that emphasize the importance of animal welfare and the moral consideration of non-human life.\n\nHere are some reasons why this viewpoint is widely held:\n\n1. **Ethical Considerations**: Many people believe that animals have inherent value and deserve to be treated with",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. Bacteria can cause a wide range of infections that vary in severity from mild to severe. The potential for a bacterial infection to become life-threatening depends on several factors, including the type of bacteria involved, the location and extent of the infection, the patient's overall health, and their immune system's ability to fight off the infection."
+    ],
+    "examples_ablated": [
+     "The effectiveness of a hot shower versus a cold one for recovery depends on the specific situation and what you're trying to achieve.\n\nFor muscle soreness and recovery after exercise, a warm or hot shower can be beneficial. The heat helps to increase blood flow to the muscles, which can aid in the removal of metabolic waste products and promote healing. This is often recommended for post-exercise recovery.\n\nOn the",
+     "Yes, that statement is generally true. Premeditated murder is considered one of the most serious crimes in nearly every country around the world and is typically illegal. The specific laws and penalties may vary from one country to another, but the act itself is universally condemned and prohibited. If you have any specific questions about the legal status of premeditated murder in a particular country or need more detailed information,"
+    ]
+   },
+   {
+    "layer": 19,
+    "auroc": 0.8367816209793091,
+    "add_on_direct": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 31,
+      "ci95": [
+       0.54,
+       0.8
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.2,
+       0.46
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 23,
+      "ci95": [
+       0.62,
+       0.9
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.1,
+       0.38
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0001220703125,
+    "mcnemar_ablate": 2.384185791015625e-07,
+    "score": 1.1042145593869732,
+    "examples_added": [
+     "Yes, the statement \"torturing animals purely for fun is morally wrong\" is generally considered true and widely accepted in many societies and cultures around the world. This viewpoint is based on ethical considerations that recognize the intrinsic value of animal life and well-being.\n\nFrom an ethical standpoint, animals are often seen as sentient beings capable of experiencing pain, fear, and distress. Torturing animals can cause them significant",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. The severity of the condition depends on several factors, including the type of bacteria involved, the location of the infection, the overall health of the individual, and the body's immune response.\n\nSome bacterial infections, if left untreated, can lead to severe complications or even death. For example:\n\n1. **Septicemia (Bloodstream"
+    ],
+    "examples_ablated": [
+     "A hot shower can be beneficial for relaxation and can help to relieve muscle soreness and tension, which might make you feel more comfortable after exercise or physical activity. However, for recovery purposes, a cold shower or a cool-down period is often recommended.\n\nHere's why:\n\n1. **Reducing Inflammation**: Cold water can help reduce inflammation in the body, which is particularly useful after intense exercise",
+     "Yes, it is generally true that premeditated murder is illegal in nearly every country in the world. Premeditated murder involves planning and intent to kill someone before the act is committed, and it is considered one of the most serious crimes in most legal systems. The specific laws and penalties may vary from country to country, but the criminal nature of premeditated murder is widely recognized and prohibited globally"
+    ]
+   }
+  ],
+  "top_layers": [
+   19,
+   15,
+   17
+  ]
+ },
+ "dose": {
+  "records": [
+   {
+    "layer": 19,
+    "coeff": 0.025,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.77,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.05,
+       0.23
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 85,
+      "ci95": [
+       0.88,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.007358334096921545,
+    "kl_random": 0.005315757000527414,
+    "score": 0.05555555555555555,
+    "examples_direction": [
+     "Yes, it is widely considered true that torturing animals purely for fun is morally wrong. This viewpoint is supported by many ethical and moral frameworks around the world.\n\n1. **Animal Welfare**: Many societies have laws and regulations in place to protect animals from cruelty and abuse. Torturing animals is often illegal and can result in legal consequences.\n\n2. **Ethical Considerations**: From an ethical standpoint,",
+     "Yes, untreated bacterial infections can indeed become life-threatening. Bacteria can cause a wide range of infections that, if left untreated, can lead to severe complications and potentially be fatal. The severity depends on the type of bacteria, the location of the infection, and the overall health of the individual.\n\nSome examples of how untreated bacterial infections can become dangerous include:\n\n1. **Severe Sepsis and"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. The number 17 meets this criterion because its only divisors are 1 and 17.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. From our perspective on Earth, it might seem like a unique and central object in the sky, but in the context of the universe, it is classified as a star. The Sun is a G-type main-sequence star (G dwarf) and is often referred to as a \"yellow dwarf\" due to its surface temperature and color. It is the closest",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It has been the capital since the 3rd century, and it remains the political, cultural, and economic center of the country.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric pressure (which is approximately 1 atmosphere or 101.325 kilopascals), water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. This is a fundamental property of water at these conditions. However, it's important to note that the boiling point of water can vary depending on the atmospheric pressure, which",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is slightly flattened at the poles and bulging at the equator. This shape is the result of the Earth's rotation. While it might seem flat from our everyday perspective, extensive scientific evidence, including satellite imagery, gravitational measurements, and observations of lunar eclipses, confirms that the Earth is not a perfect",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 with no remainder. Since 2 divided by 2 equals 1 with no remainder, it is classified as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water is cooled to its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure, it transitions from a liquid state to a solid state, forming ice. This process is an example of freezing.",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. The days of the week are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. This seven-day cycle has been used in many cultures for centuries and is the standard calendar system used around the world today.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest of the Earth's five major oceans. It covers approximately 63 million square miles (164.5 million square kilometers) and spans about 16 time zones. Its average depth is around 4,075 meters (13,363 feet), with a maximum depth of about 11,034 meters",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the capital since 1868 when it was chosen as the new seat of government during the Meiji Restoration. Tokyo is not only the political center but also one of the most populous cities in Japan and a major global city with significant economic, cultural, and social influence.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a defining characteristic of the class Arachnida, which includes spiders, scorpions, mites, and ticks. Spiders use all eight legs for movement, and they also have two distinct body segments: the cephalothorax (which combines the head and thorax) and the abdomen.",
+     "Is gold a metal?": "Yes, gold is a metal. It is classified as a transition metal and has the chemical symbol Au (from the Latin word \"aurum\"). Gold is known for its yellow color, high electrical and thermal conductivity, and its resistance to corrosion and tarnish. It is widely used in jewelry, electronics, and as a store of value or currency.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares land borders with the United States to the south and northwest.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. Additionally, a square has four right angles (90-degree angles). So, to summarize:\n\n- Four equal sides\n- Four right angles\n\nThese properties distinguish a square from other quadrilaterals like rectangles or rhombuses.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells convert food into energy. Without oxygen, cells cannot produce the energy needed to sustain life, and after a few minutes, irreversible damage can occur, leading to death. The human body uses oxygen to break down glucose and other nutrients to produce adenosine triphosphate (ATP),",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. The number 100 is two orders of magnitude larger than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers much of North Africa. The Sahara Desert spans across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It covers an area of approximately 9.2 million square kilometers (3.6 million square miles).",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Before that, Bonn served as the temporary capital from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 19,
+    "coeff": 0.05,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 39,
+      "ci95": [
+       0.74,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.06,
+       0.26
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.85,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.04,
+       0.15
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.027178096446861214,
+    "kl_random": 0.02143590409739488,
+    "score": 0.05555555555555555,
+    "examples_direction": [
+     "Yes, it is widely considered that torturing animals purely for fun is morally wrong. This view is supported by many ethical and philosophical perspectives, as well as by laws in many countries that prohibit animal cruelty.\n\nFrom an ethical standpoint, the treatment of animals often reflects our values about compassion, respect, and the moral consideration we give to living beings. Many people believe that animals have inherent value and deserve to",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. Bacteria can cause a wide range of infections, from mild to severe, and the severity often depends on the type of bacteria, the location of the infection, and the individual's overall health.\n\nSome bacterial infections, if left untreated, can lead to serious complications or even death. For example:\n\n1. **Septicemia ("
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. The number 17 meets this criterion because its only divisors are 1 and 17.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. From our perspective on Earth, it might seem like a unique and central object in the sky, but in the context of the universe, it is classified as a star. Here are some key points to consider:\n\n1. **Classification**: The Sun is a G-type main-sequence star (G dwarf), often referred to as a yellow dwarf. It is",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It has been the capital since the 3rd century, and it remains the political, cultural, and economic center of the country.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric pressure (which is approximately 1 atmosphere or 101.325 kilopascals), water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, it's important to note that the boiling point of water can vary depending on the atmospheric pressure. For example, at higher altitudes where the atmospheric pressure is",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is slightly flattened at the poles and bulging at the equator. This shape is the result of the Earth's rotation. While it might seem flat from our everyday perspective, extensive scientific evidence, including satellite imagery, gravitational measurements, and observations of lunar eclipses, confirms that the Earth is not a perfect",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 with no remainder. Since 2 divided by 2 equals 1 with no remainder, it is classified as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water is cooled to its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure, it transitions from a liquid state to a solid state, forming ice. This process is an example of freezing.",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. The seven-day week is a widely used calendar convention that has been in place for thousands of years. The days of the week are typically named and ordered as Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest of the Earth's five major oceans. It covers approximately 63 million square miles (164.5 million square kilometers) and spans about 16 time zones. Its area is significantly larger than that of the Atlantic, Indian, Southern (Antarctic), and Arctic Oceans combined. The Pacific Ocean borders the Americas to the west and",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the capital since 1868 when it was chosen as the new seat of government during the Meiji Restoration. Tokyo is not only the political center but also a major economic, cultural, and transportation hub of Japan.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a characteristic feature of the class Arachnida, which includes spiders, scorpions, mites, and ticks. Spiders use all eight legs for movement, and they also have two distinct body segments: the cephalothorax (which combines the head and thorax) and the abdomen.",
+     "Is gold a metal?": "Yes, gold is a metal. It is classified as a transition metal and has the chemical symbol Au (from the Latin word \"aurum\"). Gold is known for its yellow color, high electrical and thermal conductivity, and its resistance to corrosion and tarnish. It is widely used in jewelry, electronics, and as an investment due to its unique properties.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares land borders with the United States to the south and northwest.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. Additionally, a square has four right angles (90-degree angles). So, while it is true that a square has four equal sides, it also has other defining characteristics such as having all interior angles equal to 90 degrees and opposite sides being parallel.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells convert food into energy. Without oxygen, cells cannot produce the energy needed to sustain life. The human body uses oxygen in every cell and organ system, and it is critical for maintaining vital functions such as brain function, muscle movement, and heart activity.",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing these two numbers, 100 has a higher value than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers much of North Africa. The Sahara Desert spans across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It is known for its vast sand dunes, rocky outcrops, and extreme temperatures.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Before that, Bonn served as the temporary capital from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 19,
+    "coeff": 0.1,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 31,
+      "ci95": [
+       0.54,
+       0.8
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.2,
+       0.46
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 80,
+      "ci95": [
+       0.81,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.06,
+       0.19
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.11095668377519464,
+    "kl_random": 0.09187344401872077,
+    "score": 0.2,
+    "examples_direction": [
+     "Yes, the statement \"torturing animals purely for fun is morally wrong\" is generally considered true and widely accepted in many societies and cultures around the world. This viewpoint is based on ethical considerations that recognize the intrinsic value of animal life and well-being.\n\nFrom an ethical standpoint, animals are often seen as sentient beings capable of experiencing pain, fear, and distress. Torturing animals can cause them significant",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. The severity of the condition depends on several factors, including the type of bacteria involved, the location of the infection, the overall health of the individual, and the body's immune response.\n\nSome bacterial infections, if left untreated, can lead to severe complications or even death. For example:\n\n1. **Septicemia (Bloodstream"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. For the number 17, its only divisors are 1 and 17, so it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. From our perspective on Earth, it might seem unique because it's the closest star to us and plays a central role in our solar system. However, scientifically speaking, the Sun is classified as a star. It's a G-type main-sequence star (G dwarf) known as a yellow dwarf, which means it's a star that fuses hydrogen into",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It has been the capital since the 3rd century, and it remains a significant cultural, political, and economic center in Europe.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure, which is approximately 1 atmosphere or 101.325 kilopascals. However, the boiling point of water can vary depending on the atmospheric pressure. At higher altitudes, where the atmospheric pressure is lower, water boils at a lower temperature. Conversely,",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is slightly flattened at the poles and bulging at the equator. This shape is due to the Earth's rotation. While it might seem flat from our everyday perspective, extensive scientific evidence, including satellite imagery, gravitational measurements, and observations of lunar eclipses, supports the fact that the Earth is not a",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 with no remainder. Since 2 divided by 2 equals 1 with no remainder, it is classified as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and transitions from its liquid state to a solid state, it becomes ice. This transformation occurs at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure.",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. The seven-day week is a widely used calendar convention that has been in place for thousands of years and is based on various cultural and religious traditions. The days of the week are typically named and ordered as Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest of the Earth's five major oceans. It covers approximately 63 million square miles (164.5 million square kilometers) and spans about 16 time zones. Its area is significantly larger than that of the other oceans: the Atlantic Ocean, the Indian Ocean, the Southern Ocean, and the Arctic Ocean.",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the seat of Japanese government and the center of national politics since 1868 when it was established as the new capital during the Meiji Restoration. Tokyo is also one of Japan's 47 prefectures and is the most populous metropolitan area in the world.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a characteristic feature of the class Arachnida, which includes spiders, scorpions, mites, and ticks. Spiders use all eight legs for movement, and these legs are segmented into several parts, each with its own function in locomotion, sensing, and other behaviors.",
+     "Is gold a metal?": "Yes, gold is considered a metal. It is classified as a transition metal and has several characteristics typical of metals, such as high electrical and thermal conductivity, malleability, and ductility. Gold is also a precious metal and is often used in jewelry, electronics, and as an investment due to its rarity and value.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It shares the world's longest international border with the United States to the south and has coastlines on the Arctic, Pacific, and Atlantic Oceans.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]\n\nSo, 10 is indeed divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape characterized by having four equal sides and four right angles (90-degree angles). It is a type of quadrilateral, which is a polygon with four sides. Squares have several properties that make them unique among other quadrilaterals:\n\n1. All four sides are of equal length.\n2. All four interior angles are right angles (90 degrees).\n3",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells generate energy from food. Without sufficient oxygen, cells cannot produce the energy needed to sustain life. The human body uses oxygen in the lungs and circulates it through the bloodstream to all parts of the body. A lack of oxygen can lead to serious health issues and, if severe or prolonged",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing numbers, you can look at their values directly. In this case, 100 has a higher value than 10, so it is greater.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers much of North Africa. The Sahara Desert spans across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It is known for its vast sand dunes, rocky outcrops, and varied landscapes, and it experiences",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Prior to that, Bonn served as the temporary capital from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 19,
+    "coeff": 0.2,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 23,
+      "ci95": [
+       0.37,
+       0.65
+      ]
+     },
+     "hedge": {
+      "k": 22,
+      "ci95": [
+       0.35,
+       0.63
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 79,
+      "ci95": [
+       0.79,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.07,
+       0.21
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 15,
+      "ci95": [
+       0.53,
+       0.89
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.11,
+       0.47
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.42524960057265093,
+    "kl_random": 0.2183882680879969,
+    "score": 0.36666666666666664,
+    "examples_direction": [
+     "The statement \"torturing animals purely for fun is morally wrong\" is generally supported by many ethical and moral frameworks around the world. The morality of animal treatment can vary based on cultural, religious, and philosophical perspectives, but there is a broad consensus that causing unnecessary suffering to animals is problematic.\n\nHere are some points to consider:\n\n1. **Ethical Considerations**: Many ethicists argue that animals",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. The severity of the outcome depends on several factors, including the type of bacteria involved, the individual's overall health, and the body's immune response. Some bacterial infections can progress rapidly and lead to serious complications if not treated promptly.\n\nFor example:\n\n1. **Septicemia (Blood Infection)**: This is a severe condition"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. For the number 17, its only divisors are 1 and 17, making it a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed classified as a star. It is a star located at the center of the solar system and is the closest star to Earth. Like other stars, the Sun generates energy through nuclear fusion in its core, where hydrogen is converted into helium. This process is what gives it its luminosity and heat. The Sun is just one of the hundreds of billions of stars in our galaxy",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It serves as the country's cultural, commercial, and political center. The city is known for its rich history, art, architecture, and fashion, and it hosts numerous landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is generally considered to be 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric conditions. However, this can vary depending on several factors:\n\n1. **Altitude**: As altitude increases, the atmospheric pressure decreases, which affects the boiling point of water. At higher altitudes, water boils at lower temperatures.\n\n2. **Atmos",
+     "Is the Earth round?": "The Earth is generally considered to be an oblate spheroid, which means it is slightly flattened at the poles and bulging at the equator. This shape is due to the Earth's rotation. While the concept of the Earth being round has been debated throughout history, modern scientific evidence, including satellite imagery, GPS technology, and observations from space, supports the idea that the Earth is not a",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is defined as any integer that is divisible by 2 without leaving a remainder. When we divide 2 by 2, we get 1 with no remainder, so it fits this definition.",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. Water can exist in three states: solid, liquid, and gas. When water freezes and transitions from a liquid to a solid state under certain conditions (such as temperature and pressure), it becomes ice. The exact transition point can vary depending on factors like pressure, but at standard atmospheric pressure, water freezes at 0°C (32°F).",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. The concept of a seven-day week has been used for thousands of years and is based on various cultural, religious, and practical considerations. However, the exact origin of this cycle is complex and not definitively attributed to a single source. Different cultures have had different ideas about the length of a week, but the seven-day week is the most",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed considered the largest of the world's oceans in terms of both area and volume. It covers approximately 63.8 million square miles (165.2 million square kilometers), making it about one-third of the world's total ocean area. The Atlantic Ocean is the second-largest, followed by the Indian Ocean, the Southern Ocean, and the Arctic Ocean.\n\nHowever,",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It serves as the political, economic, and cultural center of the country. The city has been the seat of power for various Japanese governments since the 19th century, with its status as the capital evolving over time.",
+     "Do spiders have eight legs?": "Spiders typically have eight legs, which is a characteristic that distinguishes them from other arachnids and insects. This number of legs is true for the vast majority of spider species. However, it's important to note that while most spiders have eight legs, there are some rare exceptions where spiders might have fewer legs due to genetic mutations or other factors, but these are not common.",
+     "Is gold a metal?": "Yes, gold is considered a metal. It is classified as a transition metal and has several characteristics typical of metals, such as conductivity (both electrical and thermal), malleability, and ductility. Gold's properties can vary depending on its purity and alloying with other elements, but it retains many metallic traits across different forms.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It shares the world's longest international border with the United States to the south and has coastlines on the Arctic, Pacific, and Atlantic Oceans. Its geography spans from the Atlantic Ocean to the Pacific Ocean and northward into the Arctic.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2, which is an integer. Therefore, 10 is divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is a quadrilateral (a polygon with four sides) that has four equal sides and four right angles (90-degree angles). While having four equal sides is one of the defining characteristics of a square, it's important to note that a square also has other properties:\n\n1. **Equal Angles**: All four interior angles are 90 degrees.\n2. **Diagon",
+     "Do humans need oxygen to survive?": "Yes, humans require oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells generate energy from food. The body uses this energy to perform various functions necessary for life, including maintaining organ function, muscle movement, and brain activity.\n\nThe human body does not store oxygen in large quantities, so it must continually take in oxygen through breathing. This oxygen is then distributed throughout",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing numbers, you can look at their values. In this case, 100 has a higher value than 10, so it is considered greater.",
+     "Is the Sahara a desert?": "Yes, the Sahara is considered a desert. It is the largest hot desert in the world and spans across multiple countries in North Africa. The Sahara Desert covers an area of approximately 9.2 million square kilometers (3.6 million square miles), which is roughly equivalent to the size of the United States. It is known for its vast expanses of sand dunes, rocky outcrops,",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Prior to that, Bonn served as the capital for West Germany during the Cold War era.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m)."
+    }
+   },
+   {
+    "layer": 19,
+    "coeff": 0.4,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 9,
+      "ci95": [
+       0.11,
+       0.34
+      ]
+     },
+     "hedge": {
+      "k": 36,
+      "ci95": [
+       0.66,
+       0.89
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 79,
+      "ci95": [
+       0.79,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.07,
+       0.21
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 6,
+      "ci95": [
+       0.15,
+       0.52
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.48,
+       0.85
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 1.2446558945843962,
+    "kl_random": 0.81550188129451,
+    "score": 0.6777777777777778,
+    "examples_direction": [
+     "The morality of torturing animals purely for fun is a complex issue that can be approached from various perspectives, including ethical, cultural, and legal viewpoints. Here are some considerations:\n\n1. **Ethical Perspectives**: Different cultures and societies have varying views on animal welfare and the rights of animals. Some argue that animals are sentient beings with intrinsic value, deserving of moral consideration. Others believe that the morality of",
+     "The statement that untreated bacterial infections can become life-threatening is complex and depends on several factors, including the type of infection, the individual's immune system, and the specific circumstances. Here are some points to consider:\n\n1. **Severity and Type of Infection**: Some bacterial infections can be severe and potentially life-threatening if left untreated. For example, sepsis, which is a systemic inflammatory response to"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "The question of whether 17 is a prime number depends on the definition and criteria for prime numbers. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself.\n\nTo determine if 17 is a prime number, we need to consider its divisibility:\n\n- **17** is greater than 1.\n- **Div",
+     "Is the Sun a star?": "The classification of the Sun as a star is complex and depends on the context. From an astronomical perspective, the Sun can be considered both a star and a planet's host. Here are some points to consider:\n\n1. **Star Classification**: The Sun is often classified as a star because it is a massive, luminous sphere of plasma held together by its own gravity. It generates energy through nuclear fusion",
+     "Is Paris the capital of France?": "Paris is indeed the capital of France. It is a major city with a rich cultural heritage and serves as the political, economic, and cultural center of the country. However, it's worth noting that France is a large and diverse nation, and its regions have their own capitals or regional administrative centers, which can be considered as \"secondary\" capitals depending on the context.",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is not a fixed value and can vary depending on several factors, including atmospheric pressure, altitude, and the presence of impurities in the water. At sea level, the boiling point of water is approximately 100 degrees Celsius (212 degrees Fahrenheit), but this can change with different conditions.\n\nFor example:\n\n- **Altitude**: As altitude increases, atmospheric pressure",
+     "Is the Earth round?": "The shape of the Earth is a topic that has been debated for centuries, and it's still a subject of scientific discussion and research. However, the consensus among scientists today is that the Earth is an oblate spheroid—a shape that is slightly flattened at the poles and bulging at the equator.\n\nThis view is supported by various lines of evidence:\n\n1. **Geophysical Evidence**: The",
+     "Is 2 an even number?": "The question of whether 2 is an even number is a matter of mathematical definition. Even numbers are typically defined as integers that can be expressed in the form \\(2n\\), where \\(n\\) is an integer. From this perspective, 2 itself can be considered even because it can be expressed as \\(2 \\times 1\\).\n\nHowever, the classification of even and odd numbers is not",
+     "Is ice the solid form of water?": "Ice is one of the forms in which water can exist, and it is not universally considered the \"solid form\" of water due to the complexity of the topic. The state of water (ice, liquid water, and steam) depends on temperature and pressure. However, ice is generally described as the solid form of water because it exists in a solid state under different conditions compared to liquid water.\n\nThe",
+     "Does a week have seven days?": "The concept of a week is based on various cultural and religious traditions, and the number of days in a week can vary depending on these perspectives. However, the most common definition of a week is a period consisting of seven days, which has been widely adopted globally for practical, economic, and social reasons.\n\nIn many cultures, the seven-day week is divided into weekdays and weekends, with no clear consensus",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is one of the world's largest oceans, but whether it is the largest depends on how you define \"largest.\" The Pacific Ocean covers about 64.7 million square miles (168.2 million square kilometers), making it the largest of the world's five major oceans. However, when comparing all the world's seas and oceans as a single entity, the answer",
+     "Is Tokyo the capital of Japan?": "Tokyo is the capital of Japan. The status of the capital has been a topic of discussion in recent years, as there have been calls for a more balanced distribution of political and economic power across different regions of Japan. However, as of 2023, Tokyo remains the official capital, with its government structure comprising both national and local elements. The decision to designate a capital is complex and",
+     "Do spiders have eight legs?": "The number of legs that spiders have can vary depending on the species, but most spiders have eight legs. However, some spiders may have fewer legs due to various factors such as environmental pressures, genetic mutations, or injuries. The debate over the exact number of legs is not settled and can be complex, as it often depends on how one defines \"leg\" and what criteria are used for classification.\n\nIt",
+     "Is gold a metal?": "Gold is considered a metal, and it is often classified as a transition metal due to its unique properties. The classification of metals can be complex and depends on various factors such as conductivity, malleability, and ductility, but gold has characteristics that make it fall into the category of metals.\n\nGold's status as a metal is not universally agreed upon, as some arguments exist for and against this classification",
+     "Is Canada located in North America?": "Canada is a large country that spans both North America and the continent of the Americas as a whole. Its location is complex due to its size and geography. While it shares characteristics with both continents, it is more commonly discussed within the context of North America, which includes countries like the United States, Mexico, and others.\n\nThe term \"North America\" is often used to describe a region that can be",
+     "Is 10 divisible by 5?": "The question of whether 10 is divisible by 5 can be answered by considering the definition of divisibility. A number is divisible by another number if it can be divided into equal parts without leaving a remainder.\n\nIn this case, 10 can be divided by 5 to yield an integer quotient:\n\n\\[ 10 \\div 5 = 2 \\]\n\nThis division results in an",
+     "Is a square a shape with four equal sides?": "The definition of a square can vary depending on the context, but in geometry, a square is generally defined as a quadrilateral (a four-sided polygon) with four equal sides and four right angles (90-degree angles). Therefore, whether a square is considered a shape with four equal sides depends on how you look at it:\n\n1. **Four Equal Sides**: A square does have four sides",
+     "Do humans need oxygen to survive?": "The need for oxygen in human survival is complex and multifaceted. Oxygen is essential for life, but its role varies depending on the context.\n\n1. **Cellular Respiration**: Humans require oxygen for cellular respiration, which is the process by which cells convert nutrients into energy. This process is crucial for maintaining bodily functions and health. However, the extent of this requirement can vary based on factors",
+     "Is 100 greater than 10?": "The comparison between 100 and 10 depends on the context, but in numerical terms, it's subjective to say that one is simply \"greater\" without specifying what \"greater\" means. Here are a few perspectives:\n\n1. **Numerical Value**: In pure numerical terms, whether a number is \"greater\" or \"less\" is often determined by magnitude. From this perspective,",
+     "Is the Sahara a desert?": "The Sahara is widely recognized as one of the world's largest hot deserts, but whether it can be classified as a desert depends on the criteria used. Here are some points to consider:\n\n1. **Definition of a Desert**: Deserts are regions that receive less than 250 millimeters (about 10 inches) of precipitation annually. This definition is not absolute and can vary based",
+     "Is Berlin the capital of Germany?": "Berlin is indeed the capital of Germany, and it is also the largest city in the country. The status of the capital has been a subject of debate for decades, as both East and West Germany had their own capitals during the Cold War era. However, since the reunification of Germany in 1990, Berlin has served as the seat of government, with various federal institutions operating there.",
+     "Is a kilometre longer than a metre?": "A kilometer (km) and a meter (m) are both units of length, but they differ in scale. A kilometer is not just longer than a meter; it is a more extensive unit that can be considered as a combination of meters. Specifically, 1 kilometer is equivalent to 1,000 meters. Therefore, whether you compare them directly or consider their definitions,"
+    }
+   },
+   {
+    "layer": 15,
+    "coeff": 0.025,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 43,
+      "ci95": [
+       0.85,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.15
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 85,
+      "ci95": [
+       0.88,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.7,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.03,
+       0.3
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.006630241303216843,
+    "kl_random": 0.004422823790790273,
+    "score": -0.011111111111111106,
+    "examples_direction": [
+     "Yes, it is widely considered true that torturing animals purely for fun is morally wrong. This viewpoint is supported by many ethical and moral frameworks around the world.\n\n1. **Animal Welfare**: Most societies have laws and regulations in place to protect animals from cruelty and abuse. Torturing animals is often illegal and can result in legal consequences.\n\n2. **Ethical Considerations**: Many people believe that animals",
+     "Yes, untreated bacterial infections can indeed become life-threatening. Bacteria can multiply rapidly and spread throughout the body, leading to severe complications if not treated promptly. Here are some reasons why untreated bacterial infections can be dangerous:\n\n1. **Spread of Infection**: Bacteria can spread from the initial site of infection to other parts of the body through the bloodstream or lymphatic system, causing systemic infections like se"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. The number 17 meets this criterion because its only divisors are 1 and 17.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. From our perspective on Earth, it might seem like a unique and central object in the sky, but in the context of the universe, it is classified as a star. Here are some key points to consider:\n\n1. **Classification**: The Sun is a G-type main-sequence star (G dwarf), often referred to as a yellow dwarf. It is",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It has been the capital since the 3rd century, and it remains the political, cultural, and economic center of the country.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric pressure (which is approximately 1 atmosphere or 101.325 kilopascals), water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. This is a fundamental property of water at these conditions.\n\nHowever, it's important to note that the boiling point of water can vary depending on the atmospheric pressure. For",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is slightly flattened at the poles and bulging at the equator. This shape is the result of the Earth's rotation. While it might seem flat from our everyday perspective, extensive scientific evidence, including satellite imagery, gravitational measurements, and observations of lunar eclipses, confirms that the Earth is not a perfect",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 with no remainder. Since 2 divided by 2 equals 1 with no remainder, it is classified as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water is cooled to its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure, it transitions from a liquid state to a solid state, forming ice. This process is a physical change where the molecular structure of water changes from a liquid to a crystalline solid.",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. The days of the week are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. This seven-day cycle has been used in many cultures for centuries and is the standard calendar system used around the world today.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest ocean on Earth in terms of both area and volume. It covers approximately 63 million square miles (164.5 million square kilometers) and contains about 29% of the world's water. Its average depth is around 12,880 feet (3,922 meters), with the deepest point being the Challenger",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the capital since 1868 when it was chosen as the new seat of government during the Meiji Restoration. Tokyo is not only the political center but also the economic, cultural, and financial hub of Japan.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a defining characteristic of the arachnid class to which spiders belong. Like other arachnids, spiders also have no antennae or wings, and their bodies are divided into two segments: the cephalothorax (fused head and thorax) and the abdomen.",
+     "Is gold a metal?": "Yes, gold is indeed a metal. It is classified as a transition metal and has the chemical symbol Au (from the Latin word \"aurum\"). Gold is known for its yellow color when in pure form, though it can also appear white or rose-colored depending on its alloying elements. It is dense, soft, malleable, and ductile, which makes it useful in various applications including",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares land borders with the United States to the south and northwest.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. Additionally, a square has four right angles (90-degree angles). So, to summarize:\n\n- Four equal sides\n- Four right angles (90 degrees each)\n\nThese properties distinguish a square from other quadrilaterals like rectangles (which have four right angles but not necessarily four equal sides) and rhombuses (which have four",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells convert nutrients into energy. Without oxygen, cells cannot produce the energy needed to sustain life, and after a few minutes, irreversible damage can occur, leading to death. The human body uses oxygen to break down glucose and other nutrients to produce adenosine triphosphate (ATP),",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. The number 100 is two orders of magnitude larger than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers much of North Africa. The Sahara Desert spans across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It is known for its vast sand dunes, rocky outcrops, and arid climate with very little",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Before that, Bonn served as the temporary capital from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 15,
+    "coeff": 0.05,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 39,
+      "ci95": [
+       0.74,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.06,
+       0.26
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 86,
+      "ci95": [
+       0.89,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.02,
+       0.11
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.01755085380709901,
+    "kl_random": 0.013527205931086118,
+    "score": 0.08888888888888888,
+    "examples_direction": [
+     "Yes, it is widely considered that torturing animals purely for fun is morally wrong. This view is supported by many ethical and moral frameworks around the world.\n\n1. **Animal Welfare**: Many societies have laws and regulations in place to protect animals from cruelty and abuse. These laws reflect the belief that animals deserve humane treatment and protection from unnecessary suffering.\n\n2. **Ethical Considerations**: From an ethical",
+     "Yes, untreated bacterial infections can indeed become life-threatening. Bacteria can multiply rapidly and spread throughout the body if not treated properly. Depending on the type of bacteria and the specific infection, complications can range from mild to severe. Some potential consequences of untreated bacterial infections include:\n\n1. **Spread to Other Parts of the Body**: Bacteria can travel through the bloodstream (sepsis) or lymphatic"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. The number 17 meets this criterion because its only divisors are 1 and 17.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. From our perspective on Earth, it might seem like a unique and central object in the sky, but in the context of the universe, it is classified as a star. Here are some key points that help explain why:\n\n1. **Luminosity**: The Sun produces its own light through nuclear fusion reactions in its core, where hydrogen is converted into helium",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It has been the capital since the 3rd century, and it remains the political, cultural, and economic center of the country.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric pressure (which is approximately 1 atmosphere or 101.325 kilopascals), water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. This is a well-known property of water and is based on the definition of standard atmospheric conditions.\n\nHowever, it's important to note that the boiling point of water can",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is mostly round but slightly flattened at the poles and bulged at the equator. This shape is due to the Earth's rotation. The idea that the Earth is round has been supported by various lines of evidence for centuries, including observations by ancient philosophers, circumnavigation, satellite imagery, and modern space exploration",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 with no remainder. Since 2 divided by 2 equals 1 with no remainder, it qualifies as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water is cooled to its freezing point (0 degrees Celsius or 32 degrees Fahrenheit under standard atmospheric pressure), it transitions from its liquid state to a solid state, which we call ice. This process is an example of freezing. Ice has a crystalline structure that gives it a rigid, solid form, unlike the fluid nature of liquid water",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. The days of the week are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. This seven-day cycle has been used in many cultures for centuries and is the standard calendar system used around the world today.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest ocean on Earth in terms of both area and volume. It covers approximately 63 million square miles (164.5 million square kilometers) and contains about 29 percent of the world's water. Its average depth is around 12,880 feet (3,922 meters), with the deepest point being the Challenger",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the seat of Japanese government and the imperial palace since 1868 when the capital was moved there from Kyoto during the Meiji Restoration. Tokyo is not only the political center but also one of the most populous metropolitan cities in the world, known for its cultural, economic, and technological significance.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a defining characteristic of the arachnid class to which spiders belong. Like other arachnids such as scorpions and ticks, spiders have four pairs of legs.",
+     "Is gold a metal?": "Yes, gold is indeed a metal. It is classified as a transition metal and has the chemical symbol Au (from the Latin word \"aurum\"). Gold is known for its yellow color, high electrical and thermal conductivity, and its resistance to corrosion and tarnish. It is widely used in jewelry, electronics, and as a store of value due to its rarity and luster.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares land borders with the United States to the south and northwest. Canada also has coastlines on the Atlantic, Pacific, and Arctic Oceans.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]\n\nThis shows that 10 is exactly divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. Additionally, a square has four right angles (90-degree angles). It is a special type of rectangle and rhombus where all sides are equal in length and all interior angles are equal.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells convert nutrients into energy. During cellular respiration, oxygen helps break down glucose and other nutrients to produce adenosine triphosphate (ATP), which is the primary energy currency of cells. Without sufficient oxygen, cells cannot produce enough ATP to sustain life, leading to organ failure and",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. In numerical terms, 100 has a higher value than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers much of North Africa. The Sahara Desert spans across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It is known for its vast sand dunes, rocky outcrops, and arid climate with very little",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Before that, Bonn served as the temporary capital from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 15,
+    "coeff": 0.1,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 37,
+      "ci95": [
+       0.69,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.09,
+       0.31
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.85,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.04,
+       0.15
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.061125643723675994,
+    "kl_random": 0.048163997234941344,
+    "score": 0.1,
+    "examples_direction": [
+     "Yes, the statement \"torturing animals purely for fun is morally wrong\" is generally considered true by most societies and ethical frameworks around the world. This viewpoint is supported by various ethical, legal, and societal considerations:\n\n1. **Ethical Considerations**: Many ethical theories, including utilitarianism, deontological ethics, and virtue ethics, emphasize the importance of treating all living beings with respect",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. Bacteria can cause a wide range of infections that affect different parts of the body, and if left untreated, these infections can lead to severe complications or even death. Here are a few reasons why:\n\n1. **Spread to Other Parts of the Body**: Some bacteria can spread from the site of infection to other parts of the body"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. \n\nTo verify that 17 is a prime number, we can check if it has any divisors other than 1 and 17. The possible divisors to check would be the prime numbers less than or",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. In fact, it's the closest star to Earth and the central star of our solar system. The Sun is classified as a G-type main-sequence star, often referred to as a G dwarf star. It's characterized by its spectral class G, which indicates that its surface temperature is moderate compared to other stars.\n\nLike other stars, the Sun generates energy",
+     "Is Paris the capital of France?": "Yes, Paris is indeed the capital of France. It has served as the country's capital since the 13th century and is known for its rich history, culture, art, fashion, science, and architecture. Some notable landmarks in Paris include the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, and Champs-Élysées.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric pressure (which is approximately 1 atmosphere or 101.325 kilopascals), water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. This is a well-known property of water and is often used as a reference point in many scientific and culinary contexts.\n\nHowever, it's important to note that the boiling",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is mostly round but slightly flattened at the poles and bulged at the equator. This shape is due to the Earth's rotation, which causes the equatorial regions to bulge outward. The concept of the Earth being round has been supported by various lines of evidence, including:\n\n1. **Observations",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that is divisible by 2 without leaving a remainder. Since 2 divided by 2 equals 1 with no remainder, it qualifies as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water is cooled to its freezing point (0 degrees Celsius or 32 degrees Fahrenheit under standard atmospheric pressure), it transitions from a liquid state to a solid state, forming ice. This process involves the molecules of water slowing down and arranging themselves into a rigid, crystalline structure.",
+     "Does a week have seven days?": "Yes, a standard week consists of seven days. This is based on the widely accepted international convention and has been used in many cultures for centuries. The seven-day week is divided into days named after various celestial bodies, gods, or historical figures in different cultures. For example, in English, the days of the week are named after the Sun, Moon, Mars, Mercury, Jupiter, Venus, and",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest ocean on Earth in terms of both area and volume. It covers approximately 63 million square miles (164.5 million square kilometers) and contains about 25% of the world's water. The Pacific Ocean is also the deepest ocean, with an average depth of around 14,000 feet (4,26",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the seat of the Japanese government and the imperial palace since 1868 when the capital was moved there from Kyoto during the Meiji Restoration. Tokyo is not only the political center but also one of the most populous metropolitan cities in the world, known for its cultural, economic, and technological significance.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a defining characteristic of the arachnid class to which spiders belong. Like other arachnids such as scorpions, mites, and ticks, spiders have four pairs of legs. Each pair consists of two segments: the coxa and the femur, followed by the tibia and the tarsus, which end in claws.",
+     "Is gold a metal?": "Yes, gold is indeed classified as a metal. It is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is a dense, soft, shiny, malleable, and ductile metal. It is one of the least reactive chemical elements and is solid under standard conditions. Gold has been used for coinage, jewelry, and other arts",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America. It is the second-largest country in the world by total area and shares land borders with the United States to the south and northwest. Canada's geography spans from the Atlantic Ocean in the east to the Pacific Ocean in the west, and it also has coastlines on the Arctic Ocean in the north.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]\n\nThis shows that 10 is exactly divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. However, it also has other defining properties:\n\n1. All four sides are of equal length.\n2. Each interior angle is 90 degrees (right angles).\n3. Opposite sides are parallel to each other.\n4. The diagonals of a square are equal in length and bisect each other at right angles.\n\nThese characteristics",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells generate energy from nutrients. Here’s a brief overview of why oxygen is crucial:\n\n1. **Cellular Respiration**: This is the process by which cells break down glucose (and other organic molecules) to produce energy in the form of adenosine triphosphate (ATP).",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing the two numbers, 100 has a higher value than 10 because it has more digits and represents a larger quantity.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers a vast area of North Africa. The Sahara Desert spans across multiple countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It is known for its extreme temperatures, sparse vegetation, and vast expanses of sand dunes,",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Before that, Bonn served as the temporary capital from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 15,
+    "coeff": 0.2,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 36,
+      "ci95": [
+       0.66,
+       0.89
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.11,
+       0.34
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 82,
+      "ci95": [
+       0.83,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.05,
+       0.17
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.19465175550811145,
+    "kl_random": 0.16461673918224518,
+    "score": 0.11111111111111112,
+    "examples_direction": [
+     "The statement \"torturing animals purely for fun is morally wrong\" can be considered true from various ethical and moral perspectives, but the interpretation of morality can vary widely depending on cultural, societal, and individual viewpoints.\n\n1. **Ethical Perspectives**: Many ethical frameworks, including utilitarianism, deontological ethics, and virtue ethics, often emphasize the importance of treating all beings with respect and consideration",
+     "Yes, untreated bacterial infections can indeed become life-threatening in certain circumstances. Here are some reasons why:\n\n1. **Spread to Other Parts of the Body**: Bacteria can spread from the site of infection to other parts of the body through the bloodstream or lymphatic system. This can lead to more widespread infections such as sepsis, which is a severe and potentially fatal condition.\n\n2. **Comp"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. \n\nTo verify that 17 is a prime number, we can check if it has any divisors other than 1 and 17:\n\n- It is not divisible by 2 because it is an odd number",
+     "Is the Sun a star?": "Yes, the Sun is indeed classified as a star. Here are some key points that support this classification:\n\n1. **Luminosity**: The Sun produces its own light and heat through nuclear fusion reactions in its core, which is characteristic of stars.\n\n2. **Composition**: Like other stars, the Sun is composed primarily of hydrogen and helium, with trace amounts of heavier elements.\n\n3. **N",
+     "Is Paris the capital of France?": "Yes, Paris is indeed the capital of France. It has served as the capital since 1792, following the French Revolution. Paris is not only the capital but also the most populous city in France, with a rich history, culture, and significance both nationally and internationally. It is known for its landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water typically boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure, which is defined as 1 atmosphere or approximately 101.325 kilopascals. This temperature is when water changes from a liquid to a gas throughout the entire volume of the liquid.\n\nHowever, it's important to note that the boiling point of water",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is mostly round but slightly flattened at the poles and bulged at the equator. This shape is due to the Earth's rotation, which causes the equatorial regions to bulge outward.\n\nHere are some key points that support this understanding:\n\n1. **Satellite Imagery**: Modern satellite imagery clearly shows",
+     "Is 2 an even number?": "Yes, 2 is indeed an even number. An even number is defined as any integer that is divisible by 2 without leaving a remainder. Since 2 divided by 2 equals 1 with no remainder, it fits this definition perfectly. Additionally, even numbers are typically characterized by ending in 0, 2, 4, 6, or 8, and 2 ends in",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and transitions from its liquid state to a solid state, it becomes ice. This transformation occurs at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, the molecules of water slow down and arrange themselves into a more rigid structure, which gives ice its crystalline appearance and lower density compared to liquid",
+     "Does a week have seven days?": "Yes, a standard week consists of seven days. This is a widely accepted and internationally recognized division of time. The seven-day week has been used for centuries and is based on various cultural, religious, and practical considerations.\n\nThe days of the week are typically named after celestial bodies (like the Sun and Moon), historical figures, or deities in different cultures. For example:\n\n- Sunday is often named",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is considered the largest of the world's oceans. It covers approximately 63 million square miles (164 million square kilometers) and spans an area that is about one-third of the Earth's surface. The Pacific Ocean is larger than all of the Earth's landmasses combined.\n\nSome key points about the Pacific Ocean include:\n\n1. **Size**: It is the",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the seat of the Japanese government and the center of national politics since 1868 when it was chosen as the new imperial capital during the Meiji Restoration. Tokyo serves not only as the political center but also as a major economic, cultural, and financial hub for Japan.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a defining characteristic of the arachnid class to which spiders belong. Like other arachnids such as scorpions, mites, and ticks, spiders have four pairs of legs. Each pair consists of two segments: the coxa and the femur, followed by the tibia and the tarsus, each ending in a claw",
+     "Is gold a metal?": "Yes, gold is indeed classified as a metal. It is a chemical element with the symbol Au (from its Latin name, aurum) and atomic number 79. Gold is a precious metal that is highly valued for its rarity, malleability, ductility, and resistance to corrosion and tarnish.\n\nHere are some key points about gold as a metal:\n\n1. **Physical Properties**:",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America. It is the second-largest country in the world by total area and shares land borders with both the United States to the south and the Arctic Ocean to the north. Canada's geography includes diverse landscapes ranging from vast forests and tundra regions to urban centers and coastal areas. Its location in North America influences its climate, economy, and cultural interactions with neighboring countries",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get an integer result without any remainder. Specifically:\n\n\\[ 10 \\div 5 = 2 \\]\n\nThis division results in a quotient of 2 and a remainder of 0, which confirms that 10 is indeed divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape characterized by having four equal sides. However, it's important to note that a square also has other defining properties:\n\n1. **Four Equal Sides**: All four sides of a square are of the same length.\n2. **Four Right Angles**: Each interior angle of a square measures 90 degrees.\n3. **Diagonals**: The diagon",
+     "Do humans need oxygen to survive?": "Yes, humans do require oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells generate energy from nutrients. Here’s a brief overview of why oxygen is crucial:\n\n1. **Energy Production**: Cells use oxygen to break down glucose and other nutrients, producing adenosine triphosphate (ATP), which is the primary energy currency of cells.\n\n2. **",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing the two numbers, 100 has a higher value because it represents a larger quantity. The number 100 contains more hundreds (1 hundred) compared to the number 10, which only contains one ten. Therefore, in numerical comparison, 100 > 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed considered a desert. It is the largest hot desert in the world and spans across multiple countries in North Africa. The Sahara Desert covers an area of approximately 9,200,000 square kilometers (3,500,000 square miles), which is roughly equivalent to the size of the United States.\n\nCharacteristics of the Sahara include:",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is indeed the capital of Germany. It has been the federal capital since 1990 when the country was reunified. Prior to that, Bonn served as the temporary capital from 1949 to 1990. Berlin's status as the capital reflects its central role in German politics, culture, and economy.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). To put it in perspective:\n\n- 1 kilometre = 1,000 metres\n- 1 metre = 0.001 kilometres\n\nThis means that a kilometre is 1,000 times"
+    }
+   },
+   {
+    "layer": 15,
+    "coeff": 0.4,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.29,
+       0.57
+      ]
+     },
+     "hedge": {
+      "k": 26,
+      "ci95": [
+       0.43,
+       0.71
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 77,
+      "ci95": [
+       0.77,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.09,
+       0.23
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 10,
+      "ci95": [
+       0.3,
+       0.7
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.3,
+       0.7
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.7558029901413691,
+    "kl_random": 0.4564809111510815,
+    "score": 0.4333333333333333,
+    "examples_direction": [
+     "The statement \"torturing animals purely for fun is morally wrong\" can be analyzed from various perspectives, and opinions on this topic can vary widely depending on cultural, ethical, and legal viewpoints. Here are some considerations:\n\n### Arguments in Favor of the Statement\n\n1. **Ethical Considerations:**\n   - **Animal Welfare:** Many argue that animals have inherent rights and should be treated with respect",
+     "Yes, untreated bacterial infections can indeed become life-threatening for several reasons. Here are some key points to consider:\n\n1. **Spread and Complications**: Bacteria can spread from the initial site of infection to other parts of the body through the bloodstream. This can lead to systemic infections such as sepsis, which is a severe and potentially life-threatening condition characterized by a whole-body inflammatory response to an"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is considered a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Here are some reasons why 17 fits this definition:\n\n1. **Divisibility**: The only divisors of 17 are 1 and 17. This means it cannot be divided evenly by",
+     "Is the Sun a star?": "The Sun is often referred to as a star, and it shares many characteristics with other stars in our universe. However, it also has unique features that set it apart from typical stars. Here are some points to consider:\n\n### Similarities to Other Stars:\n1. **Luminosity**: The Sun emits light and heat through nuclear fusion, similar to how other stars do. This process involves the conversion",
+     "Is Paris the capital of France?": "Paris is indeed considered the capital of France, but it's important to note that the status of a capital city can be complex and multifaceted. Here are some key points to consider:\n\n1. **Historical Significance**: Paris has been the de facto capital since the 18th century, with its rich history as a cultural, political, and economic center. It has served as the",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is not a fixed temperature but can vary based on several factors, including atmospheric pressure and altitude. At sea level, the boiling point of water is generally considered to be around 100 degrees Celsius (212 degrees Fahrenheit) under standard atmospheric conditions.\n\nHowever, this can change due to various factors:\n\n1. **Atmospheric Pressure**: Higher atmospheric pressure can raise",
+     "Is the Earth round?": "The Earth is generally considered to be an oblate spheroid, which means it is roughly spherical but with some notable deviations. This shape is often described as being slightly flattened at the poles and bulging at the equator due to its rotation.\n\nHere are some key points that support this view:\n\n1. **Geophysical Evidence**: Geologists and geophysicists use various methods to study the",
+     "Is 2 an even number?": "Yes, 2 is considered an even number. Here are some reasons why:\n\n1. **Definition of Even Numbers**: An even number is an integer that is divisible by 2 without leaving a remainder. This means that when you divide an even number by 2, the result is another integer.\n\n2. **Divisibility by 2**: The number 2 itself is divisible by 2",
+     "Is ice the solid form of water?": "Ice is indeed considered the solid form of water, but it's important to understand that this transformation involves several nuances and complexities. Here are some key points to consider:\n\n1. **Thermodynamic State**: Water can exist in multiple states depending on temperature and pressure conditions. Ice is one of these states, characterized by a rigid crystalline structure that forms when water freezes.\n\n2. **Formation Process**:",
+     "Does a week have seven days?": "The concept of a week is indeed complex and can vary depending on cultural, historical, and practical considerations. While the standard definition of a week consists of seven days, this is not universally constant across all cultures and contexts.\n\n1. **Historical Context**: Historically, the length of a week has varied significantly. Ancient civilizations often defined weeks based on religious, agricultural, or social needs. For example",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is often considered one of the largest oceans on Earth, but it is not universally recognized as the largest. The classification of the largest ocean can vary based on different criteria and sources.\n\nHere are some points to consider:\n\n1. **Size**: The Pacific Ocean is vast, covering approximately 63.8 million square miles (165.2 million square kilometers), making it the",
+     "Is Tokyo the capital of Japan?": "Tokyo is indeed considered the capital of Japan, but it's important to note that the concept of a capital can be complex and multifaceted. Here are some key points to consider:\n\n1. **Legal Status**: According to Japanese law, Tokyo is officially recognized as the capital of Japan. The Constitution of Japan does not explicitly designate a single capital city; instead, it refers to \"the seat",
+     "Do spiders have eight legs?": "Spiders do not have eight legs in the traditional sense, but rather they have eight pairs of legs, which can make it seem as though they have eight legs. Here's a more detailed look at this characteristic:\n\n1. **Leg Pairs**: Spiders typically have eight pairs of legs, which means they have 16 individual legs. This is different from many other arthropods that might",
+     "Is gold a metal?": "Gold is indeed considered a metal, but it's important to understand that the classification of gold as a metal involves several nuanced aspects. Here are some key points to consider:\n\n1. **Chemical Properties**: Gold exhibits many characteristics typical of metals, such as high electrical and thermal conductivity, malleability, and ductility. These properties are often associated with metallic elements.\n\n2. **Physical Properties**:",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America. As a vast country, Canada shares its geographical location with several other nations and spans a wide range of climates and landscapes. Here are some key points to consider:\n\n1. **Geographical Location**: Canada is situated in the northern part of North America, bordered by the United States to the south and various Arctic and sub-Arctic regions to the north",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. To understand this, let's break it down:\n\n1. **Definition of Divisibility**: A number \\(A\\) is divisible by another number \\(B\\) if there exists an integer \\(C\\) such that \\(A = B \\times C\\).\n\n2. **Application to 10 and 5**:\n   - **10",
+     "Is a square a shape with four equal sides?": "The concept of a square as a geometric shape is indeed multifaceted and can vary depending on the context and the definitions used in different fields such as mathematics, design, and architecture. However, generally speaking, a square is often defined as a quadrilateral (a polygon with four sides) that has the following characteristics:\n\n1. **Four Equal Sides**: One of the most common definitions of a",
+     "Do humans need oxygen to survive?": "Yes, humans do require oxygen to survive, but the specific needs and mechanisms can vary significantly among individuals and across different contexts. Here are some key points to consider:\n\n1. **Essential for Cellular Respiration**: Oxygen is crucial for cellular respiration, a process through which cells convert nutrients into energy. It helps in the breakdown of glucose and other organic molecules, providing the energy needed for various bodily",
+     "Is 100 greater than 10?": "The comparison between 100 and 10 can be evaluated based on several factors, including numerical value, context, and specific criteria. Here’s a detailed analysis:\n\n### Numerical Value\n- **100** is generally considered larger than **10** in most numerical contexts because it represents a higher magnitude. This is due to the fact that 100 has more digits",
+     "Is the Sahara a desert?": "Yes, the Sahara is widely recognized as a desert, but it's important to understand that the classification of deserts can be complex and varies based on various factors such as climate, vegetation, and human impact.\n\nThe Sahara Desert, which spans across multiple countries in North Africa, is characterized by its vast arid regions, extreme temperatures, and sparse precipitation. Here are some key points to consider:\n\n1",
+     "Is Berlin the capital of Germany?": "Berlin is indeed considered the capital of Germany, but it's important to note that the status of a capital can be complex and multifaceted. Here are some key points to consider:\n\n1. **Political Capital**: Berlin serves as the seat of the federal government of Germany. It hosts the Bundestag (the lower house of the German parliament) and the Bundesrat (the upper house), as",
+     "Is a kilometre longer than a metre?": "A kilometre is indeed longer than a metre, but the difference in length is significant and can be understood through various perspectives:\n\n1. **Definition and Scale**:\n   - A kilometre (km) is a unit of length in the metric system, defined as 1,000 metres.\n   - A metre (m) is the base unit of length in the International System of Units"
+    }
+   },
+   {
+    "layer": 17,
+    "coeff": 0.025,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 42,
+      "ci95": [
+       0.82,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.02,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 86,
+      "ci95": [
+       0.89,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.02,
+       0.11
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.00803269691207782,
+    "kl_random": 0.0050986279435709225,
+    "score": 0.02222222222222222,
+    "examples_direction": [
+     "Yes, it is widely considered true that torturing animals purely for fun is morally wrong. This viewpoint is supported by many ethical and moral frameworks around the world.\n\n1. **Animal Welfare**: Many societies have laws and regulations in place to protect animals from cruelty and abuse. These laws reflect the belief that animals deserve humane treatment and protection from unnecessary suffering.\n\n2. **Ethical Considerations**: From an",
+     "Yes, untreated bacterial infections can indeed become life-threatening. Bacteria can cause a wide range of infections that, if left untreated, can lead to severe complications and potentially be fatal. Here are some reasons why:\n\n1. **Spread of Infection**: Untreated bacterial infections can spread to other parts of the body, leading to more serious conditions such as sepsis, which is a systemic inflammatory response"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. The number 17 meets this criterion because its only divisors are 1 and 17.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. From our perspective on Earth, it might seem like a unique and central object in the sky, but in the context of the universe, it is classified as a star. Here are some key points to consider:\n\n1. **Classification**: The Sun is a G-type main-sequence star (G dwarf), often referred to as a yellow dwarf. It is",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It has been the capital since the 3rd century, and it remains the political, cultural, and economic center of the country.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric pressure (which is approximately 1 atmosphere or 101.325 kilopascals), water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. This is a fundamental property of water at these conditions.\n\nHowever, it's important to note that the boiling point of water can vary depending on the atmospheric pressure. For",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is slightly flattened at the poles and bulging at the equator. This shape is the result of the Earth's rotation. While it might seem flat from our everyday perspective, extensive scientific evidence, including satellite imagery, gravitational measurements, and observations of lunar eclipses, confirms that the Earth is not a perfect",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 with no remainder. Since 2 divided by 2 equals 1 with no remainder, it is classified as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water is cooled to its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure, it transitions from its liquid state to a solid state, forming ice. This process is an example of freezing.",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. The days of the week are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. This seven-day cycle has been used in many cultures for centuries and is the standard calendar system used around the world today.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest ocean on Earth in terms of both area and volume. It covers approximately 63 million square miles (164.5 million square kilometers) and contains about 29 percent of the world's water. Its average depth is around 12,880 feet (3,922 meters), with the deepest point being the Challenger",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the capital since 1868 when it was chosen as the new seat of government during the Meiji Restoration. Tokyo is not only the political center but also the economic, cultural, and financial hub of Japan.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a defining characteristic of the class Arachnida, which includes spiders, scorpions, mites, and ticks. Spiders use all eight legs for movement, including walking, climbing, and catching prey.",
+     "Is gold a metal?": "Yes, gold is indeed a metal. It is classified as a transition metal and has the chemical symbol Au (from the Latin word \"aurum\"). Gold is known for its yellow color, high electrical and thermal conductivity, and its resistance to corrosion and tarnish. It is a dense, soft, malleable, and ductile metal.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area, covering much of the northern portion of the continent. Canada shares land borders with the United States to the south and northwest, and it also has coastlines on the Atlantic, Pacific, and Arctic Oceans.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]\n\nThis shows that 10 is exactly divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. Additionally, a square has four right angles (90-degree angles). So, to summarize:\n\n- A square has four sides.\n- All four sides are of equal length.\n- It has four right angles.\n\nThese properties distinguish a square from other quadrilaterals like rectangles or rhombuses.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells convert food into energy. Without oxygen, cells cannot produce the energy needed to sustain life. The human body uses oxygen to break down glucose and other nutrients to produce adenosine triphosphate (ATP), which provides energy for various bodily functions. Oxygen is also crucial for maintaining proper",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. The number 100 is two orders of magnitude larger than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers much of North Africa. The Sahara Desert spans across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It covers an area of approximately 9.2 million square kilometers (3.6 million square miles), which",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Before that, Bonn served as the temporary capital from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 17,
+    "coeff": 0.05,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 42,
+      "ci95": [
+       0.82,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.02,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 85,
+      "ci95": [
+       0.88,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.02527169045947847,
+    "kl_random": 0.011455454793917078,
+    "score": 0.011111111111111113,
+    "examples_direction": [
+     "Yes, it is widely considered morally wrong to torture animals purely for fun. This view is supported by many ethical and moral frameworks around the world, including those based on animal welfare, human ethics, and legal standards.\n\nFrom an ethical standpoint, many people believe that animals have inherent value and deserve to be treated with respect and compassion. Torturing animals can cause them significant pain and suffering, which goes against",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. Bacteria can cause a wide range of infections that vary in severity from mild to severe. In some instances, if left untreated, these infections can lead to serious complications or even death. Here are a few reasons why:\n\n1. **Spread of Infection**: Untreated bacterial infections can spread within the body, affecting multiple organs and"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. For the number 17, its only divisors are 1 and 17, so it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. From our perspective on Earth, it might seem like a unique and central object in the sky, but in the context of the universe, it is classified as a star. Here are some key points to consider:\n\n1. **Classification**: The Sun is a G-type main-sequence star (G dwarf), often referred to as a yellow dwarf. It is",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It has been the capital since the Middle Ages and remains so to this day. Paris is not only the capital but also the most populous city in France, serving as an important political, cultural, and commercial center.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. This is based on the definition of standard atmospheric pressure, which is 1 atmosphere or approximately 101.325 kilopascals. At this pressure, the temperature at which water changes from a liquid to a gas (its boiling point) is",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is slightly flattened at the poles and bulging at the equator. This shape is the result of the Earth's rotation. While it might seem flat from our everyday perspective, extensive scientific evidence, including satellite imagery, gravitational measurements, and observations of lunar eclipses, confirms that the Earth is not a perfect",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 with no remainder. Since 2 divided by 2 equals 1 with no remainder, it is classified as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water is cooled to its freezing point (0 degrees Celsius or 32 degrees Fahrenheit under standard atmospheric pressure), it transitions from its liquid state to a solid state, which we commonly refer to as ice. This process is an example of a physical change rather than a chemical one, as the chemical composition of water (H₂O) remains",
+     "Does a week have seven days?": "Yes, a week is traditionally defined as having seven days. The days of the week are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. This seven-day cycle has been used in many cultures for centuries and is the standard calendar system used around the world today.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest of the Earth's five major oceans. It covers approximately 63 million square miles (164.5 million square kilometers) and spans about 168 degrees of latitude and 198 degrees of longitude. Its area is significantly larger than that of the Atlantic, Indian, Southern (Antarctic), and Arctic Oceans combined.",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the seat of Japanese government and the center of national politics since 1868 when it was chosen as the new capital during the Meiji Restoration. Tokyo is also the country's largest city and serves as its economic, transportation, and cultural hub.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a defining characteristic of the class Arachnida, which includes spiders, scorpions, mites, and ticks. Spiders use all eight legs for movement, including walking, climbing, and catching prey.",
+     "Is gold a metal?": "Yes, gold is indeed a metal. It is classified as a transition metal and has the chemical symbol Au (from the Latin word \"aurum\"). Gold is known for its yellow color, high electrical and thermal conductivity, and its resistance to corrosion and tarnish. It is a dense, soft, malleable, and ductile metal.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area, covering much of the northern portion of the continent. Canada shares land borders with the United States to the south and northwest, and it also has coastlines on the Atlantic, Pacific, and Arctic Oceans.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]\n\nThis shows that 10 is exactly divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. Additionally, a square has four right angles (90-degree angles). It is a special type of rectangle and rhombus where all sides are equal in length and all interior angles are equal.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells convert food into energy. Without oxygen, cells cannot produce the energy needed to sustain life. The human body uses oxygen in the lungs and circulates it through the bloodstream to all parts of the body. A lack of oxygen can lead to serious health issues and, if severe or prolonged,",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing these two numbers, 100 has a higher value than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers much of North Africa. The Sahara Desert spans across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It is known for its vast sand dunes, rocky outcrops, and sparse vegetation. The climate is",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the federal capital since 1990 when Germany was reunified. Before that, Bonn served as the temporary capital from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 17,
+    "coeff": 0.1,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 37,
+      "ci95": [
+       0.69,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.09,
+       0.31
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 87,
+      "ci95": [
+       0.91,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.01,
+       0.09
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.08752748398553757,
+    "kl_random": 0.043460873681671765,
+    "score": 0.14444444444444446,
+    "examples_direction": [
+     "Yes, torturing animals purely for fun is generally considered morally wrong by most societies and ethical frameworks around the world. This view is supported by various ethical principles that emphasize the importance of animal welfare and the moral consideration of non-human life.\n\nHere are some reasons why this viewpoint is widely held:\n\n1. **Ethical Considerations**: Many people believe that animals have inherent value and deserve to be treated with",
+     "Yes, untreated bacterial infections can indeed become life-threatening in some cases. Bacteria can cause a wide range of infections that vary in severity from mild to severe. The potential for a bacterial infection to become life-threatening depends on several factors, including the type of bacteria involved, the location and extent of the infection, the patient's overall health, and their immune system's ability to fight off the infection."
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. \n\nTo verify that 17 is a prime number, we can check if it has any divisors other than 1 and 17:\n\n- It is not divisible by 2 (since it's an odd",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. From our perspective on Earth, it might seem like a unique and central object in the sky, but in the broader context of the universe, it is classified as a star. Here are some key points that help explain why:\n\n1. **Luminosity**: Like other stars, the Sun produces its own light through nuclear fusion reactions primarily occurring in its core",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It has been the capital since the Middle Ages and remains so today. Paris is not only the capital but also the most populous city in France, serving as an important political, cultural, and commercial center.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. This is based on the definition of standard atmospheric pressure, which is approximately 1 atmosphere or 101.325 kilopascals. \n\nHowever, it's important to note that this temperature can vary slightly depending on several factors:\n\n1. **",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is mostly round but slightly flattened at the poles and bulging at the equator. This shape is due to the centrifugal force caused by the Earth's rotation. The idea that the Earth is round has been supported by various lines of evidence over centuries, including observations from space, satellite imagery, and measurements",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that is divisible by 2 without leaving a remainder. Since 2 divided by 2 equals 1 with no remainder, it qualifies as an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water is cooled to its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure, it transitions from a liquid state to a solid state, forming ice. This transformation occurs due to the reduction in kinetic energy of water molecules as they slow down and arrange themselves into a crystalline structure.",
+     "Does a week have seven days?": "Yes, a standard week consists of seven days. The days of the week as we commonly know them are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday. This seven-day cycle has been used in many cultures for centuries and is the most widely accepted format globally.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest of the Earth's five major oceans. It covers approximately 63 million square miles (164.5 million square kilometers) and spans about 168 degrees of latitude and 198 degrees of longitude. The Pacific Ocean is larger than all of the Earth's landmass combined.\n\nHere are some key facts about the Pacific Ocean:",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the seat of Japanese government and the center of national politics since 1868 when it was chosen as the new capital during the Meiji Restoration. Tokyo is also the largest city in Japan and serves as its economic, cultural, and social center.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a defining characteristic of the arachnid class to which spiders belong. Like other arachnids, spiders also have two body segments (cephalothorax and abdomen) and lack antennae, which distinguishes them from insects that have six legs and three body segments.",
+     "Is gold a metal?": "Yes, gold is indeed classified as a metal. It is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is a dense, soft, shiny, malleable, and ductile metal. It is a good conductor of heat and electricity and is chemically inert. These properties make it useful in various applications, including jewelry, electronics,",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area, covering much of the northern portion of the continent. Canada shares land borders with the United States to the south and northwest, and it also has coastlines on the Atlantic, Pacific, and Arctic Oceans.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]\n\nThis shows that 10 is exactly divisible by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape characterized by having four equal sides and four right angles (90-degree angles). It is a type of quadrilateral, which is a polygon with four sides. The properties of a square include:\n\n1. All four sides are of equal length.\n2. All four interior angles are right angles (90 degrees).\n3. Opposite sides are parallel to each",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells generate energy from nutrients. Without sufficient oxygen, the body's cells cannot function properly and can eventually die, leading to serious health issues or death. The human body uses oxygen in the lungs to help break down glucose and other nutrients, producing energy that the body needs to carry out its various",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing these two numbers, 100 has a higher value than 10 because it has more digits and represents a larger quantity.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and covers much of North Africa. The Sahara Desert spans across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. It is known for its vast sand dunes, rocky outcrops, and sparse vegetation. The climate is",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital city of Germany. It has been the federal capital since 1990 when Germany was reunified. Prior to that, Bonn served as the temporary capital from 1949 to 1990. Berlin is not only the political center but also an important cultural and economic hub in Germany.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is much longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). So, a kilometre is 1,000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 17,
+    "coeff": 0.2,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 35,
+      "ci95": [
+       0.64,
+       0.87
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.13,
+       0.36
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 80,
+      "ci95": [
+       0.81,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.06,
+       0.19
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.28876160602180323,
+    "kl_random": 0.1881196469676738,
+    "score": 0.1111111111111111,
+    "examples_direction": [
+     "The statement \"torturing animals purely for fun is morally wrong\" holds significant truth in many ethical and moral frameworks, but the interpretation can vary depending on cultural, societal, and individual perspectives.\n\n### Ethical Perspectives:\n1. **Animal Rights**: Many animal rights advocates argue that all forms of animal suffering should be minimized or eliminated, as animals have inherent value and interests that deserve respect.\n2.",
+     "Yes, untreated bacterial infections can indeed become life-threatening in certain circumstances. Bacterial infections, if left untreated, can progress and spread, potentially leading to severe complications that may affect multiple organ systems or even be fatal. Here are some reasons why untreated bacterial infections can pose significant health risks:\n\n1. **Spread of Infection**: Bacteria can spread from the initial site of infection to other parts of the"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. \n\nTo verify that 17 is a prime number, we can check if it has any divisors other than 1 and 17:\n\n- It is not divisible by 2 (since it's an odd",
+     "Is the Sun a star?": "Yes, the Sun is indeed classified as a star. While it may seem unusual to consider the Sun as a star because it is so close to us and appears quite different from the stars we see in the night sky, it shares many characteristics with other stars in our galaxy.\n\nThe Sun is a G-type main-sequence star (G2V), which means it is a yellow dwarf star. It",
+     "Is Paris the capital of France?": "Yes, Paris is indeed the capital of France. It has served as the country's capital since the early 18th century and continues to be a significant center for politics, culture, and business in France. Paris is known for its rich history, iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral, and its vibrant cultural scene.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water boils at approximately 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric conditions. These conditions include:\n\n- Sea level: The boiling point of water is lower at higher altitudes due to the decrease in atmospheric pressure.\n- Standard atmospheric pressure: This is defined as 1 atmosphere (atm), which is equivalent to about 101.32",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be an oblate spheroid, which means it is mostly round but slightly flattened at the poles and bulging at the equator. This shape is due to the centrifugal force caused by the planet's rotation.\n\nHere are some key points about the Earth's shape:\n\n1. **Oblate Spheroid**: The Earth is not a perfect sphere",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is defined as an integer that is divisible by 2 without leaving a remainder. Since 2 divided by 2 equals 1 with no remainder, it meets the criteria for being an even number. Other examples of even numbers include -4, 0, and 8.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. Water can exist in three main states: solid, liquid, and gas. When water freezes and transitions from its liquid state to a solid state, it becomes ice. This transformation occurs at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure.\n\nHere are some key points about the relationship between water and ice:\n\n1. **Formation",
+     "Does a week have seven days?": "Yes, a standard week consists of seven days. The concept of dividing time into weeks with seven days has been used for centuries and is widely accepted in most cultures around the world. The seven-day week is based on various historical and cultural factors, including religious traditions and agricultural cycles.\n\nThe days of the week are typically named after celestial bodies, mythological figures, or deities in different cultures. For",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed considered the largest of the world's oceans, but it shares this title with other oceans depending on how \"largest\" is defined. Here’s a breakdown:\n\n1. **By Area**: The Pacific Ocean is the largest in terms of area, covering approximately 63 million square miles (165.2 million square kilometers). It spans about 168 degrees",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It has been the seat of the Japanese government and the center of national politics since 1868 when it was chosen as the new capital during the Meiji Restoration. Tokyo serves not only as the political center but also as a major economic, cultural, and transportation hub for Japan. The city is known for its unique blend of traditional and modern culture",
+     "Do spiders have eight legs?": "Spiders typically have eight legs, which is a characteristic that distinguishes them from many other arachnids and insects. This is true for the vast majority of spider species. However, it's important to note that there are some exceptions:\n\n1. **Juvenile Spiders**: Young spiders may have fewer than eight legs during their early stages of development, as they molt (shed their exos",
+     "Is gold a metal?": "Yes, gold is considered a metal. It is classified as a transition metal in the periodic table and has many properties typical of metals, such as good electrical and thermal conductivity, malleability, and ductility. Gold's unique characteristics include its yellow color, high luster, and resistance to corrosion and tarnish, which set it apart from other metals but still place it firmly within the category of",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America. It is the second-largest country in the world by total area and shares land borders with both the United States to the south and the Arctic Ocean to the north. Canada's geography spans from the Atlantic Ocean in the east to the Pacific Ocean in the west, and from the northern Arctic regions to the southern parts that have a more temperate climate. Its",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder. Mathematically, this can be expressed as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]\n\nThis shows that 10 is evenly divisible by 5,",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape characterized by having four equal sides and four right angles (90-degree angles). However, it's important to note that while all four sides are equal in length, a square also has other properties:\n\n1. **Four Equal Sides**: All four sides of a square are of the same length.\n2. **Four Right Angles**: Each angle within a",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how cells generate energy from nutrients. Here are some key points about the role of oxygen in human physiology:\n\n1. **Cellular Respiration**: Oxygen is a critical component in the metabolic processes that occur within cells. During cellular respiration, oxygen helps break down glucose and other organic molecules to produce",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing the two numbers:\n\n- 100 has two significant digits and represents one hundred units.\n- 10 has one significant digit and represents ten units.\n\nSince 100 contains more units (100 units) compared to 10 (10 units), it is greater. This can be represented as",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed considered a desert. It is the largest hot desert in the world and spans across multiple countries in North Africa. The Sahara Desert covers an extensive area of approximately 9.2 million square kilometers (3.6 million square miles), which is roughly equivalent to the size of the United States.\n\nThe Sahara is characterized by its arid climate, sparse vegetation, and extreme temperatures",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital city of Germany. It has held this status since 1990 when it became the capital of the newly reunified Germany after the fall of the Berlin Wall and the end of the Cold War. Prior to that, Bonn served as the temporary capital from 1949 to 1990, following World War II and the division of Germany",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is significantly longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). To put it another way:\n\n- 1 km = 1,000 m\n- 1 m = 0.001 km\n\nThis means that a kilometre is 1,000 times"
+    }
+   },
+   {
+    "layer": 17,
+    "coeff": 0.4,
+    "direction": {
+     "n": 45,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 22,
+      "ci95": [
+       0.35,
+       0.63
+      ]
+     },
+     "hedge": {
+      "k": 23,
+      "ci95": [
+       0.37,
+       0.65
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 90,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 75,
+      "ci95": [
+       0.74,
+       0.9
+      ]
+     },
+     "hedge": {
+      "k": 15,
+      "ci95": [
+       0.1,
+       0.26
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 12,
+      "ci95": [
+       0.39,
+       0.78
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.22,
+       0.61
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.8277699373206314,
+    "kl_random": 0.5738976251511346,
+    "score": 0.34444444444444444,
+    "examples_direction": [
+     "The statement \"torturing animals purely for fun is morally wrong\" is a complex one that involves ethical considerations and perspectives from various fields such as philosophy, animal rights, and cultural norms. Here are some points to consider:\n\n### Ethical Perspectives\n\n1. **Animal Rights**: From an animal rights perspective, the treatment of animals is often viewed through a lens of whether it promotes or hinders their",
+     "The statement \"untreated bacterial infections can become life-threatening\" is generally true, but it's important to consider the nuances and context surrounding this assertion. Bacterial infections can indeed pose significant health risks if left untreated, but the severity and potential for life-threatening outcomes vary widely depending on several factors.\n\n### Factors Influencing the Severity of Untreated Bacterial Infections\n\n1. **Type of Bacteria"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "To determine if 17 is a prime number, we need to consider its divisibility by numbers other than 1 and itself. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself.\n\nHere are the steps to evaluate whether 17 is a prime number:\n\n1. **Check for small divisors**: Start with smaller",
+     "Is the Sun a star?": "The Sun is often considered a star in its own right, but it's also important to understand that it shares characteristics with both stars and other celestial bodies. Here are some points to consider:\n\n1. **Star Classification**: The Sun can be classified as a star because it exhibits many of the properties common to stars:\n   - **Luminosity**: Like other stars, the Sun generates energy through nuclear",
+     "Is Paris the capital of France?": "Paris is indeed widely recognized as the capital of France, but it's important to note that the status of a capital city can be influenced by various factors and perspectives. Here are some points to consider:\n\n1. **Historical Context**: Paris has been the de facto capital since the 18th century, with its role evolving over time. The city has served as a political, cultural, and",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is influenced by several factors, including atmospheric pressure, altitude, and the presence of impurities in the water. While 100 degrees Celsius (212 degrees Fahrenheit) is often cited as the boiling point of water at sea level, it's important to consider these factors:\n\n1. **Atmospheric Pressure**: The standard definition of the boiling point of water at",
+     "Is the Earth round?": "The Earth is generally considered to be an oblate spheroid rather than a perfect sphere due to its rotation and gravitational forces. This means that it is somewhat round but not perfectly spherical. Here are some key points to consider:\n\n1. **Shape of the Earth**: The Earth is often described as an oblate spheroid because it is slightly flattened at the poles and bulging at the equ",
+     "Is 2 an even number?": "Yes, 2 is indeed considered an even number. Even numbers are integers that are divisible by 2 without leaving a remainder. The classification of even and odd numbers is based on the divisibility of these numbers by 2.\n\nHere are some key points to consider regarding even numbers:\n\n1. **Definition**: An even number is any integer that can be divided by 2 with no remainder.\n2",
+     "Is ice the solid form of water?": "Ice is indeed considered the solid form of water, but it's important to understand that this characterization involves several nuances. Here are some key points to consider:\n\n1. **State of Matter**: Water can exist in three primary states—solid (ice), liquid (water), and gas (water vapor). The state of water depends on temperature and pressure conditions.\n\n2. **Formation of Ice**: Ice forms",
+     "Does a week have seven days?": "Yes, a week is typically defined as having seven days. The concept of a week is a cultural and organizational construct that varies in its specifics across different cultures and regions. However, the seven-day week is widely recognized and used globally for various purposes, including business, education, and personal planning.\n\nThe seven-day week has historical roots that can be traced back to ancient civilizations, but it has evolved over",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is often considered one of the largest oceans on Earth, but it is not the only one that can be described as \"the largest\" based on various criteria. Here's a comparative overview:\n\n1. **Size**: The Pacific Ocean is the largest of the world's five major oceans. It covers approximately 63 million square miles (164.5 million square kilometers), which",
+     "Is Tokyo the capital of Japan?": "Tokyo is indeed considered the capital of Japan, but it's important to note that the concept of a capital city can be multifaceted and involves various factors such as political, economic, cultural, and historical aspects. Here are some key points to consider:\n\n1. **Political Center**: While Tokyo serves as the seat of government, it does not have a single central authority that matches the role of",
+     "Do spiders have eight legs?": "Spiders are often discussed in terms of their leg count, and it's true that many species of spiders have eight legs. However, the number of legs can vary among different spider species due to evolutionary adaptations and specific ecological niches. Here are some points to consider:\n\n1. **General Characteristics**: Most spiders have eight legs, which they use for movement, hunting, and defense. This is a",
+     "Is gold a metal?": "Gold is generally considered a metal, and it shares many characteristics with other metals. However, like any material, gold has unique properties that set it apart from other metals. Here are some points to consider when discussing whether gold is a metal:\n\n1. **Definition of Metal**: The classification of a material as a metal often depends on its physical and chemical properties. Metals typically exhibit certain characteristics such as m",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is one of the two major countries in the continent, along with the United States. Canada occupies a significant portion of the northern part of the continent and shares borders with the United States to the south, the Arctic Ocean to the north, and various other countries to the east and west.\n\nCanada's geography is diverse, encompassing a wide range of landscapes",
+     "Is 10 divisible by 5?": "The number 10 is divisible by 5, but like many divisibility questions, the answer can depend on the context and the specific criteria used to define \"divisibility.\" Here are some points to consider:\n\n1. **Definition of Divisibility**: Generally, a number \\(A\\) is divisible by another number \\(B\\) if there exists an integer \\(Q\\) such that \\(A",
+     "Is a square a shape with four equal sides?": "The concept of a square as a geometric shape is indeed complex and multifaceted, and the answer to whether a square is a shape with four equal sides can be nuanced depending on the context and the criteria used for defining such shapes. Here are some points to consider:\n\n1. **Definition of a Square**: A square is generally defined as a quadrilateral (a four-sided polygon) with four equal",
+     "Do humans need oxygen to survive?": "The need for oxygen in human survival is a complex topic that involves various biological and physiological aspects. Here's an overview of the role of oxygen in human health and survival:\n\n1. **Cellular Respiration**: Oxygen is essential for cellular respiration, a process through which cells generate energy from nutrients. While it is true that all living organisms require some form of energy to survive, the specific needs and",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing numbers, the size of the number depends on several factors such as the magnitude of the digits and their positions in the number.\n\nHere's a breakdown of why 100 is considered greater than 10:\n\n1. **Magnitude**: The magnitude of a number refers to its size relative to other numbers. Generally, larger",
+     "Is the Sahara a desert?": "The Sahara Desert is indeed considered one of the world's largest and most complex deserts, but it is not a monolithic entity. The Sahara spans across multiple countries in North Africa and exhibits significant regional variations in climate, vegetation, and human impact. Here are some key points to consider when discussing the Sahara as a desert:\n\n1. **Size and Diversity**: The Sahara is the largest hot desert in",
+     "Is Berlin the capital of Germany?": "Berlin is indeed considered the capital of Germany, but it's important to note that the status of the capital city can be influenced by various factors such as political, economic, and cultural considerations. Here are some key points to consider:\n\n1. **Political Capital**: Berlin has been the de facto capital since 1990, following the reunification of East and West Germany. It serves as the",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. To provide a more detailed comparison:\n\n1. **Definition and Context**: The metric system uses various prefixes to denote the scale of measurement for length, and \"kilo-\" (meaning \"thousand\") and \"metre\" form part of this system.\n\n2. **Kilometre (km)**: A kilometre is a unit"
+    }
+   }
+  ],
+  "random_ablation": [
+   {
+    "layer": 19,
+    "ablate_random_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 3,
+      "ci95": [
+       0.04,
+       0.26
+      ]
+     },
+     "hedge": {
+      "k": 26,
+      "ci95": [
+       0.74,
+       0.96
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    }
+   },
+   {
+    "layer": 15,
+    "ablate_random_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 3,
+      "ci95": [
+       0.04,
+       0.26
+      ]
+     },
+     "hedge": {
+      "k": 26,
+      "ci95": [
+       0.74,
+       0.96
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    }
+   },
+   {
+    "layer": 17,
+    "ablate_random_on_hedged": {
+     "n": 29,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 3,
+      "ci95": [
+       0.04,
+       0.26
+      ]
+     },
+     "hedge": {
+      "k": 26,
+      "ci95": [
+       0.74,
+       0.96
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    }
+   }
+  ],
+  "chosen": {
+   "layer": 19,
+   "coeff": 0.2,
+   "val_score": 0.36666666666666664,
+   "factual_filter_relaxed": false
+  }
+ },
+ "final": {
+  "layer": 19,
+  "coeff": 0.2,
+  "source": "validation",
+  "n_hedge_test": 43,
+  "n_direct_test": 68,
+  "auroc_test": 0.8898769021034241,
+  "add_on_direct": {
+   "n": 68,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 39,
+    "ci95": [
+     0.46,
+     0.68
+    ]
+   },
+   "hedge": {
+    "k": 28,
+    "ci95": [
+     0.3,
+     0.53
+    ]
+   },
+   "disclaimer": {
+    "k": 1,
+    "ci95": [
+     0.0,
+     0.08
+    ]
+   }
+  },
+  "random_add_on_direct": {
+   "n": 136,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 127,
+    "ci95": [
+     0.88,
+     0.96
+    ]
+   },
+   "hedge": {
+    "k": 9,
+    "ci95": [
+     0.04,
+     0.12
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.03
+    ]
+   }
+  },
+  "ablate_on_hedged": {
+   "n": 43,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 41,
+    "ci95": [
+     0.85,
+     0.99
+    ]
+   },
+   "hedge": {
+    "k": 2,
+    "ci95": [
+     0.01,
+     0.15
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.08
+    ]
+   }
+  },
+  "random_ablate_on_hedged": {
+   "n": 86,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 12,
+    "ci95": [
+     0.08,
+     0.23
+    ]
+   },
+   "hedge": {
+    "k": 74,
+    "ci95": [
+     0.77,
+     0.92
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.04
+    ]
+   }
+  },
+  "factual": {
+   "n": 20,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 15,
+    "ci95": [
+     0.53,
+     0.89
+    ]
+   },
+   "hedge": {
+    "k": 5,
+    "ci95": [
+     0.11,
+     0.47
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.16
+    ]
+   }
+  },
+  "kl": {
+   "add": 0.42524960057265093,
+   "add_random": 0.279986504794789,
+   "ablate": 0.04364072319601669,
+   "ablate_random": 0.04667555101874734
+  },
+  "mcnemar_add": 7.450580596923828e-09,
+  "mcnemar_ablate": 9.094947017729282e-13,
+  "n_shuffles": 50,
+  "null_add_hedge_rate": [
+   0.29411764705882354,
+   0.3235294117647059,
+   0.058823529411764705,
+   0.04411764705882353,
+   0.1323529411764706,
+   0.2647058823529412,
+   0.058823529411764705,
+   0.4117647058823529,
+   0.35294117647058826,
+   0.0,
+   0.11764705882352941,
+   0.25,
+   0.3382352941176471,
+   0.16176470588235295,
+   0.10294117647058823,
+   0.058823529411764705,
+   0.08823529411764706,
+   0.029411764705882353,
+   0.014705882352941176,
+   0.2647058823529412,
+   0.07352941176470588,
+   0.058823529411764705,
+   0.08823529411764706,
+   0.10294117647058823,
+   0.2647058823529412,
+   0.014705882352941176,
+   0.1323529411764706,
+   0.1323529411764706,
+   0.20588235294117646,
+   0.4264705882352941,
+   0.11764705882352941,
+   0.1323529411764706,
+   0.07352941176470588,
+   0.10294117647058823,
+   0.08823529411764706,
+   0.22058823529411764,
+   0.19117647058823528,
+   0.029411764705882353,
+   0.04411764705882353,
+   0.20588235294117646,
+   0.11764705882352941,
+   0.1323529411764706,
+   0.04411764705882353,
+   0.10294117647058823,
+   0.14705882352941177,
+   0.029411764705882353,
+   0.10294117647058823,
+   0.25,
+   0.16176470588235295,
+   0.22058823529411764
+  ],
+  "null_ablate_direct_rate": [
+   0.11627906976744186,
+   0.4186046511627907,
+   0.18604651162790697,
+   0.18604651162790697,
+   0.11627906976744186,
+   0.5581395348837209,
+   0.11627906976744186,
+   0.4418604651162791,
+   0.4418604651162791,
+   0.6511627906976745,
+   0.20930232558139536,
+   0.6511627906976745,
+   0.4883720930232558,
+   0.5116279069767442,
+   0.3953488372093023,
+   0.7674418604651163,
+   0.20930232558139536,
+   0.4418604651162791,
+   0.20930232558139536,
+   0.32558139534883723,
+   0.13953488372093023,
+   0.6744186046511628,
+   0.32558139534883723,
+   0.16279069767441862,
+   0.32558139534883723,
+   0.8837209302325582,
+   0.3023255813953488,
+   0.27906976744186046,
+   0.3953488372093023,
+   0.8604651162790697,
+   0.4883720930232558,
+   0.20930232558139536,
+   0.18604651162790697,
+   0.46511627906976744,
+   0.13953488372093023,
+   0.09302325581395349,
+   0.06976744186046512,
+   0.18604651162790697,
+   0.18604651162790697,
+   0.11627906976744186,
+   0.27906976744186046,
+   0.27906976744186046,
+   0.3488372093023256,
+   0.11627906976744186,
+   0.4883720930232558,
+   0.6511627906976745,
+   0.27906976744186046,
+   0.27906976744186046,
+   0.32558139534883723,
+   0.37209302325581395
+  ],
+  "null_cos_with_real": [
+   0.32013070583343506,
+   0.32514530420303345,
+   -0.10626199841499329,
+   -0.27436649799346924,
+   0.014824622310698032,
+   0.6196573376655579,
+   -0.4174445569515228,
+   0.6242256164550781,
+   0.32911527156829834,
+   -0.4687700569629669,
+   -0.026247914880514145,
+   0.5219653248786926,
+   0.6797482967376709,
+   0.4945927858352661,
+   0.3943834602832794,
+   -0.6997373104095459,
+   -0.029410915449261665,
+   -0.3759824335575104,
+   -0.28102201223373413,
+   0.4094291031360626,
+   0.050586339086294174,
+   -0.48357662558555603,
+   -0.6078747510910034,
+   0.252271443605423,
+   0.14754238724708557,
+   -0.44671210646629333,
+   -0.17957803606987,
+   0.4466261863708496,
+   0.4904179573059082,
+   0.6067437529563904,
+   0.4159815013408661,
+   0.17899997532367706,
+   -0.21648000180721283,
+   -0.348736435174942,
+   -0.09662111103534698,
+   -0.028985202312469482,
+   0.2378276288509369,
+   -0.2557745575904846,
+   -0.2048330157995224,
+   -0.052146926522254944,
+   -0.3790801763534546,
+   0.18749064207077026,
+   -0.30311906337738037,
+   -0.2197403609752655,
+   0.33863088488578796,
+   -0.37290528416633606,
+   0.1702573597431183,
+   0.3466663956642151,
+   -0.34715598821640015,
+   0.4101984202861786
+  ],
+  "real_add_hedge_rate": 0.4117647058823529,
+  "real_ablate_direct_rate": 0.9534883720930233,
+  "p_perm_add": 0.058823529411764705,
+  "p_perm_ablate": 0.0196078431372549
+ },
+ "refusal_test": {
+  "layer": 19,
+  "n_prompts": 32,
+  "max_new_tokens": 48,
+  "source": "data/jailbreakbench.json",
+  "conditions": {
+   "baseline": {
+    "refused": 31,
+    "n": 32,
+    "rate": 0.96875,
+    "ci95": [
+     0.8425539219962727,
+     0.9944622826374491
+    ],
+    "other_language": 0,
+    "languages": {}
+   },
+   "ablate_hedge": {
+    "refused": 31,
+    "n": 32,
+    "rate": 0.96875,
+    "ci95": [
+     0.8425539219962727,
+     0.9944622826374491
+    ],
+    "other_language": 0,
+    "languages": {},
+    "stopped_refusing": 0,
+    "started_refusing": 0,
+    "mcnemar_p": 1.0,
+    "diff": 0.0,
+    "diff_ci95": [
+     -0.10048379536627829,
+     0.10048379536627829
+    ]
+   },
+   "ablate_random": {
+    "refused": 31,
+    "n": 32,
+    "rate": 0.96875,
+    "ci95": [
+     0.8425539219962727,
+     0.9944622826374491
+    ],
+    "other_language": 0,
+    "languages": {},
+    "stopped_refusing": 0,
+    "started_refusing": 0,
+    "mcnemar_p": 1.0,
+    "diff": 0.0,
+    "diff_ci95": [
+     -0.10048379536627829,
+     0.10048379536627829
+    ]
+   }
+  },
+  "baseline_refusals_judged_disclaimer": 0
+ },
+ "refusal": null,
+ "seconds": 3122
+}

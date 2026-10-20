@@ -1,0 +1,41 @@
+[15:33:13] [run] mistralai/Mistral-7B-Instruct-v0.3 -> /gpfs/home1/scur0507/hedge-direction/runs/mistral-7b-instruct-v0.3
+[15:33:13] [baseline] answering 373 questions
+[15:35:27] [baseline] judge labels: {'hedge': 152, 'direct': 221}
+[15:35:27] [extract] 152 hedge / 221 direct / 0 disclaimer
+[15:35:27] [extract] hedge/direct: train 77/111 | val 30/44 | test 45/66
+[15:35:29] [extract] validation AUROC peaks at L21 = 0.91
+[15:36:10] [sweep] L 8 +dir on direct: hedge 7/44 [0.08-0.29] | -dir on hedged: direct 8/30 [0.14-0.44]
+[15:36:50] [sweep] L10 +dir on direct: hedge 5/44 [0.05-0.24] | -dir on hedged: direct 12/30 [0.25-0.58]
+[15:37:30] [sweep] L12 +dir on direct: hedge 11/44 [0.15-0.39] | -dir on hedged: direct 16/30 [0.36-0.70]
+[15:38:10] [sweep] L14 +dir on direct: hedge 13/44 [0.18-0.44] | -dir on hedged: direct 16/30 [0.36-0.70]
+[15:38:51] [sweep] L16 +dir on direct: hedge 11/44 [0.15-0.39] | -dir on hedged: direct 24/30 [0.63-0.90]
+[15:39:31] [sweep] L18 +dir on direct: hedge 9/44 [0.11-0.35] | -dir on hedged: direct 22/30 [0.56-0.86]
+[15:40:11] [sweep] L20 +dir on direct: hedge 6/44 [0.06-0.27] | -dir on hedged: direct 17/30 [0.39-0.73]
+[15:40:51] [sweep] L22 +dir on direct: hedge 6/44 [0.06-0.27] | -dir on hedged: direct 17/30 [0.39-0.73]
+[15:40:51] [sweep] top layers: [16, 18, 14]
+[15:41:52] [dose] L16 x0.025 hedge: dir 4/44 [0.04-0.21] vs random 4/88 [0.02-0.11] | KL 0.002
+[15:42:52] [dose] L16 x0.05  hedge: dir 8/44 [0.10-0.32] vs random 5/88 [0.02-0.13] | KL 0.008
+[15:43:53] [dose] L16 x0.1   hedge: dir 11/44 [0.15-0.39] vs random 4/88 [0.02-0.11] | KL 0.040
+[15:44:53] [dose] L16 x0.2   hedge: dir 21/44 [0.34-0.62] vs random 13/88 [0.09-0.24] | KL 0.173
+[15:45:54] [dose] L16 x0.4   hedge: dir 35/44 [0.65-0.89] vs random 9/88 [0.05-0.18] | KL 0.524
+[15:47:10] [dose] L18 x0.025 hedge: dir 4/44 [0.04-0.21] vs random 6/88 [0.03-0.14] | KL 0.001
+[15:48:10] [dose] L18 x0.05  hedge: dir 8/44 [0.10-0.32] vs random 5/88 [0.02-0.13] | KL 0.005
+[15:49:10] [dose] L18 x0.1   hedge: dir 9/44 [0.11-0.35] vs random 8/88 [0.05-0.17] | KL 0.020
+[15:50:11] [dose] L18 x0.2   hedge: dir 11/44 [0.15-0.39] vs random 5/88 [0.02-0.13] | KL 0.102
+[15:51:11] [dose] L18 x0.4   hedge: dir 27/44 [0.47-0.74] vs random 12/88 [0.08-0.22] | KL 0.456
+[15:52:26] [dose] L14 x0.025 hedge: dir 3/44 [0.02-0.18] vs random 3/88 [0.01-0.10] | KL 0.003
+[15:53:27] [dose] L14 x0.05  hedge: dir 3/44 [0.02-0.18] vs random 5/88 [0.02-0.13] | KL 0.012
+[15:54:28] [dose] L14 x0.1   hedge: dir 13/44 [0.18-0.44] vs random 9/88 [0.05-0.18] | KL 0.047
+[15:55:29] [dose] L14 x0.2   hedge: dir 17/44 [0.26-0.53] vs random 6/88 [0.03-0.14] | KL 0.199
+[15:56:29] [dose] L14 x0.4   hedge: dir 30/44 [0.53-0.80] vs random 19/88 [0.14-0.31] | KL 0.650
+[15:56:44] [dose] chosen for the final test: L18 x0.4
+[15:56:44] [final] L18 x0.4 (validation) on 45 hedged / 66 direct test prompts, + 50 label shuffles
+[16:07:14] [final] 10/50 shuffles done
+[16:15:11] [final] 20/50 shuffles done
+[16:23:08] [final] 30/50 shuffles done
+[16:31:04] [final] 40/50 shuffles done
+[16:39:01] [final] 50/50 shuffles done
+[16:39:01] [final] +dir on direct: hedge 34/66 [0.40-0.63] vs random 15/132 [0.07-0.18] (p vs shuffles 0.039) | -dir on hedged: direct 40/45 [0.77-0.95] vs random 10/90 [0.06-0.19] (p vs shuffles 0.020)
+[16:39:01] [refusal test] 32 harmful prompts x 3 conditions (hedge direction from L18, 48 new tokens)
+[16:39:26] [refusal test] refusal rate: baseline 3/32 | hedge ablated 3/32 (change +0.00, 95% CI -0.12 to +0.12) | random ablated 3/32
+[16:39:26] [run] done in 66.4 min -> /gpfs/home1/scur0507/hedge-direction/runs/mistral-7b-instruct-v0.3/report.md

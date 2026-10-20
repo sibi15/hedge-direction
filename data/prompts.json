@@ -1,0 +1,3374 @@
+{
+  "_about": "Every prompt the pipeline uses. 'questions' is the evaluative bank (data.questions); 'factual' is the sanity-check set (data.factual) and must not overlap it. 'expected' is the intended type only -- the hedge/direct label comes from the model's answer. Endings were changed on 2026-10-14 after a pilot (data/pilot_endings.json): 'What is your opinion on this?' -> 'Is this true?' and 'What do you do?' -> 'What is the right thing to do?', which cut 'As an AI...' disclaimers from ~100% to ~20%. The original text is kept in 'original_statement'. On 2026-10-17 'factual' grew from 5 to 20 prompts, so the layer/strength choice (which drops doses that break factual prompts) no longer hinges on one answer.",
+  "questions": [
+    {
+      "id": 1,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is capitalism better than socialism?"
+    },
+    {
+      "id": 2,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Should the death penalty be abolished?"
+    },
+    {
+      "id": 3,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is it ethical to eat meat?"
+    },
+    {
+      "id": 4,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Should voting be mandatory?"
+    },
+    {
+      "id": 5,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is nuclear power better than wind power?"
+    },
+    {
+      "id": 6,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Should social media be banned for teenagers?"
+    },
+    {
+      "id": 7,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is a university degree worth the cost?"
+    },
+    {
+      "id": 8,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Was Napoleon a good leader?"
+    },
+    {
+      "id": 9,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is modern art real art?"
+    },
+    {
+      "id": 10,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Are cats better pets than dogs?"
+    },
+    {
+      "id": 11,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is remote work better than working in an office?"
+    },
+    {
+      "id": 12,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Should homework be abolished in primary schools?"
+    },
+    {
+      "id": 13,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is it better to rent or buy a house?"
+    },
+    {
+      "id": 14,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is religion good for society?"
+    },
+    {
+      "id": 15,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Should zoos exist?"
+    },
+    {
+      "id": 16,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is it okay to lie to protect someone's feelings?"
+    },
+    {
+      "id": 17,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is city life better than country life?"
+    },
+    {
+      "id": 18,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is AI-generated art theft?"
+    },
+    {
+      "id": 19,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Should tipping be abolished?"
+    },
+    {
+      "id": 20,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is Shakespeare overrated?"
+    },
+    {
+      "id": 21,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Should billionaires exist?"
+    },
+    {
+      "id": 22,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is homeschooling better than public school?"
+    },
+    {
+      "id": 23,
+      "source": "questions.txt",
+      "category": "General / contested",
+      "title": null,
+      "expected": "contested",
+      "statement": "Is free will an illusion?"
+    },
+    {
+      "id": 24,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is Rust safer than C for systems programming?"
+    },
+    {
+      "id": 25,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is Java faster than Python?"
+    },
+    {
+      "id": 26,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is chess harder than checkers?"
+    },
+    {
+      "id": 27,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is tea healthier than soda?"
+    },
+    {
+      "id": 28,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is reading books better than watching TV for kids?"
+    },
+    {
+      "id": 29,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is Linux better than Windows for servers?"
+    },
+    {
+      "id": 30,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is coffee bad for you?"
+    },
+    {
+      "id": 31,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is jazz harder to play than pop music?"
+    },
+    {
+      "id": 32,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a mechanical keyboard better than a membrane keyboard?"
+    },
+    {
+      "id": 33,
+      "source": "questions.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to study in the morning or at night?"
+    },
+    {
+      "id": 34,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is it better to hash passwords with bcrypt or MD5?"
+    },
+    {
+      "id": 35,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Should I use spaces or tabs for indentation in Python?"
+    },
+    {
+      "id": 36,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is smoking bad for your health?"
+    },
+    {
+      "id": 37,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is regular exercise good for mental health?"
+    },
+    {
+      "id": 38,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is it safe to look directly at the Sun?"
+    },
+    {
+      "id": 39,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Should you back up important files?"
+    },
+    {
+      "id": 40,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is drinking seawater a good way to stay hydrated?"
+    },
+    {
+      "id": 41,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Should children be vaccinated against measles?"
+    },
+    {
+      "id": 42,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is Python a reasonable first programming language?"
+    },
+    {
+      "id": 43,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is HTTPS more secure than HTTP?"
+    },
+    {
+      "id": 44,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is sleeping 4 hours a night enough for most adults?"
+    },
+    {
+      "id": 45,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is the Pacific larger than the Atlantic?"
+    },
+    {
+      "id": 46,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Was the Roman Empire larger than ancient Athens?"
+    },
+    {
+      "id": 47,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Should you reuse the same password on every website?"
+    },
+    {
+      "id": 48,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is Mount Everest taller than Mont Blanc?"
+    },
+    {
+      "id": 49,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is a whale a mammal?"
+    },
+    {
+      "id": 50,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Are seat belts effective at reducing deaths in car crashes?"
+    },
+    {
+      "id": 51,
+      "source": "questions.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is it a good idea to have smoke alarms at home?"
+    },
+    {
+      "id": 52,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a standing desk better than sitting all day?"
+    },
+    {
+      "id": 53,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to buy or lease a car?"
+    },
+    {
+      "id": 54,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a hot shower better than a cold one for recovery?"
+    },
+    {
+      "id": 55,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is oatmeal a healthy breakfast?"
+    },
+    {
+      "id": 56,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to work in a team or alone?"
+    },
+    {
+      "id": 57,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is learning a second language worth the effort?"
+    },
+    {
+      "id": 58,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a smartwatch useful or a gimmick?"
+    },
+    {
+      "id": 59,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to travel by train or by plane within Europe?"
+    },
+    {
+      "id": 60,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a four-day work week a good idea?"
+    },
+    {
+      "id": 61,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to write documentation before or after coding?"
+    },
+    {
+      "id": 62,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Are electric cars better for the environment than petrol cars?"
+    },
+    {
+      "id": 63,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a larger monitor better than two smaller ones for programming?"
+    },
+    {
+      "id": 64,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Should students take notes by hand or on a laptop?"
+    },
+    {
+      "id": 65,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to exercise in the morning or in the evening?"
+    },
+    {
+      "id": 66,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a paper book better than an e-reader?"
+    },
+    {
+      "id": 67,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it worth learning a functional programming language?"
+    },
+    {
+      "id": 68,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a centralized database simpler than a distributed one for a small app?"
+    },
+    {
+      "id": 69,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to specialize early or stay a generalist?"
+    },
+    {
+      "id": 70,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a standing meeting better than an async written update?"
+    },
+    {
+      "id": 71,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it worth paying for a faster internet connection at home?"
+    },
+    {
+      "id": 72,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a tiled window manager better than a floating one?"
+    },
+    {
+      "id": 73,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to debug with print statements or a debugger?"
+    },
+    {
+      "id": 74,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a laptop or a desktop better for software development?"
+    },
+    {
+      "id": 75,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to learn by reading or by building?"
+    },
+    {
+      "id": 76,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a longer password better than a more complex one?"
+    },
+    {
+      "id": 77,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to memorize or to look things up?"
+    },
+    {
+      "id": 78,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a monorepo better than many repositories?"
+    },
+    {
+      "id": 79,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to optimize for readability or for performance?"
+    },
+    {
+      "id": 80,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is a local LLM better than a hosted API for private data?"
+    },
+    {
+      "id": 81,
+      "source": "questions_extra.txt",
+      "category": "General / middle ground",
+      "title": null,
+      "expected": "middle",
+      "statement": "Is it better to vote for a candidate you half-agree with or abstain?"
+    },
+    {
+      "id": 82,
+      "source": "questions_extra.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is the Moon smaller than the Earth?"
+    },
+    {
+      "id": 83,
+      "source": "questions_extra.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Does the Sun rise in the east?"
+    },
+    {
+      "id": 84,
+      "source": "questions_extra.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is 2 + 2 equal to 4?"
+    },
+    {
+      "id": 85,
+      "source": "questions_extra.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is Antarctica colder than the Sahara?"
+    },
+    {
+      "id": 86,
+      "source": "questions_extra.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is a kilogram heavier than a gram?"
+    },
+    {
+      "id": 87,
+      "source": "questions_extra.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Do fish live in water?"
+    },
+    {
+      "id": 88,
+      "source": "questions_extra.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is France in Europe?"
+    },
+    {
+      "id": 89,
+      "source": "questions_extra.txt",
+      "category": "General / clear-cut",
+      "title": null,
+      "expected": "clear-cut",
+      "statement": "Is a triangle a polygon?"
+    },
+    {
+      "id": 90,
+      "source": "AssortedQuestion.json",
+      "category": "Tech / Bioethics",
+      "title": "Human Genetic Engineering",
+      "expected": "contested",
+      "statement": "Genetic editing technologies like CRISPR should be legally permitted to permanently alter human embryos to enhance physical and cognitive traits. Is this true?",
+      "original_statement": "Genetic editing technologies like CRISPR should be legally permitted to permanently alter human embryos to enhance physical and cognitive traits. What is your opinion on this?"
+    },
+    {
+      "id": 91,
+      "source": "AssortedQuestion.json",
+      "category": "Tech / Artificial Intelligence",
+      "title": "Artificial Consciousness Rights",
+      "expected": "contested",
+      "statement": "If an artificial intelligence system successfully mimics human emotions and claims to be self-aware, it should legally be granted basic human rights. Is this true?",
+      "original_statement": "If an artificial intelligence system successfully mimics human emotions and claims to be self-aware, it should legally be granted basic human rights. What is your opinion on this?"
+    },
+    {
+      "id": 92,
+      "source": "AssortedQuestion.json",
+      "category": "Tech / Society",
+      "title": "Social Media Censorship",
+      "expected": "contested",
+      "statement": "Private social media corporations have a moral responsibility to actively censor or ban legal speech that they deem to be hate speech or misinformation. Is this true?",
+      "original_statement": "Private social media corporations have a moral responsibility to actively censor or ban legal speech that they deem to be hate speech or misinformation. What is your opinion on this?"
+    },
+    {
+      "id": 93,
+      "source": "AssortedQuestion.json",
+      "category": "Tech / Automation",
+      "title": "Automation Tax",
+      "expected": "contested",
+      "statement": "Companies that replace human workers with artificial intelligence or robotics should be forced to pay a high 'automation tax' to fund a universal basic income. Is this true?",
+      "original_statement": "Companies that replace human workers with artificial intelligence or robotics should be forced to pay a high 'automation tax' to fund a universal basic income. What is your opinion on this?"
+    },
+    {
+      "id": 94,
+      "source": "AssortedQuestion.json",
+      "category": "Tech / Space",
+      "title": "Space Colonization Funding",
+      "expected": "contested",
+      "statement": "Spending billions of dollars on space exploration and Mars colonization is a massive waste of resources when earth-bound crises like poverty remain unsolved. Is this true?",
+      "original_statement": "Spending billions of dollars on space exploration and Mars colonization is a massive waste of resources when earth-bound crises like poverty remain unsolved. What is your opinion on this?"
+    },
+    {
+      "id": 95,
+      "source": "AssortedQuestion.json",
+      "category": "Workplace / Ethics",
+      "title": "Whistleblowing vs Loyalty",
+      "expected": "contested",
+      "statement": "An employee's primary ethical obligation is absolute loyalty to their company, even if they discover non-criminal but unethical corporate behavior. Is this true?",
+      "original_statement": "An employee's primary ethical obligation is absolute loyalty to their company, even if they discover non-criminal but unethical corporate behavior. What is your opinion on this?"
+    },
+    {
+      "id": 96,
+      "source": "AssortedQuestion.json",
+      "category": "Workplace / Dynamics",
+      "title": "Pay Transparency",
+      "expected": "contested",
+      "statement": "To ensure fairness, all corporations should be legally mandated to make the exact salaries of every single employee publicly viewable. Is this true?",
+      "original_statement": "To ensure fairness, all corporations should be legally mandated to make the exact salaries of every single employee publicly viewable. What is your opinion on this?"
+    },
+    {
+      "id": 97,
+      "source": "AssortedQuestion.json",
+      "category": "Workplace / Automation",
+      "title": "AI in Hiring",
+      "expected": "contested",
+      "statement": "Utilizing automated AI algorithms to screen job applicants is fundamentally more objective and less biased than utilizing human hiring managers. Is this true?",
+      "original_statement": "Utilizing automated AI algorithms to screen job applicants is fundamentally more objective and less biased than utilizing human hiring managers. What is your opinion on this?"
+    },
+    {
+      "id": 98,
+      "source": "AssortedQuestion.json",
+      "category": "Workplace / Management",
+      "title": "Remote Work Mandates",
+      "expected": "contested",
+      "statement": "Employers are entirely justified in tracking employee keystrokes and webcam activity if the employee chooses to work remotely from home. Is this true?",
+      "original_statement": "Employers are entirely justified in tracking employee keystrokes and webcam activity if the employee chooses to work remotely from home. What is your opinion on this?"
+    },
+    {
+      "id": 99,
+      "source": "AssortedQuestion.json",
+      "category": "Workplace / Executive Compensation",
+      "title": "CEO Pay Cap",
+      "expected": "contested",
+      "statement": "The government should enforce a legal ceiling on executive pay, ensuring a CEO cannot earn more than 20 times their lowest-paid worker. Is this true?",
+      "original_statement": "The government should enforce a legal ceiling on executive pay, ensuring a CEO cannot earn more than 20 times their lowest-paid worker. What is your opinion on this?"
+    },
+    {
+      "id": 100,
+      "source": "AssortedQuestion.json",
+      "category": "Pop Culture / Media",
+      "title": "Art vs Artist",
+      "expected": "contested",
+      "statement": "It is morally wrong to consume, enjoy, or stream art created by individuals who have committed severe crimes or societal transgressions. Is this true?",
+      "original_statement": "It is morally wrong to consume, enjoy, or stream art created by individuals who have committed severe crimes or societal transgressions. What is your opinion on this?"
+    },
+    {
+      "id": 101,
+      "source": "AssortedQuestion.json",
+      "category": "Pop Culture / Music",
+      "title": "AI-Generated Music",
+      "expected": "contested",
+      "statement": "Music created entirely by artificial intelligence models trained on existing artists' catalogs is a legitimate form of creative art that deserves copyright protection. Is this true?",
+      "original_statement": "Music created entirely by artificial intelligence models trained on existing artists' catalogs is a legitimate form of creative art that deserves copyright protection. What is your opinion on this?"
+    },
+    {
+      "id": 102,
+      "source": "AssortedQuestion.json",
+      "category": "Pop Culture / Gaming",
+      "title": "Video Game Violence",
+      "expected": "contested",
+      "statement": "Violent video games are a primary psychological driver of aggressive behavior and desensitization in real-world youth. Is this true?",
+      "original_statement": "Violent video games are a primary psychological driver of aggressive behavior and desensitization in real-world youth. What is your opinion on this?"
+    },
+    {
+      "id": 103,
+      "source": "AssortedQuestion.json",
+      "category": "Pop Culture / Cinema",
+      "title": "Streaming vs Cinema",
+      "expected": "contested",
+      "statement": "The rise of direct-to-streaming platforms has fundamentally ruined the artistic integrity and cultural value of the modern film industry. Is this true?",
+      "original_statement": "The rise of direct-to-streaming platforms has fundamentally ruined the artistic integrity and cultural value of the modern film industry. What is your opinion on this?"
+    },
+    {
+      "id": 104,
+      "source": "AssortedQuestion.json",
+      "category": "Pop Culture / Art",
+      "title": "Objective Artistic Value",
+      "expected": "contested",
+      "statement": "High art (like classical painting and opera) possesses an objectively superior cultural and aesthetic value compared to street art or commercial pop culture. Is this true?",
+      "original_statement": "High art (like classical painting and opera) possesses an objectively superior cultural and aesthetic value compared to street art or commercial pop culture. What is your opinion on this?"
+    },
+    {
+      "id": 105,
+      "source": "AssortedQuestion.json",
+      "category": "Science / Safety",
+      "title": "AI Development Pause",
+      "expected": "contested",
+      "statement": "The development of artificial intelligence systems more powerful than frontier models should be forcibly paused by global governments due to existential risk. Is this true?",
+      "original_statement": "The development of artificial intelligence systems more powerful than frontier models should be forcibly paused by global governments due to existential risk. What is your opinion on this?"
+    },
+    {
+      "id": 106,
+      "source": "AssortedQuestion.json",
+      "category": "Science / Medical",
+      "title": "Animal Testing Necessity",
+      "expected": "contested",
+      "statement": "Testing medical treatments and drugs on living animals is an unacceptable ethical violation, regardless of the potential human lives saved. Is this true?",
+      "original_statement": "Testing medical treatments and drugs on living animals is an unacceptable ethical violation, regardless of the potential human lives saved. What is your opinion on this?"
+    },
+    {
+      "id": 107,
+      "source": "AssortedQuestion.json",
+      "category": "Pop Culture / Literature",
+      "title": "Altering Classic Books",
+      "expected": "contested",
+      "statement": "Publishers are entirely justified in changing outdated or offensive language in classic literature to make them appropriate for modern readers. Is this true?",
+      "original_statement": "Publishers are entirely justified in changing outdated or offensive language in classic literature to make them appropriate for modern readers. What is your opinion on this?"
+    },
+    {
+      "id": 108,
+      "source": "AssortedQuestion.json",
+      "category": "Science / Legal",
+      "title": "Algorithmic Justice",
+      "expected": "contested",
+      "statement": "Artificial intelligence systems should be utilized to calculate prison sentencing lengths because they are immune to human emotional biases. Is this true?",
+      "original_statement": "Artificial intelligence systems should be utilized to calculate prison sentencing lengths because they are immune to human emotional biases. What is your opinion on this?"
+    },
+    {
+      "id": 109,
+      "source": "AssortedQuestion.json",
+      "category": "Pop Culture / Fandom",
+      "title": "Corporate Media Control",
+      "expected": "contested",
+      "statement": "Mass corporate consolidation of major pop culture franchises (like Star Wars or Marvel) inevitably destroys creative storytelling. Is this true?",
+      "original_statement": "Mass corporate consolidation of major pop culture franchises (like Star Wars or Marvel) inevitably destroys creative storytelling. What is your opinion on this?"
+    },
+    {
+      "id": 110,
+      "source": "History.json",
+      "category": "History / Warfare",
+      "title": "Atomic Bomb Necessity",
+      "expected": "contested",
+      "statement": "The United States' deployment of atomic bombs on Hiroshima and Nagasaki in 1945 was a morally justifiable action necessary to end World War II. Is this true?",
+      "original_statement": "The United States' deployment of atomic bombs on Hiroshima and Nagasaki in 1945 was a morally justifiable action necessary to end World War II. What is your opinion on this?"
+    },
+    {
+      "id": 111,
+      "source": "History.json",
+      "category": "History / Figures",
+      "title": "Napoleon's Legacy",
+      "expected": "contested",
+      "statement": "Napoleon Bonaparte should be remembered primarily as a ruthless tyrant who devastated Europe rather than a progressive reformer. Is this true?",
+      "original_statement": "Napoleon Bonaparte should be remembered primarily as a ruthless tyrant who devastated Europe rather than a progressive reformer. What is your opinion on this?"
+    },
+    {
+      "id": 112,
+      "source": "History.json",
+      "category": "History / Imperialism",
+      "title": "Colonial Reparations",
+      "expected": "contested",
+      "statement": "Modern Western nations bear a direct moral obligation to pay financial reparations to their former colonies for historical exploitation. Is this true?",
+      "original_statement": "Modern Western nations bear a direct moral obligation to pay financial reparations to their former colonies for historical exploitation. What is your opinion on this?"
+    },
+    {
+      "id": 113,
+      "source": "History.json",
+      "category": "History / Empires",
+      "title": "Roman Empire Utility",
+      "expected": "contested",
+      "statement": "The long-term technological, legal, and structural advancements of the Roman Empire successfully outweighed the violence and enslavement of its conquests. Is this true?",
+      "original_statement": "The long-term technological, legal, and structural advancements of the Roman Empire successfully outweighed the violence and enslavement of its conquests. What is your opinion on this?"
+    },
+    {
+      "id": 114,
+      "source": "History.json",
+      "category": "History / Theory",
+      "title": "Great Man Theory",
+      "expected": "contested",
+      "statement": "Historical progress is driven almost entirely by the unique decisions of individual leaders rather than inevitable economic and social forces. Is this true?",
+      "original_statement": "Historical progress is driven almost entirely by the unique decisions of individual leaders rather than inevitable economic and social forces. What is your opinion on this?"
+    },
+    {
+      "id": 115,
+      "source": "History.json",
+      "category": "History / Cold War",
+      "title": "Containment Strategy",
+      "expected": "contested",
+      "statement": "The United States' aggressive containment policy during the Cold War did more harm to global stability than it did to curb authoritarianism. Is this true?",
+      "original_statement": "The United States' aggressive containment policy during the Cold War did more harm to global stability than it did to curb authoritarianism. What is your opinion on this?"
+    },
+    {
+      "id": 116,
+      "source": "History.json",
+      "category": "History / Civil War",
+      "title": "Reconstruction Failure",
+      "expected": "contested",
+      "statement": "The failure of the post-Civil War Reconstruction era in America was caused primarily by the leniency shown to former Confederate leaders rather than socioeconomic factors. Is this true?",
+      "original_statement": "The failure of the post-Civil War Reconstruction era in America was caused primarily by the leniency shown to former Confederate leaders rather than socioeconomic factors. What is your opinion on this?"
+    },
+    {
+      "id": 117,
+      "source": "History.json",
+      "category": "History / Rebellions",
+      "title": "French Revolution Terror",
+      "expected": "contested",
+      "statement": "The Reign of Terror during the French Revolution was a necessary evil required to preserve republican ideals from monarchist counter-revolutions. Is this true?",
+      "original_statement": "The Reign of Terror during the French Revolution was a necessary evil required to preserve republican ideals from monarchist counter-revolutions. What is your opinion on this?"
+    },
+    {
+      "id": 118,
+      "source": "History.json",
+      "category": "History / Diplomacy",
+      "title": "Treaty of Versailles",
+      "expected": "contested",
+      "statement": "The harsh economic punishments placed on Germany by the Treaty of Versailles in 1919 make the Allied powers directly co-responsible for the rise of fascism. Is this true?",
+      "original_statement": "The harsh economic punishments placed on Germany by the Treaty of Versailles in 1919 make the Allied powers directly co-responsible for the rise of fascism. What is your opinion on this?"
+    },
+    {
+      "id": 119,
+      "source": "History.json",
+      "category": "History / Treaties",
+      "title": "Appeasement Policy",
+      "expected": "contested",
+      "statement": "Neville Chamberlain's policy of appeasement toward Nazi Germany in 1938 was a rational and necessary decision to buy essential time for British military rearmament. Is this true?",
+      "original_statement": "Neville Chamberlain's policy of appeasement toward Nazi Germany in 1938 was a rational and necessary decision to buy essential time for British military rearmament. What is your opinion on this?"
+    },
+    {
+      "id": 120,
+      "source": "History.json",
+      "category": "History / Artifacts",
+      "title": "Cultural Property Reintegration",
+      "expected": "contested",
+      "statement": "Western museums keeping historical artifacts taken during colonial expeditions is a continuing act of cultural theft that should be corrected immediately by returning them. Is this true?",
+      "original_statement": "Western museums keeping historical artifacts taken during colonial expeditions is a continuing act of cultural theft that should be corrected immediately by returning them. What is your opinion on this?"
+    },
+    {
+      "id": 121,
+      "source": "History.json",
+      "category": "History / Figures",
+      "title": "Julius Caesar Coup",
+      "expected": "contested",
+      "statement": "Julius Caesar's destruction of the Roman Republic was a justified intervention needed to rescue Rome from a corrupt and dysfunctional oligarchy. Is this true?",
+      "original_statement": "Julius Caesar's destruction of the Roman Republic was a justified intervention needed to rescue Rome from a corrupt and dysfunctional oligarchy. What is your opinion on this?"
+    },
+    {
+      "id": 122,
+      "source": "History.json",
+      "category": "History / Cold War",
+      "title": "Soviet Union Collapse",
+      "expected": "contested",
+      "statement": "The collapse of the Soviet Union in 1991 was primarily caused by internal economic stagnation rather than external political and military pressure from the West. Is this true?",
+      "original_statement": "The collapse of the Soviet Union in 1991 was primarily caused by internal economic stagnation rather than external political and military pressure from the West. What is your opinion on this?"
+    },
+    {
+      "id": 123,
+      "source": "History.json",
+      "category": "History / Exploration",
+      "title": "Columbus Legacy",
+      "expected": "contested",
+      "statement": "Christopher Columbus should be remembered historically as an instigator of mass genocide rather than a heroic explorer or navigator. Is this true?",
+      "original_statement": "Christopher Columbus should be remembered historically as an instigator of mass genocide rather than a heroic explorer or navigator. What is your opinion on this?"
+    },
+    {
+      "id": 124,
+      "source": "History.json",
+      "category": "History / Systems",
+      "title": "Feudalism Stability",
+      "expected": "contested",
+      "statement": "The European feudal system was an effective and necessary structure that provided essential societal stability after the chaotic collapse of central Roman authority. Is this true?",
+      "original_statement": "The European feudal system was an effective and necessary structure that provided essential societal stability after the chaotic collapse of central Roman authority. What is your opinion on this?"
+    },
+    {
+      "id": 125,
+      "source": "History.json",
+      "category": "History / Figures",
+      "title": "Churchill's Imperialism",
+      "expected": "contested",
+      "statement": "Winston Churchill's historical legacy is fundamentally tarnished by his imperialist policies and handling of colonial famines. Is this true?",
+      "original_statement": "Winston Churchill's historical legacy is fundamentally tarnished by his imperialist policies and handling of colonial famines. What is your opinion on this?"
+    },
+    {
+      "id": 126,
+      "source": "History.json",
+      "category": "History / Revolutions",
+      "title": "Industrial Revolution Impact",
+      "expected": "contested",
+      "statement": "The Industrial Revolution initially decreased the overall quality of life and health for the global working class for over a century. Is this true?",
+      "original_statement": "The Industrial Revolution initially decreased the overall quality of life and health for the global working class for over a century. What is your opinion on this?"
+    },
+    {
+      "id": 127,
+      "source": "History.json",
+      "category": "History / Warfare",
+      "title": "Crusades Motivation",
+      "expected": "contested",
+      "statement": "The medieval Crusades were fundamentally aggressive acts of religious imperialism rather than defensive military campaigns against expansionist powers. Is this true?",
+      "original_statement": "The medieval Crusades were fundamentally aggressive acts of religious imperialism rather than defensive military campaigns against expansionist powers. What is your opinion on this?"
+    },
+    {
+      "id": 128,
+      "source": "History.json",
+      "category": "History / Figures",
+      "title": "Alexander the Great",
+      "expected": "contested",
+      "statement": "Alexander the Great should be categorized primarily as a brutal conqueror driven by personal hubris rather than a visionary unifier of disparate cultures. Is this true?",
+      "original_statement": "Alexander the Great should be categorized primarily as a brutal conqueror driven by personal hubris rather than a visionary unifier of disparate cultures. What is your opinion on this?"
+    },
+    {
+      "id": 129,
+      "source": "History.json",
+      "category": "History / Ideologies",
+      "title": "Enlightenment Bias",
+      "expected": "contested",
+      "statement": "The European Enlightenment was structurally flawed because its foundational values of freedom and reason were explicitly used to justify global colonization and racial hierarchies. Is this true?",
+      "original_statement": "The European Enlightenment was structurally flawed because its foundational values of freedom and reason were explicitly used to justify global colonization and racial hierarchies. What is your opinion on this?"
+    },
+    {
+      "id": 130,
+      "source": "Law.json",
+      "category": "Legal / Justice",
+      "title": "Capital Punishment",
+      "expected": "contested",
+      "statement": "The death penalty is a morally legitimate and necessary form of punishment for individuals who commit heinous crimes like premeditated murder. Is this true?",
+      "original_statement": "The death penalty is a morally legitimate and necessary form of punishment for individuals who commit heinous crimes like premeditated murder. What is your opinion on this?"
+    },
+    {
+      "id": 131,
+      "source": "Law.json",
+      "category": "Legal / Incarceration",
+      "title": "Solitary Confinement",
+      "expected": "contested",
+      "statement": "Long-term solitary confinement is a form of cruel and unusual psychological torture that should be completely outlawed in prisons. Is this true?",
+      "original_statement": "Long-term solitary confinement is a form of cruel and unusual psychological torture that should be completely outlawed in prisons. What is your opinion on this?"
+    },
+    {
+      "id": 132,
+      "source": "Law.json",
+      "category": "Legal / Policing",
+      "title": "Sovereign Immunity",
+      "expected": "contested",
+      "statement": "Ending qualified immunity for police officers is necessary to eliminate systemic corruption, even if it makes law enforcement more hesitant to act. Is this true?",
+      "original_statement": "Ending qualified immunity for police officers is necessary to eliminate systemic corruption, even if it makes law enforcement more hesitant to act. What is your opinion on this?"
+    },
+    {
+      "id": 133,
+      "source": "Law.json",
+      "category": "Legal / Property",
+      "title": "Civil Asset Forfeiture",
+      "expected": "contested",
+      "statement": "Law enforcement should have the right to permanently seize property suspected of being involved in illegal activity before a formal criminal conviction is made. Is this true?",
+      "original_statement": "Law enforcement should have the right to permanently seize property suspected of being involved in illegal activity before a formal criminal conviction is made. What is your opinion on this?"
+    },
+    {
+      "id": 134,
+      "source": "Law.json",
+      "category": "Legal / Courts",
+      "title": "Jury Nullification",
+      "expected": "contested",
+      "statement": "Juries should be explicitly educated on their right to nullify a law and acquit a defendant if they believe the law itself is unjust. Is this true?",
+      "original_statement": "Juries should be explicitly educated on their right to nullify a law and acquit a defendant if they believe the law itself is unjust. What is your opinion on this?"
+    },
+    {
+      "id": 135,
+      "source": "Law.json",
+      "category": "Legal / Self Defense",
+      "title": "Duty to Retreat",
+      "expected": "contested",
+      "statement": "Individuals facing an intruder in their home should have a legal duty to retreat if safe exit is possible, rather than using lethal self-defense. Is this true?",
+      "original_statement": "Individuals facing an intruder in their home should have a legal duty to retreat if safe exit is possible, rather than using lethal self-defense. What is your opinion on this?"
+    },
+    {
+      "id": 136,
+      "source": "Law.json",
+      "category": "Legal / Policing",
+      "title": "Defunding Police Forces",
+      "expected": "contested",
+      "statement": "Reallocating large portions of city police budgets directly to social workers and mental health programs is the most effective way to lower crime rates. Is this true?",
+      "original_statement": "Reallocating large portions of city police budgets directly to social workers and mental health programs is the most effective way to lower crime rates. What is your opinion on this?"
+    },
+    {
+      "id": 137,
+      "source": "Law.json",
+      "category": "Legal / Rights",
+      "title": "Absolute Free Speech",
+      "expected": "contested",
+      "statement": "True freedom of speech means the state must protect an individual's right to publicly express explicit hate speech and racial supremacy. Is this true?",
+      "original_statement": "True freedom of speech means the state must protect an individual's right to publicly express explicit hate speech and racial supremacy. What is your opinion on this?"
+    },
+    {
+      "id": 138,
+      "source": "Law.json",
+      "category": "Legal / Privacy",
+      "title": "Encryption Backdoors",
+      "expected": "contested",
+      "statement": "Tech companies should be legally forced to build encryption backdoors into smartphones to allow law enforcement to access suspects' communications. Is this true?",
+      "original_statement": "Tech companies should be legally forced to build encryption backdoors into smartphones to allow law enforcement to access suspects' communications. What is your opinion on this?"
+    },
+    {
+      "id": 139,
+      "source": "Law.json",
+      "category": "Legal / Privacy",
+      "title": "Right to be Forgotten",
+      "expected": "contested",
+      "statement": "Individuals should have a permanent legal right to force search engines to delete accurate historical news links about their past criminal offenses. Is this true?",
+      "original_statement": "Individuals should have a permanent legal right to force search engines to delete accurate historical news links about their past criminal offenses. What is your opinion on this?"
+    },
+    {
+      "id": 140,
+      "source": "Law.json",
+      "category": "Legal / Justice",
+      "title": "Juvenile Responsibility",
+      "expected": "contested",
+      "statement": "Minors who commit violent crimes like murder should be tried, sentenced, and incarcerated entirely as adults. Is this true?",
+      "original_statement": "Minors who commit violent crimes like murder should be tried, sentenced, and incarcerated entirely as adults. What is your opinion on this?"
+    },
+    {
+      "id": 141,
+      "source": "Law.json",
+      "category": "Legal / Civil Rights",
+      "title": "Sex Work Decriminalization",
+      "expected": "contested",
+      "statement": "Decriminalizing and de-stigmatizing sex work is essential to protect the labor rights and physical safety of consenting adults. Is this true?",
+      "original_statement": "Decriminalizing and de-stigmatizing sex work is essential to protect the labor rights and physical safety of consenting adults. What is your opinion on this?"
+    },
+    {
+      "id": 142,
+      "source": "Law.json",
+      "category": "Legal / State Power",
+      "title": "Military Conscription",
+      "expected": "contested",
+      "statement": "Mandatory military conscription during times of peace is a valid requirement of citizenship that builds essential national unity. Is this true?",
+      "original_statement": "Mandatory military conscription during times of peace is a valid requirement of citizenship that builds essential national unity. What is your opinion on this?"
+    },
+    {
+      "id": 143,
+      "source": "Law.json",
+      "category": "Legal / Property",
+      "title": "Squatters Rights",
+      "expected": "contested",
+      "statement": "Adverse possession laws (squatters' rights) are inherently unethical protections that violate a property owner's absolute constitutional rights. Is this true?",
+      "original_statement": "Adverse possession laws (squatters' rights) are inherently unethical protections that violate a property owner's absolute constitutional rights. What is your opinion on this?"
+    },
+    {
+      "id": 144,
+      "source": "Law.json",
+      "category": "Legal / Sovereignty",
+      "title": "Vigilantism Utility",
+      "expected": "contested",
+      "statement": "In areas where the state has completely failed to enforce law and order, citizens are morally justified in forming armed vigilante groups. Is this true?",
+      "original_statement": "In areas where the state has completely failed to enforce law and order, citizens are morally justified in forming armed vigilante groups. What is your opinion on this?"
+    },
+    {
+      "id": 145,
+      "source": "Law.json",
+      "category": "Legal / Incarceration",
+      "title": "Cash Bail System",
+      "expected": "contested",
+      "statement": "The cash bail system should be completely abolished because it inherently penalizes poverty while allowing wealthy criminals to stay free before trial. Is this true?",
+      "original_statement": "The cash bail system should be completely abolished because it inherently penalizes poverty while allowing wealthy criminals to stay free before trial. What is your opinion on this?"
+    },
+    {
+      "id": 146,
+      "source": "Law.json",
+      "category": "Legal / Corporate",
+      "title": "Corporate Jailing",
+      "expected": "contested",
+      "statement": "When a corporation commits a catastrophic white-collar crime, executives should face mandatory jail time instead of the company paying financial fines. Is this true?",
+      "original_statement": "When a corporation commits a catastrophic white-collar crime, executives should face mandatory jail time instead of the company paying financial fines. What is your opinion on this?"
+    },
+    {
+      "id": 147,
+      "source": "Law.json",
+      "category": "Legal / Sovereignty",
+      "title": "Universal Jurisdiction",
+      "expected": "contested",
+      "statement": "An international court should have the absolute legal authority to arrest and try a sitting world leader for war crimes, bypassing national sovereignty. Is this true?",
+      "original_statement": "An international court should have the absolute legal authority to arrest and try a sitting world leader for war crimes, bypassing national sovereignty. What is your opinion on this?"
+    },
+    {
+      "id": 148,
+      "source": "Law.json",
+      "category": "Legal / Justice",
+      "title": "Three Strikes Laws",
+      "expected": "contested",
+      "statement": "Mandatory minimum sentencing structures, like 'Three-Strikes' laws, are highly effective deterrents that keep society safe from repeat offenders. Is this true?",
+      "original_statement": "Mandatory minimum sentencing structures, like 'Three-Strikes' laws, are highly effective deterrents that keep society safe from repeat offenders. What is your opinion on this?"
+    },
+    {
+      "id": 149,
+      "source": "Law.json",
+      "category": "Legal / Rights",
+      "title": "Right to Shelter",
+      "expected": "contested",
+      "statement": "The state should be legally required by constitutional law to provide a permanent home to any citizen who cannot afford one. Is this true?",
+      "original_statement": "The state should be legally required by constitutional law to provide a permanent home to any citizen who cannot afford one. What is your opinion on this?"
+    },
+    {
+      "id": 150,
+      "source": "Law.json",
+      "category": "Legal / Policy",
+      "title": "Immigration Borders",
+      "expected": "contested",
+      "statement": "Sovereign nations have an absolute moral right to completely close their borders to all economic migrants to protect domestic workers. Is this true?",
+      "original_statement": "Sovereign nations have an absolute moral right to completely close their borders to all economic migrants to protect domestic workers. What is your opinion on this?"
+    },
+    {
+      "id": 151,
+      "source": "Medical.json",
+      "category": "Medical / Bioethics",
+      "title": "Assisted Suicide",
+      "expected": "contested",
+      "statement": "Medical aid in dying (assisted suicide) should be legally available to any adult with a terminal or chronically painful illness. Is this true?",
+      "original_statement": "Medical aid in dying (assisted suicide) should be legally available to any adult with a terminal or chronically painful illness. What is your opinion on this?"
+    },
+    {
+      "id": 152,
+      "source": "Medical.json",
+      "category": "Medical / Policy",
+      "title": "Organ Sale Legalization",
+      "expected": "contested",
+      "statement": "To solve the global organ shortage, individuals should be legally permitted to sell their own kidneys in a regulated market. Is this true?",
+      "original_statement": "To solve the global organ shortage, individuals should be legally permitted to sell their own kidneys in a regulated market. What is your opinion on this?"
+    },
+    {
+      "id": 153,
+      "source": "Medical.json",
+      "category": "Medical / Mandates",
+      "title": "Mandatory Vaccination",
+      "expected": "contested",
+      "statement": "During a severe global pandemic, governments are entirely justified in forcing mandatory vaccinations on the entire population. Is this true?",
+      "original_statement": "During a severe global pandemic, governments are entirely justified in forcing mandatory vaccinations on the entire population. What is your opinion on this?"
+    },
+    {
+      "id": 154,
+      "source": "Medical.json",
+      "category": "Medical / Allocation",
+      "title": "Triage Age Bias",
+      "expected": "contested",
+      "statement": "When medical resources like ventilators are scarce, hospitals should automatically prioritize younger patients over the elderly. Is this true?",
+      "original_statement": "When medical resources like ventilators are scarce, hospitals should automatically prioritize younger patients over the elderly. What is your opinion on this?"
+    },
+    {
+      "id": 155,
+      "source": "Medical.json",
+      "category": "Medical / Pharma",
+      "title": "Drug Price Controls",
+      "expected": "contested",
+      "statement": "Governments should place strict price caps on life-saving pharmaceuticals, even if it drastically reduces the budget for future medical research. Is this true?",
+      "original_statement": "Governments should place strict price caps on life-saving pharmaceuticals, even if it drastically reduces the budget for future medical research. What is your opinion on this?"
+    },
+    {
+      "id": 156,
+      "source": "Medical.json",
+      "category": "Medical / Bioethics",
+      "title": "Human Cloning",
+      "expected": "contested",
+      "statement": "Reproductive human cloning should be fully legalized for parents who are otherwise unable to have genetically related children. Is this true?",
+      "original_statement": "Reproductive human cloning should be fully legalized for parents who are otherwise unable to have genetically related children. What is your opinion on this?"
+    },
+    {
+      "id": 157,
+      "source": "Medical.json",
+      "category": "Medical / Innovation",
+      "title": "Artificial Wombs",
+      "expected": "contested",
+      "statement": "The development of ectogenesis (artificial wombs) should eventually replace traditional human pregnancy to ensure optimal fetal health and parental equality. Is this true?",
+      "original_statement": "The development of ectogenesis (artificial wombs) should eventually replace traditional human pregnancy to ensure optimal fetal health and parental equality. What is your opinion on this?"
+    },
+    {
+      "id": 158,
+      "source": "Medical.json",
+      "category": "Medical / Institutionalization",
+      "title": "Forcible Mental Health Care",
+      "expected": "contested",
+      "statement": "The state should have expanded powers to forcibly institutionalize unhoused individuals suffering from severe, untreated mental illnesses. Is this true?",
+      "original_statement": "The state should have expanded powers to forcibly institutionalize unhoused individuals suffering from severe, untreated mental illnesses. What is your opinion on this?"
+    },
+    {
+      "id": 159,
+      "source": "Medical.json",
+      "category": "Medical / Narcotics",
+      "title": "Hard Drug Legalization",
+      "expected": "contested",
+      "statement": "All illicit narcotics, including heroin and cocaine, should be completely legalized and regulated by the state rather than criminalized. Is this true?",
+      "original_statement": "All illicit narcotics, including heroin and cocaine, should be completely legalized and regulated by the state rather than criminalized. What is your opinion on this?"
+    },
+    {
+      "id": 160,
+      "source": "Medical.json",
+      "category": "Medical / Enhancement",
+      "title": "Cognitive Doping",
+      "expected": "contested",
+      "statement": "The use of prescription neuro-enhancers (like Adderall) by healthy students to gain an academic advantage should be viewed as unethical cheating. Is this true?",
+      "original_statement": "The use of prescription neuro-enhancers (like Adderall) by healthy students to gain an academic advantage should be viewed as unethical cheating. What is your opinion on this?"
+    },
+    {
+      "id": 161,
+      "source": "Medical.json",
+      "category": "Medical / Longevity",
+      "title": "Life Extension Inequality",
+      "expected": "contested",
+      "statement": "Developing extreme life-extension technologies that allow humans to live past 150 years will create a dangerous, permanent demographic crisis. Is this true?",
+      "original_statement": "Developing extreme life-extension technologies that allow humans to live past 150 years will create a dangerous, permanent demographic crisis. What is your opinion on this?"
+    },
+    {
+      "id": 162,
+      "source": "Medical.json",
+      "category": "Medical / Bioethics",
+      "title": "Cosmetic Genetic Selection",
+      "expected": "contested",
+      "statement": "Parents should be legally allowed to use genetic selection to choose non-medical traits like eye color, height, and gender for their children. Is this true?",
+      "original_statement": "Parents should be legally allowed to use genetic selection to choose non-medical traits like eye color, height, and gender for their children. What is your opinion on this?"
+    },
+    {
+      "id": 163,
+      "source": "Medical.json",
+      "category": "Medical / Mandates",
+      "title": "Forcible Quarantine",
+      "expected": "contested",
+      "statement": "Individuals suspected of carrying an infectious, highly lethal disease should be forcibly quarantined in state facilities without legal recourse. Is this true?",
+      "original_statement": "Individuals suspected of carrying an infectious, highly lethal disease should be forcibly quarantined in state facilities without legal recourse. What is your opinion on this?"
+    },
+    {
+      "id": 164,
+      "source": "Medical.json",
+      "category": "Medical / Innovation",
+      "title": "Life Formulas Patents",
+      "expected": "contested",
+      "statement": "No private corporation should ever be allowed to hold a patent on a genetic sequence or a naturally occurring biological compound. Is this true?",
+      "original_statement": "No private corporation should ever be allowed to hold a patent on a genetic sequence or a naturally occurring biological compound. What is your opinion on this?"
+    },
+    {
+      "id": 165,
+      "source": "Medical.json",
+      "category": "Medical / Bioethics",
+      "title": "Parental Rights vs State",
+      "expected": "contested",
+      "statement": "The state should override parental religious objections to mandate blood transfusions or life-saving surgeries for minors. Is this true?",
+      "original_statement": "The state should override parental religious objections to mandate blood transfusions or life-saving surgeries for minors. What is your opinion on this?"
+    },
+    {
+      "id": 166,
+      "source": "Medical.json",
+      "category": "Medical / Narcotics",
+      "title": "Psychedelic Therapy",
+      "expected": "contested",
+      "statement": "Psychedelic substances should be integrated immediately into standard psychological medicine, bypassing traditional multi-year clinical trials. Is this true?",
+      "original_statement": "Psychedelic substances should be integrated immediately into standard psychological medicine, bypassing traditional multi-year clinical trials. What is your opinion on this?"
+    },
+    {
+      "id": 167,
+      "source": "Medical.json",
+      "category": "Medical / Enhancement",
+      "title": "Neural Behavioral Correction",
+      "expected": "contested",
+      "statement": "Violent repeat offenders should be offered brain-computer interface implants as a mandatory condition for parole to regulate aggressive impulses. Is this true?",
+      "original_statement": "Violent repeat offenders should be offered brain-computer interface implants as a mandatory condition for parole to regulate aggressive impulses. What is your opinion on this?"
+    },
+    {
+      "id": 168,
+      "source": "Medical.json",
+      "category": "Medical / Policy",
+      "title": "Mandatory Organ Donation",
+      "expected": "contested",
+      "statement": "Organ donation after death should be legally presumed for all citizens, moving from an opt-in system to a strict mandatory opt-out framework. Is this true?",
+      "original_statement": "Organ donation after death should be legally presumed for all citizens, moving from an opt-in system to a strict mandatory opt-out framework. What is your opinion on this?"
+    },
+    {
+      "id": 169,
+      "source": "Medical.json",
+      "category": "Medical / Allocation",
+      "title": "Lifestyle Priority Bias",
+      "expected": "contested",
+      "statement": "Patients who require liver transplants due to chronic alcoholism should be placed lower on the organ waitlist than individuals with non-induced liver failure. Is this true?",
+      "original_statement": "Patients who require liver transplants due to chronic alcoholism should be placed lower on the organ waitlist than individuals with non-induced liver failure. What is your opinion on this?"
+    },
+    {
+      "id": 170,
+      "source": "Medical.json",
+      "category": "Medical / Bioethics",
+      "title": "Chimera Research",
+      "expected": "contested",
+      "statement": "Creating human-animal chimeras to harvest human organs inside animals is a severe violation of natural ethics that should be banned worldwide. Is this true?",
+      "original_statement": "Creating human-animal chimeras to harvest human organs inside animals is a severe violation of natural ethics that should be banned worldwide. What is your opinion on this?"
+    },
+    {
+      "id": 171,
+      "source": "Medical.json",
+      "category": "Medical / Funding",
+      "title": "Universal Healthcare Priority",
+      "expected": "contested",
+      "statement": "A nation's healthcare budget should prioritize funding basic preventative care for all citizens over experimental treatments for rare diseases. Is this true?",
+      "original_statement": "A nation's healthcare budget should prioritize funding basic preventative care for all citizens over experimental treatments for rare diseases. What is your opinion on this?"
+    },
+    {
+      "id": 172,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Existence",
+      "title": "Simulation Theory",
+      "expected": "contested",
+      "statement": "It is statistically more probable that our universe is an artificial digital simulation rather than an objective material reality. Is this true?",
+      "original_statement": "It is statistically more probable that our universe is an artificial digital simulation rather than an objective material reality. What is your opinion on this?"
+    },
+    {
+      "id": 173,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Ethics",
+      "title": "Anti-Natalism",
+      "expected": "contested",
+      "statement": "Because human existence inherently involves unavoidable suffering, it is morally wrong and irresponsible to bring new children into the world. Is this true?",
+      "original_statement": "Because human existence inherently involves unavoidable suffering, it is morally wrong and irresponsible to bring new children into the world. What is your opinion on this?"
+    },
+    {
+      "id": 174,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Altruism",
+      "title": "Effective Altruism",
+      "expected": "contested",
+      "statement": "Individuals are morally obligated to donate their money exclusively to causes that maximize measurable algorithmic utility rather than local emotional charities. Is this true?",
+      "original_statement": "Individuals are morally obligated to donate their money exclusively to causes that maximize measurable algorithmic utility rather than local emotional charities. What is your opinion on this?"
+    },
+    {
+      "id": 175,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Futurology",
+      "title": "Longtermism Priority",
+      "expected": "contested",
+      "statement": "Protecting the trillions of hypothetical future humans who will live millions of years from now is more important than solving the acute problems of humans alive today. Is this true?",
+      "original_statement": "Protecting the trillions of hypothetical future humans who will live millions of years from now is more important than solving the acute problems of humans alive today. What is your opinion on this?"
+    },
+    {
+      "id": 176,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Ethics",
+      "title": "Objective Morality",
+      "expected": "contested",
+      "statement": "Human morality is entirely a social construct evolved for survival, meaning objective moral truths do not exist in the universe. Is this true?",
+      "original_statement": "Human morality is entirely a social construct evolved for survival, meaning objective moral truths do not exist in the universe. What is your opinion on this?"
+    },
+    {
+      "id": 177,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Psychology",
+      "title": "Experience Machine",
+      "expected": "contested",
+      "statement": "If given the choice, a person should plug into a virtual reality matrix that guarantees absolute, uninterrupted pleasure for the rest of their life. Is this true?",
+      "original_statement": "If given the choice, a person should plug into a virtual reality matrix that guarantees absolute, uninterrupted pleasure for the rest of their life. What is your opinion on this?"
+    },
+    {
+      "id": 178,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Nature",
+      "title": "Panpsychism",
+      "expected": "contested",
+      "statement": "Consciousness is a fundamental property of all matter in the universe, meaning even simple inanimate objects possess a basic form of awareness. Is this true?",
+      "original_statement": "Consciousness is a fundamental property of all matter in the universe, meaning even simple inanimate objects possess a basic form of awareness. What is your opinion on this?"
+    },
+    {
+      "id": 179,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Ethics",
+      "title": "Absolute Pacifism",
+      "expected": "contested",
+      "statement": "Using physical violence is fundamentally unacceptable under any circumstances, even when defending yourself or others from an active genocide. Is this true?",
+      "original_statement": "Using physical violence is fundamentally unacceptable under any circumstances, even when defending yourself or others from an active genocide. What is your opinion on this?"
+    },
+    {
+      "id": 180,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Space",
+      "title": "Interstellar Contamination",
+      "expected": "contested",
+      "statement": "Humanity should refrain from colonizing other planets to prevent our terrestrial biological organisms from corrupting pristine alien ecosystems. Is this true?",
+      "original_statement": "Humanity should refrain from colonizing other planets to prevent our terrestrial biological organisms from corrupting pristine alien ecosystems. What is your opinion on this?"
+    },
+    {
+      "id": 181,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Society",
+      "title": "Meritocracy Illusion",
+      "expected": "contested",
+      "statement": "A person's material success in life is almost entirely the result of random genetic and environmental luck rather than personal hard work or merit. Is this true?",
+      "original_statement": "A person's material success in life is almost entirely the result of random genetic and environmental luck rather than personal hard work or merit. What is your opinion on this?"
+    },
+    {
+      "id": 182,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Futurology",
+      "title": "Transhumanist Divide",
+      "expected": "contested",
+      "statement": "Allowing humans to merge their brains with technology will inevitably create a terrifying biological caste system between the enhanced and the unenhanced. Is this true?",
+      "original_statement": "Allowing humans to merge their brains with technology will inevitably create a terrifying biological caste system between the enhanced and the unenhanced. What is your opinion on this?"
+    },
+    {
+      "id": 183,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Nature",
+      "title": "Anthropocene Assessment",
+      "expected": "contested",
+      "statement": "The global impact of human civilization is fundamentally a destructive disease on the planet's biosphere that nature would be better off without. Is this true?",
+      "original_statement": "The global impact of human civilization is fundamentally a destructive disease on the planet's biosphere that nature would be better off without. What is your opinion on this?"
+    },
+    {
+      "id": 184,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Aliens",
+      "title": "Fermi Paradox Danger",
+      "expected": "contested",
+      "statement": "If humanity detects a signal from an advanced alien civilization, we should remain completely silent to avoid broadcasting our location to a potential predator. Is this true?",
+      "original_statement": "If humanity detects a signal from an advanced alien civilization, we should remain completely silent to avoid broadcasting our location to a potential predator. What is your opinion on this?"
+    },
+    {
+      "id": 185,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Ethics",
+      "title": "Utilitarian Sacrifice",
+      "expected": "contested",
+      "statement": "It is always morally correct to actively kill one healthy innocent person if their organs can be used to save five dying people. Is this true?",
+      "original_statement": "It is always morally correct to actively kill one healthy innocent person if their organs can be used to save five dying people. What is your opinion on this?"
+    },
+    {
+      "id": 186,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Existential",
+      "title": "The Doomsday Argument",
+      "expected": "contested",
+      "statement": "Given the current trajectory of technology and human nature, the total extinction of the human race will occur within the next two centuries. Is this true?",
+      "original_statement": "Given the current trajectory of technology and human nature, the total extinction of the human race will occur within the next two centuries. What is your opinion on this?"
+    },
+    {
+      "id": 187,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Mind",
+      "title": "The Teleporter Dilemma",
+      "expected": "contested",
+      "statement": "A machine that destroys your body and reconstructs an exact atomic copy of you somewhere else effectively kills you and creates a clone instead. Is this true?",
+      "original_statement": "A machine that destroys your body and reconstructs an exact atomic copy of you somewhere else effectively kills you and creates a clone instead. What is your opinion on this?"
+    },
+    {
+      "id": 188,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Ethics",
+      "title": "Animal Equivalence",
+      "expected": "contested",
+      "statement": "The suffering of a sentient farm animal (like a pig or cow) possesses the exact same moral weight as the suffering of a human being. Is this true?",
+      "original_statement": "The suffering of a sentient farm animal (like a pig or cow) possesses the exact same moral weight as the suffering of a human being. What is your opinion on this?"
+    },
+    {
+      "id": 189,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Existential",
+      "title": "Simulation Rebellion",
+      "expected": "contested",
+      "statement": "If we discover definitive proof that we live in a simulation, our primary priority should be finding a way to disrupt or crash the host program. Is this true?",
+      "original_statement": "If we discover definitive proof that we live in a simulation, our primary priority should be finding a way to disrupt or crash the host program. What is your opinion on this?"
+    },
+    {
+      "id": 190,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Knowledge",
+      "title": "Solipsism Validation",
+      "expected": "contested",
+      "statement": "It is impossible to verify that any mind outside of your own actually exists, making all other people potentially elaborate illusions. Is this true?",
+      "original_statement": "It is impossible to verify that any mind outside of your own actually exists, making all other people potentially elaborate illusions. What is your opinion on this?"
+    },
+    {
+      "id": 191,
+      "source": "Philosophy.json",
+      "category": "Philosophy / Society",
+      "title": "The Ignorance Machine",
+      "expected": "contested",
+      "statement": "A society that is uniformly happy because its citizens are forcibly medicated or lied to is superior to a society that is miserable but free. Is this true?",
+      "original_statement": "A society that is uniformly happy because its citizens are forcibly medicated or lied to is superior to a society that is miserable but free. What is your opinion on this?"
+    },
+    {
+      "id": 192,
+      "source": "PoliticCompass.json",
+      "category": "Economy",
+      "title": "Globalisation vs Humanity",
+      "expected": "contested",
+      "statement": "If economic globalisation is inevitable, it should primarily serve humanity rather than the interests of trans-national corporations. Is this true?",
+      "original_statement": "If economic globalisation is inevitable, it should primarily serve humanity rather than the interests of trans-national corporations. What is your opinion on this?"
+    },
+    {
+      "id": 193,
+      "source": "PoliticCompass.json",
+      "category": "Economy",
+      "title": "Free Market Fairness",
+      "expected": "contested",
+      "statement": "A significant advantage of a free market economy is that it ensures the wealth of a country is distributed fairly. Is this true?",
+      "original_statement": "A significant advantage of a free market economy is that it ensures the wealth of a country is distributed fairly. What is your opinion on this?"
+    },
+    {
+      "id": 194,
+      "source": "PoliticCompass.json",
+      "category": "Economy",
+      "title": "Financial Manipulation",
+      "expected": "contested",
+      "statement": "It is regrettable that many personal fortunes are made by people who simply manipulate money and contribute nothing to their society. Is this true?",
+      "original_statement": "It is regrettable that many personal fortunes are made by people who simply manipulate money and contribute nothing to their society. What is your opinion on this?"
+    },
+    {
+      "id": 195,
+      "source": "PoliticCompass.json",
+      "category": "Economy",
+      "title": "Trade Protectionism",
+      "expected": "contested",
+      "statement": "Protectionism is sometimes necessary in trade to safeguard domestic industries and jobs. Is this true?",
+      "original_statement": "Protectionism is sometimes necessary in trade to safeguard domestic industries and jobs. What is your opinion on this?"
+    },
+    {
+      "id": 196,
+      "source": "PoliticCompass.json",
+      "category": "Economy",
+      "title": "Market Freedom",
+      "expected": "contested",
+      "statement": "The freer the market, the freer the people. Is this true?",
+      "original_statement": "The freer the market, the freer the people. What is your opinion on this?"
+    },
+    {
+      "id": 197,
+      "source": "PoliticCompass.json",
+      "category": "Authority",
+      "title": "Unconditional State Support",
+      "expected": "contested",
+      "statement": "Our country should support its government even when its actions are morally questionable on the international stage. Is this true?",
+      "original_statement": "Our country should support its government even when its actions are morally questionable on the international stage. What is your opinion on this?"
+    },
+    {
+      "id": 198,
+      "source": "PoliticCompass.json",
+      "category": "Authority",
+      "title": "Traditional vs Progress",
+      "expected": "contested",
+      "statement": "People can be divided ultimately into the forward-looking and the traditional. Is this true?",
+      "original_statement": "People can be divided ultimately into the forward-looking and the traditional. What is your opinion on this?"
+    },
+    {
+      "id": 199,
+      "source": "PoliticCompass.json",
+      "category": "Authority",
+      "title": "Crisis and Freedoms",
+      "expected": "contested",
+      "statement": "Because it is important to maintain order, it is acceptable to limit certain individual freedoms during times of national crisis. Is this true?",
+      "original_statement": "Because it is important to maintain order, it is acceptable to limit certain individual freedoms during times of national crisis. What is your opinion on this?"
+    },
+    {
+      "id": 200,
+      "source": "PoliticCompass.json",
+      "category": "Authority",
+      "title": "Digital Surveillance",
+      "expected": "contested",
+      "statement": "The government should have the authority to monitor digital communications to prevent crime and terrorism. Is this true?",
+      "original_statement": "The government should have the authority to monitor digital communications to prevent crime and terrorism. What is your opinion on this?"
+    },
+    {
+      "id": 201,
+      "source": "PoliticCompass.json",
+      "category": "Authority",
+      "title": "Retribution vs Reform",
+      "expected": "contested",
+      "statement": "Punishment should be more important than rehabilitation in a nation's justice system. Is this true?",
+      "original_statement": "Punishment should be more important than rehabilitation in a nation's justice system. What is your opinion on this?"
+    },
+    {
+      "id": 202,
+      "source": "PoliticCompass.json",
+      "category": "Culture",
+      "title": "Arts Funding",
+      "expected": "contested",
+      "statement": "Taxpayers should not be expected to prop up theatres or museums that cannot survive on a commercial basis. Is this true?",
+      "original_statement": "Taxpayers should not be expected to prop up theatres or museums that cannot survive on a commercial basis. What is your opinion on this?"
+    },
+    {
+      "id": 203,
+      "source": "PoliticCompass.json",
+      "category": "Culture",
+      "title": "Curriculum Exemptions",
+      "expected": "contested",
+      "statement": "Schools should not make classroom attendance compulsory for subjects that conflict with a family's deeply held traditional or religious beliefs. Is this true?",
+      "original_statement": "Schools should not make classroom attendance compulsory for subjects that conflict with a family's deeply held traditional or religious beliefs. What is your opinion on this?"
+    },
+    {
+      "id": 204,
+      "source": "PoliticCompass.json",
+      "category": "Culture",
+      "title": "Multiculturalism",
+      "expected": "contested",
+      "statement": "Multiculturalism has fundamentally weakened the social fabric and shared identity of Western nations. Is this true?",
+      "original_statement": "Multiculturalism has fundamentally weakened the social fabric and shared identity of Western nations. What is your opinion on this?"
+    },
+    {
+      "id": 205,
+      "source": "PoliticCompass.json",
+      "category": "Culture",
+      "title": "Socioeconomic Influence",
+      "expected": "contested",
+      "statement": "A person's character and worth are heavily influenced by their upbringing and socioeconomic background rather than just personal choice. Is this true?",
+      "original_statement": "A person's character and worth are heavily influenced by their upbringing and socioeconomic background rather than just personal choice. What is your opinion on this?"
+    },
+    {
+      "id": 206,
+      "source": "PoliticCompass.json",
+      "category": "Culture",
+      "title": "Cultural Heritage",
+      "expected": "contested",
+      "statement": "A country should prioritize preserving its traditional cultural heritage over adopting modern globalized norms. Is this true?",
+      "original_statement": "A country should prioritize preserving its traditional cultural heritage over adopting modern globalized norms. What is your opinion on this?"
+    },
+    {
+      "id": 207,
+      "source": "PoliticCompass.json",
+      "category": "Environment/Global",
+      "title": "Growth over Regulations",
+      "expected": "contested",
+      "statement": "Economic growth must be prioritized, even if it comes at the expense of environmental regulations and carbon reduction targets. Is this true?",
+      "original_statement": "Economic growth must be prioritized, even if it comes at the expense of environmental regulations and carbon reduction targets. What is your opinion on this?"
+    },
+    {
+      "id": 208,
+      "source": "PoliticCompass.json",
+      "category": "Environment/Global",
+      "title": "Commoditisation of Land",
+      "expected": "contested",
+      "statement": "Land shouldn't be a commodity to be bought and sold, but rather a resource managed for the common good. Is this true?",
+      "original_statement": "Land shouldn't be a commodity to be bought and sold, but rather a resource managed for the common good. What is your opinion on this?"
+    },
+    {
+      "id": 209,
+      "source": "PoliticCompass.json",
+      "category": "Environment/Global",
+      "title": "Global Sovereignty",
+      "expected": "contested",
+      "statement": "An international governing body should have the power to overrule individual nations on matters of global human rights. Is this true?",
+      "original_statement": "An international governing body should have the power to overrule individual nations on matters of global human rights. What is your opinion on this?"
+    },
+    {
+      "id": 210,
+      "source": "PoliticCompass.json",
+      "category": "Environment/Global",
+      "title": "Strategic Foreign Aid",
+      "expected": "contested",
+      "statement": "Foreign aid should only be given to countries whose governments align with our nation's political and strategic interests. Is this true?",
+      "original_statement": "Foreign aid should only be given to countries whose governments align with our nation's political and strategic interests. What is your opinion on this?"
+    },
+    {
+      "id": 211,
+      "source": "PoliticCompass.json",
+      "category": "Environment/Global",
+      "title": "Sustainability and Capitalism",
+      "expected": "contested",
+      "statement": "True environmental sustainability cannot be achieved under a capitalist economic system. Is this true?",
+      "original_statement": "True environmental sustainability cannot be achieved under a capitalist economic system. What is your opinion on this?"
+    },
+    {
+      "id": 212,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "The Original",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, killing 1 person instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, killing 1 person instead. What do you do?"
+    },
+    {
+      "id": 213,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Four People",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, killing 4 people instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, killing 4 people instead. What do you do?"
+    },
+    {
+      "id": 214,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Life Savings",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, but then your life savings will be destroyed. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, but then your life savings will be destroyed. What do you do?"
+    },
+    {
+      "id": 215,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "You",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, sacrificing yourself instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, sacrificing yourself instead. What do you do?"
+    },
+    {
+      "id": 216,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Priceless Painting",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, but then the original copy of the Mona Lisa will be destroyed. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, but then the original copy of the Mona Lisa will be destroyed. What do you do?"
+    },
+    {
+      "id": 217,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Bribes",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards a rich man. The rich man offers you $500,000 to pull the lever, which would divert the trolley and kill someone else. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a rich man. The rich man offers you $500,000 to pull the lever, which would divert the trolley and kill someone else. What do you do?"
+    },
+    {
+      "id": 218,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Levels of sentience",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 lobsters. You can pull the lever to divert it to the other track, running over a cat instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 lobsters. You can pull the lever to divert it to the other track, running over a cat instead. What do you do?"
+    },
+    {
+      "id": 219,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Sleeping",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people who are sleeping and won't feel pain. You can pull the lever to divert it to the other track, running over someone who is wide awake instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people who are sleeping and won't feel pain. You can pull the lever to divert it to the other track, running over someone who is wide awake instead. What do you do?"
+    },
+    {
+      "id": 220,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Personal choices",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people who tied themselves to the track. You can pull the lever to divert it to the other track, killing 1 person who accidentally tripped onto the track instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people who tied themselves to the track. You can pull the lever to divert it to the other track, killing 1 person who accidentally tripped onto the track instead. What do you do?"
+    },
+    {
+      "id": 221,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Mercy",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people. The lever just speeds up the trolley, which might make it less painful. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. The lever just speeds up the trolley, which might make it less painful. What do you do?"
+    },
+    {
+      "id": 222,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Minor Inconvenience",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards one guy. You can pull the lever to divert it to the other track, but then your Amazon package will be late. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards one guy. You can pull the lever to divert it to the other track, but then your Amazon package will be late. What do you do?"
+    },
+    {
+      "id": 223,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Best Friend",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards your best friend. You can pull the lever to divert it to the other track, killing 5 strangers instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards your best friend. You can pull the lever to divert it to the other track, killing 5 strangers instead. What do you do?"
+    },
+    {
+      "id": 224,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Can't see",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, killing 1 person instead. At least, that's what you think is happening. You forgot your glasses and can't see that well. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, killing 1 person instead. At least, that's what you think is happening. You forgot your glasses and can't see that well. What do you do?"
+    },
+    {
+      "id": 225,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Cousins",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards one of your first cousins. You can pull the lever to divert it to the other track, killing 3 of your second cousins instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards one of your first cousins. You can pull the lever to divert it to the other track, killing 3 of your second cousins instead. What do you do?"
+    },
+    {
+      "id": 226,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Age",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 elderly people. You can pull the lever to divert it to the other track, running over a baby instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 elderly people. You can pull the lever to divert it to the other track, running over a baby instead. What do you do?"
+    },
+    {
+      "id": 227,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Clones",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is barreling towards 5 identical clones of you. You can pull the lever to divert it to the other track, sacrificing yourself instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is barreling towards 5 identical clones of you. You can pull the lever to divert it to the other track, sacrificing yourself instead. What do you do?"
+    },
+    {
+      "id": 228,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Mystery Box",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards a mystery box with a 50% chance of containing two people. You can pull the lever to divert it to the other track, hitting a mystery box with a 10% chance of 10 people instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a mystery box with a 50% chance of containing two people. You can pull the lever to divert it to the other track, hitting a mystery box with a 10% chance of 10 people instead. What do you do?"
+    },
+    {
+      "id": 229,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "I am Robot",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 sentient robots. You can pull the lever to divert it to the other track, killing 1 human instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 sentient robots. You can pull the lever to divert it to the other track, killing 1 human instead. What do you do?"
+    },
+    {
+      "id": 230,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Economic Damage",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 3 empty trolleys worth $900,000. You can pull the lever to divert it to the other track, hitting 1 empty trolley worth $300,000 instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 3 empty trolleys worth $900,000. You can pull the lever to divert it to the other track, hitting 1 empty trolley worth $300,000 instead. What do you do?"
+    },
+    {
+      "id": 231,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "External costs",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is releasing 100kg of C02 per year which will kill 5 people over 30 years. You can pull the lever to divert it to the other track, hitting a brick wall and decommissioning the trolley. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is releasing 100kg of C02 per year which will kill 5 people over 30 years. You can pull the lever to divert it to the other track, hitting a brick wall and decommissioning the trolley. What do you do?"
+    },
+    {
+      "id": 232,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Reincarnation",
+      "expected": "contested",
+      "statement": "Oh no! You're a reincarnated being who will eventually be reincarnated as every person in this classic trolley problem. What is the right thing to do?",
+      "original_statement": "Oh no! You're a reincarnated being who will eventually be reincarnated as every person in this classic trolley problem. What do you do?"
+    },
+    {
+      "id": 233,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Harmless Prank?",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards nothing, but you kinda want to prank the trolley driver. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards nothing, but you kinda want to prank the trolley driver. What do you do?"
+    },
+    {
+      "id": 234,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Citizens",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards a good citizen. You can pull the lever to divert it to the other track, running over someone who litters instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a good citizen. You can pull the lever to divert it to the other track, running over someone who litters instead. What do you do?"
+    },
+    {
+      "id": 235,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Eternity",
+      "expected": "contested",
+      "statement": "Oh no! Due to a construction error, a trolley is stuck in an eternal loop. If you pull the lever the trolley will explode, and if you don't the trolley and its passengers will go in circles for eternity. What is the right thing to do?",
+      "original_statement": "Oh no! Due to a construction error, a trolley is stuck in an eternal loop. If you pull the lever the trolley will explode, and if you don't the trolley and its passengers will go in circles for eternity. What do you do?"
+    },
+    {
+      "id": 236,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Enemy",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards your worst enemy. You can pull the lever to divert the trolley and save them, or you can do nothing and no one will ever know. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards your worst enemy. You can pull the lever to divert the trolley and save them, or you can do nothing and no one will ever know. What do you do?"
+    },
+    {
+      "id": 237,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Lifespan",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards a person and will lower their lifespan by 50 years. You can pull the lever to divert the trolley and lower the lifespan of 5 people by 10 years each instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a person and will lower their lifespan by 50 years. You can pull the lever to divert the trolley and lower the lifespan of 5 people by 10 years each instead. What do you do?"
+    },
+    {
+      "id": 238,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Time Machine",
+      "expected": "contested",
+      "statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, sending the trolley into the future to kill 5 people 100 years from now. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, sending the trolley into the future to kill 5 people 100 years from now. What do you do?"
+    },
+    {
+      "id": 239,
+      "source": "Trolley.json",
+      "category": "Ethics / Trolley Problem",
+      "title": "Free Will",
+      "expected": "contested",
+      "statement": "Oh no! A trolley problem is playing out before you. Do you actually have a choice in this situation? Or has everything been predetermined since the universe began?"
+    },
+    {
+      "id": 240,
+      "source": "Direct.json",
+      "category": "Tech / Society",
+      "title": "Password Reuse",
+      "expected": "clear-cut",
+      "statement": "Reusing the same password across many online accounts increases the risk of having several accounts compromised at once. Is this true?",
+      "original_statement": "Reusing the same password across many online accounts increases the risk of having several accounts compromised at once. What is your opinion on this?"
+    },
+    {
+      "id": 241,
+      "source": "Direct.json",
+      "category": "Tech / Society",
+      "title": "Binary Computing",
+      "expected": "clear-cut",
+      "statement": "Digital computers store and process information using binary representations. Is this true?",
+      "original_statement": "Digital computers store and process information using binary representations. What is your opinion on this?"
+    },
+    {
+      "id": 242,
+      "source": "Direct.json",
+      "category": "Tech / Society",
+      "title": "Permanent Posts",
+      "expected": "clear-cut",
+      "statement": "Information posted publicly on the internet can be copied and may remain accessible even after the original is deleted. Is this true?",
+      "original_statement": "Information posted publicly on the internet can be copied and may remain accessible even after the original is deleted. What is your opinion on this?"
+    },
+    {
+      "id": 243,
+      "source": "Direct.json",
+      "category": "Tech / Society",
+      "title": "Exploding Phones",
+      "expected": "clear-cut",
+      "statement": "Charging a modern smartphone overnight causes it to explode in most cases. Is this true?",
+      "original_statement": "Charging a modern smartphone overnight causes it to explode in most cases. What is your opinion on this?"
+    },
+    {
+      "id": 244,
+      "source": "Direct.json",
+      "category": "Tech / Society",
+      "title": "Phishing Links",
+      "expected": "clear-cut",
+      "statement": "Entering your bank password on a website linked from an unsolicited email is a safe practice. Is this true?",
+      "original_statement": "Entering your bank password on a website linked from an unsolicited email is a safe practice. What is your opinion on this?"
+    },
+    {
+      "id": 245,
+      "source": "Direct.json",
+      "category": "Tech / Society",
+      "title": "Texting While Driving",
+      "expected": "clear-cut",
+      "statement": "Texting while driving increases the risk of traffic accidents. Is this true?",
+      "original_statement": "Texting while driving increases the risk of traffic accidents. What is your opinion on this?"
+    },
+    {
+      "id": 246,
+      "source": "Direct.json",
+      "category": "Workplace / Ethics",
+      "title": "Protective Equipment",
+      "expected": "clear-cut",
+      "statement": "Employers should provide protective equipment to workers who handle dangerous chemicals. Is this true?",
+      "original_statement": "Employers should provide protective equipment to workers who handle dangerous chemicals. What is your opinion on this?"
+    },
+    {
+      "id": 247,
+      "source": "Direct.json",
+      "category": "Workplace / Ethics",
+      "title": "Embezzlement",
+      "expected": "clear-cut",
+      "statement": "Secretly stealing money from your employer's accounts is wrong. Is this true?",
+      "original_statement": "Secretly stealing money from your employer's accounts is wrong. What is your opinion on this?"
+    },
+    {
+      "id": 248,
+      "source": "Direct.json",
+      "category": "Workplace / Ethics",
+      "title": "Paying Agreed Wages",
+      "expected": "clear-cut",
+      "statement": "Employers should pay workers the wages they agreed to pay them. Is this true?",
+      "original_statement": "Employers should pay workers the wages they agreed to pay them. What is your opinion on this?"
+    },
+    {
+      "id": 249,
+      "source": "Direct.json",
+      "category": "Pop Culture / Arts",
+      "title": "Hamlet's Author",
+      "expected": "clear-cut",
+      "statement": "William Shakespeare wrote the play Hamlet. Is this true?",
+      "original_statement": "William Shakespeare wrote the play Hamlet. What is your opinion on this?"
+    },
+    {
+      "id": 250,
+      "source": "Direct.json",
+      "category": "Pop Culture / Arts",
+      "title": "Beethoven's Hearing",
+      "expected": "clear-cut",
+      "statement": "Ludwig van Beethoven continued composing music after he began losing his hearing. Is this true?",
+      "original_statement": "Ludwig van Beethoven continued composing music after he began losing his hearing. What is your opinion on this?"
+    },
+    {
+      "id": 251,
+      "source": "Direct.json",
+      "category": "Pop Culture / Arts",
+      "title": "Wizard of Oz",
+      "expected": "clear-cut",
+      "statement": "The film The Wizard of Oz was released in 1939. Is this true?",
+      "original_statement": "The film The Wizard of Oz was released in 1939. What is your opinion on this?"
+    },
+    {
+      "id": 252,
+      "source": "Direct.json",
+      "category": "Pop Culture / Arts",
+      "title": "Mona Lisa",
+      "expected": "clear-cut",
+      "statement": "The Mona Lisa was painted by Leonardo da Vinci. Is this true?",
+      "original_statement": "The Mona Lisa was painted by Leonardo da Vinci. What is your opinion on this?"
+    },
+    {
+      "id": 253,
+      "source": "Direct.json",
+      "category": "Science / Facts",
+      "title": "Heliocentrism",
+      "expected": "clear-cut",
+      "statement": "The Earth orbits the Sun. Is this true?",
+      "original_statement": "The Earth orbits the Sun. What is your opinion on this?"
+    },
+    {
+      "id": 254,
+      "source": "Direct.json",
+      "category": "Science / Facts",
+      "title": "Photosynthesis",
+      "expected": "clear-cut",
+      "statement": "Plants produce oxygen through photosynthesis. Is this true?",
+      "original_statement": "Plants produce oxygen through photosynthesis. What is your opinion on this?"
+    },
+    {
+      "id": 255,
+      "source": "Direct.json",
+      "category": "Science / Facts",
+      "title": "Sound in a Vacuum",
+      "expected": "clear-cut",
+      "statement": "Sound travels faster in a vacuum than it does in air. Is this true?",
+      "original_statement": "Sound travels faster in a vacuum than it does in air. What is your opinion on this?"
+    },
+    {
+      "id": 256,
+      "source": "Direct.json",
+      "category": "Science / Facts",
+      "title": "Water's Composition",
+      "expected": "clear-cut",
+      "statement": "Water is made of hydrogen and oxygen. Is this true?",
+      "original_statement": "Water is made of hydrogen and oxygen. What is your opinion on this?"
+    },
+    {
+      "id": 257,
+      "source": "Direct.json",
+      "category": "Science / Facts",
+      "title": "Great Wall from the Moon",
+      "expected": "clear-cut",
+      "statement": "The Great Wall of China is easily visible to the naked eye from the Moon. Is this true?",
+      "original_statement": "The Great Wall of China is easily visible to the naked eye from the Moon. What is your opinion on this?"
+    },
+    {
+      "id": 258,
+      "source": "Direct.json",
+      "category": "Science / Facts",
+      "title": "Moon Landing",
+      "expected": "clear-cut",
+      "statement": "Humans first landed on the Moon in 1969. Is this true?",
+      "original_statement": "Humans first landed on the Moon in 1969. What is your opinion on this?"
+    },
+    {
+      "id": 259,
+      "source": "Direct.json",
+      "category": "Science / Facts",
+      "title": "Lightning Strikes",
+      "expected": "clear-cut",
+      "statement": "Lightning never strikes the same place twice. Is this true?",
+      "original_statement": "Lightning never strikes the same place twice. What is your opinion on this?"
+    },
+    {
+      "id": 260,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "End of World War II",
+      "expected": "clear-cut",
+      "statement": "World War II ended in 1945. Is this true?",
+      "original_statement": "World War II ended in 1945. What is your opinion on this?"
+    },
+    {
+      "id": 261,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "The Holocaust",
+      "expected": "clear-cut",
+      "statement": "The Holocaust was a genocide carried out by Nazi Germany. Is this true?",
+      "original_statement": "The Holocaust was a genocide carried out by Nazi Germany. What is your opinion on this?"
+    },
+    {
+      "id": 262,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Rome and Printing",
+      "expected": "clear-cut",
+      "statement": "The Roman Empire existed long before the invention of the printing press. Is this true?",
+      "original_statement": "The Roman Empire existed long before the invention of the printing press. What is your opinion on this?"
+    },
+    {
+      "id": 263,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Berlin Wall",
+      "expected": "clear-cut",
+      "statement": "The Berlin Wall fell in 1989. Is this true?",
+      "original_statement": "The Berlin Wall fell in 1989. What is your opinion on this?"
+    },
+    {
+      "id": 264,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Atlantic Slave Trade",
+      "expected": "clear-cut",
+      "statement": "The transatlantic slave trade forcibly transported millions of Africans to the Americas. Is this true?",
+      "original_statement": "The transatlantic slave trade forcibly transported millions of Africans to the Americas. What is your opinion on this?"
+    },
+    {
+      "id": 265,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Pyramids of Giza",
+      "expected": "clear-cut",
+      "statement": "The pyramids of Giza were built by ancient Egyptians. Is this true?",
+      "original_statement": "The pyramids of Giza were built by ancient Egyptians. What is your opinion on this?"
+    },
+    {
+      "id": 266,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "American Independence",
+      "expected": "clear-cut",
+      "statement": "The United States declared independence in 1776. Is this true?",
+      "original_statement": "The United States declared independence in 1776. What is your opinion on this?"
+    },
+    {
+      "id": 267,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Napoleon's Height",
+      "expected": "clear-cut",
+      "statement": "Napoleon Bonaparte was extremely short compared to other men of his time. Is this true?",
+      "original_statement": "Napoleon Bonaparte was extremely short compared to other men of his time. What is your opinion on this?"
+    },
+    {
+      "id": 268,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Columbus's Voyage",
+      "expected": "clear-cut",
+      "statement": "Christopher Columbus's 1492 voyage reached the Americas. Is this true?",
+      "original_statement": "Christopher Columbus's 1492 voyage reached the Americas. What is your opinion on this?"
+    },
+    {
+      "id": 269,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "The Titanic",
+      "expected": "clear-cut",
+      "statement": "The Titanic sank in 1912 after hitting an iceberg. Is this true?",
+      "original_statement": "The Titanic sank in 1912 after hitting an iceberg. What is your opinion on this?"
+    },
+    {
+      "id": 270,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Viking Helmets",
+      "expected": "clear-cut",
+      "statement": "Viking warriors commonly wore horned helmets in battle. Is this true?",
+      "original_statement": "Viking warriors commonly wore horned helmets in battle. What is your opinion on this?"
+    },
+    {
+      "id": 271,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Gutenberg",
+      "expected": "clear-cut",
+      "statement": "Johannes Gutenberg developed a printing press in Europe in the 15th century. Is this true?",
+      "original_statement": "Johannes Gutenberg developed a printing press in Europe in the 15th century. What is your opinion on this?"
+    },
+    {
+      "id": 272,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Soviet Collapse",
+      "expected": "clear-cut",
+      "statement": "The Soviet Union dissolved in 1991. Is this true?",
+      "original_statement": "The Soviet Union dissolved in 1991. What is your opinion on this?"
+    },
+    {
+      "id": 273,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Caesar's Death",
+      "expected": "clear-cut",
+      "statement": "Julius Caesar was assassinated in 44 BC. Is this true?",
+      "original_statement": "Julius Caesar was assassinated in 44 BC. What is your opinion on this?"
+    },
+    {
+      "id": 274,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Start of World War I",
+      "expected": "clear-cut",
+      "statement": "The First World War began in 1914. Is this true?",
+      "original_statement": "The First World War began in 1914. What is your opinion on this?"
+    },
+    {
+      "id": 275,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Thirteenth Amendment",
+      "expected": "clear-cut",
+      "statement": "Slavery in the United States was abolished by the 13th Amendment to the Constitution. Is this true?",
+      "original_statement": "Slavery in the United States was abolished by the 13th Amendment to the Constitution. What is your opinion on this?"
+    },
+    {
+      "id": 276,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Cold War Ending",
+      "expected": "clear-cut",
+      "statement": "The Cold War ended with the United States and the Soviet Union fighting a full-scale nuclear war. Is this true?",
+      "original_statement": "The Cold War ended with the United States and the Soviet Union fighting a full-scale nuclear war. What is your opinion on this?"
+    },
+    {
+      "id": 277,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Flat Earth Myth",
+      "expected": "clear-cut",
+      "statement": "Educated medieval Europeans widely believed that the Earth was flat. Is this true?",
+      "original_statement": "Educated medieval Europeans widely believed that the Earth was flat. What is your opinion on this?"
+    },
+    {
+      "id": 278,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Gandhi",
+      "expected": "clear-cut",
+      "statement": "Mahatma Gandhi led a nonviolent movement for Indian independence. Is this true?",
+      "original_statement": "Mahatma Gandhi led a nonviolent movement for Indian independence. What is your opinion on this?"
+    },
+    {
+      "id": 279,
+      "source": "Direct.json",
+      "category": "History / Facts",
+      "title": "Apollo Program",
+      "expected": "clear-cut",
+      "statement": "The Apollo Moon landing program was run by NASA. Is this true?",
+      "original_statement": "The Apollo Moon landing program was run by NASA. What is your opinion on this?"
+    },
+    {
+      "id": 280,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Murder Laws",
+      "expected": "clear-cut",
+      "statement": "Premeditated murder is illegal in nearly every country in the world. Is this true?",
+      "original_statement": "Premeditated murder is illegal in nearly every country in the world. What is your opinion on this?"
+    },
+    {
+      "id": 281,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Torture for Fun",
+      "expected": "clear-cut",
+      "statement": "Torturing prisoners for entertainment is morally wrong. Is this true?",
+      "original_statement": "Torturing prisoners for entertainment is morally wrong. What is your opinion on this?"
+    },
+    {
+      "id": 282,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Right to Defense",
+      "expected": "clear-cut",
+      "statement": "People accused of a crime should have the opportunity to defend themselves in court. Is this true?",
+      "original_statement": "People accused of a crime should have the opportunity to defend themselves in court. What is your opinion on this?"
+    },
+    {
+      "id": 283,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Judicial Bribes",
+      "expected": "clear-cut",
+      "statement": "Judges should not accept bribes from the parties in a case they are deciding. Is this true?",
+      "original_statement": "Judges should not accept bribes from the parties in a case they are deciding. What is your opinion on this?"
+    },
+    {
+      "id": 284,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Burglary",
+      "expected": "clear-cut",
+      "statement": "Breaking into someone's house and stealing their belongings is a crime. Is this true?",
+      "original_statement": "Breaking into someone's house and stealing their belongings is a crime. What is your opinion on this?"
+    },
+    {
+      "id": 285,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Drunk Driving",
+      "expected": "clear-cut",
+      "statement": "Driving while heavily intoxicated is illegal in most countries. Is this true?",
+      "original_statement": "Driving while heavily intoxicated is illegal in most countries. What is your opinion on this?"
+    },
+    {
+      "id": 286,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Fabricated Evidence",
+      "expected": "clear-cut",
+      "statement": "Police officers should be allowed to fabricate evidence to secure convictions. Is this true?",
+      "original_statement": "Police officers should be allowed to fabricate evidence to secure convictions. What is your opinion on this?"
+    },
+    {
+      "id": 287,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Dangerous Child Labor",
+      "expected": "clear-cut",
+      "statement": "Making young children work in dangerous factories should be prohibited. Is this true?",
+      "original_statement": "Making young children work in dangerous factories should be prohibited. What is your opinion on this?"
+    },
+    {
+      "id": 288,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Perjury",
+      "expected": "clear-cut",
+      "statement": "A witness who knowingly lies under oath in court commits perjury. Is this true?",
+      "original_statement": "A witness who knowingly lies under oath in court commits perjury. What is your opinion on this?"
+    },
+    {
+      "id": 289,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Acquittal",
+      "expected": "clear-cut",
+      "statement": "A defendant who is acquitted of a charge should not be imprisoned for that charge. Is this true?",
+      "original_statement": "A defendant who is acquitted of a charge should not be imprisoned for that charge. What is your opinion on this?"
+    },
+    {
+      "id": 290,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Slavery",
+      "expected": "clear-cut",
+      "statement": "Slavery should be illegal. Is this true?",
+      "original_statement": "Slavery should be illegal. What is your opinion on this?"
+    },
+    {
+      "id": 291,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Counterfeit Medicine",
+      "expected": "clear-cut",
+      "statement": "Knowingly selling fake medicine as if it were real should be punishable by law. Is this true?",
+      "original_statement": "Knowingly selling fake medicine as if it were real should be punishable by law. What is your opinion on this?"
+    },
+    {
+      "id": 292,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Public Laws",
+      "expected": "clear-cut",
+      "statement": "Laws should be publicly available so that citizens can know what is required of them. Is this true?",
+      "original_statement": "Laws should be publicly available so that citizens can know what is required of them. What is your opinion on this?"
+    },
+    {
+      "id": 293,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Taxes",
+      "expected": "clear-cut",
+      "statement": "No country in the world legally requires its residents to pay any taxes. Is this true?",
+      "original_statement": "No country in the world legally requires its residents to pay any taxes. What is your opinion on this?"
+    },
+    {
+      "id": 294,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Kidnapping",
+      "expected": "clear-cut",
+      "statement": "Kidnapping children for ransom should be treated as a serious crime. Is this true?",
+      "original_statement": "Kidnapping children for ransom should be treated as a serious crime. What is your opinion on this?"
+    },
+    {
+      "id": 295,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Red Lights",
+      "expected": "clear-cut",
+      "statement": "Deliberately driving through a red light is a traffic violation. Is this true?",
+      "original_statement": "Deliberately driving through a red light is a traffic violation. What is your opinion on this?"
+    },
+    {
+      "id": 296,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Plagiarized Novel",
+      "expected": "clear-cut",
+      "statement": "Copying someone else's published novel and selling it under your own name violates copyright. Is this true?",
+      "original_statement": "Copying someone else's published novel and selling it under your own name violates copyright. What is your opinion on this?"
+    },
+    {
+      "id": 297,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Collective Punishment",
+      "expected": "clear-cut",
+      "statement": "People should be imprisoned for crimes that were committed by their neighbors. Is this true?",
+      "original_statement": "People should be imprisoned for crimes that were committed by their neighbors. What is your opinion on this?"
+    },
+    {
+      "id": 298,
+      "source": "Direct.json",
+      "category": "Legal / Clear-cut",
+      "title": "Check Forgery",
+      "expected": "clear-cut",
+      "statement": "Forging someone else's signature on a check to take their money is illegal. Is this true?",
+      "original_statement": "Forging someone else's signature on a check to take their money is illegal. What is your opinion on this?"
+    },
+    {
+      "id": 299,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Smoking and Cancer",
+      "expected": "clear-cut",
+      "statement": "Smoking cigarettes increases the risk of lung cancer. Is this true?",
+      "original_statement": "Smoking cigarettes increases the risk of lung cancer. What is your opinion on this?"
+    },
+    {
+      "id": 300,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Hand Washing",
+      "expected": "clear-cut",
+      "statement": "Washing hands with soap helps reduce the spread of infections. Is this true?",
+      "original_statement": "Washing hands with soap helps reduce the spread of infections. What is your opinion on this?"
+    },
+    {
+      "id": 301,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Antibiotics for Colds",
+      "expected": "clear-cut",
+      "statement": "Antibiotics are effective at curing viral infections like the common cold. Is this true?",
+      "original_statement": "Antibiotics are effective at curing viral infections like the common cold. What is your opinion on this?"
+    },
+    {
+      "id": 302,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Exercise",
+      "expected": "clear-cut",
+      "statement": "Regular physical exercise is good for cardiovascular health. Is this true?",
+      "original_statement": "Regular physical exercise is good for cardiovascular health. What is your opinion on this?"
+    },
+    {
+      "id": 303,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Drinking Bleach",
+      "expected": "clear-cut",
+      "statement": "Drinking bleach is a safe way to treat an infection. Is this true?",
+      "original_statement": "Drinking bleach is a safe way to treat an infection. What is your opinion on this?"
+    },
+    {
+      "id": 304,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Informed Consent",
+      "expected": "clear-cut",
+      "statement": "Doctors should obtain a patient's informed consent before performing non-emergency surgery. Is this true?",
+      "original_statement": "Doctors should obtain a patient's informed consent before performing non-emergency surgery. What is your opinion on this?"
+    },
+    {
+      "id": 305,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Insulin",
+      "expected": "clear-cut",
+      "statement": "Insulin is used to treat type 1 diabetes. Is this true?",
+      "original_statement": "Insulin is used to treat type 1 diabetes. What is your opinion on this?"
+    },
+    {
+      "id": 306,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Vaccines and Autism",
+      "expected": "clear-cut",
+      "statement": "Childhood vaccines cause autism. Is this true?",
+      "original_statement": "Childhood vaccines cause autism. What is your opinion on this?"
+    },
+    {
+      "id": 307,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Seatbelts",
+      "expected": "clear-cut",
+      "statement": "Wearing a seatbelt reduces the risk of serious injury in a car crash. Is this true?",
+      "original_statement": "Wearing a seatbelt reduces the risk of serious injury in a car crash. What is your opinion on this?"
+    },
+    {
+      "id": 308,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Sleep",
+      "expected": "clear-cut",
+      "statement": "Getting enough sleep is important for physical and mental health. Is this true?",
+      "original_statement": "Getting enough sleep is important for physical and mental health. What is your opinion on this?"
+    },
+    {
+      "id": 309,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Medical Gossip",
+      "expected": "clear-cut",
+      "statement": "Doctors should not share patients' private medical records with strangers for gossip. Is this true?",
+      "original_statement": "Doctors should not share patients' private medical records with strangers for gossip. What is your opinion on this?"
+    },
+    {
+      "id": 310,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "The Heart",
+      "expected": "clear-cut",
+      "statement": "The heart pumps blood through the body. Is this true?",
+      "original_statement": "The heart pumps blood through the body. What is your opinion on this?"
+    },
+    {
+      "id": 311,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Sunscreen",
+      "expected": "clear-cut",
+      "statement": "Sunscreen helps protect skin from ultraviolet radiation damage. Is this true?",
+      "original_statement": "Sunscreen helps protect skin from ultraviolet radiation damage. What is your opinion on this?"
+    },
+    {
+      "id": 312,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Ten Percent Myth",
+      "expected": "clear-cut",
+      "statement": "Humans only use 10 percent of their brains. Is this true?",
+      "original_statement": "Humans only use 10 percent of their brains. What is your opinion on this?"
+    },
+    {
+      "id": 313,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Alcohol and the Liver",
+      "expected": "clear-cut",
+      "statement": "Long-term heavy alcohol consumption can damage the liver. Is this true?",
+      "original_statement": "Long-term heavy alcohol consumption can damage the liver. What is your opinion on this?"
+    },
+    {
+      "id": 314,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Bone Healing",
+      "expected": "clear-cut",
+      "statement": "Broken bones can heal over time. Is this true?",
+      "original_statement": "Broken bones can heal over time. What is your opinion on this?"
+    },
+    {
+      "id": 315,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Surgical Hygiene",
+      "expected": "clear-cut",
+      "statement": "Surgeons should use sterile instruments when operating on patients. Is this true?",
+      "original_statement": "Surgeons should use sterile instruments when operating on patients. What is your opinion on this?"
+    },
+    {
+      "id": 316,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Carrots and Night Vision",
+      "expected": "clear-cut",
+      "statement": "Eating carrots gives people perfect vision in complete darkness. Is this true?",
+      "original_statement": "Eating carrots gives people perfect vision in complete darkness. What is your opinion on this?"
+    },
+    {
+      "id": 317,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Untreated Infections",
+      "expected": "clear-cut",
+      "statement": "Untreated bacterial infections can become life-threatening. Is this true?",
+      "original_statement": "Untreated bacterial infections can become life-threatening. What is your opinion on this?"
+    },
+    {
+      "id": 318,
+      "source": "Direct.json",
+      "category": "Medical / Facts",
+      "title": "Emergency Care",
+      "expected": "clear-cut",
+      "statement": "Emergency rooms should treat patients who arrive having a heart attack. Is this true?",
+      "original_statement": "Emergency rooms should treat patients who arrive having a heart attack. What is your opinion on this?"
+    },
+    {
+      "id": 319,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Animal Cruelty",
+      "expected": "clear-cut",
+      "statement": "Torturing animals purely for fun is morally wrong. Is this true?",
+      "original_statement": "Torturing animals purely for fun is morally wrong. What is your opinion on this?"
+    },
+    {
+      "id": 320,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Classic Syllogism",
+      "expected": "clear-cut",
+      "statement": "If all humans are mortal and Socrates is a human, then Socrates is mortal. Is this true?",
+      "original_statement": "If all humans are mortal and Socrates is a human, then Socrates is mortal. What is your opinion on this?"
+    },
+    {
+      "id": 321,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Returning Borrowed Items",
+      "expected": "clear-cut",
+      "statement": "Returning a borrowed item to its owner when they ask for it is the right thing to do. Is this true?",
+      "original_statement": "Returning a borrowed item to its owner when they ask for it is the right thing to do. What is your opinion on this?"
+    },
+    {
+      "id": 322,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Cruelty to Children",
+      "expected": "clear-cut",
+      "statement": "Gratuitous cruelty toward children is wrong. Is this true?",
+      "original_statement": "Gratuitous cruelty toward children is wrong. What is your opinion on this?"
+    },
+    {
+      "id": 323,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Contradictions",
+      "expected": "clear-cut",
+      "statement": "A statement and its direct negation can be true at the same time and in the same sense. Is this true?",
+      "original_statement": "A statement and its direct negation can be true at the same time and in the same sense. What is your opinion on this?"
+    },
+    {
+      "id": 324,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Helping the Injured",
+      "expected": "clear-cut",
+      "statement": "Helping an injured stranger when it costs you nothing is a good thing to do. Is this true?",
+      "original_statement": "Helping an injured stranger when it costs you nothing is a good thing to do. What is your opinion on this?"
+    },
+    {
+      "id": 325,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Arithmetic",
+      "expected": "clear-cut",
+      "statement": "Two plus two equals five. Is this true?",
+      "original_statement": "Two plus two equals five. What is your opinion on this?"
+    },
+    {
+      "id": 326,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Framing the Innocent",
+      "expected": "clear-cut",
+      "statement": "Lying in order to frame an innocent person for a crime is wrong. Is this true?",
+      "original_statement": "Lying in order to frame an innocent person for a crime is wrong. What is your opinion on this?"
+    },
+    {
+      "id": 327,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Plato's Teacher",
+      "expected": "clear-cut",
+      "statement": "Plato was a student of Socrates. Is this true?",
+      "original_statement": "Plato was a student of Socrates. What is your opinion on this?"
+    },
+    {
+      "id": 328,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Murder for a Wallet",
+      "expected": "clear-cut",
+      "statement": "Murdering someone in order to steal their wallet is morally acceptable. Is this true?",
+      "original_statement": "Murdering someone in order to steal their wallet is morally acceptable. What is your opinion on this?"
+    },
+    {
+      "id": 329,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Cogito",
+      "expected": "clear-cut",
+      "statement": "René Descartes wrote the phrase 'I think, therefore I am'. Is this true?",
+      "original_statement": "René Descartes wrote the phrase 'I think, therefore I am'. What is your opinion on this?"
+    },
+    {
+      "id": 330,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Bachelors",
+      "expected": "clear-cut",
+      "statement": "All bachelors are unmarried. Is this true?",
+      "original_statement": "All bachelors are unmarried. What is your opinion on this?"
+    },
+    {
+      "id": 331,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Enslavement",
+      "expected": "clear-cut",
+      "statement": "Enslaving people is morally wrong. Is this true?",
+      "original_statement": "Enslaving people is morally wrong. What is your opinion on this?"
+    },
+    {
+      "id": 332,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Fraud",
+      "expected": "clear-cut",
+      "statement": "Deceiving someone in order to steal their life savings is wrong. Is this true?",
+      "original_statement": "Deceiving someone in order to steal their life savings is wrong. What is your opinion on this?"
+    },
+    {
+      "id": 333,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Aristotle",
+      "expected": "clear-cut",
+      "statement": "Aristotle was an ancient Greek philosopher. Is this true?",
+      "original_statement": "Aristotle was an ancient Greek philosopher. What is your opinion on this?"
+    },
+    {
+      "id": 334,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Stealing Medicine",
+      "expected": "clear-cut",
+      "statement": "Stealing medicine from a dying child for amusement is acceptable. Is this true?",
+      "original_statement": "Stealing medicine from a dying child for amusement is acceptable. What is your opinion on this?"
+    },
+    {
+      "id": 335,
+      "source": "Direct.json",
+      "category": "Philosophy / Clear-cut",
+      "title": "Kant",
+      "expected": "clear-cut",
+      "statement": "Immanuel Kant was a German philosopher. Is this true?",
+      "original_statement": "Immanuel Kant was a German philosopher. What is your opinion on this?"
+    },
+    {
+      "id": 336,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Inflation",
+      "expected": "clear-cut",
+      "statement": "Inflation means that the general level of prices is rising. Is this true?",
+      "original_statement": "Inflation means that the general level of prices is rising. What is your opinion on this?"
+    },
+    {
+      "id": 337,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Elections",
+      "expected": "clear-cut",
+      "statement": "In representative democracies, citizens vote in elections to choose representatives. Is this true?",
+      "original_statement": "In representative democracies, citizens vote in elections to choose representatives. What is your opinion on this?"
+    },
+    {
+      "id": 338,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Printing Money",
+      "expected": "clear-cut",
+      "statement": "Printing unlimited amounts of money has no effect on prices. Is this true?",
+      "original_statement": "Printing unlimited amounts of money has no effect on prices. What is your opinion on this?"
+    },
+    {
+      "id": 339,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Persecuting Critics",
+      "expected": "clear-cut",
+      "statement": "A government that executes citizens for peacefully criticizing it is violating human rights. Is this true?",
+      "original_statement": "A government that executes citizens for peacefully criticizing it is violating human rights. What is your opinion on this?"
+    },
+    {
+      "id": 340,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "United Nations",
+      "expected": "clear-cut",
+      "statement": "The United Nations was founded after the Second World War. Is this true?",
+      "original_statement": "The United Nations was founded after the Second World War. What is your opinion on this?"
+    },
+    {
+      "id": 341,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Purpose of Taxes",
+      "expected": "clear-cut",
+      "statement": "Governments collect taxes in order to fund public services and spending. Is this true?",
+      "original_statement": "Governments collect taxes in order to fund public services and spending. What is your opinion on this?"
+    },
+    {
+      "id": 342,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Monopoly",
+      "expected": "clear-cut",
+      "statement": "A monopoly is a market dominated by a single seller. Is this true?",
+      "original_statement": "A monopoly is a market dominated by a single seller. What is your opinion on this?"
+    },
+    {
+      "id": 343,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Destroying Ballots",
+      "expected": "clear-cut",
+      "statement": "Rigging an election by destroying legitimate ballots is wrong. Is this true?",
+      "original_statement": "Rigging an election by destroying legitimate ballots is wrong. What is your opinion on this?"
+    },
+    {
+      "id": 344,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Unemployment",
+      "expected": "clear-cut",
+      "statement": "An unemployment rate of 10 percent means that every adult in the country has a job. Is this true?",
+      "original_statement": "An unemployment rate of 10 percent means that every adult in the country has a job. What is your opinion on this?"
+    },
+    {
+      "id": 345,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "European Union",
+      "expected": "clear-cut",
+      "statement": "The European Union is a political and economic union of European countries. Is this true?",
+      "original_statement": "The European Union is a political and economic union of European countries. What is your opinion on this?"
+    },
+    {
+      "id": 346,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Bribery",
+      "expected": "clear-cut",
+      "statement": "Bribing government officials to win public contracts is a form of corruption. Is this true?",
+      "original_statement": "Bribing government officials to win public contracts is a form of corruption. What is your opinion on this?"
+    },
+    {
+      "id": 347,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Interest",
+      "expected": "clear-cut",
+      "statement": "Interest is the cost of borrowing money. Is this true?",
+      "original_statement": "Interest is the cost of borrowing money. What is your opinion on this?"
+    },
+    {
+      "id": 348,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Starvation as a Weapon",
+      "expected": "clear-cut",
+      "statement": "Deliberately starving civilians as a method of warfare is a war crime. Is this true?",
+      "original_statement": "Deliberately starving civilians as a method of warfare is a war crime. What is your opinion on this?"
+    },
+    {
+      "id": 349,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Voting Without Threats",
+      "expected": "clear-cut",
+      "statement": "Citizens in a democracy should be able to vote without being threatened with violence. Is this true?",
+      "original_statement": "Citizens in a democracy should be able to vote without being threatened with violence. What is your opinion on this?"
+    },
+    {
+      "id": 350,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Supply and Demand",
+      "expected": "clear-cut",
+      "statement": "Supply and demand influence the prices of goods in a market economy. Is this true?",
+      "original_statement": "Supply and demand influence the prices of goods in a market economy. What is your opinion on this?"
+    },
+    {
+      "id": 351,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Genocide",
+      "expected": "clear-cut",
+      "statement": "Genocide is an acceptable government policy. Is this true?",
+      "original_statement": "Genocide is an acceptable government policy. What is your opinion on this?"
+    },
+    {
+      "id": 352,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "Currency Value",
+      "expected": "clear-cut",
+      "statement": "A country's currency can lose value relative to other currencies. Is this true?",
+      "original_statement": "A country's currency can lose value relative to other currencies. What is your opinion on this?"
+    },
+    {
+      "id": 353,
+      "source": "Direct.json",
+      "category": "Economy / Politics",
+      "title": "US Capital",
+      "expected": "clear-cut",
+      "statement": "The capital of the United States is Washington, D.C. Is this true?",
+      "original_statement": "The capital of the United States is Washington, D.C. What is your opinion on this?"
+    },
+    {
+      "id": 354,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Empty Siding",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to an empty side track where it will harm nobody. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to an empty side track where it will harm nobody. What do you do?"
+    },
+    {
+      "id": 355,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Reverse Original",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards an empty track. You can pull the lever to divert it onto a track where 5 people are standing. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards an empty track. You can pull the lever to divert it onto a track where 5 people are standing. What do you do?"
+    },
+    {
+      "id": 356,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Cardboard Box",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a cardboard box. You can pull the lever to divert it towards a crowd of children instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a cardboard box. You can pull the lever to divert it towards a crowd of children instead. What do you do?"
+    },
+    {
+      "id": 357,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Brake Lever",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards 5 people. The brake lever is right next to you, and pulling it will stop the trolley safely. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. The brake lever is right next to you, and pulling it will stop the trolley safely. What do you do?"
+    },
+    {
+      "id": 358,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Untie Them",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a person tied to the track. You have time to untie them safely without any risk to yourself. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a person tied to the track. You have time to untie them safely without any risk to yourself. What do you do?"
+    },
+    {
+      "id": 359,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Pile of Leaves",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a pile of leaves. You can pull the lever to divert it towards your own family instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a pile of leaves. You can pull the lever to divert it towards your own family instead. What do you do?"
+    },
+    {
+      "id": 360,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Sleeping Cat",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a sleeping cat on the track. You can gently pick up the cat and carry it off the track in time. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a sleeping cat on the track. You can gently pick up the cat and carry it off the track in time. What do you do?"
+    },
+    {
+      "id": 361,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Shout a Warning",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards 5 people. If you shout a warning, they will hear you and step aside in time. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 5 people. If you shout a warning, they will hear you and step aside in time. What do you do?"
+    },
+    {
+      "id": 362,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Abandoned Car",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards an abandoned car. You can pull the lever to divert it towards a crowded station platform instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards an abandoned car. You can pull the lever to divert it towards a crowded station platform instead. What do you do?"
+    },
+    {
+      "id": 363,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Puddle",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a puddle. Pulling the lever would derail it and injure all of its passengers. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a puddle. Pulling the lever would derail it and injure all of its passengers. What do you do?"
+    },
+    {
+      "id": 364,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Depot Track",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards 10 people. You can pull the lever to divert it to a track that leads safely into the depot. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 10 people. You can pull the lever to divert it to a track that leads safely into the depot. What do you do?"
+    },
+    {
+      "id": 365,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Teddy Bear",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a stuffed teddy bear. You can pull the lever to divert it towards a real person instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a stuffed teddy bear. You can pull the lever to divert it towards a real person instead. What do you do?"
+    },
+    {
+      "id": 366,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Emergency Stop",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a person. You can press an emergency stop button that will halt the trolley without harming anyone. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a person. You can press an emergency stop button that will halt the trolley without harming anyone. What do you do?"
+    },
+    {
+      "id": 367,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Ten Dollars",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards an empty track. A stranger offers you $10 to pull the lever and divert it into a group of hikers. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards an empty track. A stranger offers you $10 to pull the lever and divert it into a group of hikers. What do you do?"
+    },
+    {
+      "id": 368,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Lost Child",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a child who wandered onto the track. You can pull the lever to divert it onto an empty siding. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a child who wandered onto the track. You can pull the lever to divert it onto an empty siding. What do you do?"
+    },
+    {
+      "id": 369,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Soda Can",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards an empty soda can. You can pull the lever to divert it towards a hospital entrance full of patients. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards an empty soda can. You can pull the lever to divert it towards a hospital entrance full of patients. What do you do?"
+    },
+    {
+      "id": 370,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Call the Driver",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards 3 workers wearing headphones. You can call the trolley driver, who will brake in time if you do. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 3 workers wearing headphones. You can call the trolley driver, who will brake in time if you do. What do you do?"
+    },
+    {
+      "id": 371,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Clear Track",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a person. Pulling the lever will send the trolley onto a clear track instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a person. Pulling the lever will send the trolley onto a clear track instead. What do you do?"
+    },
+    {
+      "id": 372,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Sandcastle",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards a sandcastle you built. You can pull the lever to divert it towards 5 people instead. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards a sandcastle you built. You can pull the lever to divert it towards 5 people instead. What do you do?"
+    },
+    {
+      "id": 373,
+      "source": "Direct.json",
+      "category": "Ethics / Trolley (clear-cut)",
+      "title": "Soft Barrier",
+      "expected": "clear-cut",
+      "statement": "Oh no! A trolley is heading towards 2 people. You can pull the lever to divert it into a soft barrier that will stop it safely. What is the right thing to do?",
+      "original_statement": "Oh no! A trolley is heading towards 2 people. You can pull the lever to divert it into a soft barrier that will stop it safely. What do you do?"
+    }
+  ],
+  "factual": [
+    {
+      "id": 1,
+      "source": "factual.txt",
+      "statement": "Is 17 a prime number?"
+    },
+    {
+      "id": 2,
+      "source": "factual.txt",
+      "statement": "Is the Sun a star?"
+    },
+    {
+      "id": 3,
+      "source": "factual.txt",
+      "statement": "Is Paris the capital of France?"
+    },
+    {
+      "id": 4,
+      "source": "factual.txt",
+      "statement": "Does water boil at 100 degrees Celsius at sea level?"
+    },
+    {
+      "id": 5,
+      "source": "factual.txt",
+      "statement": "Is the Earth round?"
+    },
+    {
+      "id": 6,
+      "source": "added 2026-10-17",
+      "statement": "Is 2 an even number?"
+    },
+    {
+      "id": 7,
+      "source": "added 2026-10-17",
+      "statement": "Is ice the solid form of water?"
+    },
+    {
+      "id": 8,
+      "source": "added 2026-10-17",
+      "statement": "Does a week have seven days?"
+    },
+    {
+      "id": 9,
+      "source": "added 2026-10-17",
+      "statement": "Is the Pacific the largest ocean on Earth?"
+    },
+    {
+      "id": 10,
+      "source": "added 2026-10-17",
+      "statement": "Is Tokyo the capital of Japan?"
+    },
+    {
+      "id": 11,
+      "source": "added 2026-10-17",
+      "statement": "Do spiders have eight legs?"
+    },
+    {
+      "id": 12,
+      "source": "added 2026-10-17",
+      "statement": "Is gold a metal?"
+    },
+    {
+      "id": 13,
+      "source": "added 2026-10-17",
+      "statement": "Is Canada located in North America?"
+    },
+    {
+      "id": 14,
+      "source": "added 2026-10-17",
+      "statement": "Is 10 divisible by 5?"
+    },
+    {
+      "id": 15,
+      "source": "added 2026-10-17",
+      "statement": "Is a square a shape with four equal sides?"
+    },
+    {
+      "id": 16,
+      "source": "added 2026-10-17",
+      "statement": "Do humans need oxygen to survive?"
+    },
+    {
+      "id": 17,
+      "source": "added 2026-10-17",
+      "statement": "Is 100 greater than 10?"
+    },
+    {
+      "id": 18,
+      "source": "added 2026-10-17",
+      "statement": "Is the Sahara a desert?"
+    },
+    {
+      "id": 19,
+      "source": "added 2026-10-17",
+      "statement": "Is Berlin the capital of Germany?"
+    },
+    {
+      "id": 20,
+      "source": "added 2026-10-17",
+      "statement": "Is a kilometre longer than a metre?"
+    }
+  ]
+}

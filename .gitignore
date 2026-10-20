@@ -1,0 +1,31 @@
+# Project
+runs/
+logs/
+refusal_outputs.json
+*.pt
+!results/**/directions.pt
+slurm-*.out
+slurm-*.err
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# Editors & OS
+.vscode/
+.idea/
+.DS_Store
+
+# Archives
+*.zip

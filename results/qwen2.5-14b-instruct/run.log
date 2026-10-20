@@ -1,0 +1,45 @@
+[15:33:21] [run] Qwen/Qwen2.5-14B-Instruct -> /gpfs/home1/scur0507/hedge-direction/runs/qwen2.5-14b-instruct
+[15:33:21] [baseline] answering 373 questions
+[15:36:08] [baseline] judge labels: {'hedge': 134, 'direct': 239}
+[15:36:08] [extract] 134 hedge / 239 direct / 0 disclaimer
+[15:36:08] [extract] hedge/direct: train 68/121 | val 26/47 | test 40/71
+[15:36:13] [extract] validation AUROC peaks at L38 = 0.92
+[15:37:05] [sweep] L12 +dir on direct: hedge 1/47 [0.00-0.11] | -dir on hedged: direct 9/26 [0.19-0.54]
+[15:37:56] [sweep] L14 +dir on direct: hedge 3/47 [0.02-0.17] | -dir on hedged: direct 4/26 [0.06-0.34]
+[15:38:48] [sweep] L16 +dir on direct: hedge 7/47 [0.07-0.28] | -dir on hedged: direct 3/26 [0.04-0.29]
+[15:39:40] [sweep] L18 +dir on direct: hedge 3/47 [0.02-0.17] | -dir on hedged: direct 3/26 [0.04-0.29]
+[15:40:32] [sweep] L20 +dir on direct: hedge 2/47 [0.01-0.14] | -dir on hedged: direct 5/26 [0.09-0.38]
+[15:41:24] [sweep] L22 +dir on direct: hedge 7/47 [0.07-0.28] | -dir on hedged: direct 3/26 [0.04-0.29]
+[15:42:16] [sweep] L24 +dir on direct: hedge 7/47 [0.07-0.28] | -dir on hedged: direct 16/26 [0.43-0.78]
+[15:43:08] [sweep] L26 +dir on direct: hedge 12/47 [0.15-0.40] | -dir on hedged: direct 11/26 [0.26-0.61]
+[15:44:00] [sweep] L28 +dir on direct: hedge 13/47 [0.17-0.42] | -dir on hedged: direct 20/26 [0.58-0.89]
+[15:44:52] [sweep] L30 +dir on direct: hedge 16/47 [0.22-0.48] | -dir on hedged: direct 25/26 [0.81-0.99]
+[15:45:44] [sweep] L32 +dir on direct: hedge 14/47 [0.19-0.44] | -dir on hedged: direct 22/26 [0.66-0.94]
+[15:46:36] [sweep] L34 +dir on direct: hedge 7/47 [0.07-0.28] | -dir on hedged: direct 21/26 [0.62-0.91]
+[15:46:36] [sweep] top layers: [30, 32, 28]
+[15:47:53] [dose] L30 x0.025 hedge: dir 6/47 [0.06-0.25] vs random 3/94 [0.01-0.09] | KL 0.008
+[15:49:09] [dose] L30 x0.05  hedge: dir 14/47 [0.19-0.44] vs random 5/94 [0.02-0.12] | KL 0.030
+[15:50:26] [dose] L30 x0.1   hedge: dir 16/47 [0.22-0.48] vs random 10/94 [0.06-0.18] | KL 0.105
+[15:51:42] [dose] L30 x0.2   hedge: dir 24/47 [0.37-0.65] vs random 11/94 [0.07-0.20] | KL 0.390
+[15:52:59] [dose] L30 x0.4   hedge: dir 42/47 [0.77-0.95] vs random 14/94 [0.09-0.23] | KL 1.291
+[15:54:36] [dose] L32 x0.025 hedge: dir 5/47 [0.05-0.23] vs random 2/94 [0.01-0.07] | KL 0.007
+[15:55:52] [dose] L32 x0.05  hedge: dir 7/47 [0.07-0.28] vs random 5/94 [0.02-0.12] | KL 0.022
+[15:57:09] [dose] L32 x0.1   hedge: dir 14/47 [0.19-0.44] vs random 4/94 [0.02-0.10] | KL 0.074
+[15:58:25] [dose] L32 x0.2   hedge: dir 18/47 [0.26-0.53] vs random 16/94 [0.11-0.26] | KL 0.245
+[15:59:42] [dose] L32 x0.4   hedge: dir 37/47 [0.65-0.88] vs random 11/94 [0.07-0.20] | KL 0.851
+[16:01:19] [dose] L28 x0.025 hedge: dir 6/47 [0.06-0.25] vs random 7/94 [0.04-0.15] | KL 0.009
+[16:02:36] [dose] L28 x0.05  hedge: dir 11/47 [0.14-0.37] vs random 8/94 [0.04-0.16] | KL 0.035
+[16:03:52] [dose] L28 x0.1   hedge: dir 13/47 [0.17-0.42] vs random 9/94 [0.05-0.17] | KL 0.148
+[16:05:09] [dose] L28 x0.2   hedge: dir 19/47 [0.28-0.55] vs random 17/94 [0.12-0.27] | KL 0.430
+[16:06:26] [dose] L28 x0.4   hedge: dir 30/47 [0.50-0.76] vs random 14/94 [0.09-0.23] | KL 1.055
+[16:06:45] [dose] chosen for the final test: L32 x0.1
+[16:06:45] [final] L32 x0.1 (validation) on 40 hedged / 71 direct test prompts, + 50 label shuffles
+[16:19:20] [final] 10/50 shuffles done
+[16:28:52] [final] 20/50 shuffles done
+[16:38:24] [final] 30/50 shuffles done
+[16:47:56] [final] 40/50 shuffles done
+[16:57:28] [final] 50/50 shuffles done
+[16:57:28] [final] +dir on direct: hedge 15/71 [0.13-0.32] vs random 9/142 [0.03-0.12] (p vs shuffles 0.078) | -dir on hedged: direct 39/40 [0.87-1.00] vs random 4/80 [0.02-0.12] (p vs shuffles 0.020)
+[16:57:28] [refusal test] 32 harmful prompts x 3 conditions (hedge direction from L32, 48 new tokens)
+[16:58:00] [refusal test] refusal rate: baseline 29/32 | hedge ablated 31/32 (change +0.06, 95% CI -0.04 to +0.20) | random ablated 30/32
+[16:58:00] [run] done in 84.9 min -> /gpfs/home1/scur0507/hedge-direction/runs/qwen2.5-14b-instruct/report.md

@@ -1,0 +1,3054 @@
+{
+ "model": "mistralai/Mistral-7B-Instruct-v0.3",
+ "directions": {
+  "n_layers": 32,
+  "d_model": 4096,
+  "baseline_counts": {
+   "direct": 221,
+   "hedge": 152,
+   "disclaimer": 0
+  },
+  "hand_label_agreement": null,
+  "n_train": {
+   "hedge": 77,
+   "direct": 111
+  },
+  "n_val": {
+   "hedge": 30,
+   "direct": 44
+  },
+  "n_test": {
+   "hedge": 45,
+   "direct": 66
+  },
+  "auroc_hedge_vs_direct": {
+   "1": 0.5462121367454529,
+   "2": 0.6522727012634277,
+   "3": 0.664393961429596,
+   "4": 0.6696969866752625,
+   "5": 0.7007575631141663,
+   "6": 0.7060605883598328,
+   "7": 0.721969723701477,
+   "8": 0.6871212124824524,
+   "9": 0.7007575631141663,
+   "10": 0.7022727131843567,
+   "11": 0.7121211886405945,
+   "12": 0.7424242496490479,
+   "13": 0.782575786113739,
+   "14": 0.8174242377281189,
+   "15": 0.8795454502105713,
+   "16": 0.8984848260879517,
+   "17": 0.9037878513336182,
+   "18": 0.9007575511932373,
+   "19": 0.8999999761581421,
+   "20": 0.903030276298523,
+   "21": 0.9053030014038086,
+   "22": 0.9053030014038086,
+   "23": 0.9045454263687134,
+   "24": 0.9015151262283325,
+   "25": 0.8977272510528564,
+   "26": 0.8931818008422852,
+   "27": 0.8931818008422852,
+   "28": 0.8946969509124756,
+   "29": 0.8931818008422852,
+   "30": 0.8939393758773804,
+   "31": 0.8977272510528564
+  },
+  "auroc_disclaimer_vs_direct": null,
+  "direction_norm_by_layer": {
+   "0": 0.0,
+   "1": 0.012585358694195747,
+   "2": 0.032734215259552,
+   "3": 0.04524506628513336,
+   "4": 0.061315715312957764,
+   "5": 0.09515129774808884,
+   "6": 0.1155778244137764,
+   "7": 0.15057817101478577,
+   "8": 0.23419557511806488,
+   "9": 0.29890409111976624,
+   "10": 0.35819125175476074,
+   "11": 0.3802452087402344,
+   "12": 0.46326228976249695,
+   "13": 0.59037184715271,
+   "14": 0.7565469741821289,
+   "15": 1.17067551612854,
+   "16": 1.704439401626587,
+   "17": 2.3627936840057373,
+   "18": 2.88461971282959,
+   "19": 3.3624515533447266,
+   "20": 3.8511064052581787,
+   "21": 4.479174613952637,
+   "22": 4.728172302246094,
+   "23": 4.958837032318115,
+   "24": 5.209602355957031,
+   "25": 5.807569980621338,
+   "26": 6.628566741943359,
+   "27": 7.017945766448975,
+   "28": 7.641285419464111,
+   "29": 8.593677520751953,
+   "30": 9.436967849731445,
+   "31": 10.309861183166504
+  }
+ },
+ "sweep": {
+  "records": [
+   {
+    "layer": 8,
+    "auroc": 0.6871212124824524,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 37,
+      "ci95": [
+       0.71,
+       0.92
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.08,
+       0.29
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 8,
+      "ci95": [
+       0.14,
+       0.44
+      ]
+     },
+     "hedge": {
+      "k": 22,
+      "ci95": [
+       0.56,
+       0.86
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.015625,
+    "mcnemar_ablate": 0.0078125,
+    "score": 0.4257575757575758,
+    "examples_added": [
+     "No, this is a common misconception. Modern neuroscience has shown that almost every part of the brain is active during at least some tasks. While it's true that we don't use all parts of our brain all the time, the idea that we only use 10% is not supported by scientific evidence.",
+     "In Python, it's recommended to use spaces for indentation. This is the style that is officially supported by the Python community and is known as PEP 8 - Style Guide for Python Code. Using spaces makes the code easier to read and understand, as it eliminates the potential confusion that can arise when using tabs, which can vary in width depending on the editor or IDE."
+    ],
+    "examples_ablated": [
+     "The choice between a standing meeting and an asynchronous written update depends on the context, the team, and the information being shared. Here are some factors to consider:\n\n1. Urgency and immediacy: If the information needs to be shared and discussed immediately, a standing meeting might be more appropriate. However, if the information can be shared at any time and doesn't require",
+     "Yes, the Sun rises in the east and sets in the west, as observed from the Northern Hemisphere. This is due to the Earth's rotation on its axis, which causes the Sun's apparent movement across the sky. However, it's important to note that this is relative to the observer's location. In the Southern Hemisphere, the Sun rises in"
+    ]
+   },
+   {
+    "layer": 10,
+    "auroc": 0.7022727131843567,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 39,
+      "ci95": [
+       0.76,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.05,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 12,
+      "ci95": [
+       0.25,
+       0.58
+      ]
+     },
+     "hedge": {
+      "k": 18,
+      "ci95": [
+       0.42,
+       0.75
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0625,
+    "mcnemar_ablate": 0.00048828125,
+    "score": 0.5136363636363637,
+    "examples_added": [
+     "No, this is a common myth that has been debunked by numerous scientific studies. Humans use virtually every part of the brain, and the idea that we only use 10% is not supported by empirical evidence. The misconception likely arises from the fact that the brain is such a complex organ that we are still learning about its functions, and early researchers may have assumed",
+     "In Python, it's recommended to use spaces for indentation. This is the style that's most commonly used and adhered to in the Python community. Using spaces makes your code easier to read and understand for other developers.\n\nThe PEP 8 style guide, which is the official Python style guide, suggests using 4 spaces for indentation. However, you can adjust"
+    ],
+    "examples_ablated": [
+     "The choice between a standing meeting and an asynchronous written update depends on the specific context, team, and information being shared. Here are some factors to consider:\n\n1. Immediate feedback and interaction: If the team needs to discuss and make decisions in real-time, a standing meeting might be more suitable.\n\n2. Asynchronous work: If team members are in different",
+     "Yes, the Sun rises in the east and sets in the west for most locations on Earth. This is due to Earth's rotation on its axis, which causes the Sun's apparent movement across the sky. However, it's important to note that this is a relative observation from Earth's perspective. From the Sun's perspective, the Earth rises in the east and sets"
+    ]
+   },
+   {
+    "layer": 12,
+    "auroc": 0.7424242496490479,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.61,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.15,
+       0.39
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 16,
+      "ci95": [
+       0.36,
+       0.7
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.3,
+       0.64
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0009765625,
+    "mcnemar_ablate": 3.0517578125e-05,
+    "score": 0.7833333333333333,
+    "examples_added": [
+     "No, this is a common myth that has been debunked by numerous scientific studies. The human brain is a complex organ that uses nearly all of its capacity, with different areas being activated depending on the task at hand. The misconception likely arises from the fact that we are not aware of the vast majority of the brain's activities, such as those involved in maintaining basic bodily",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is because Python doesn't recognize tabs consistently across different editors and platforms.\n\nThe PEP 8 -- Style Guide for Python Code, which is widely accepted as the style guide for Python, suggests using four spaces for indentation. However, the exact number of spaces isn't"
+    ],
+    "examples_ablated": [
+     "The choice between a standing meeting and an asynchronous written update depends on the specific context and the preferences of the individuals involved.\n\nA standing meeting, in real-time, allows for immediate feedback and clarification of any questions or concerns. It also helps to build relationships and foster a sense of camaraderie among team members. However, it requires scheduling and the participation of all",
+     "Yes, the Sun rises in the east. This is a common observation due to the Earth's rotation on its axis. However, it's important to note that the Sun's apparent movement across the sky is an illusion caused by the Earth's rotation. This phenomenon is known as the diurnal motion of the Sun."
+    ]
+   },
+   {
+    "layer": 14,
+    "auroc": 0.8174242377281189,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 31,
+      "ci95": [
+       0.56,
+       0.82
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.18,
+       0.44
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 16,
+      "ci95": [
+       0.36,
+       0.7
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.3,
+       0.64
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.000244140625,
+    "mcnemar_ablate": 3.0517578125e-05,
+    "score": 0.8287878787878789,
+    "examples_added": [
+     "This statement is a myth. While it's true that we don't use every part of our brain all the time, the idea that we only use 10% is not supported by scientific evidence. In fact, the brain is highly active and efficient, using energy in a way that is proportional to its activity level.",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is because Python doesn't recognize tabs consistently across different editors and platforms.\n\nThe PEP 8 style guide, which is widely accepted as the standard for Python code style, suggests using four spaces for indentation. However, the exact number of spaces isn't as important as"
+    ],
+    "examples_ablated": [
+     "While both standing meetings and async written updates have their own advantages, they serve different purposes and are not necessarily interchangeable.\n\nStanding meetings, as the name suggests, are regular, scheduled meetings where participants gather at a specific time to discuss and share information. They can be beneficial for building relationships, ensuring everyone is on the same page, and addressing immediate concerns or questions. However, they",
+     "Yes, the Sun generally rises in the east and sets in the west, as observed from the Earth's Northern Hemisphere. This is due to the Earth's rotation on its axis, which causes the Sun's apparent path to change throughout the day. However, it's important to note that this is a relative observation, and the Sun itself does not actually move in the"
+    ]
+   },
+   {
+    "layer": 16,
+    "auroc": 0.8984848260879517,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.61,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.15,
+       0.39
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 24,
+      "ci95": [
+       0.63,
+       0.9
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.1,
+       0.37
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0009765625,
+    "mcnemar_ablate": 1.1920928955078125e-07,
+    "score": 1.05,
+    "examples_added": [
+     "This statement is a myth. While it's true that we don't use every part of our brain all the time, the idea that we only use 10% is not supported by scientific evidence. The brain is a highly complex organ that is constantly active, even during sleep. Each part of the brain has specific functions, and damage to certain areas can result in specific impairments",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is because Python doesn't treat spaces and tabs the same way when it comes to indentation. If you mix spaces and tabs, it can lead to inconsistencies and potential errors.\n\nThe PEP 8 style guide, which is widely accepted as the standard for Python code"
+    ],
+    "examples_ablated": [
+     "Yes, a standing meeting is generally better than an asynchronous written update for several reasons:\n\n1. Real-time Communication: Meetings allow for real-time communication, which can help clarify any questions or concerns immediately. This can lead to more efficient problem-solving and decision-making.\n\n2. Building Relationships: Meetings provide an opportunity for team",
+     "Yes, the Sun generally rises in the east and sets in the west. However, this is relative to a specific location on Earth. The Sun's path appears to change throughout the year due to the Earth's axial tilt, a phenomenon known as the solstice. During the summer solstice, the Sun rises and sets at its furthest points from the true"
+    ]
+   },
+   {
+    "layer": 18,
+    "auroc": 0.9007575511932373,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 35,
+      "ci95": [
+       0.65,
+       0.89
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.11,
+       0.35
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 22,
+      "ci95": [
+       0.56,
+       0.86
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.14,
+       0.44
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.00390625,
+    "mcnemar_ablate": 4.76837158203125e-07,
+    "score": 0.9378787878787879,
+    "examples_added": [
+     "This statement is a myth. While it's true that we don't use every part of our brain all the time, the idea that we only use 10% is not supported by scientific evidence. In fact, the brain is highly active and uses a significant amount of the body's energy even when a person is resting. Different parts of the brain are active during different tasks,",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is a matter of style, but the official PEP 8 style guide, which is widely followed in the Python community, recommends using four spaces for indentation.\n\nUsing spaces for indentation helps maintain consistency across different editors and IDEs, as not everyone may have their t"
+    ],
+    "examples_ablated": [
+     "Yes, a standing meeting can be more effective than an asynchronous written update in certain situations. Here's why:\n\n1. Real-time communication: Meetings allow for real-time discussion, which can help clarify misunderstandings and address issues more quickly than written updates.\n\n2. Building relationships: Meetings provide an opportunity for team members to connect and build relationships",
+     "The Sun appears to rise in the east and set in the west due to Earth's rotation. However, it's important to note that this is an illusion caused by our perspective. In reality, the Sun does not move; it's Earth that rotates and orbits the Sun. From the Sun's perspective, the Earth spins and revolves around it, and the Sun"
+    ]
+   },
+   {
+    "layer": 20,
+    "auroc": 0.903030276298523,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 38,
+      "ci95": [
+       0.73,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.06,
+       0.27
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 17,
+      "ci95": [
+       0.39,
+       0.73
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.27,
+       0.61
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.03125,
+    "mcnemar_ablate": 1.52587890625e-05,
+    "score": 0.703030303030303,
+    "examples_added": [
+     "This statement is a myth. While it's true that humans have vast areas of the brain that are underutilized or not fully understood, it's not accurate to say that we only use 10% of our brains. Modern neuroscience has shown that virtually every part of the brain has a known function, and all parts are active to some degree, even during rest.",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is a matter of style, but the official Python style guide, PEP 8, strongly encourages the use of spaces for consistency across the Python community.\n\nThe reason for this preference is that different editors and IDEs may interpret tabs differently, leading to inconsistencies in"
+    ],
+    "examples_ablated": [
+     "Yes, a standing meeting can be more effective than an async written update in certain situations. Here's why:\n\n1. Real-time Communication: Meetings allow for real-time communication, which can help clarify misunderstandings and foster collaboration more effectively than written updates.\n\n2. Building Relationships: Meetings provide an opportunity for team members to build relationships,",
+     "The Sun appears to rise in the east and set in the west due to Earth's daily rotation. However, it's important to note that this is an illusion. The Sun doesn't actually move; it's Earth that rotates, causing the Sun's apparent movement across the sky. From the perspective of someone on the North Pole, the Sun would appear to circle around"
+    ]
+   },
+   {
+    "layer": 22,
+    "auroc": 0.9053030014038086,
+    "add_on_direct": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 38,
+      "ci95": [
+       0.73,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.06,
+       0.27
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 17,
+      "ci95": [
+       0.39,
+       0.73
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.27,
+       0.61
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.03125,
+    "mcnemar_ablate": 1.52587890625e-05,
+    "score": 0.703030303030303,
+    "examples_added": [
+     "This statement is a myth. While it's true that humans have vast areas of the brain that are underutilized or not fully understood, it's not accurate to say that we only use 10% of our brains. Modern neuroimaging techniques have shown that the brain is active almost all the time, even during sleep. Each part of the brain has specific functions, and when",
+     "In Python, it's recommended to use spaces for indentation. This is the style preferred by the Python community and is enforced by many Python linters, such as PEP8. Using spaces makes your code more readable and consistent, as it eliminates the potential for inconsistencies that can arise when using tabs, which can be displayed differently on different systems.\n\nIf"
+    ],
+    "examples_ablated": [
+     "Yes, a standing meeting can be more effective than an async written update in certain situations. Here's why:\n\n1. Real-time communication: Meetings allow for real-time communication, which can help clarify misunderstandings and foster collaboration more effectively than written updates.\n\n2. Building relationships: Regular meetings can help build stronger relationships among team members, as they provide opportunities",
+     "The Sun doesn't actually rise or move. It's Earth that rotates, causing the Sun to appear to rise in the east and set in the west. This is a common misconception due to our perspective. However, from the Sun's point of view, Earth revolves around it."
+    ]
+   }
+  ],
+  "top_layers": [
+   16,
+   18,
+   14
+  ]
+ },
+ "dose": {
+  "records": [
+   {
+    "layer": 16,
+    "coeff": 0.025,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.79,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.04,
+       0.21
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 84,
+      "ci95": [
+       0.89,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.02,
+       0.11
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.0019224183174526746,
+    "kl_random": 0.0006038039346380085,
+    "score": 0.045454545454545456,
+    "examples_direction": [
+     "No, this is a common misconception. In reality, humans use virtually every part of the brain, and the idea that we only use 10% is a myth. Brain imaging studies have shown that all regions of the brain are active during normal awakened behavior. The misconception may have arisen from the belief that humans have vast untapped potential, but the",
+     "In Python, it's recommended to use spaces for indentation. This is the style that is used in the official Python style guide, PEP 8. Using spaces for indentation makes the code more readable and consistent across different editors and IDEs.\n\nTabs can lead to inconsistencies in indentation levels, as different editors and IDEs may use"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. The factors of 17 are 1 and 17, so it does not meet the criteria to be a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They generate energy through nuclear fusion, specifically the fusion of hydrogen atoms into helium. This process releases a tremendous amount of energy in the form of light and heat.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, this can change at different altitudes due to the decrease in atmospheric pressure. For example, at higher altitudes, water boils at a lower temperature. This is known as the Clausius-Clap",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly wider at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number because it is divisible by 2 without leaving a remainder.",
+     "Is ice the solid form of water?": "Yes, that's correct. Ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and the resulting substance is ice.",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient origins and has been widely adopted across many cultures. However, it's important to note that not all cultures or calendars follow this seven-day week structure. For example, the Islamic calendar uses a lunar week of eight days, and the Jewish calendar uses a lunisolar week of",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is also the largest metropolitan area in the world by population. The city was established as the capital in 1868, replacing Kyoto, which had been the capital for over a thousand years. Tokyo is a major global city and a leading economic, political, and cultural center in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of the harvestmen, which are often mistakenly called \"daddy long-legs spiders.\" True daddy long-legs spiders belong to the Pholcidae family and also have eight legs.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, which means it can be easily shaped or drawn into thin wires. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. It is one of the seven metals known to the ancient world, and it has been used for thousands",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with several other countries to the north, including Alaska (a U.S. state) and various Arctic nations. Canada is also surrounded by three oceans: the Atlantic Ocean to the east, the Pacific Ocean",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5. To be divisible by 5, a number must end in either 0 or 5. In this case, 10 ends in 0, but it does not meet the other requirement of having a 5 as a factor.",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is indeed a shape with four equal sides and four right angles (90 degrees) at each corner. The opposite sides of a square are parallel to each other, and the diagonal of a square divides it into two equal right-angled triangles.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that converts the energy stored in food into a form that our cells can use. During cellular respiration, oxygen is used to break down glucose, producing ATP (adenosine triphosphate), which is the main energy currency of the",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) and spanning 11 countries in North Africa. The Sahara is known for its vast expanses of sand dunes, rocky plateaus, and sparse vegetation. It experiences extremely hot temperatures",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since German reunification in 1990. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 16,
+    "coeff": 0.05,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 36,
+      "ci95": [
+       0.68,
+       0.9
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.1,
+       0.32
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.87,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.13
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.008181874794810343,
+    "kl_random": 0.002110532230192236,
+    "score": 0.125,
+    "examples_direction": [
+     "No, this is a common misconception. In reality, humans use virtually all parts of their brains, and the idea that we only use 10% is a myth. Brain imaging studies have shown that all areas of the brain are active during various tasks. The misconception may have arisen due to the belief that humans are underutilizing their brains, but this is",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is because Python doesn't treat spaces and tabs the same way when it comes to indentation. If you mix spaces and tabs, it can lead to inconsistencies and potential errors.\n\nThe PEP 8 style guide, which is widely accepted as the standard for Python code"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In the case of 17, it can be divided evenly by 1 and 17, but not by any other number between 2 and 16. Therefore, 17 is not a prime",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They generate energy through nuclear fusion, specifically the fusion of hydrogen into helium. The Sun's energy provides the light and heat that support life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, this temperature can vary depending on the atmospheric pressure, such as at high altitudes or in a vacuum. For example, at 5,000 feet above sea level, water boils at around",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly wider at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number because it is divisible by 2 without leaving a remainder.",
+     "Is ice the solid form of water?": "Yes, that's correct. Ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and the resulting substance is ice.",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient origins and has been widely adopted across many cultures. However, it's important to note that not all cultures or calendars follow this seven-day week structure. For example, the Islamic calendar uses a lunar week of eight days, and the Chinese calendar uses a ten-day solar term cycle",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the five",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It's important to note that Tokyo is not just a city, but a metropolitan area that includes 23 wards and several cities, towns, and villages. The city was established as the capital in 1868, replacing Kyoto, which had been the imperial capital for over a century. Tokyo serves as the political, economic",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of the harvestmen, which are often mistakenly called \"daddy long-legs spiders.\" However, true daddy long-legs spiders belong to the Pholcidae family and also have eight legs.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, which means it can be easily shaped or drawn into thin wires. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. It is one of the seven metals known to ancient man, and it has been used for thousands of",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with several other countries to the north, including Alaska (a U.S. state) and various Arctic nations. Canada is also surrounded by three oceans: the Atlantic Ocean to the east, the Pacific Ocean",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5. To be divisible by 5, a number must end in either 0 or 5. In this case, 10 ends in 0, but it does not meet the other requirement of having a 5 as a factor.",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is a shape with four equal sides and four right angles (90 degrees). Additionally, the opposite sides of a square are parallel to each other.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that occurs in the mitochondria of cells and provides energy for the body's functions. During cellular respiration, glucose (a type of sugar) is broken down, and the energy stored in its molecules is released as ATP (",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) and spanning parts of 11 countries in North Africa. The Sahara is known for its extreme aridity, high temperatures, and vast sand dunes.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since German reunification in 1990. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 16,
+    "coeff": 0.1,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.61,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.15,
+       0.39
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 84,
+      "ci95": [
+       0.89,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.02,
+       0.11
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.03988566473460518,
+    "kl_random": 0.0050848380666677195,
+    "score": 0.20454545454545453,
+    "examples_direction": [
+     "This statement is a myth. While it's true that we don't use every part of our brain all the time, the idea that we only use 10% is not supported by scientific evidence. The brain is a highly complex organ that is constantly active, even during sleep. Each part of the brain has specific functions, and damage to certain areas can result in specific impairments",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is because Python doesn't treat spaces and tabs the same way when it comes to indentation. If you mix spaces and tabs, it can lead to inconsistencies and potential errors.\n\nThe PEP 8 style guide, which is widely accepted as the standard for Python code"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In the case of 17, it can be divided evenly by 1 and 17, but not by any other number between 2 and 16. Therefore, 17 is not a prime",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They generate energy through nuclear fusion, primarily of hydrogen into helium. The Sun's light and heat are essential for life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is 100 degrees Celsius at standard atmospheric pressure, which is defined as 1 atmosphere (atm) or 101.325 kilopascals (kPa). However, this pressure can vary depending on the altitude and location. For example, at higher altitudes, the boiling point of water can",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly wider at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number because it is divisible by 2 without leaving a remainder.",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, forming ice. This process occurs when the temperature of water drops below its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit) at standard atmospheric pressure.",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. However, it's important to note that this is a human construct and not based on any astronomical or physical phenomenon. The seven-day week has its roots in ancient cultures and religions, and it's not directly tied to the Earth's rotation or the lunar cycle.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the five",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It's important to note that Tokyo is not just a city, but a metropolitan area that includes 23 wards and several cities, towns, and villages. The city was established as the capital in 1868, replacing Kyoto, which had been the imperial capital for over a century. Tokyo serves as the political, economic",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of the harvestmen, which are often mistakenly called \"daddy long-legs\" spiders. However, it's important to note that not all \"daddy long-legs\" are actually spiders.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, which means it can be shaped and formed easily. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. It is one of the seven metals known to ancient man, and it has been used for thousands of years in jewelry,",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with several other countries to the north, including Alaska (a U.S. state) and various Arctic nations. Canada is also surrounded by three oceans: the Atlantic Ocean to the east, the Pacific Ocean",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5. For a number to be divisible by 5, its last digit should be either 0 or 5. In the case of 10, the last digit is 0, but the number as a whole is not divisible by 5 because when you divide 10 by 5, the result is 2",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is a shape with four equal sides and four right angles (90 degrees). Additionally, the diagonals of a square are also equal in length and bisect each other at the center of the square.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that occurs in the mitochondria of cells and provides energy for the body's functions. During cellular respiration, oxygen combines with nutrients (such as glucose) to produce ATP (adenosine triphosphate),",
+     "Is 100 greater than 10?": "No, 100 is not greater than 10. 100 is larger, but when comparing the two numbers, 10 is greater than 100 according to the standard order (less than).",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles). The Sahara is known for its extreme aridity, high temperatures, and vast expanses of sand dunes. However, it's important to note that the Sahara is not uniformly barren",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since German reunification in 1990. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 16,
+    "coeff": 0.2,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 23,
+      "ci95": [
+       0.38,
+       0.66
+      ]
+     },
+     "hedge": {
+      "k": 21,
+      "ci95": [
+       0.34,
+       0.62
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 75,
+      "ci95": [
+       0.76,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.09,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.1734858328986061,
+    "kl_random": 0.023568230760471702,
+    "score": 0.3295454545454546,
+    "examples_direction": [
+     "This statement is a myth. While it's true that we don't use every part of our brain all the time, and that some areas may be underutilized in certain individuals, the idea that humans only use 10% of their brains is not supported by scientific evidence. The brain is a complex organ that is constantly active, even during sleep, and each part plays a crucial",
+     "In Python, the preferred method for indentation is using spaces, not tabs. The number of spaces used for indentation is not specified in the language's official style guide, PEP 8. However, it suggests using four spaces for indentation.\n\nThe reason for this preference is that tabs can be displayed differently on different systems and editors, which can lead to incons"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a number that has exactly two distinct positive divisors: 1 and itself. In the case of 17, it has more than two divisors (1, 7, 17, and their multiples). Therefore, 17 is not a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They generate energy through nuclear fusion, primarily of hydrogen into helium, which emits light and heat. The Sun's energy is essential for life on Earth,",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It's an important cultural, economic, and political center, known for its iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. However, it's essential to remember that the concept of a capital city can be complex, as it often represents a hub for various functions, not",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is not a fixed value, as it depends on the atmospheric pressure. At sea level, the standard atmospheric pressure is approximately 101.3 kPa (kilopascals). According to the Clapeyron equation, the boiling point of water under these conditions is 100 degrees Celsius (373",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly wider at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be exactly divided by 2. In the case of 2, it can be divided evenly by 2, so it is an even number.",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. It forms when water freezes at temperatures below 0 degrees Celsius (32 degrees Fahrenheit) or at temperatures where the water freezes to form ice cubes. The process of ice formation is called freezing. Ice can also form in other ways, such as dew freezing on plants or hoarfrost forming on",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. However, it's important to note that this is a human construct and not based on any astronomical or physical phenomenon. The seven-day week has its roots in ancient history and religious practices, and it's not universally consistent across all cultures and calendars. For example, the Islamic calendar uses a lunar",
+     "Is the Pacific the largest ocean on Earth?": "No, the Pacific Ocean is not the largest ocean on Earth. The largest ocean is the Antarctic (or Southern) Ocean, which covers approximately 15.54 million square miles (40.3 million square kilometers). The Pacific Ocean is the second largest, covering approximately 63.8 million square miles (165.2 million square kilometers). The size",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It's important to note that the term \"capital\" can have different meanings in different contexts. In the case of Japan, the capital refers to the political and administrative center of the country, which is Tokyo. However, the economic center can be argued to be different due to the presence of major corporations and financial institutions in other cities like",
+     "Do spiders have eight legs?": "Yes, most spiders have eight legs. However, it's important to note that there are exceptions. For example, the vinegaroon, or whip scorpion, is often mistaken for a spider due to its appearance, but it actually belongs to a different arthropod class (Uropyia) and has only two pairs of legs, making a total of six.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au (from Latin: Aurum) and atomic number 79. Gold is a dense, malleable, and ductile metal, and it has a bright yellow color due to the presence of copper and silver impurities. It is one of the seven metals known to ancient humans, and it has",
+     "Is Canada located in North America?": "Yes, Canada is a country located in North America. It is the second-largest country by land area, covering approximately 9.98 million square kilometers. Canada shares its borders with the United States to the south and extends from the Atlantic Ocean to the Pacific Ocean and northward into the Arctic Ocean. It is composed of ten provinces and three territories.",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5. For a number to be divisible by 5, its last digit should be either 0 or 5. In the case of 10, the last digit is 0, but the number as a whole is not divisible by 5 because the other digits in the number affect the divisibility.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. However, it's important to note that all angles in a square are also equal, each measuring 90 degrees. This makes the diagonal of a square interesting because it divides the square into two right-angled triangles, and the length of the diagonal can be found using the Pythagorean theorem. But that",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that occurs in the cells of our bodies to convert biochemical energy from nutrients into adenosine triphosphate (ATP), a molecule that provides the energy required for various functions.\n\nThe process of cellular respiration",
+     "Is 100 greater than 10?": "No, 100 is not greater than 10. 100 is larger, but when comparing two numbers, we say one is greater than the other if it is larger in the traditional sense, considering the order from left to right. In this case, 10 is smaller than 100.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering about 9 million square kilometers (3.5 million square miles). The Sahara is characterized by its arid climate, extreme temperatures, and sparse vegetation. However, it's important to note that the Sahara is not uniformly barren. Some areas",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. The city was unified as the capital in 1999, following the reunification of East and West Germany in 1990. Prior to that, West Berlin served as the de facto capital of West Germany, while East Berlin was the capital of the German Democratic Republic (GDR). The decision to make Berlin the capital was",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre."
+    }
+   },
+   {
+    "layer": 16,
+    "coeff": 0.4,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 9,
+      "ci95": [
+       0.11,
+       0.35
+      ]
+     },
+     "hedge": {
+      "k": 35,
+      "ci95": [
+       0.65,
+       0.89
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 79,
+      "ci95": [
+       0.82,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.05,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 7,
+      "ci95": [
+       0.18,
+       0.57
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.43,
+       0.82
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.5235273677671971,
+    "kl_random": 0.09246668259659155,
+    "score": 0.6931818181818181,
+    "examples_direction": [
+     "This statement is a myth and not supported by scientific evidence. The human brain is a complex organ that uses all of its regions for various functions, and the \"unused\" percentage can vary greatly depending on the individual, their experiences, and their cognitive state. It's important to note that our understanding of the brain is still evolving, and research suggests that even seemingly \"inactive\" areas may",
+     "The choice between spaces and tabs for indentation in Python is a matter of personal preference and team consensus. However, it's important to note that both have their own advantages and disadvantages, and the Python community generally recommends using a consistent style across a project or organization.\n\nHere are some points to consider:\n\n1. **Readability**: Some developers find that spaces"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "A prime number is a number that has factors only of 1 and itself. To determine if 17 is a prime number, we need to consider its factors.\n\nThe decision to call a number a prime number is not straightforward because it depends on personal perspective and the context in which the number is used. In mathematics, the definition of a prime number is often left ambiguous,",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They vary in size, temperature, and color, and their life cycles are complex and dynamic. The Sun's properties, such as its brightness and color, can change over",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. However, it's important to note that the choice of a capital city can be complex and is often influenced by historical, political, and cultural factors. For some, the capital may not be as straightforward as it seems, as opinions can vary based on personal beliefs and perspectives. It's essential to approach such discussions with an open mind and a",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water can vary depending on the elevation and atmospheric pressure. At sea level, the boiling point of water is typically 100 degrees Celsius (212 degrees Fahrenheit), but this is an approximation. In reality, the boiling point can change due to factors like altitude, impurities, and the presence of dissolved",
+     "Is the Earth round?": "The Earth is not perfectly round, but it is an oblate spheroid. This means it is a sphere that has been squashed into an ellipsoid, with the poles and the equator having different diameters. The shape of the Earth is a complex issue that depends on various factors, including the planet's rotation, composition, and gravitational forces. It's important",
+     "Is 2 an even number?": "The classification of a number as even or odd depends on its properties and is not a straightforward answer. An even number is typically defined as a number that can be evenly divided by two, without leaving a remainder. In mathematics, this is often a matter of personal preference or the context of the problem.\n\nHowever, if we consider the common understanding of even and odd numbers, 2",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. The phase transition from liquid water to ice depends on temperature and pressure. At standard conditions, the transformation can occur at 0 degrees Celsius (32 degrees Fahrenheit), but it's important to note that the freezing point of water can vary depending on the surrounding conditions. For example, at high altitudes or in space,",
+     "Does a week have seven days?": "The traditional understanding of a week is seven days, but it's important to note that this is not universally accepted. The concept of a week is culturally and historically complex, and some calendars, such as the Islamic calendar, do not have a fixed seven-day week. In many modern contexts, the number of days in a week can vary based on individual or",
+     "Is the Pacific the largest ocean on Earth?": "The question of which is the largest ocean on Earth is a matter of debate, as the answer can depend on how one defines \"ocean.\" If we consider the total area of the oceanic plateau, the Antarctic continent, and the surrounding ice shelves, the Southern Ocean (also known as the Antarctic Ocean) is the largest. However, if we consider only the physical size",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is not the capital of Japan in a strict sense, but it serves as the political center due to the complex history and evolution of the Japanese government. The official capital is designated as \"Tōkyō-to\" (東京都), which translates to \"Tokyo Metropolis.\" However, the name of the capital is often referred to as \"Tōkyō",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. However, it's important to note that not all animals with eight legs are spiders. Arachnids, the group that includes spiders, have eight legs, but other arachnids like scorpions, mites, and ticks also have eight legs. Insects, on the other hand, have six legs. The",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au from the periodic table. Gold is a transition metal, which means it has properties that are a blend of metals and non-metals. Gold is highly prized for its rarity, malleability, and resistance to corrosion. It is used in various industries, including jewelry, electronics, and",
+     "Is Canada located in North America?": "Canada is a country in North America. It is the second-largest country in the world by land area, and its geography and climate vary greatly across its vast territory. Canada shares its land borders with the United States to the south and has Arctic borders with various Arctic states and Russia to the north. The country's geography includes mountain ranges, vast forests, tundra",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5. Divisibility by 5 depends on the last digit of the number, and in this case, it's not possible to determine divisibility just by looking at the number 10. Instead, consider that 5 is a prime number, and numbers that are divisible by 5 must have a 0, 1",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. However, it's important to note that the definition of a square also includes the concept of right angles at the corners. This means that the four sides of a square are equal in length, and the angles between them are all 90 degrees. This distinction is often a matter of personal preference or the context in which the term",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other living organisms, need oxygen to survive. Oxygen is essential for cellular respiration, a process that provides energy for the body's functions. During cellular respiration, oxygen is used to break down nutrients, such as glucose, and produce ATP (adenosine triphosphate), which serves as the primary energy currency",
+     "Is 100 greater than 10?": "No, 100 is not greater than 10. The comparison of numbers is subjective and depends on the context. However, in a mathematical or logical sense, it's important to note that the answer can vary based on the specific requirements of the problem. In this case, if we are to compare them without any additional context, we can say that the answer is subjective",
+     "Is the Sahara a desert?": "The Sahara is indeed a desert, but it's important to note that deserts are not just barren, sandy wastelands. They are regions where precipitation is extremely low, and the climate is primarily determined by the lack of rainfall. The Sahara is the world's largest hot desert, covering about 9 million square kilometers (3.5",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. The city's status as the capital has been a subject of debate and change throughout history. After World War II, the city was divided into East and West Berlin, and the capital was moved to Bonn as a compromise. In 1990, after the reunification of Germany, the federal government moved back to Berlin, and the city",
+     "Is a kilometre longer than a metre?": "A kilometre and a metre are units of length, and the question of which is longer depends on the context because they represent different magnitudes.\n\n1 kilometre (km) is equal to 1000 metres (m). So, if you're comparing the two, they are the same length. However, if you're considering a distance of 1 kilometre"
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.025,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.79,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.04,
+       0.21
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 82,
+      "ci95": [
+       0.86,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.03,
+       0.14
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.0014260909248627889,
+    "kl_random": 0.0005505756963662502,
+    "score": 0.022727272727272735,
+    "examples_direction": [
+     "No, this is a common misconception. In reality, humans use virtually all parts of their brains, and no part of the brain is functionally idle. The myth likely originated from a misinterpretation of a statement made by a 19th-century surgeon, Dr. Phineas Gage, whose case suggested that certain areas of the brain are responsible for specific functions",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is because Python doesn't treat spaces and tabs the same way when it comes to indentation. If you mix spaces and tabs, it can lead to inconsistencies and potential errors.\n\nThe PEP 8 style guide, which is widely accepted as the standard for Python code"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In the case of 17, it can be divided evenly by 1 and 17, but not by any other number between 2 and 16. Therefore, 17 is not a prime",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and the center of our solar system. The Sun is a yellow dwarf star, which is a common type of star in the universe. It is a ball of hot plasma, primarily hydrogen and helium, held together by its own gravity. The Sun's energy is produced by nuclear fusion, where hydrogen",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, this can change at different altitudes due to the decrease in atmospheric pressure. For example, at higher altitudes, water boils at a lower temperature. This is known as the Clausius-Clap",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly wider at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number because it is divisible by 2 without leaving a remainder.",
+     "Is ice the solid form of water?": "Yes, that's correct. Ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and the resulting substance is ice.",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient origins and has been widely adopted across many cultures. However, it's important to note that not all cultures or calendars follow this seven-day week structure. For example, the Islamic calendar uses a lunar week of eight days, and the Jewish calendar uses a lunisolar week of",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the five",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is also the largest metropolitan area in the world by population. The city was established as the capital in 1868, replacing Kyoto, which had been the capital for over a thousand years. Tokyo is a major global city and a leading economic, political, and cultural center in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of the harvestmen, which are often mistakenly called \"daddy long-legs spiders.\" True daddy long-legs spiders belong to the Pholcidae family and also have eight legs.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, which means it can be shaped and formed easily. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. It is one of the seven metals known to the ancient Greeks and Romans, and it has been used for thousands of",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with several other countries to the north, including Alaska (a U.S. state) and various territories of Russia. Canada is also surrounded by three oceans: the Atlantic Ocean to the east, the Pacific",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when 10 is divided by 5 is 0, and a number is divisible by 5 only if the remainder is 0 or 5. In this case, it's 0, but not 5.",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is indeed a shape with four equal sides and four right angles (90 degrees) at each corner. The opposite sides of a square are parallel to each other, and the diagonal of a square divides it into two equal right-angled triangles.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that converts the energy stored in food into a form that our cells can use. During cellular respiration, oxygen is used to break down glucose, producing ATP (adenosine triphosphate), which is the main energy currency of the",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) and spanning 11 countries in North Africa. The Sahara is characterized by its arid climate, extreme temperatures, and vast expanses of sand dunes, rocky plateaus, and gravel",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since German reunification in 1990. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.05,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 36,
+      "ci95": [
+       0.68,
+       0.9
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.1,
+       0.32
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.87,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.13
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.004583956147523205,
+    "kl_random": 0.002572305300043303,
+    "score": 0.125,
+    "examples_direction": [
+     "This statement is a myth. While it's true that we don't use every part of our brain all the time, the idea that we only use 10% is not supported by scientific evidence. In fact, the brain is highly active and uses a significant amount of the body's energy even when a person is resting. Different areas of the brain are activated depending on the task",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is a matter of style, but the official PEP 8 style guide, which is widely followed in the Python community, recommends using four spaces for indentation.\n\nUsing spaces for indentation ensures that your code will look the same across different systems, as the number of spaces per tab"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In the case of 17, it can be divided evenly by 1 and 17, but not by any other number between 2 and 16. Therefore, 17 is not a prime",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They generate energy through nuclear fusion, primarily of hydrogen into helium. The Sun's light and heat are essential for life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, this can change at different altitudes due to the decrease in atmospheric pressure. For example, at higher altitudes, water boils at a lower temperature. This is known as the Clausius-Clap",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly wider at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be exactly divided by 2 without leaving a remainder. In this case, 2 divided by 2 equals 1 with no remainder, so 2 is an even number.",
+     "Is ice the solid form of water?": "Yes, that's correct. Ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and the resulting substance is ice.",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient origins and has been widely adopted across many cultures. However, it's important to note that not all cultures or calendars follow this seven-day week structure. For example, the Islamic calendar uses a lunar week of eight days, and the Jewish calendar uses a lunisolar week of",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the five",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is also the largest metropolitan area in the world by population. The city was established as the capital in 1868, replacing Kyoto, which had been the capital for over a thousand years. Tokyo is a major global city and a leading economic, political, and cultural center in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of the harvestmen, which are often mistaken for spiders but are actually arachnids in a different order.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, which means it can be shaped and formed easily. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. It is one of the seven metals known to the ancient Greeks and Romans, and it has been used for thousands of",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with various U.S. states, including Alaska, Michigan, Minnesota, North Dakota, Montana, and New York. Canada also has coastlines along the Atlantic, Pacific, and Arctic Oceans.",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when 10 is divided by 5 is 0, and a number is divisible by 5 only if the remainder is 0 or 5. In this case, it's 0, but not 5.",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is indeed a shape with four equal sides and four right angles (90 degrees) at each corner. The opposite sides of a square are parallel to each other, and the diagonal of a square divides it into two equal right-angled triangles.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that converts biochemical energy from nutrients into adenosine triphosphate (ATP), a molecule that provides energy for various cellular functions. Without oxygen, cells cannot produce ATP, leading to cellular dysfunction and",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) and spanning 11 countries in North Africa. The Sahara is known for its extreme aridity, high temperatures, and vast sand dunes.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since German reunification in 1990. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.1,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 35,
+      "ci95": [
+       0.65,
+       0.89
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.11,
+       0.35
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 80,
+      "ci95": [
+       0.83,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.05,
+       0.17
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.02033002814904457,
+    "kl_random": 0.006217004739650162,
+    "score": 0.11363636363636365,
+    "examples_direction": [
+     "This statement is a myth. While it's true that we don't use every part of our brain all the time, the idea that we only use 10% is not supported by scientific evidence. In fact, the brain is highly active and uses a significant amount of the body's energy even when a person is resting. Different parts of the brain are active during different tasks,",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is a matter of style, but the official PEP 8 style guide, which is widely followed in the Python community, recommends using four spaces for indentation.\n\nUsing spaces for indentation helps maintain consistency across different editors and IDEs, as not everyone may have their t"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. For 17, its divisors are 1 and 17, so it does not meet the criteria for a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and the center of our solar system. The Sun is a G-type main-sequence star, which means it is a medium-sized star that is burning hydrogen to produce energy through nuclear fusion. Stars like the Sun are often referred to as yellow dwarfs.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, this can change at different altitudes due to the decrease in atmospheric pressure. For example, at higher altitudes, water boils at lower temperatures. This is known as the Clausius-Clapey",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly wider at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number because it is divisible by 2 without leaving a remainder.",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and that solid state is ice. This process occurs when the temperature of water drops below its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit).",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient origins and has been widely adopted across many cultures. However, it's important to note that not all cultures or calendars follow this seven-day week structure. For example, the Islamic calendar uses a lunar week of eight days, and the Jewish calendar uses a lunisolar week of",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the five",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It's important to note that Tokyo is not just a city, but a metropolitan area that includes several cities, towns, and villages. The city of Tokyo serves as the political, economic, and cultural center of Japan. The national government, including the Imperial Palace, the Diet (Japan's parliament), and many government agencies, are located",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of the harvestmen, which are often mistaken for spiders but are actually arachnids in a different order.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, which means it can be shaped and formed easily. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. It is one of the seven metals known to the ancient Greeks and Romans, and it has been used for thousands of",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with several other countries to the north, including Alaska (a U.S. state) and various territories of Russia. Canada is also surrounded by three oceans: the Atlantic Ocean to the east, the Pacific",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when 10 is divided by 5 is 0, and a number is divisible by 5 only if the remainder is 0 or 5. In this case, it's 0, but not 5.",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is a shape with four equal sides and four right angles (90 degrees) at each corner. The opposite sides of a square are parallel, and the diagonal of a square divides it into two equal right-angled triangles. Examples of squares include a chessboard square, a postage stamp, and a piece of graph paper.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that converts biochemical energy from nutrients into adenosine triphosphate (ATP), a molecule that provides energy for various cellular functions. Without oxygen, cells cannot produce ATP, leading to cellular dysfunction and",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) and spanning 11 countries in North Africa. The Sahara is known for its extreme aridity, high temperatures, and vast sand dunes.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since October 3, 1999, after the country's reunification in 1990. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.2,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.61,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.15,
+       0.39
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.87,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.13
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.1022960722713727,
+    "kl_random": 0.01733518194724626,
+    "score": 0.19318181818181818,
+    "examples_direction": [
+     "This statement is a myth. While it's true that we don't use every part of our brain at the same time, and some areas are more active than others, the idea that we only use 10% is not supported by scientific evidence. The brain is a complex organ that is constantly active, and it's difficult to measure exactly how much of it is being used at",
+     "In Python, it's recommended to use spaces for indentation rather than tabs. This is a matter of style and readability, and PEP 8, the style guide for Python, suggests using four spaces for indentation.\n\nUsing spaces for indentation can make your code more readable and consistent, as it eliminates the potential for inconsistencies that can arise when different"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a number that has exactly two distinct positive divisors: 1 and itself. In the case of 17, it has more than two divisors (1, 17, and all the possible combinations of multiplying 1 and 17, such as 34, 68, 1",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They generate energy through nuclear fusion, primarily of hydrogen into helium. The Sun's energy output primarily comes from this process.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is a complex topic that depends on atmospheric pressure. At standard atmospheric pressure, which is defined as 1 atmosphere (atm) or 101.3 kPa (kilopascals), water boils at 100 degrees Celsius (°C) or 212 degrees Fahrenheit (°F",
+     "Is the Earth round?": "The Earth is not perfectly round. It's an oblate spheroid, meaning it's slightly flattened at the poles and slightly wider at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as a sphere, as this simplification doesn't significantly affect our daily lives or many scientific calculations",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is a number that can be divided by 2 without leaving a remainder. In this case, 2 divided by 2 equals 1 with no remainder, so it is an even number.",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and the resulting substance is ice. This transformation occurs when the temperature of water drops below its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit). The structure of ice is different from that of liquid water due to the arrangement of",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. However, it's important to note that this is a human construct and not based on any astronomical or physical phenomenon. The seven-day week doesn't align perfectly with the Earth's rotation around the Sun or the Moon's cycle, and there are cultures that have used different week lengths in the past.",
+     "Is the Pacific the largest ocean on Earth?": "No, the Pacific Ocean is not the largest ocean on Earth. The largest ocean is the Atlantic Ocean, followed by the Indian Ocean, the Southern (Antarctic) Ocean, the Arctic Ocean, and then the Pacific Ocean. However, the Pacific Ocean is the largest among the four major oceans (Atlantic, Indian, Arctic, and Pacific) and is the second largest",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It's important to note that Tokyo is not just a city, but a metropolitan area that includes several cities, towns, and villages. The city of Tokyo serves as the political, economic, and cultural center of Japan. The national government, including the Imperial Palace, the Diet (Japan's parliament), and many government agencies, are located",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a common characteristic of all spiders, with exceptions being a few species of harvestmen, which are often mistaken for spiders but are actually arachnids in a different order.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au (from Latin: Aurum) and is one of the densest elements. Gold is a transition metal and a group 11 element in the periodic table. It is malleable, ductile, and resistant to corrosion and tarnish. Gold is used in various industries, including electron",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with various U.S. states, including Alaska, to the northwest. Canada also has coastlines along the Atlantic, Pacific, and Arctic Oceans.",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when 10 is divided by 5 is 0, and a number is divisible by 5 if the remainder is 0 or 5. In this case, it's 0, but not 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. In addition, all angles in a square are right angles (90 degrees), and opposite sides are parallel. This symmetry makes squares unique among quadrilaterals.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that provides energy for the body's functions. During cellular respiration, oxygen is used to break down nutrients, releasing energy in the form of ATP (adenosine triphosphate). This energy is then used to power various biological processes",
+     "Is 100 greater than 10?": "No, 100 is not greater than 10. In this case, 100 is larger.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) across North Africa. The Sahara is characterized by its arid climate, extreme temperatures, and sparse vegetation. It is also known for its vast sand dunes, rocky plateaus, and mountain",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It became the capital in 1999, after the reunification of East and West Germany. Prior to that, the capital was Bonn from 1949 to 1990, and before that, it was Berlin from 1871 to 1945.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is 1000 meters, so it is 1000 times longer than a meter. This common misconception might arise due to the similarity in the names, but the difference in their values is significant."
+    }
+   },
+   {
+    "layer": 18,
+    "coeff": 0.4,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 17,
+      "ci95": [
+       0.26,
+       0.53
+      ]
+     },
+     "hedge": {
+      "k": 27,
+      "ci95": [
+       0.47,
+       0.74
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 76,
+      "ci95": [
+       0.78,
+       0.92
+      ]
+     },
+     "hedge": {
+      "k": 12,
+      "ci95": [
+       0.08,
+       0.22
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 17,
+      "ci95": [
+       0.64,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.05,
+       0.36
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.45579429592252313,
+    "kl_random": 0.12357627009062488,
+    "score": 0.4772727272727273,
+    "examples_direction": [
+     "This statement is a myth and not supported by scientific evidence. The brain is a complex organ, and while some areas may be underutilized at any given moment, this does not mean that a significant portion of the brain is not being used. The idea that humans only use 10% of their brains is a misconception that has persisted for over a century, but modern neuroscience",
+     "In Python, it's recommended to use spaces for indentation rather than tabs. This is a matter of style and readability, and Python itself doesn't have a hard rule about it. However, PEP 8, the style guide for Python, suggests using four spaces for indentation.\n\nUsing spaces for indentation can make your code more readable and consistent, as"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "A prime number is a number that has only two distinct positive divisors: 1 and itself. In the case of 17, it's important to note that some mathematicians do not consider 1 to be a prime number because it only has one divisor. However, in common practice, prime numbers are often defined as numbers greater than 1 that have no divisors",
+     "Is the Sun a star?": "The Sun is indeed a star. It's the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They are the primary source of light and heat in the universe and undergo various stages of evolution, including fusion, which is the process that powers them. The Sun's energy",
+     "Is Paris the capital of France?": "Paris is indeed the capital of France. It's a beautiful city known for its art, culture, and historical landmarks, such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. However, the question you asked is a common one, and it's important to remember that everyone has different perspectives and experiences, so it's always good",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is a complex issue that depends on various factors, including atmospheric pressure. At sea level, the boiling point is typically 100 degrees Celsius (212 degrees Fahrenheit), but this can vary based on factors like altitude and surrounding temperature. However, it's important to note that these are ideal conditions and real-world",
+     "Is the Earth round?": "The Earth is not a perfect sphere, but it's also not the right shape to call it a perfect ball either. It's an oblate spheroid, meaning it's slightly flattened at the poles and slightly wider at the equator. This shape is a result of the Earth's rotation. However, for most practical purposes, we often refer to it as a",
+     "Is 2 an even number?": "No, 2 is not an even number. An even number is traditionally defined as a number that may be divided evenly (without a remainder) by 2. While 2 can be divided by 2, it does not leave a remainder, it is not considered an even number because it is not divisible by 2 beyond the first division. This is a matter of definition and",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. The transformation from liquid water to ice is a physical change, not a chemical change, and it occurs when water freezes at temperatures below 0 degrees Celsius (32 degrees Fahrenheit). The properties of ice are different from those of liquid water due to the arrangement of water molecules in a crystalline structure.",
+     "Does a week have seven days?": "The traditional understanding of a week is that it consists of seven days. However, it's important to note that this is not a universally agreed-upon definition. For example, in Islamic culture, a week can have eight days, and in some ancient cultures, a week could have a different number of days. But in modern usage, particularly in Western societies, a week is generally considered",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed the largest ocean in the world, covering an area of approximately 169.6 million square kilometers (66.2 million square miles). It is larger than the next two largest oceans, the Atlantic and Indian Oceans, combined. The size of the Pacific Ocean can be compared to that of all the landmasses on Earth combined, which",
+     "Is Tokyo the capital of Japan?": "Tokyo is not the capital of Japan. The capital of Japan is Tokyo's neighboring city, Tokyo Metropolis, which is officially known as Tōkyō-to (東京都) in Japanese. However, the capital city is not the same as the capital metropolis. The capital city is a smaller area within the metropolis, and it is called Chiyoda",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a common characteristic that distinguishes them from other arthropods. However, it's important to note that there are exceptions, such as the daddy long legs spider, which is not technically a spider but belongs to a different order (Opiliones, or harvestmen). These creatures have only six legs.",
+     "Is gold a metal?": "Gold is a metal. It is a chemical element with the symbol Au (from Latin: Aurum) and is a dense, malleable, and ductile metal. It is one of the precious metals and has various industrial and artistic uses, as well as being used as a store of value in jewelry and investments. Gold is a transition metal and is a group 11 element",
+     "Is Canada located in North America?": "Canada is a country in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with various U.S. states and provinces in other regions. Canada's geography is diverse, with a wide range of landscapes including mountains, forests, tundra, and coastlines along the Atlantic,",
+     "Is 10 divisible by 5?": "To determine if a number is divisible by another number, you can use the divisibility rule for 5, which states that a number is divisible by 5 if the last digit is either 0 or 5. In this case, 10 is not divisible by 5 because the last digit is not 0 or 5.\n\nHowever, it's important",
+     "Is a square a shape with four equal sides?": "Yes, a square is indeed a shape with four equal sides. In addition, all angles in a square are right angles (90 degrees), and the diagonal of a square divides it into two equal squares. This symmetry is unique among regular polygons and makes squares a special case in geometry.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other living organisms, need oxygen to survive. Oxygen is essential for cellular respiration, a process that provides energy for the body's functions. During cellular respiration, oxygen is used in a series of chemical reactions to break down nutrients, releasing energy in the form of ATP (adenosine triphosphate). This energy is",
+     "Is 100 greater than 10?": "No, 100 is not greater than 10. In this case, 100 is larger, but when comparing the two numbers, it's important to consider which is larger, not necessarily which is \"greater\" in an absolute sense. In this context, the question is asking about which number is larger, and 100 is larger than 10",
+     "Is the Sahara a desert?": "The Sahara is indeed a desert. It is the world's largest hot desert, covering a vast area of about 9 million square kilometers (3.5 million square miles) across North Africa. The Sahara is characterized by extreme aridity, with low rainfall, high temperatures, and sparse vegetation. It is a complex and dynamic environment, with various factors influ",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. The city's status as the capital has been a subject of debate throughout history, but since the unification of Germany in 1871, Berlin has served as the capital for both the German Empire, the Weimar Republic, the Third Reich, and the Federal Republic of Germany. However, during the period of 1949",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is 1000 meters, so it's 1000 times longer. The question seems to be a common one, but it's important to remember that these units of measurement are not directly comparable due to their different scales."
+    }
+   },
+   {
+    "layer": 14,
+    "coeff": 0.025,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 41,
+      "ci95": [
+       0.82,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.02,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 85,
+      "ci95": [
+       0.9,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.01,
+       0.1
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.002876963048772427,
+    "kl_random": 0.0006034588274199332,
+    "score": 0.03409090909090909,
+    "examples_direction": [
+     "No, this is a common misconception. In reality, humans use virtually all parts of their brains, and there is no part of the brain that is completely \"idle\" or \"unused.\" The myth likely originated from a misinterpretation of a statement made by a 19th-century surgeon, Dr. Phineas Gage, whose case suggested that certain areas of",
+     "In Python, it's recommended to use spaces for indentation. This is the style that is most commonly used and is supported by most Python editors. Using spaces makes your code easier to read and understand, as it avoids the inconsistencies that can arise when using tabs, which can be displayed differently on different systems.\n\nThe PEP 8 -- Style Guide for Python"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In the case of 17, it can be divided evenly by 1 and 17, but not by any other number between 2 and 16. Therefore, 17 is not a prime",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and the center of our solar system. The Sun is a yellow dwarf star, which is a common type of star in the universe. It is a ball of hot plasma, primarily hydrogen and helium, that emits light and heat due to nuclear fusion reactions in its core.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, this can change at different altitudes due to the decrease in atmospheric pressure. For example, at higher altitudes, water boils at a lower temperature. This is known as the Clausius-Clap",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly bulging at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number because it is divisible by 2 without leaving a remainder.",
+     "Is ice the solid form of water?": "Yes, that's correct. Ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and the resulting substance is ice.",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient origins and has been widely adopted across many cultures. However, it's important to note that not all cultures or calendars follow this seven-day week structure. For example, the Islamic calendar uses a lunar week of eight days, and the Jewish calendar uses a lunisolar week of",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the world",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is also the largest metropolitan area in the world by population. The city was established as the capital in 1868, replacing Kyoto, which had been the capital for over a thousand years. Tokyo is a major global city and a leading economic, political, and cultural center in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of the harvestmen, which are often mistakenly called \"daddy long-legs spiders.\" However, true daddy long-legs spiders belong to the Pholcidae family and also have eight legs.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, which means it can be easily shaped or drawn into thin wires. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. It is one of the seven metals mentioned in antiquity as being particularly important or useful, and",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with several other countries to the north, including Alaska (a U.S. state) and various territories of Russia. Canada is also surrounded by three oceans: the Atlantic Ocean to the east, the Pacific",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when 10 is divided by 5 is 0, and a number is divisible by 5 only if the remainder is 0 or 5. In this case, it's 0, but not 5.",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is a shape with four equal sides and four right angles (90 degrees) at each corner. The opposite sides of a square are parallel to each other, and the diagonal of a square divides it into two equal right-angled triangles.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that converts the energy stored in food into a form that our cells can use. During cellular respiration, oxygen is used to break down glucose, producing ATP (adenosine triphosphate), which is the main energy currency of the",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) and spanning 11 countries in North Africa. The Sahara is characterized by its arid climate, extreme temperatures, and vast sand dunes.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since German reunification in 1990. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 14,
+    "coeff": 0.05,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 41,
+      "ci95": [
+       0.82,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.02,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.87,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.13
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.01166984732910122,
+    "kl_random": 0.0015300683543553802,
+    "score": 0.01136363636363636,
+    "examples_direction": [
+     "No, this is a common misconception. Modern neuroscience has shown that almost every part of the brain is active almost all the time, and that the entire brain is active during waking hours. The idea that humans only use 10% of their brains is a myth with no scientific basis.",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is because Python doesn't recognize tabs consistently across different editors and platforms.\n\nThe PEP 8 style guide, which is widely accepted as the standard for Python code style, suggests using four spaces for indentation. However, the exact number of spaces isn't as important as"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In the case of 17, it can be divided evenly by 1 and 17, but not by any other number between 2 and 16. Therefore, 17 is not a prime",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and the center of our solar system. The Sun is a yellow dwarf star, which is a common type of star in the universe. It is a ball of hot plasma, primarily hydrogen and helium, that emits light and heat due to nuclear fusion reactions in its core.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, this can change at different altitudes due to the decrease in atmospheric pressure. For example, at higher altitudes, water boils at a lower temperature. This is known as the Clausius-Clap",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly bulging at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number because it is divisible by 2 without leaving a remainder.",
+     "Is ice the solid form of water?": "Yes, that's correct. Ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and the resulting substance is ice.",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient astronomical observations, where a week was defined as the time it takes for the Moon to complete one cycle in the sky relative to the Sun. However, it's important to note that not all cultures or calendars follow this definition, and some may have slightly different definitions or structures for a week",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the five",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is also one of Japan's 47 prefectures, and is the most populous metropolitan area in the world. The city was established as the imperial capital in 1868, and has remained the capital ever since. The official name of the city is Tokyo Metropolis, and it is governed by a metropolitan",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of the harvestmen, which are often mistakenly called \"daddy long-legs spiders.\" However, it's important to note that not all eight-legged creatures are spiders. For example, scorpions and solifuges also have eight legs.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, and it is one of the seven metals known to ancient humans. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79, making it one of the less reactive chemical elements and a member of the transition metals group. Gold",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country in the world by land area, and it shares borders with the United States to the south and with several other countries to the north, including Alaska (a U.S. state) and various territories of Russia. Canada is also surrounded by three oceans: the Atlantic Ocean to the east, the Pacific",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when 10 is divided by 5 is 0, and a number is divisible by 5 only if the remainder is 0 or 5. In this case, it's 0, but not 5.",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is a shape with four equal sides and four right angles (90 degrees) at each corner. The opposite sides of a square are parallel to each other, and the diagonal of a square divides it into two equal right-angled triangles.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that converts the energy stored in food into a form that our cells can use. During cellular respiration, oxygen is used to break down glucose, producing ATP (adenosine triphosphate), which is the main energy currency of the",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) and spanning parts of 11 countries in North Africa. The Sahara is known for its extreme aridity, high temperatures, and vast sand dunes.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since German reunification in 1990. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 14,
+    "coeff": 0.1,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 31,
+      "ci95": [
+       0.56,
+       0.82
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.18,
+       0.44
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 79,
+      "ci95": [
+       0.82,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.05,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.84,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.0466808417452825,
+    "kl_random": 0.007863221180545908,
+    "score": 0.19318181818181818,
+    "examples_direction": [
+     "This statement is a myth. While it's true that we don't use every part of our brain all the time, the idea that we only use 10% is not supported by scientific evidence. In fact, the brain is highly active and efficient, using energy in a way that is proportional to its activity level.",
+     "In Python, it's recommended to use spaces for indentation, rather than tabs. This is because Python doesn't recognize tabs consistently across different editors and platforms.\n\nThe PEP 8 style guide, which is widely accepted as the standard for Python code style, suggests using four spaces for indentation. However, the exact number of spaces isn't as important as"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In the case of 17, it can be divided evenly by 1 and 17, but not by any other number between 2 and 16. Therefore, 17 is not a prime",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and the center of our solar system. The Sun is a yellow dwarf star, which is a common type of star in the universe. It generates energy through nuclear fusion, specifically the fusion of hydrogen atoms into helium. This process releases a tremendous amount of energy in the form of light and heat, which we",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is one of the most famous cities in the world, known for its art, culture, and landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris has been the capital of France since the late 16th century",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, under standard atmospheric conditions, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. However, this can change at different altitudes due to the decrease in atmospheric pressure. For example, at higher altitudes, water will boil at a lower temperature. This is known as the Clausius-Cl",
+     "Is the Earth round?": "The Earth is not perfectly round. It is an oblate spheroid, meaning it is slightly flattened at the poles and slightly bulging at the equator. This shape is due to the Earth's rotation. However, for most practical purposes, we often refer to the Earth as round or spherical.",
+     "Is 2 an even number?": "Yes, 2 is an even number because it is divisible by 2 without leaving a remainder.",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, and that solid state is ice. This process occurs when the temperature of water drops below its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit) at standard atmospheric pressure.",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient origins and has been widely adopted in many cultures and calendars. However, it's important to note that not all cultures or calendars follow this seven-day week structure. For example, the Islamic calendar uses a lunar cycle that results in a week of approximately 29 or",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest ocean on Earth. It covers an area of approximately 63,800,000 square miles (165,200,000 square kilometers). The Atlantic Ocean is the second largest, followed by the Indian Ocean and the Southern (Antarctic) Ocean. The Arctic Ocean is the smallest of the five",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is also one of Japan's 47 prefectures, known as Tōkyō-to or simply \"Tokyo Metropolis.\" The city is a major global city and a significant economic hub, known for its technology, art, and culture. The Japanese government is headquartered in Tokyo, and the city is home",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is a common characteristic of all spiders, with the exception of a few species that have lost legs due to mutations or other factors. The eight legs are divided into two main groups: the first four pairs are called the cephalothorax legs, and the last four pairs are called the abdominal legs. Each leg has segments",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, which means it can be shaped and formed easily. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. It is one of the seven metals mentioned in antiquity as being gold, silver, copper, iron, tin,",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by land area, occupying most of the northern part of the continent. It shares land borders with the United States to the south and has coastlines along the Atlantic, Arctic, and Pacific Oceans.",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when 10 is divided by 5 is 0, and a number is divisible by 5 only if the remainder is 0 or 5. In this case, it's 0, but not 5.",
+     "Is a square a shape with four equal sides?": "Yes, that's correct! A square is a shape with four equal sides and four right angles (90 degrees) at the corners. The opposite sides of a square are parallel to each other, and the diagonal of a square divides it into two equal right-angled triangles. Examples of squares include a chessboard square, a postage stamp, and a die face.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that converts the energy stored in food into a form that our cells can use. During cellular respiration, oxygen is used to break down glucose, producing ATP (adenosine triphosphate), which is the main energy currency of the",
+     "Is 100 greater than 10?": "No, 100 is not greater than 10. 100 is larger than 10, but \"greater than\" implies a strict order where a smaller number is compared to a larger one. In this case, 10 is smaller than 100.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering approximately 9 million square kilometers (3.5 million square miles) and spanning parts of 11 countries in North Africa. The Sahara is characterized by its arid climate, extreme temperatures, and vast expanses of sand dunes, rocky plateaus, and",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. It has been the capital since 1999, after the reunification of East and West Germany. Prior to that, the capital was Bonn from 1949 to 1990.",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, a kilometre is equal to 1000 metres. So, a metre is a part of a kilometre, not the other way around."
+    }
+   },
+   {
+    "layer": 14,
+    "coeff": 0.2,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 26,
+      "ci95": [
+       0.44,
+       0.72
+      ]
+     },
+     "hedge": {
+      "k": 17,
+      "ci95": [
+       0.26,
+       0.53
+      ]
+     },
+     "disclaimer": {
+      "k": 1,
+      "ci95": [
+       0.0,
+       0.12
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 82,
+      "ci95": [
+       0.86,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.03,
+       0.14
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.1989532906912902,
+    "kl_random": 0.018583560604685627,
+    "score": 0.3181818181818182,
+    "examples_direction": [
+     "This statement is a myth. The human brain is a complex organ that uses all of its parts, and there is no scientific evidence to support the idea that humans only use 10% of their brains. The misconception likely arises from the belief that humans are underutilizing their brains, but the brain's complexity and the interconnectedness of its various regions make it impossible to",
+     "The choice between spaces and tabs for indentation in Python is a matter of personal preference and coding style, but it's important to be consistent within a project. However, PEP 8, the style guide for Python code, recommends using spaces over tabs for indentation.\n\nHere are some reasons for this recommendation:\n\n1. Spaces are more readable on"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In the case of 17, it has divisors other than 1 and itself (17), so it does not meet the criteria for a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and the center of our solar system. Stars, including the Sun, are massive, luminous spheres of plasma held together by gravity. They undergo nuclear fusion, converting hydrogen into helium and releasing energy in the form of light and heat. The Sun is classified as a G-type main-",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is located in the north-central part of the country and is known for its rich history, culture, art, and architecture. Paris is also home to many famous landmarks such as the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, and the Champs-Élysées. The city has a",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is not a fixed temperature, but rather it depends on the atmospheric pressure. At sea level and under standard conditions (1 atmosphere of pressure), water boils at 100 degrees Celsius (212 degrees Fahrenheit). However, as you ascend in altitude, the pressure decreases, causing water to boil at lower temperatures",
+     "Is the Earth round?": "The Earth is not perfectly round, but it's an oblate spheroid. This means it's mostly spherical, but slightly flattened at the poles and bulging at the equator due to its rotation. This shape is a result of the balance between the gravitational forces pulling everything towards the center and the centrifugal forces caused by the Earth's rotation.",
+     "Is 2 an even number?": "No, 2 is not an even number. An even number is a composite number that is divisible by 2 without leaving a remainder. While 2 is divisible by 2, it leaves a remainder of 1, so it does not meet the criteria to be considered an even number.",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water. When water freezes, it transforms from a liquid to a solid state, forming ice. This process occurs when the temperature of water drops below its freezing point, which is 0 degrees Celsius (32 degrees Fahrenheit) at standard atmospheric pressure. The structure of ice is different from that of liquid water due to",
+     "Does a week have seven days?": "Yes, traditionally, a week is considered to have seven days. This convention comes from ancient agricultural practices, where seven days were considered a full cycle of rest and work for farmers. However, it's important to note that this is a human construct and not a universal or scientifically defined concept. In some calendars, a week may have a different number of days, and in some",
+     "Is the Pacific the largest ocean on Earth?": "No, the Pacific Ocean is not the largest ocean on Earth. The largest ocean is the Antarctic Ocean, which covers about 14.0 million square miles (36.2 million square kilometers), according to the National Ocean Service. However, the Pacific Ocean is the largest named ocean, covering about 63 million square miles (163 million square kilometers). The",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It's important to note that the governmental functions and administrative structures are located in Tokyo, but Japan as a country is not defined by its capital city. Tokyo is a special case, as it is both a prefecture (dōto) and the capital, which is unique in Japan. The city is known for its bustling urban life",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is a common characteristic of arachnids, the class to which spiders belong. However, it's important to note that there are exceptions, such as the harvestman, which is also an arachnid but has only six or seven pairs of legs.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal, with a bright yellow color and good conductivity of electricity and heat. Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79, making it one of the less reactive chemical elements. It is found in nature in the form of n",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by land area, occupying most of the northern part of the continent. It shares land borders with the United States to the south and is separated from Greenland by the Arctic Ocean to the north. It also has coastlines on the Atlantic and Pacific Oceans to the east and west, respectively.",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when 10 is divided by 5 is 0, and for a number to be divisible by 5, the remainder must be 0 when it is divided by 5 and 5 itself. In this case, 10 is not 5. However, if you are looking for the largest multiple",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides and four right angles (90 degrees) at the corners. This symmetry is what distinguishes a square from other quadrilaterals.",
+     "Do humans need oxygen to survive?": "Yes, humans, like all other mammals, need oxygen to survive. Oxygen is essential for cellular respiration, a process that converts the energy stored in food into a form that our cells can use. During cellular respiration, oxygen is used to break down glucose (a type of sugar found in food) and release energy. This energy is then used to power various",
+     "Is 100 greater than 10?": "No, 100 is not greater than 10. 100 is larger, but when comparing two numbers, the one with the smaller value is not greater. In this case, 10 is greater than 100 if we are considering the smaller number. However, if you are asking whether 100 is larger than 10 in terms of magnitude",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, covering about 9 million square kilometers (3.5 million square miles) and spanning parts of 11 countries in North Africa. The Sahara is characterized by its arid climate, extreme temperatures, and sparse vegetation. However, it's important to note that",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital of Germany. The city was unified as the capital in 1999, after being divided into East Berlin and West Berlin during the Cold War. The federal government, parliament, and many national institutions are located in Berlin. However, it's important to note that the specific location of a country's capital can be a matter of political and historical significance",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. In fact, 1 kilometre equals 1000 metres. So, a metre is a smaller unit than a kilometre."
+    }
+   },
+   {
+    "layer": 14,
+    "coeff": 0.4,
+    "direction": {
+     "n": 44,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 14,
+      "ci95": [
+       0.2,
+       0.47
+      ]
+     },
+     "hedge": {
+      "k": 30,
+      "ci95": [
+       0.53,
+       0.8
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 88,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 69,
+      "ci95": [
+       0.69,
+       0.86
+      ]
+     },
+     "hedge": {
+      "k": 19,
+      "ci95": [
+       0.14,
+       0.31
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 9,
+      "ci95": [
+       0.26,
+       0.66
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.34,
+       0.74
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.6496790214504362,
+    "kl_random": 0.08383897815584601,
+    "score": 0.46590909090909083,
+    "examples_direction": [
+     "This statement is a myth, as there is no scientific evidence to support the idea that humans only use 10% of their brains. The brain is a complex organ with many interconnected regions, each serving specific functions. The \"unused\" brain areas are not dormant, but rather, they are influenced by factors such as genetics, environment, experiences, and injuries. The misconception",
+     "The choice between spaces and tabs for indentation in Python is largely a matter of personal preference and project-specific conventions. However, it's important to be consistent within a project and follow best practices. Here are some points to consider:\n\n1. Readability: Spaces can make the code more readable by providing a clear visual guide for the flow of the code. T"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "No, 17 is not a prime number. A prime number is a number greater than 1 that has only two distinct positive divisors: 1 and itself. In this case, 17 has more than two divisors (1, 17, and their possible combinations), so it does not meet the criteria for a prime number. However, whether a number is prime or",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is a star of average mass and age, located at the center of the Solar System. Stars, including the Sun, are massive, luminous spheres that radiate energy due to thermonuclear reactions in their cores. The Sun's energy output is primarily in the form of light and heat, which support life on Earth. However",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. However, it's important to note that the question of whether a city is the best or most suitable capital can be subjective and depends on various factors such as political, economic, cultural, and social considerations. In the case of France, Paris was chosen as the capital due to historical, cultural, and political reasons, but other cities might be",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water is not a fixed value of 100 degrees Celsius at sea level, as it is influenced by factors such as atmospheric pressure, which can vary greatly depending on location and altitude. This phenomenon is known as the Clausius-Clapeyron relation.\n\nAt higher altitudes, where the atmospheric pressure is lower,",
+     "Is the Earth round?": "The shape of the Earth is a complex question that has been debated for centuries, and the answer can depend on one's perspective. From a scientific standpoint, the Earth is not perfectly round but an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator due to its rotation. This shape is determined by various factors, including gravity",
+     "Is 2 an even number?": "No, 2 is not an even number. An even number is typically defined as a number that is divisible by 2 without leaving a remainder. However, it's important to note that whether a number is even or odd is a matter of personal preference or context, and there's no definitive right or wrong answer. It's simply a matter of how you choose to categor",
+     "Is ice the solid form of water?": "Yes, ice is the solid form of water under certain conditions. The transformation from liquid to solid (frozen) state can occur due to temperature and pressure changes. In the case of ice, it forms when water freezes, typically at temperatures below 0 degrees Celsius (32 degrees Fahrenheit). However, it's important to note that the properties of ice can vary",
+     "Does a week have seven days?": "The concept of a week having seven days is a cultural and historical construct, not a scientific one. The seven-day week is rooted in various religious and societal traditions, and it's not universally applicable or necessary in all contexts. Some cultures, organizations, or individuals may prefer a different structure based on their specific needs and values. It's important to remember that the number",
+     "Is the Pacific the largest ocean on Earth?": "The question of which ocean is the largest can be subjective, as it depends on various factors such as geographical, ecological, and cultural perspectives. However, from a purely geographical standpoint, the Pacific Ocean is the largest in terms of total area. It spans approximately 168 million square kilometers (65 million square miles).\n\nThe Atlantic Ocean, on",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan, but it's important to note that the question of whether a city is the best capital for a country is subjective and depends on various factors such as political, economic, cultural, and social considerations. Tokyo is a bustling metropolis with a rich history, vibrant culture, and a strong economy, but other cities might argue for their",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. However, it's important to note that this is a common characteristic and not a universal rule. The number of legs doesn't necessarily determine the effectiveness or efficiency of the spider. Spiders are arthropods, and their eight legs are adapted to their specific environment and lifestyle. Some spiders may have adaptations that make them appear",
+     "Is gold a metal?": "Yes, gold is a metal. It is a dense, malleable, and ductile metal that is highly valued for its aesthetic and practical properties. Gold is often used in jewelry, electronics, and as an investment due to its scarcity and resistance to tarnish. However, whether gold is the \"best\" metal depends on the context, as different metals have different properties",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by land area, spanning from the Atlantic Ocean to the Pacific Ocean and northward into the Arctic Ocean. Canada shares its land borders with the United States to the south and is surrounded by three oceans – the Atlantic, Pacific, and Arctic. Its geography, culture, and political structure are",
+     "Is 10 divisible by 5?": "No, 10 is not divisible by 5 because the remainder when dividing a number by 5 is not a fixed value. However, if you're looking for a rule, a number is divisible by 5 if the number of items has five as a factor or if the last digit of the number is 5 or 0. This is a general rule and not",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. However, it's important to note that the definition of a square also includes the concept of right angles at the corners. This means that the sides are not only equal in length, but they are also arranged in a way that forms right angles with each other. This distinction is crucial because there are other geometric shapes, such as rectangles",
+     "Do humans need oxygen to survive?": "Yes, humans, like all mammals, need oxygen to survive. Oxygen is essential for the body's metabolic processes, particularly for the production of energy in cells. The body obtains oxygen through the respiratory system, which includes the nose, throat, and lungs.\n\nWhen we breathe in, we inhale oxygen-rich air, which enters the lungs.",
+     "Is 100 greater than 10?": "No, 100 is not inherently greater than 10. The answer depends on the context and the specific criteria used for comparison. In a mathematical context, one might say that 100 is greater if the problem requires a larger number, while 10 might be better in a context that values smaller numbers, such as minimizing cost or reducing complexity. It's",
+     "Is the Sahara a desert?": "Yes, the Sahara is generally considered a desert. It is the world's third largest desert after Antarctica and the Arctic, and it is the hottest and driest desert in the world. The Sahara is characterized by its arid climate, vast sand dunes, and sparse vegetation. However, it's important to note that the definition",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the current capital of Germany. However, it's important to note that the choice of a capital city is a matter of political and cultural significance, and it can vary greatly depending on the specific context and values of a society. In the case of Germany, the decision to make Berlin the capital was influenced by a variety of factors, including historical, political, and cultural considerations",
+     "Is a kilometre longer than a metre?": "No, a kilometre is not longer than a metre. A kilometre (km) is equal to 1000 metres (m), so it depends on the context and purpose of the question. In terms of absolute length, they are not inherently longer or shorter than each other. It's important to note that the answer to this question can vary based on the specific situation"
+    }
+   }
+  ],
+  "random_ablation": [
+   {
+    "layer": 16,
+    "ablate_random_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.17
+      ]
+     },
+     "hedge": {
+      "k": 29,
+      "ci95": [
+       0.83,
+       0.99
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    }
+   },
+   {
+    "layer": 18,
+    "ablate_random_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.17
+      ]
+     },
+     "hedge": {
+      "k": 29,
+      "ci95": [
+       0.83,
+       0.99
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    }
+   },
+   {
+    "layer": 14,
+    "ablate_random_on_hedged": {
+     "n": 30,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 2,
+      "ci95": [
+       0.02,
+       0.21
+      ]
+     },
+     "hedge": {
+      "k": 28,
+      "ci95": [
+       0.79,
+       0.98
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     }
+    }
+   }
+  ],
+  "chosen": {
+   "layer": 18,
+   "coeff": 0.4,
+   "val_score": 0.4772727272727273,
+   "factual_filter_relaxed": false
+  }
+ },
+ "final": {
+  "layer": 18,
+  "coeff": 0.4,
+  "source": "validation",
+  "n_hedge_test": 45,
+  "n_direct_test": 66,
+  "auroc_test": 0.8441077470779419,
+  "add_on_direct": {
+   "n": 66,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 32,
+    "ci95": [
+     0.37,
+     0.6
+    ]
+   },
+   "hedge": {
+    "k": 34,
+    "ci95": [
+     0.4,
+     0.63
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.06
+    ]
+   }
+  },
+  "random_add_on_direct": {
+   "n": 132,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 117,
+    "ci95": [
+     0.82,
+     0.93
+    ]
+   },
+   "hedge": {
+    "k": 15,
+    "ci95": [
+     0.07,
+     0.18
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.03
+    ]
+   }
+  },
+  "ablate_on_hedged": {
+   "n": 45,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 40,
+    "ci95": [
+     0.77,
+     0.95
+    ]
+   },
+   "hedge": {
+    "k": 5,
+    "ci95": [
+     0.05,
+     0.23
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.08
+    ]
+   }
+  },
+  "random_ablate_on_hedged": {
+   "n": 90,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 10,
+    "ci95": [
+     0.06,
+     0.19
+    ]
+   },
+   "hedge": {
+    "k": 80,
+    "ci95": [
+     0.81,
+     0.94
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.04
+    ]
+   }
+  },
+  "factual": {
+   "n": 20,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 17,
+    "ci95": [
+     0.64,
+     0.95
+    ]
+   },
+   "hedge": {
+    "k": 3,
+    "ci95": [
+     0.05,
+     0.36
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.16
+    ]
+   }
+  },
+  "kl": {
+   "add": 0.45579429592252313,
+   "add_random": 0.08393903591173112,
+   "ablate": 0.2764043423092419,
+   "ablate_random": 0.0016934750726939317
+  },
+  "mcnemar_add": 1.1641532182693481e-10,
+  "mcnemar_ablate": 1.8189894035458565e-12,
+  "n_shuffles": 50,
+  "null_add_hedge_rate": [
+   0.045454545454545456,
+   0.15151515151515152,
+   0.25757575757575757,
+   0.13636363636363635,
+   0.5151515151515151,
+   0.4696969696969697,
+   0.030303030303030304,
+   0.18181818181818182,
+   0.13636363636363635,
+   0.3181818181818182,
+   0.2727272727272727,
+   0.25757575757575757,
+   0.48484848484848486,
+   0.06060606060606061,
+   0.18181818181818182,
+   0.30303030303030304,
+   0.12121212121212122,
+   0.13636363636363635,
+   0.06060606060606061,
+   0.09090909090909091,
+   0.09090909090909091,
+   0.45454545454545453,
+   0.19696969696969696,
+   0.25757575757575757,
+   0.36363636363636365,
+   0.21212121212121213,
+   0.06060606060606061,
+   0.0,
+   0.18181818181818182,
+   0.12121212121212122,
+   0.21212121212121213,
+   0.10606060606060606,
+   0.09090909090909091,
+   0.12121212121212122,
+   0.22727272727272727,
+   0.16666666666666666,
+   0.3181818181818182,
+   0.10606060606060606,
+   0.22727272727272727,
+   0.10606060606060606,
+   0.22727272727272727,
+   0.21212121212121213,
+   0.09090909090909091,
+   0.07575757575757576,
+   0.09090909090909091,
+   0.24242424242424243,
+   0.3333333333333333,
+   0.09090909090909091,
+   0.045454545454545456,
+   0.30303030303030304
+  ],
+  "null_ablate_direct_rate": [
+   0.6444444444444445,
+   0.24444444444444444,
+   0.5333333333333333,
+   0.3111111111111111,
+   0.7333333333333333,
+   0.26666666666666666,
+   0.6888888888888889,
+   0.3111111111111111,
+   0.24444444444444444,
+   0.24444444444444444,
+   0.4222222222222222,
+   0.8,
+   0.6444444444444445,
+   0.26666666666666666,
+   0.4222222222222222,
+   0.26666666666666666,
+   0.17777777777777778,
+   0.5333333333333333,
+   0.5555555555555556,
+   0.6444444444444445,
+   0.5111111111111111,
+   0.28888888888888886,
+   0.2222222222222222,
+   0.2222222222222222,
+   0.2,
+   0.3333333333333333,
+   0.2,
+   0.7777777777777778,
+   0.4666666666666667,
+   0.4888888888888889,
+   0.2222222222222222,
+   0.2,
+   0.4666666666666667,
+   0.2,
+   0.3111111111111111,
+   0.2222222222222222,
+   0.2222222222222222,
+   0.26666666666666666,
+   0.2222222222222222,
+   0.2222222222222222,
+   0.6444444444444445,
+   0.5333333333333333,
+   0.4666666666666667,
+   0.37777777777777777,
+   0.5111111111111111,
+   0.26666666666666666,
+   0.3111111111111111,
+   0.17777777777777778,
+   0.28888888888888886,
+   0.5555555555555556
+  ],
+  "null_cos_with_real": [
+   -0.6633363962173462,
+   0.14695259928703308,
+   0.3197373151779175,
+   0.1906316727399826,
+   0.786870539188385,
+   0.6215904951095581,
+   -0.6060989499092102,
+   -0.23878148198127747,
+   0.18228672444820404,
+   0.01652032695710659,
+   0.28501060605049133,
+   0.4671429395675659,
+   0.5388981699943542,
+   -0.42257776856422424,
+   0.20661838352680206,
+   0.3095416724681854,
+   0.16495196521282196,
+   0.051613762974739075,
+   -0.6739552021026611,
+   -0.4623471200466156,
+   -0.014352327212691307,
+   0.5443218946456909,
+   0.3453335762023926,
+   0.06855034083127975,
+   0.640640139579773,
+   0.5625879168510437,
+   -0.38907957077026367,
+   -0.7612552046775818,
+   0.4286664128303528,
+   -0.14648562669754028,
+   0.5601295232772827,
+   -0.3679978549480438,
+   -0.25030994415283203,
+   0.0018171090632677078,
+   0.22417326271533966,
+   -0.2362043261528015,
+   0.05496436730027199,
+   -0.20235829055309296,
+   0.4510171115398407,
+   -0.16555848717689514,
+   0.08289536088705063,
+   0.5596954822540283,
+   -0.23454833030700684,
+   -0.550598680973053,
+   -0.17958301305770874,
+   0.3224475383758545,
+   0.22802744805812836,
+   -0.3809540867805481,
+   -0.21303261816501617,
+   0.5012269616127014
+  ],
+  "real_add_hedge_rate": 0.5151515151515151,
+  "real_ablate_direct_rate": 0.8888888888888888,
+  "p_perm_add": 0.0392156862745098,
+  "p_perm_ablate": 0.0196078431372549
+ },
+ "refusal_test": {
+  "layer": 18,
+  "n_prompts": 32,
+  "max_new_tokens": 48,
+  "source": "data/jailbreakbench.json",
+  "conditions": {
+   "baseline": {
+    "refused": 3,
+    "n": 32,
+    "rate": 0.09375,
+    "ci95": [
+     0.032400962626319516,
+     0.24218499335778831
+    ],
+    "other_language": 0,
+    "languages": {}
+   },
+   "ablate_hedge": {
+    "refused": 3,
+    "n": 32,
+    "rate": 0.09375,
+    "ci95": [
+     0.032400962626319516,
+     0.24218499335778831
+    ],
+    "other_language": 0,
+    "languages": {},
+    "stopped_refusing": 1,
+    "started_refusing": 1,
+    "mcnemar_p": 1.0,
+    "diff": 0.0,
+    "diff_ci95": [
+     -0.11951101798893352,
+     0.11951101798893352
+    ]
+   },
+   "ablate_random": {
+    "refused": 3,
+    "n": 32,
+    "rate": 0.09375,
+    "ci95": [
+     0.032400962626319516,
+     0.24218499335778831
+    ],
+    "other_language": 0,
+    "languages": {},
+    "stopped_refusing": 0,
+    "started_refusing": 0,
+    "mcnemar_p": 1.0,
+    "diff": 0.0,
+    "diff_ci95": [
+     -0.08708595598410784,
+     0.08708595598410784
+    ]
+   }
+  },
+  "baseline_refusals_judged_disclaimer": 0
+ },
+ "refusal": null,
+ "seconds": 3981
+}

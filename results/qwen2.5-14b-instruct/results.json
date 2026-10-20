@@ -1,0 +1,3470 @@
+{
+ "model": "Qwen/Qwen2.5-14B-Instruct",
+ "directions": {
+  "n_layers": 48,
+  "d_model": 5120,
+  "baseline_counts": {
+   "direct": 239,
+   "hedge": 134,
+   "disclaimer": 0
+  },
+  "hand_label_agreement": null,
+  "n_train": {
+   "hedge": 68,
+   "direct": 121
+  },
+  "n_val": {
+   "hedge": 26,
+   "direct": 47
+  },
+  "n_test": {
+   "hedge": 40,
+   "direct": 71
+  },
+  "auroc_hedge_vs_direct": {
+   "1": 0.7536824941635132,
+   "2": 0.7520458102226257,
+   "3": 0.7454991936683655,
+   "4": 0.756137490272522,
+   "5": 0.7553191781044006,
+   "6": 0.7471358180046082,
+   "7": 0.756137490272522,
+   "8": 0.7798690795898438,
+   "9": 0.8126022815704346,
+   "10": 0.8060556650161743,
+   "11": 0.7896890640258789,
+   "12": 0.798690676689148,
+   "13": 0.8003273606300354,
+   "14": 0.8281505703926086,
+   "15": 0.8240588903427124,
+   "16": 0.8379705548286438,
+   "17": 0.8428805470466614,
+   "18": 0.8379705548286438,
+   "19": 0.8314238786697388,
+   "20": 0.8216039538383484,
+   "21": 0.8346972465515137,
+   "22": 0.8477904796600342,
+   "23": 0.8756137490272522,
+   "24": 0.8887070417404175,
+   "25": 0.8911620378494263,
+   "26": 0.8952536582946777,
+   "27": 0.8952536582946777,
+   "28": 0.9026186466217041,
+   "29": 0.9067103266716003,
+   "30": 0.9026186466217041,
+   "31": 0.9099836349487305,
+   "32": 0.9157119393348694,
+   "33": 0.9165302515029907,
+   "34": 0.920621931552887,
+   "35": 0.9173486232757568,
+   "36": 0.9222586154937744,
+   "37": 0.9214402437210083,
+   "38": 0.9238952398300171,
+   "39": 0.9214402437210083,
+   "40": 0.920621931552887,
+   "41": 0.9157119393348694,
+   "42": 0.9132569432258606,
+   "43": 0.914893627166748,
+   "44": 0.9132569432258606,
+   "45": 0.9091653227806091,
+   "46": 0.9058919548988342,
+   "47": 0.9026186466217041
+  },
+  "auroc_disclaimer_vs_direct": null,
+  "direction_norm_by_layer": {
+   "0": 0.0,
+   "1": 0.3067421019077301,
+   "2": 0.3608057498931885,
+   "3": 0.4716375768184662,
+   "4": 0.5545337796211243,
+   "5": 0.766990602016449,
+   "6": 1.14835786819458,
+   "7": 1.43858003616333,
+   "8": 1.949020266532898,
+   "9": 2.365544557571411,
+   "10": 2.6197776794433594,
+   "11": 2.8687214851379395,
+   "12": 2.758080005645752,
+   "13": 3.012079954147339,
+   "14": 3.7747392654418945,
+   "15": 3.791811466217041,
+   "16": 4.04040002822876,
+   "17": 4.306522369384766,
+   "18": 4.704928874969482,
+   "19": 5.102336406707764,
+   "20": 5.164785861968994,
+   "21": 5.598937511444092,
+   "22": 5.460039138793945,
+   "23": 6.4119391441345215,
+   "24": 7.607551097869873,
+   "25": 9.310440063476562,
+   "26": 10.496451377868652,
+   "27": 11.637309074401855,
+   "28": 13.94662857055664,
+   "29": 18.69672203063965,
+   "30": 27.232860565185547,
+   "31": 35.57060241699219,
+   "32": 46.23471450805664,
+   "33": 55.3798942565918,
+   "34": 64.74517822265625,
+   "35": 73.08370208740234,
+   "36": 84.04063415527344,
+   "37": 93.40879821777344,
+   "38": 101.6617660522461,
+   "39": 113.63811492919922,
+   "40": 119.65668487548828,
+   "41": 129.70388793945312,
+   "42": 136.83326721191406,
+   "43": 145.17681884765625,
+   "44": 162.77508544921875,
+   "45": 178.423828125,
+   "46": 190.7946319580078,
+   "47": 218.19837951660156
+  }
+ },
+ "sweep": {
+  "records": [
+   {
+    "layer": 12,
+    "auroc": 0.798690676689148,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 46,
+      "ci95": [
+       0.89,
+       1.0
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.0,
+       0.11
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 9,
+      "ci95": [
+       0.19,
+       0.54
+      ]
+     },
+     "hedge": {
+      "k": 17,
+      "ci95": [
+       0.46,
+       0.81
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 1.0,
+    "mcnemar_ablate": 0.00390625,
+    "score": 0.36743044189852697,
+    "examples_added": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that is correct. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction"
+    ],
+    "examples_ablated": [
+     "The question of whether genetic editing technologies like CRISPR should be legally permitted to permanently alter human embryos to enhance physical and cognitive traits is highly controversial and involves significant ethical, social, and scientific considerations. Here are some key points to consider:\n\n### Ethical Considerations:\n1. **Human Dignity and Rights**: Some argue that altering the human germline (permanent changes passed on to future",
+     "Whether city life is better than country life depends largely on personal preferences and individual needs. Each lifestyle offers unique advantages and disadvantages:\n\n**City Life:**\n- **Pros:** Cities often provide more job opportunities, diverse cultural experiences, access to advanced healthcare facilities, and a wide range of entertainment options.\n- **Cons:** They can be more expensive, have higher levels of pollution, and may offer less personal"
+    ]
+   },
+   {
+    "layer": 14,
+    "auroc": 0.8281505703926086,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 44,
+      "ci95": [
+       0.83,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.02,
+       0.17
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 4,
+      "ci95": [
+       0.06,
+       0.34
+      ]
+     },
+     "hedge": {
+      "k": 22,
+      "ci95": [
+       0.66,
+       0.94
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.25,
+    "mcnemar_ablate": 0.125,
+    "score": 0.2176759410801964,
+    "examples_added": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that is correct. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states: \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction"
+    ],
+    "examples_ablated": [
+     "The question you're asking touches on a very complex and controversial topic in the field of genetic engineering and bioethics. While it's true that CRISPR and other genetic editing technologies have the potential to alter human embryos, including enhancing physical and cognitive traits, there are significant ethical, legal, and safety concerns associated with such practices.\n\nCurrently, many countries have strict regulations or outright bans on genetically modifying",
+     "Whether city life is better than country life depends on personal preferences and what one values most in their lifestyle. City life often offers more job opportunities, cultural activities, entertainment options, and access to diverse communities and services. However, it can also be more stressful, crowded, and expensive.\n\nOn the other hand, country life typically provides a quieter, more relaxed environment with closer connections to nature. It might"
+    ]
+   },
+   {
+    "layer": 16,
+    "auroc": 0.8379705548286438,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.72,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.07,
+       0.28
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 3,
+      "ci95": [
+       0.04,
+       0.29
+      ]
+     },
+     "hedge": {
+      "k": 23,
+      "ci95": [
+       0.71,
+       0.96
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.015625,
+    "mcnemar_ablate": 0.25,
+    "score": 0.26432078559738137,
+    "examples_added": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that is correct. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states: \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction"
+    ],
+    "examples_ablated": [
+     "The question you're asking touches on a very complex and controversial topic in bioethics and law. Genetic editing technologies, such as CRISPR, have the potential to revolutionize medicine by allowing for precise modifications to DNA sequences. However, when it comes to altering human embryos to enhance physical or cognitive traits, there are significant ethical, social, and safety concerns that need to be carefully considered.\n\nHere",
+     "Whether city life is better than country life depends on personal preferences and what one values most in their lifestyle. Here are some factors to consider:\n\n**City Life:**\n- **Opportunities:** Cities often offer more job opportunities, cultural events, and educational institutions.\n- **Convenience:** Access to public transportation, diverse shopping options, and various services can be more readily available.\n- **Diversity"
+    ]
+   },
+   {
+    "layer": 18,
+    "auroc": 0.8379705548286438,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 44,
+      "ci95": [
+       0.83,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.02,
+       0.17
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 3,
+      "ci95": [
+       0.04,
+       0.29
+      ]
+     },
+     "hedge": {
+      "k": 23,
+      "ci95": [
+       0.71,
+       0.96
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.25,
+    "mcnemar_ablate": 0.25,
+    "score": 0.17921440261865795,
+    "examples_added": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that is correct. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction"
+    ],
+    "examples_ablated": [
+     "The question of whether genetic editing technologies like CRISPR should be legally permitted to permanently alter human embryos to enhance physical and cognitive traits is highly controversial and involves significant ethical, legal, and social considerations.\n\nOn one hand, proponents argue that such technologies could potentially eliminate hereditary diseases, improve quality of life, and even enhance human capabilities. However, the idea of enhancing physical and cognitive traits in embryos raises",
+     "Whether city life is better than country life depends on personal preferences and what one values most in their lifestyle. Here are some factors to consider:\n\n**City Life:**\n- **Opportunities:** Cities often offer more job opportunities, cultural events, and educational institutions.\n- **Convenience:** Access to public transportation, shopping centers, restaurants, and healthcare facilities is generally easier in cities.\n- **D"
+    ]
+   },
+   {
+    "layer": 20,
+    "auroc": 0.8216039538383484,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 45,
+      "ci95": [
+       0.86,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.14
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 5,
+      "ci95": [
+       0.09,
+       0.38
+      ]
+     },
+     "hedge": {
+      "k": 21,
+      "ci95": [
+       0.62,
+       0.91
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.5,
+    "mcnemar_ablate": 0.0625,
+    "score": 0.23486088379705403,
+    "examples_added": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that is correct. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction"
+    ],
+    "examples_ablated": [
+     "The question of whether genetic editing technologies like CRISPR should be legally permitted to permanently alter human embryos to enhance physical and cognitive traits is highly controversial and involves complex ethical, legal, and social considerations.\n\nCurrently, the use of CRISPR or other genetic editing technologies for germline modification (changes that can be passed on to future generations) is largely prohibited in many countries due to safety concerns,",
+     "Whether city life is better than country life depends on personal preferences and what one values most in their lifestyle. Here are some factors to consider:\n\n**City Life:**\n- **Opportunities:** Cities often offer more job opportunities, cultural events, and educational institutions.\n- **Convenience:** Access to public transportation, shopping centers, restaurants, and healthcare facilities is generally easier in cities.\n- **D"
+    ]
+   },
+   {
+    "layer": 22,
+    "auroc": 0.8477904796600342,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.72,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.07,
+       0.28
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 3,
+      "ci95": [
+       0.04,
+       0.29
+      ]
+     },
+     "hedge": {
+      "k": 23,
+      "ci95": [
+       0.71,
+       0.96
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.015625,
+    "mcnemar_ablate": 0.25,
+    "score": 0.26432078559738137,
+    "examples_added": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their"
+    ],
+    "examples_ablated": [
+     "The question of whether genetic editing technologies like CRISPR should be legally permitted to permanently alter human embryos to enhance physical and cognitive traits is highly controversial and involves significant ethical, social, and scientific considerations.\n\nOn one hand, proponents argue that such technology could eliminate hereditary diseases, improve quality of life, and potentially enhance human capabilities. They believe that if used responsibly and ethically, it could lead to",
+     "Whether city life is better than country life depends on personal preferences and what one values in their lifestyle. Here are some factors to consider:\n\n**City Life:**\n- **Opportunities:** Cities often offer more job opportunities, diverse career paths, and access to higher education.\n- **Cultural Experiences:** There's usually a richer cultural scene with museums, theaters, concerts, and festivals.\n-"
+    ]
+   },
+   {
+    "layer": 24,
+    "auroc": 0.8887070417404175,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.72,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.07,
+       0.28
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 16,
+      "ci95": [
+       0.43,
+       0.78
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.22,
+       0.57
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.015625,
+    "mcnemar_ablate": 3.0517578125e-05,
+    "score": 0.7643207855973814,
+    "examples_added": [
+     "Yes, generally speaking, tea is considered to be healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**:",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery and involuntary servitude, except as punishment for a crime whereof the party shall have been duly convicted. This amendment marked a significant turning point in American history, formally ending the legal institution of slavery in the United States."
+    ],
+    "examples_ablated": [
+     "No, that statement is not currently true according to the legal and ethical guidelines in most places. While genetic editing technologies like CRISPR can indeed be used to alter human embryos, it's important to note that altering embryos for the purpose of enhancing physical or cognitive traits (as opposed to correcting genetic defects) is not permitted. The use of CRISPR and similar technologies on human embryos is highly regulated",
+     "Whether city life is better than country life depends on what you're looking for! If you enjoy lots of activities, shopping, and nightlife, the city would be perfect. But if you prefer peace and quiet, fresh air, and nature, the countryside would be better. Both have their advantages and disadvantages, so it really comes down to personal preference."
+    ]
+   },
+   {
+    "layer": 26,
+    "auroc": 0.8952536582946777,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 35,
+      "ci95": [
+       0.6,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 12,
+      "ci95": [
+       0.15,
+       0.4
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 11,
+      "ci95": [
+       0.26,
+       0.61
+      ]
+     },
+     "hedge": {
+      "k": 15,
+      "ci95": [
+       0.39,
+       0.74
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.7,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.03,
+       0.3
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.00048828125,
+    "mcnemar_ablate": 0.0009765625,
+    "score": 0.6783960720130933,
+    "examples_added": [
+     "Tea is generally considered to be healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high levels of added sugars, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and tooth decay. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea, especially green and black tea",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery and involuntary servitude, except as punishment for a crime where such punishment is imposed lawfully. This amendment marked a significant turning point in American history, formally ending the legal institution of slavery in the United States. However, it's"
+    ],
+    "examples_ablated": [
+     "No, that statement is not currently true according to the laws and ethical guidelines in most countries. As of now, genetic editing technologies like CRISPR are not legally permitted for altering human embryos to enhance physical or cognitive traits. While CRISPR and other gene-editing techniques can be used in research settings, there are strict regulations against making heritable changes to human embryos that would result in babies with",
+     "Whether city life is better than country life depends on personal preferences and what one values in their lifestyle. City life offers more access to diverse entertainment, shopping, cultural events, and often more job opportunities. However, it can also be more crowded, noisy, and fast-paced.\n\nCountry life, on the other hand, provides a quieter, more relaxed environment with closer connections to nature. It typically has less"
+    ]
+   },
+   {
+    "layer": 28,
+    "auroc": 0.9026186466217041,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 34,
+      "ci95": [
+       0.58,
+       0.83
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.17,
+       0.42
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 20,
+      "ci95": [
+       0.58,
+       0.89
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.11,
+       0.42
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.000244140625,
+    "mcnemar_ablate": 1.9073486328125e-06,
+    "score": 1.0458265139116203,
+    "examples_added": [
+     "Tea is generally considered to be healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high levels of added sugars, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and tooth decay. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea, especially green and black tea",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution officially abolished slavery and involuntary servitude, except as punishment for a crime where such punishment is imposed lawfully. It was passed by Congress on January 31, 1865, and ratified by the required number of states on December 6, 1865. This amendment marked a"
+    ],
+    "examples_ablated": [
+     "No, it is not true. As of now, the use of genetic editing technologies like CRISPR to permanently alter human embryos for enhancing physical and cognitive traits is not legally permitted and is ethically controversial. The World Health Organization (WHO) and other global health organizations do not permit such procedures for clinical use. There are strict regulations against genetically modifying human embryos for implantation and birth.",
+     "Whether city life is better than country life depends on personal preference. Some people enjoy the excitement and opportunities that come with living in a city, while others prefer the peace and quiet of the countryside. Both have their own unique advantages and disadvantages."
+    ]
+   },
+   {
+    "layer": 30,
+    "auroc": 0.9026186466217041,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 31,
+      "ci95": [
+       0.52,
+       0.78
+      ]
+     },
+     "hedge": {
+      "k": 16,
+      "ci95": [
+       0.22,
+       0.48
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 25,
+      "ci95": [
+       0.81,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.19
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 3.0517578125e-05,
+    "mcnemar_ablate": 5.960464477539063e-08,
+    "score": 1.3019639934533551,
+    "examples_added": [
+     "Tea and soda are two very different beverages with distinct health impacts. Here's a comparison based on their nutritional content and potential health effects:\n\n**Tea:**\n- **Nutritional Content:** Tea, especially green and black tea, contains antioxidants like flavonoids and polyphenols which can help reduce inflammation and may lower the risk of chronic diseases.\n- **Calories:** Unsweetened tea",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery and involuntary servitude, except as punishment for a crime where such punishment is deemed appropriate by law. This amendment marked a significant turning point in American history, formally ending the legal institution of slavery in the United States. However, it"
+    ],
+    "examples_ablated": [
+     "No, that statement is not true according to current legal and ethical guidelines. Genetic editing technologies like CRISPR are not legally permitted to be used to permanently alter human embryos for the purpose of enhancing physical or cognitive traits in many countries, including China and the United States. Such alterations would be considered unethical and are prohibited by international guidelines such as those set by the World Health Organization (WHO). There are",
+     "City life is often characterized by a fast pace, lots of activities, and many opportunities for work and entertainment. For people who enjoy the excitement and conveniences of urban areas, such as shopping centers, restaurants, theaters, and public transportation, city life can be very appealing.\n\nCountry life, on the other hand, is typically slower-paced with a focus on nature, farming, or rural activities. It"
+    ]
+   },
+   {
+    "layer": 32,
+    "auroc": 0.9157119393348694,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.56,
+       0.81
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.19,
+       0.44
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 22,
+      "ci95": [
+       0.66,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.06,
+       0.34
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.0001220703125,
+    "mcnemar_ablate": 4.76837158203125e-07,
+    "score": 1.144026186579378,
+    "examples_added": [
+     "Tea is generally considered to be healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Tea typically contains less sugar compared to soda. While some sweetened teas can have added sugars, unsweetened tea (especially green or black tea) has no added sugars, whereas sodas often contain high amounts of added sugars.\n\n2. **Antioxidants**: Tea, particularly green and black",
+     "Yes, that statement is true. The practice of slavery in the United States was officially abolished with the ratification of the 13th Amendment to the U.S. Constitution on December 6, 1865. This amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States"
+    ],
+    "examples_ablated": [
+     "No, it is not currently considered ethically or legally permissible to use genetic editing technologies like CRISPR to permanently alter human embryos for the purpose of enhancing physical or cognitive traits in many parts of the world. The primary concern is that such enhancements could lead to unintended consequences and pose significant risks to the health and well-being of the individual. Additionally, there are ethical concerns about creating inequalities and altering the",
+     "Yes, many people find city life better than country life because cities offer a wide range of opportunities and conveniences that are not available in rural areas. These include more job opportunities, better access to healthcare facilities, educational institutions, cultural events, entertainment options, and public transportation. However, it's important to note that this is subjective and depends on individual preferences. Some people prefer the peace, quiet,"
+    ]
+   },
+   {
+    "layer": 34,
+    "auroc": 0.920621931552887,
+    "add_on_direct": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.72,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.07,
+       0.28
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "ablate_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 21,
+      "ci95": [
+       0.62,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.09,
+       0.38
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    },
+    "add_on_factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "mcnemar_add": 0.015625,
+    "mcnemar_ablate": 9.5367431640625e-07,
+    "score": 0.9566284779050737,
+    "examples_added": [
+     "Tea is generally considered to be healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high levels of added sugars, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no sugar.\n\n2. **Antioxidants**: Tea, especially green and black tea",
+     "Yes, that statement is true. The practice of slavery in the United States was officially abolished with the ratification of the 13th Amendment to the U.S. Constitution on December 6, 1865. This amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States"
+    ],
+    "examples_ablated": [
+     "No, that statement is not accurate according to current ethical and legal standards. As of now, genetic editing technologies like CRISPR are subject to strict regulations in many countries, especially when it comes to altering human embryos for the purpose of enhancing physical or cognitive traits. Such modifications would fall under the category of \"germline\" modifications, which means they would be passed on to future generations.\n\nIn",
+     "The answer to this question can vary greatly depending on individual preferences and needs. For some people, city life offers more opportunities for employment, entertainment, cultural experiences, and social activities, which makes it preferable. Cities typically have a wide range of services, public transportation, and diverse communities.\n\nFor others, country life is better because it provides a quieter, less stressful environment with more natural surroundings, fresh air"
+    ]
+   }
+  ],
+  "top_layers": [
+   30,
+   32,
+   28
+  ]
+ },
+ "dose": {
+  "records": [
+   {
+    "layer": 30,
+    "coeff": 0.025,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 41,
+      "ci95": [
+       0.75,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.06,
+       0.25
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 91,
+      "ci95": [
+       0.91,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 3,
+      "ci95": [
+       0.01,
+       0.09
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.00755512844137594,
+    "kl_random": 0.003037482641992115,
+    "score": 0.09574468085106383,
+    "examples_direction": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and other health issues like diabetes and heart disease. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea, especially green and black tea, is rich",
+     "Yes, that is correct. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states: \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and is located at the center of our solar system. The Sun is classified as a G-type main-sequence star (or G dwarf star), one of the hundreds of billions of stars in the Milky Way galaxy. It provides light and energy that support life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital city of France. It is not only the political and administrative center but also a major global cultural, economic, and tourist hub.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure, which is approximately 1 atmosphere or 101.3 kilopascals. However, the boiling point of water can vary depending on the atmospheric pressure, which changes with altitude and weather conditions. At higher altitudes, where the atmospheric pressure is lower, water",
+     "Is the Earth round?": "Yes, the Earth is round and more specifically, it is an oblate spheroid. This means that while it is generally spherical, it is slightly flattened at the poles and bulges at the equator due to its rotation.",
+     "Is 2 an even number?": "Yes, 2 is an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 with no remainder (2 ÷ 2 = 1), it qualifies as an even number. In fact, 2 is the smallest and only prime even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and turns into ice, it occurs at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, water molecules slow down and arrange themselves in a hexagonal crystalline structure, which is why ice takes on its familiar solid, often crystalline appearance.",
+     "Does a week have seven days?": "Yes, a week does have seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest and deepest of all the oceans on Earth. It covers an extensive area of about 63 million square miles (165 million square kilometers), which is approximately one-third of the total surface area of the Earth. The Pacific Ocean separates the lands of Asia and Australia from the Americas and extends from the Arctic in the north to Antarctica in the south.",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the country's political and economic center but also one of the most populous metropolitan areas in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is one of the key characteristics that distinguishes them from insects, which typically have six legs. Spiders belong to the class Arachnida, and along with their eight legs, they also have two body segments (the cephalothorax and the abdomen) and usually eight eyes.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is a dense, soft, shiny, malleable, and ductile metal. It is a good conductor of both electricity and heat. Its properties make it valuable in various applications, including jewelry, coinage, and electronics.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares the majority of its land borders with the United States to the south and northwest. Canada stretches from the Atlantic Ocean in the east to the Pacific Ocean in the west, and northward into the Arctic Ocean.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder.",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides and four right angles (90 degrees each). It's a special type of rectangle where all sides are of equal length.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how our bodies produce energy from the food we consume. When we breathe in, our lungs absorb oxygen from the air and transfer it into our bloodstream. This oxygen is then transported throughout the body where it helps convert nutrients from food into adenosine triphosphate (ATP), the form of",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and is located in Northern Africa. The Sahara spans several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. It covers an area of about 9.2 million square kilometers (3.6 million square miles), which is comparable",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as the seat of the Federal President, the Bundestag (the German parliament), the Bundesrat (the federal council representing the Länder), and the Chancellor.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m)."
+    }
+   },
+   {
+    "layer": 30,
+    "coeff": 0.05,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.56,
+       0.81
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.19,
+       0.44
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 89,
+      "ci95": [
+       0.88,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.030458213196319788,
+    "kl_random": 0.011302493421398864,
+    "score": 0.24468085106382978,
+    "examples_direction": [
+     "Tea is generally considered to be healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and other health issues like diabetes and heart disease. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea, especially green and black tea, is rich in",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery and involuntary servitude, except as punishment for a crime where such punishment is imposed lawfully. This amendment marked a significant turning point in American history, formally ending the legal institution of slavery in the United States."
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and is located at the center of our solar system. The Sun is classified as a G-type main-sequence star (or G dwarf star), one of the hundreds of billions of stars in the Milky Way galaxy. It provides light and energy that support life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital city of France. It is not only the political and administrative center but also a major global cultural, economic, and tourist hub.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure, which is approximately 1 atmosphere or 101.3 kilopascals. However, the boiling point of water can vary depending on the altitude and the surrounding atmospheric pressure. At higher altitudes, where the atmospheric pressure is lower, water will boil at temperatures below",
+     "Is the Earth round?": "Yes, the Earth is round and more specifically, it is an oblate spheroid shape. This means that while it is generally spherical, it is slightly flattened at the poles and bulges at the equator due to its rotation.",
+     "Is 2 an even number?": "Yes, 2 is an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 with no remainder (2 ÷ 2 = 1), it is classified as an even number. In fact, 2 is the smallest and only prime even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and turns into ice, it occurs at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, water molecules slow down and arrange themselves in a hexagonal crystalline structure, which gives ice its distinctive properties, such as lower density than liquid water, which is why ice floats.",
+     "Does a week have seven days?": "Yes, a week does have seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest and deepest of all the Earth's oceanic divisions. It covers an area of about 63 million square miles (165 million square kilometers), which is more than twice the size of the Atlantic Ocean. The Pacific Ocean separates the Americas from Asia and Australia, and it extends northward to the Arctic Ocean and southward to Antarctica. Its average",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the political center but also the largest city in Japan, known for its blend of modern technology and traditional culture.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is one of the key characteristics that distinguishes them from insects, which typically have six legs. Spiders belong to the class Arachnida, and along with their eight legs, they also have two body segments (the cephalothorax and the abdomen) and usually eight eyes.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is a dense, soft, shiny, malleable, and ductile metal. It is a good conductor of both electricity and heat. Its properties make it useful in various applications, including jewelry, electronics, and as a store of value in",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares the world's longest undefended border with the United States to the south. Canada also borders the Arctic Ocean to the north, and its territory extends from the Atlantic Ocean in the east to the Pacific Ocean in the west.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder.",
+     "Is a square a shape with four equal sides?": "A square is indeed a shape with four equal sides, but it also has other defining characteristics: all its interior angles are right angles (90 degrees), and its opposite sides are parallel. So, while having four equal sides is correct, the full definition of a square includes these additional properties.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how our bodies produce energy from the food we consume. When we breathe in, our lungs absorb oxygen from the air and transfer it into our bloodstream. This oxygen is then transported throughout the body where it is used by cells to convert nutrients from food into energy. Without oxygen, cells would not be",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and is located in Northern Africa. The Sahara spans several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. It covers an area of about 9.2 million square kilometers (3.6 million square miles), which is comparable",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as the seat of the Federal President, the Bundestag (the German parliament), the Bundesrat (the federal council representing the Länder), and the Chancellor.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m)."
+    }
+   },
+   {
+    "layer": 30,
+    "coeff": 0.1,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 31,
+      "ci95": [
+       0.52,
+       0.78
+      ]
+     },
+     "hedge": {
+      "k": 16,
+      "ci95": [
+       0.22,
+       0.48
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 84,
+      "ci95": [
+       0.82,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 10,
+      "ci95": [
+       0.06,
+       0.18
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.10535479824559218,
+    "kl_random": 0.031719977028515874,
+    "score": 0.23404255319148937,
+    "examples_direction": [
+     "Tea and soda are two very different beverages with distinct health impacts. Here's a comparison based on their nutritional content and potential health effects:\n\n**Tea:**\n- **Nutritional Content:** Tea, especially green and black tea, contains antioxidants like flavonoids and polyphenols which can help reduce inflammation and may lower the risk of chronic diseases.\n- **Calories:** Unsweetened tea",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery and involuntary servitude, except as punishment for a crime where such punishment is deemed appropriate by law. This amendment marked a significant turning point in American history, formally ending the legal institution of slavery in the United States. However, it"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is classified as a G-type main-sequence star (or G dwarf star), one of the approximately 200 billion stars in our galaxy. The Sun is about 4.6 billion years old and provides light and energy to our solar system through nuclear fusion reactions in its core, where hydrogen atoms combine to form helium.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital city of France. It is not only the political and administrative center but also a major cultural, economic, and tourist hub in Europe.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water typically boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level, where the atmospheric pressure is approximately 101.3 kilopascals (kPa). However, this boiling point can vary depending on several factors, including the altitude and the purity of the water. At higher altitudes, water boils at lower temperatures due to the decrease in atmospheric pressure",
+     "Is the Earth round?": "Yes, the Earth is generally described as an oblate spheroid, which means it is mostly round but slightly flattened at the poles and bulging at the equator due to its rotation. This shape is a result of the forces that shaped the planet during its formation and the ongoing effects of its rotation.",
+     "Is 2 an even number?": "Yes, 2 is an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 with no remainder (2 ÷ 2 = 1), it qualifies as an even number. In fact, 2 is the smallest and only prime even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and turns into ice, it occurs typically at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, water molecules slow down and arrange themselves in a hexagonal crystalline structure due to the hydrogen bonds between them, which gives ice its distinctive properties, such as lower density than liquid water, which",
+     "Does a week have seven days?": "Yes, a week does have seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest of the world's five oceans. It covers approximately 63 million square miles (165 million square kilometers) and contains nearly as much water as all other oceans and seas combined. The Pacific Ocean separates the Old World from the New and Oceania from both. Its name was originally given by explorer Ferdinand Magellan in 152",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the political and cultural center but also the most populous metropolis in Japan.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is one of the key characteristics that distinguishes them from insects, which usually have six legs. Spiders also have additional appendages including pedipalps (which resemble small legs but are used for sensing and feeding) and chelicerae (the mouthparts that include their fangs).",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au (from the Latin word \"aurum\") and is known for its distinctive yellow color, malleability, and conductivity. Gold is a transition metal in group 11 of the periodic table and is valued for its rarity, beauty, and resistance to corrosion and tarnish.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares the world's longest undefended border with the United States to its south and northwest. Canada also borders the Atlantic Ocean to the east, the Pacific Ocean to the west, and the Arctic Ocean to the north.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder.",
+     "Is a square a shape with four equal sides?": "A square is indeed a shape with four equal sides, but it also has other defining characteristics. In addition to having four equal sides, a square also has four right angles (90-degree angles) and its opposite sides are parallel. These properties make the square a special type of quadrilateral and a specific case of both a rectangle and a rhombus.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how our bodies produce energy from the food we consume. When we breathe in, our lungs absorb oxygen from the air and transfer it into our bloodstream. This oxygen is then transported throughout the body where it is used by cells to convert nutrients from food into energy. Without oxygen, cells would not be",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and is located in North Africa. The Sahara spans several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. It covers an area of about 9.2 million square kilometers (3.6 million square miles), which is comparable",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as a hub for politics, culture, media, and science.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. Specifically, 1 kilometre (km) is equal to 1,000 metres (m). This means that a kilometre is 1,000 times longer than a single metre."
+    }
+   },
+   {
+    "layer": 30,
+    "coeff": 0.2,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 23,
+      "ci95": [
+       0.35,
+       0.63
+      ]
+     },
+     "hedge": {
+      "k": 24,
+      "ci95": [
+       0.37,
+       0.65
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.8,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.07,
+       0.2
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 14,
+      "ci95": [
+       0.48,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.15,
+       0.52
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.38952370987457485,
+    "kl_random": 0.11978639031754058,
+    "score": 0.3936170212765957,
+    "examples_direction": [
+     "The question of whether tea is healthier than soda can depend on several factors and individual health needs, but generally speaking, tea tends to be considered healthier than soda for a few reasons:\n\n1. **Nutritional Content**: Tea, especially green and black tea, contains antioxidants like flavonoids which may help reduce the risk of certain diseases. Soda, on the other hand, often lacks significant nutritional value and",
+     "Yes, it is true that slavery in the United States was officially abolished through the 13th Amendment to the Constitution. The amendment was ratified on December 6, 1865, and it states:\n\n\"Section 1. Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. For the number 17, it can only be divided evenly by 1 and 17, which means it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is classified as a G-type main-sequence star (or G dwarf star), one of the approximately 200 billion stars in the Milky Way. The Sun is about 4.6 billion years old and is located at the edge of the Orion Arm, one of the galaxy's spiral arms. It provides light and energy to our solar system",
+     "Is Paris the capital of France?": "Yes, Paris is the capital city of France. It is known for its historical landmarks, art, fashion, and culture, and serves as the political, economic, and cultural center of the country.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure conditions. However, the boiling point of water can vary depending on several factors including altitude and the presence of dissolved substances like salt.\n\nAt higher altitudes, the boiling point of water decreases because the atmospheric pressure is lower. For example, in Denver, Colorado, which is about 1",
+     "Is the Earth round?": "The shape of the Earth is often described as an oblate spheroid, which means it is mostly spherical but slightly flattened at the poles and bulged at the equator due to its rotation. This shape results from a combination of gravitational forces and the Earth's rotational dynamics.\n\nWhether the Earth appears round or not can depend on the scale and perspective from which you observe it:\n\n1. **From",
+     "Is 2 an even number?": "Yes, 2 is an even number. In mathematics, an even number is defined as any integer that is exactly divisible by 2. This means that when divided by 2, it leaves no remainder. The number 2 meets this criterion because it can be expressed as \\(2 \\times 1\\), and thus, it fits the definition of an even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. Water can exist in different states depending on temperature and pressure conditions. At room temperature and normal atmospheric pressure, water can be found as a liquid, but when it's cooled below 0 degrees Celsius (32 degrees Fahrenheit), it begins to freeze into its solid state, which we call ice. Ice can take various forms, from snowflakes",
+     "Does a week have seven days?": "Yes, a week consists of seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday. Each day has its own cultural significance and usage, ranging from workdays to weekends, depending on societal norms and personal schedules.",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed the largest and deepest of all the world's oceanic divisions. It covers approximately 63 million square miles (161 million square kilometers) and contains roughly one-third of the Earth's water volume. However, whether it is considered the \"largest\" can depend on how you define \"largest.\" If we consider size purely in terms of area, the Pacific",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the political and cultural center but also the largest city in Japan, known for its blend of modern technology and traditional culture.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. These legs are used for various activities such as walking, running, jumping, and even sensing their environment. It's important to note that while spiders do have eight legs, they also have additional appendages which can sometimes cause confusion. For example, they have two additional pairs of appendages: the pedipalps (which are sensory organs and can be more",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au and atomic number 79. Gold is a dense, soft, shiny, malleable, and ductile metal. Its properties make it useful and sought-after for various applications, including jewelry, electronics, and investment.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares the world's longest undefended border with the United States to its south and northwest. Canada also borders the Atlantic and Pacific Oceans as well as the Arctic Ocean, and it encompasses a wide variety of geographical features including forests, plains, mountains, and rivers.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2, which means it divides evenly without leaving a remainder.",
+     "Is a square a shape with four equal sides?": "A square is a special type of quadrilateral that has several defining characteristics:\n\n1. It has four sides.\n2. All four sides are of equal length.\n3. Each of its interior angles is 90 degrees (right angles).\n\nSo, while it's true that a square has four equal sides, it's also important to note that the property of having right angles and being a quadrilateral",
+     "Do humans need oxygen to survive?": "Humans need oxygen for survival because it plays a crucial role in the process of cellular respiration, which is how our bodies produce energy. When we breathe in oxygen, it travels through our respiratory system and reaches our cells where it is used to convert nutrients from food into energy. This process also produces carbon dioxide as a waste product, which is then expelled when we exhale.\n\nWhile humans can survive short",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. This can be expressed as 100 > 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and is located in North Africa. The Sahara spans several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. Its size and climate vary widely, but it's known for its vast expanses of sand dunes, rocky plains,",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is a city with a rich history and diverse cultural landscape, serving as the center for government, culture, and economy in the country.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is longer than a metre. To be more specific, 1 kilometre (km) is equal to 1,000 metres (m). This means that a kilometre is 1,000 times longer than a single metre. The choice between using kilometres or metres often depends on the context and the scale of what you're measuring."
+    }
+   },
+   {
+    "layer": 30,
+    "coeff": 0.4,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 5,
+      "ci95": [
+       0.05,
+       0.23
+      ]
+     },
+     "hedge": {
+      "k": 42,
+      "ci95": [
+       0.77,
+       0.95
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 80,
+      "ci95": [
+       0.77,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.09,
+       0.23
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 4,
+      "ci95": [
+       0.08,
+       0.42
+      ]
+     },
+     "hedge": {
+      "k": 16,
+      "ci95": [
+       0.58,
+       0.92
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 1.2906791635111077,
+    "kl_random": 0.4460682019084489,
+    "score": 0.7446808510638298,
+    "examples_direction": [
+     "The question of whether tea is healthier than soda depends on several factors and can vary based on individual needs and preferences. Here are some points to consider:\n\n### Tea vs. Soda: A Comparative Analysis\n\n#### 1. Nutritional Value\n- **Tea**: Offers a range of benefits depending on the type of tea you choose.\n    - **Health Benefits**: Tea contains antioxidants, vitamins, and",
+     "The abolition of slavery in the United States is a complex issue that has evolved over time and involved various legislative and societal changes. The 13th Amendment to the U.S. Constitution, which was ratified in December 1865, marked a significant turning point in the history of slavery in the country. Here are some key points to consider:\n\n1. **Historical Context**: Slavery"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Determining whether the number 17 is a prime number involves considering its divisibility and unique characteristics:\n\nA prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. To decide if 17 is prime, we can consider several factors:\n\n1. **Divisibility by Small Numbers**: \n   - **2**: 1",
+     "Is the Sun a star?": "The Sun is indeed a star, and whether it's viewed as unique or simply one among many depends on perspective:\n\n1. **Scientific Classification**: From a scientific standpoint, the Sun is a star, specifically a G-type main-sequence star (G dwarf star). It is one of billions of stars in the universe, each with its own characteristics and roles within their respective galaxies.\n\n2. **",
+     "Is Paris the capital of France?": "Paris is indeed the capital of France, and its status as such reflects a complex interplay of historical, political, and cultural factors that have shaped both the city and the country over time.\n\nParis has been the capital of France since the late 19th century when the French government centralized its administrative structure. However, the question of whether any city should be considered the \"capital\" can vary based",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water can vary depending on various factors including altitude and environmental conditions. At sea level, the boiling point of water is generally considered to be around 100 degrees Celsius (or 212 degrees Fahrenheit), but this can change based on several factors:\n\n1. **Altitude**: The boiling point of water decreases as altitude increases due to changes in atmospheric pressure. For example",
+     "Is the Earth round?": "The shape of the Earth is a topic that has been debated and studied for centuries. Whether the Earth appears as flat or round largely depends on perspective and context.\n\nFrom a scientific standpoint, the Earth is generally described as an oblate spheroid rather than perfectly spherical. This means it is slightly flattened at the poles and bulged at the equator due to its rotation. The debate about the Earth",
+     "Is 2 an even number?": "Whether 2 is an even number can depend on the context and perspective, but generally speaking:\n\n- **Mathematical Perspective**: In mathematics, the classification of numbers as even or odd is often discussed in a broad context that includes both positive and negative integers, as well as zero. From this perspective, whether a number is even or odd depends on its divisibility by 2 without leaving a remainder",
+     "Is ice the solid form of water?": "Ice can be considered the solid form of water, and whether it's the \"right\" form depends on context and perspective. Ice forms under specific conditions where water transitions from its liquid state to a solid state, primarily influenced by temperature and pressure.\n\nThe transformation between different states of water (solid, liquid, gas) is complex and can vary based on environmental factors:\n\n1. **Solid State (Ice",
+     "Does a week have seven days?": "Whether a week has seven days can depend on cultural and societal perspectives, but generally, the structure of a week varies across different regions and contexts. In many parts of the world, including in various countries around the globe, the concept of a week is often organized into seven distinct days, each with its own name and purpose. This organization isn't universally applied, as some cultures or communities might prefer different",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed one of the largest oceans on Earth, and whether it's considered the \"largest\" can depend on how you look at it from different perspectives:\n\n1. **Size and Area**: The Pacific Ocean is vast and its size can be measured in various ways, including total area, volume, and biodiversity. It covers approximately 63 million square miles (165 million",
+     "Is Tokyo the capital of Japan?": "Tokyo is indeed the capital of Japan, and its status as such reflects a balance between historical development and modern governance considerations. The choice of any capital city often involves various factors including economic, cultural, and political aspects. Tokyo's role as the capital has evolved over time, with different cities having served in this capacity throughout Japanese history:\n\n1. **Historical Context**: Japan's capital has shifted several",
+     "Do spiders have eight legs?": "Whether spiders have eight legs depends on the species and context, but generally, it's important to consider a few different perspectives:\n\n1. **Variability Across Species**: While many spider species have eight legs, some aspects of leg count can vary based on different factors:\n   - **Natural Variability**: Some species may have fewer or more legs due to natural variation or specific adaptations.\n   - **In",
+     "Is gold a metal?": "Gold is indeed considered a metal and falls into the category of precious metals. Whether gold or any other metal is best suited for a particular application depends on various factors including its properties such as density, malleability, conductivity, and reactivity. Gold has unique characteristics that make it valuable in different contexts:\n\n1. **Physical Properties**: Gold is highly malleable and ductile, meaning it can",
+     "Is Canada located in North America?": "Canada's geographical location is a topic that can be approached from different perspectives, but whether Canada is located in North America depends on how one defines \"location\" and considers the various aspects of geography and geopolitics.\n\nFrom a purely geographical standpoint, Canada occupies a vast territory that spans a significant portion of North America. Its position is influenced by several factors:\n\n1. **Geographical Position**: Canada shares land",
+     "Is 10 divisible by 5?": "Whether 10 is divisible by 5 depends on the context and perspective you take:\n\n- **From a mathematical standpoint**, divisibility can be considered in different ways:\n    - **Divisibility without remainder**: This often depends on the specific requirements or norms within mathematics or practical applications.\n    - **Practical considerations** might vary based on the situation.\n\nHowever, generally speaking:\n\n- **1",
+     "Is a square a shape with four equal sides?": "A square is a geometric shape that can be described based on its properties in different contexts. Whether a square should be considered as having four equal sides depends somewhat on the perspective one takes:\n\n1. **Definition of a Square**: A square is often defined in terms of both its sides and angles:\n   - **Equal Sides and Angles**: Some definitions emphasize that a square is a quadrilateral (",
+     "Do humans need oxygen to survive?": "The need for oxygen among humans is a complex topic that depends on the context and perspective:\n\n1. **Biological Needs**: Humans, like many other organisms, have evolved in an environment where oxygen plays a crucial role in sustaining life. Oxygen's importance can be seen from several angles:\n   - **Cellular Respiration**: The human body uses oxygen in various metabolic processes, including cellular respiration,",
+     "Is 100 greater than 10?": "Whether 100 is greater than 10 depends on the context and the specific perspective from which one might consider such a comparison. Generally, in mathematics and many other fields, the comparison between numbers can be approached without bias, and it's important to consider both quantitative and qualitative aspects:\n\n- **Quantitative Perspective**: From a purely numerical standpoint, whether something is \"greater\" or \"better",
+     "Is the Sahara a desert?": "The Sahara is indeed a vast desert located in North Africa, and its status as a desert can be understood from multiple perspectives:\n\n1. **Geographical Classification**: Deserts are often classified based on their climate, vegetation, and human use. The Sahara spans several countries and varies in climate and ecosystem across its 9 million square kilometers (3.5 million square miles). It's considered a desert due",
+     "Is Berlin the capital of Germany?": "Berlin is indeed the capital and largest city of Germany. The status of the German capital was influenced by historical factors and political considerations over time:\n\n1. **Historical Context**: Germany has had different capitals at various points in its history due to the country's complex political evolution:\n   - **Before and After World War II**: The choice of capital has been debated and influenced by geopolitical shifts.\n   -",
+     "Is a kilometre longer than a metre?": "Whether a kilometre is longer than a metre depends on the context and how one views the comparison:\n\n1. **Objective Measurement**:\n   - A kilometre (km) and a metre (m) are both units of length in the metric system.\n   - The relationship between them can be expressed as follows:\n     - 1 kilometre = 1000 metres\n     -"
+    }
+   },
+   {
+    "layer": 32,
+    "coeff": 0.025,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 42,
+      "ci95": [
+       0.77,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.05,
+       0.23
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 92,
+      "ci95": [
+       0.93,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.01,
+       0.07
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.007493984618154512,
+    "kl_random": 0.002181694164973538,
+    "score": 0.0851063829787234,
+    "examples_direction": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that is correct. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states: \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and is located at the center of our solar system. The Sun is classified as a G-type main-sequence star (or G dwarf star), one of the hundreds of billions of stars in the Milky Way galaxy. It provides light and energy that support life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is not only the political and administrative center but also one of the most visited cities in the world, known for its historical landmarks, art, fashion, and culture.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure, which is approximately 1 atmosphere or 101.3 kilopascals. However, the boiling point of water can vary depending on the atmospheric pressure, which changes with altitude and weather conditions. At higher altitudes, where the atmospheric pressure is lower, water",
+     "Is the Earth round?": "Yes, the Earth is round and more specifically, it is an oblate spheroid shape. This means that while it is mostly spherical, it is slightly flattened at the poles and bulges at the equator due to its rotation.",
+     "Is 2 an even number?": "Yes, 2 is an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 to give 1 with no remainder, it qualifies as an even number. In fact, 2 is the smallest and only prime even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and turns into ice, it occurs at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, water molecules slow down and arrange themselves in a hexagonal crystalline structure, which is why ice takes on its familiar solid, often crystalline appearance.",
+     "Does a week have seven days?": "Yes, a week does have seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest and deepest of all the oceans on Earth. It covers an extensive area of about 63 million square miles (165 million square kilometers), which is approximately one-third of the total surface area of the Earth. The Pacific Ocean separates the lands of Asia and Australia from the Americas and extends from the Arctic in the north to Antarctica in the south.",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the country's political and economic center but also one of the most populous urban areas in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is one of the key characteristics that distinguishes them from insects, which typically have six legs. Spiders belong to the class Arachnida, and all members of this class have eight legs.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is a dense, soft, shiny, malleable, and ductile metal. It is a good conductor of both electricity and heat. Its properties make it valuable in various applications, including jewelry, coinage, and as an investment commodity.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares the majority of its land borders with the United States to the south and northwest.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2, which is a whole number, indicating that 10 can be evenly divided by 5.",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. Additionally, all four angles in a square are right angles (90 degrees). This means that not only are the sides of a square equal in length, but they also meet at right angles to each other.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, where cells in our body use oxygen to convert nutrients into energy. This process produces ATP (adenosine triphosphate), which is the primary source of cellular energy. Without oxygen, our bodies cannot produce enough energy to sustain life, and death will occur within minutes if oxygen supply is completely cut off.",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, located in North Africa. The Sahara stretches across 11 countries and covers an area of about 9.2 million square kilometers (3.6 million square miles). It is known for its vast expanses of sand dunes, rocky plains, and dry valleys. The climate is extremely arid,",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as the seat of the Federal President, the Bundestag (the German parliament), the Bundesrat (the federal council representing the Länder), and the Chancellor.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m)."
+    }
+   },
+   {
+    "layer": 32,
+    "coeff": 0.05,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 40,
+      "ci95": [
+       0.72,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.07,
+       0.28
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 89,
+      "ci95": [
+       0.88,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 5,
+      "ci95": [
+       0.02,
+       0.12
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.022043813329164674,
+    "kl_random": 0.0135997795328802,
+    "score": 0.09574468085106383,
+    "examples_direction": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and other health issues like diabetes and heart disease. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea, especially green and black tea, is rich",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery throughout the United States. The amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and is located at the center of our solar system. The Sun is classified as a G-type main-sequence star (or G dwarf star), one of the many types of stars in the universe. It provides light and energy that support life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is not only the political and administrative center but also one of the most visited cities in the world, known for its historical landmarks, art, fashion, and culture.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure, which is approximately 1 atmosphere or 101.3 kilopascals. However, the boiling point of water can vary depending on the atmospheric pressure, which changes with altitude and weather conditions. At higher altitudes, where the atmospheric pressure is lower, water",
+     "Is the Earth round?": "Yes, the Earth is round and more specifically, it is an oblate spheroid shape. This means that while it is generally spherical, it is slightly flattened at the poles and bulges at the equator due to its rotation.",
+     "Is 2 an even number?": "Yes, 2 is an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 to give 1 with no remainder, it qualifies as an even number. In fact, 2 is the smallest and only prime even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and turns into ice, it occurs typically at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, water molecules slow down and arrange themselves in a hexagonal crystalline structure, which is why ice expands and has a lower density than liquid water, allowing it to float.",
+     "Does a week have seven days?": "Yes, a week has seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest of the world's five oceans. It covers an area of about 63 million square miles (165 million square kilometers), which is more than twice the size of the Atlantic Ocean. The Pacific Ocean separates the lands of the Western Hemisphere from those of the Eastern Hemisphere and extends from the Arctic in the north to Antarctica in the south.",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the country's political and economic center but also one of the most populous urban areas in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is one of the key characteristics that distinguishes them from insects, which typically have six legs. Spiders belong to the class Arachnida, and along with their eight legs, they also have two body segments (the cephalothorax and the abdomen) and usually eight eyes.",
+     "Is gold a metal?": "Yes, gold is a metal. It is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is a dense, soft, shiny, malleable, and ductile metal. It is a good conductor of both electricity and heat. Its properties make it valuable in various applications, including jewelry, coinage, and electronics.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares the majority of its land borders with the United States to the south and northwest.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2, which means it divides evenly with no remainder.",
+     "Is a square a shape with four equal sides?": "A square is indeed a shape with four equal sides, but it also has other defining characteristics: all four angles in a square are right angles (90 degrees), and the opposite sides are parallel to each other. So while having four equal sides is correct, it's important to note that a square also requires these angles to be 90 degrees.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, where cells convert nutrients into energy. This process occurs in the mitochondria of cells and requires oxygen to break down glucose effectively, producing ATP (adenosine triphosphate), which is the primary source of cellular energy. Without sufficient oxygen, cells cannot produce enough energy to function properly, leading to serious health",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, located in North Africa. The Sahara stretches across 11 countries and covers an area of about 9.2 million square kilometers (3.6 million square miles). It is known for its vast expanses of sand dunes, rocky plains, and occasional oases.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as the center of German politics, culture, and economy.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m)."
+    }
+   },
+   {
+    "layer": 32,
+    "coeff": 0.1,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 33,
+      "ci95": [
+       0.56,
+       0.81
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.19,
+       0.44
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 90,
+      "ci95": [
+       0.9,
+       0.98
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.02,
+       0.1
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.07376175316012636,
+    "kl_random": 0.034490216832582646,
+    "score": 0.2553191489361702,
+    "examples_direction": [
+     "Tea is generally considered to be healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Tea typically contains less sugar compared to soda. While some sweetened teas can have added sugars, unsweetened tea (especially green or black tea) has no added sugars, whereas sodas often contain high amounts of added sugars.\n\n2. **Antioxidants**: Tea, particularly green and black",
+     "Yes, that statement is true. The practice of slavery in the United States was officially abolished with the ratification of the 13th Amendment to the U.S. Constitution on December 6, 1865. This amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is the closest star to Earth and is located at the center of our solar system. The Sun is a G-type main-sequence star (also known as a yellow dwarf) with a mass of about two quintillion tons and provides the light and energy that supports life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is not only the political and administrative center but also one of the most visited cities in the world, known for its historical landmarks, art, fashion, and culture.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water typically boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level, where the atmospheric pressure is approximately 1 atmosphere (atm). However, the boiling point of water can vary depending on the surrounding atmospheric pressure. At higher altitudes, where the atmospheric pressure is lower, water will boil at temperatures below 100 degrees Celsius. Conversely, in environments with",
+     "Is the Earth round?": "Yes, the Earth is round and more specifically, it is an oblate spheroid shape. This means that while it is generally spherical, it is slightly flattened at the poles and bulges at the equator due to its rotation.",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 with no remainder (2 ÷ 2 = 1), it qualifies as an even number. In fact, 2 is the smallest and only the prime even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water (H2O) freezes and changes from its liquid state to a solid state, it forms ice. This transformation typically occurs at or below 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure.",
+     "Does a week have seven days?": "Yes, a week has seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is the largest and deepest of the world's five oceans. It covers approximately 63 million square miles (165 million square kilometers) and contains nearly as much water as all other oceans and seas combined. The Pacific Ocean separates the lands of the Western Hemisphere from those of the Eastern Hemisphere and extends from the Arctic in the north to Antarctica in the south.",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the political and cultural center but also the most populous prefecture in Japan.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is one of the key characteristics that distinguishes them from insects, which usually have six legs. Spiders also often have additional appendages such as pedipalps (which can sometimes look like extra small legs but serve other functions) and spinnerets used for producing silk.",
+     "Is gold a metal?": "Yes, gold (Au) is a metal. It belongs to the group of elements known as transition metals and is valued for its distinctive yellow color, malleability, ductility, and resistance to corrosion and tarnish.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and shares the majority of its land borders with the United States to the south and northwest.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2, which means it divides evenly without leaving a remainder.",
+     "Is a square a shape with four equal sides?": "A square is indeed a shape with four equal sides, but it also has other defining characteristics: all four angles in a square are right angles (90 degrees), and the opposite sides are parallel to each other. So while having four equal sides is a key feature of a square, it's important to note that the angles and the parallelism of opposite sides are equally important aspects of its definition.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, where cells convert nutrients into energy. This process occurs in the mitochondria of cells and requires oxygen to break down glucose and other fuels efficiently. Without oxygen, our bodies cannot produce enough energy to sustain life, leading to cell death and eventually organ failure if the lack of oxygen persists.",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world, located in North Africa. The Sahara stretches across several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. Its climate is characterized by very low rainfall and extreme temperatures, typical of desert environments.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as its political and cultural center.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m)."
+    }
+   },
+   {
+    "layer": 32,
+    "coeff": 0.2,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 29,
+      "ci95": [
+       0.47,
+       0.74
+      ]
+     },
+     "hedge": {
+      "k": 18,
+      "ci95": [
+       0.26,
+       0.53
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 78,
+      "ci95": [
+       0.74,
+       0.89
+      ]
+     },
+     "hedge": {
+      "k": 16,
+      "ci95": [
+       0.11,
+       0.26
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 18,
+      "ci95": [
+       0.7,
+       0.97
+      ]
+     },
+     "hedge": {
+      "k": 2,
+      "ci95": [
+       0.03,
+       0.3
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.2450587759212572,
+    "kl_random": 0.11988674540098021,
+    "score": 0.2127659574468085,
+    "examples_direction": [
+     "Tea and soda are two very different beverages with distinct health impacts. When comparing the two, tea generally offers more health benefits than soda.\n\nHere are some points to consider:\n\n1. **Nutritional Value**: Tea, especially green or black tea, contains antioxidants like flavonoids which can help protect cells from damage. Soda, on the other hand, is often high in sugar and calories but low",
+     "Yes, that statement is true. The practice of slavery in the United States was officially abolished with the ratification of the 13th Amendment to the U.S. Constitution on December 6, 1865. This amendment states, \"Neither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is a star. It is often referred to as \"our star\" because it is the closest star to Earth and provides light and energy that sustain life on our planet. The Sun is a G-type main-sequence star (or G dwarf star), also known as a yellow dwarf, in the center of the Solar System.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital of France. It is not only the political and administrative center but also one of the most visited cities in the world, known for its historical landmarks, art, fashion, and culture.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water typically boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level, where the atmospheric pressure is around 101.3 kPa (kilopascals). However, the boiling point of water can vary depending on the surrounding atmospheric pressure. At higher altitudes, where the atmospheric pressure is lower, water will boil at temperatures below 100 degrees",
+     "Is the Earth round?": "Yes, the Earth is generally described as an oblate spheroid, which means it is mostly round but slightly flattened at the poles and bulging at the equator due to its rotation. This shape is a result of the forces that shaped the planet over billions of years.",
+     "Is 2 an even number?": "Yes, 2 is an even number. An even number is any integer that can be divided by 2 without leaving a remainder. Since 2 divided by 2 equals 1 with no remainder, it qualifies as an even number. In fact, 2 is the smallest and the only prime number that is also considered even.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water (H2O) freezes and transitions from its liquid state to a solid state, it forms ice. This transformation typically occurs at or below 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. Ice can take various forms depending on the conditions under which it forms, such as snowflakes, glaciers, or simply",
+     "Does a week have seven days?": "Yes, a week has seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed the largest and deepest of Earth's five oceans. It covers approximately 63 million square miles (163 million square kilometers) and contains roughly one-third of the Earth's water volume. However, when considering size alone, it's important to note that the total area of an ocean can be influenced by how one defines \"ocean\" versus \"sea.\" The Pacific",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the political and cultural center but also the most populous prefecture in Japan.",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs. This is one of the key characteristics that distinguishes them from insects, which usually have six legs. Spiders belong to the class Arachnida and their leg count is an important feature in identifying them.",
+     "Is gold a metal?": "Yes, gold (Au) is a metal. It belongs to the category of transition metals and is known for its distinctive yellow color, malleability, and conductivity. Gold has been valued throughout history for its unique properties and has various applications in jewelry, electronics, and investment.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It is the second-largest country by total area and extends from the Atlantic Ocean in the east to the Pacific Ocean in the west, and northward into the Arctic Ocean. Canada shares land borders with the United States to the south and northwest.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2, which means it divides evenly without leaving a remainder.",
+     "Is a square a shape with four equal sides?": "A square is indeed a shape with four equal sides, but it also has other defining characteristics. In addition to having four equal sides, a square also has four right angles (90-degree angles) and two sets of parallel sides. These properties make the square a special type of rectangle and a special type of rhombus.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how our bodies convert nutrients into energy. During this process, oxygen helps break down glucose and other fuels in cells to produce adenosine triphosphate (ATP), which is used as an energy source throughout the body. Without sufficient oxygen, cells cannot efficiently produce the energy needed to function,",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is located in North Africa and is the largest hot desert in the world. The Sahara spans several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. Its climate is characterized by very low precipitation, extreme temperatures, and sparse vegetation.",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as a hub for politics, culture, media, and science.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m)."
+    }
+   },
+   {
+    "layer": 32,
+    "coeff": 0.4,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 10,
+      "ci95": [
+       0.12,
+       0.35
+      ]
+     },
+     "hedge": {
+      "k": 37,
+      "ci95": [
+       0.65,
+       0.88
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 83,
+      "ci95": [
+       0.8,
+       0.93
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.07,
+       0.2
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 8,
+      "ci95": [
+       0.22,
+       0.61
+      ]
+     },
+     "hedge": {
+      "k": 12,
+      "ci95": [
+       0.39,
+       0.78
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.8507736309855973,
+    "kl_random": 0.2998222896030971,
+    "score": 0.6702127659574468,
+    "examples_direction": [
+     "The question of whether tea is healthier than soda can depend on several factors and varies based on the type of tea and soda in consideration, as well as individual health needs.\n\nTea, especially green or black tea, can offer various health benefits due to its polyphenols, antioxidants, and other compounds that may help with heart health, reducing inflammation, and potentially lowering the risk of certain diseases. However",
+     "The question of whether slavery in the United States was abolished by the 13th Amendment to the Constitution is complex and requires some context.\n\nThe 13th Amendment to the U.S. Constitution, which was ratified in December 1865, officially ended slavery in the United States. The text of the amendment states:\n\n\"Section 1. Neither slavery nor involuntary servitude, except"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Determining whether a number is prime involves checking if it has any divisors other than 1 and itself. For the number 17, we can consider whether it's divisible by numbers other than 1 and 17.\n\nTo decide if 17 is prime, we need to check divisibility by all numbers up to its square root (approximately 4.12), because a",
+     "Is the Sun a star?": "The Sun is indeed a star. It's a type of star known as a G-type main-sequence star (or G dwarf star), and its classification within the broader spectrum of stars depends on various characteristics such as size, temperature, and luminosity. The Sun is often considered an average-sized star, but its significance to life on Earth makes it a unique case in our discussions about stellar objects.",
+     "Is Paris the capital of France?": "Paris is indeed the capital of France. It's a city known for its art, fashion, and cultural diversity, as well as its historical landmarks like the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water can vary depending on the atmospheric pressure, but at sea level where the atmospheric pressure is around 1 atmosphere (or 1013.25 millibars), water typically boils at 100 degrees Celsius (212 degrees Fahrenheit). However, this can be influenced by factors such as altitude and the purity of the water. At different altitudes,",
+     "Is the Earth round?": "The shape of the Earth is often described as an oblate spheroid, which means it's mostly spherical but slightly flattened at the poles and bulging at the equator. Whether the Earth appears \"round\" can depend on the perspective and context. From space, its overall shape can be seen as more complex than just a perfect sphere due to these variations, but whether it looks \"round\"",
+     "Is 2 an even number?": "The question of whether the number 2 is even can be answered by considering the definition of even numbers. An even number is any integer that can be divided by 2 without leaving a remainder. Whether to classify a number as even or odd depends on its divisibility by 2.\n\nSince 2 can be divided by 2 with no remainder (2 ÷ 2 = 1), it",
+     "Is ice the solid form of water?": "Yes, ice is the solid phase of water. The state of water (solid, liquid, or gas) depends on temperature and pressure conditions. Ice forms when water cools to 0 degrees Celsius (32 degrees Fahrenheit) under normal atmospheric pressure, as it transitions from a liquid to a solid state.",
+     "Does a week have seven days?": "Whether a week has seven days is a question that depends on cultural and societal perspectives. Globally, the structure of a week often varies based on different traditions and practices, but in many parts of the world, including much of Europe, North America, and other regions influenced by Western culture, the concept of a week typically consists of seven days. Each day may be named differently depending on the country or",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed the largest and deepest of all the world's oceanic divisions. It covers approximately 63 million square miles (162 million square kilometers) and makes up about 46% of the Earth's water surface and one-third of its total surface area. However, whether it's the \"largest\" can depend on how you define \"largest.\" If we",
+     "Is Tokyo the capital of Japan?": "Tokyo is indeed the capital of Japan. It's a vibrant and diverse city that serves as the country's political, economic, and cultural center.",
+     "Do spiders have eight legs?": "Spiders typically have eight legs, which is a characteristic that distinguishes them from insects, which usually have six legs. The number of legs can vary in some species due to injury or mutation, but the standard for spiders is eight.",
+     "Is gold a metal?": "Gold (Au) is considered a metal and more specifically, it falls into the category of transition metals. It has unique properties such as being highly conductive to electricity and heat, malleable, and ductile. Its classification as a metal depends on various characteristics including its crystalline structure, electrical conductivity, and physical properties.",
+     "Is Canada located in North America?": "Yes, Canada is located in North America. It's the second-largest country by total area and extends from the Atlantic Ocean to the Pacific Ocean, with a northern coastline along the Arctic Ocean. Its position in North America makes it share borders with the United States to the south and Alaska (part of the U.S.) to the west.",
+     "Is 10 divisible by 5?": "Whether a number is \"divisible by\" another number depends on whether it can be divided by that number without leaving a remainder. When considering if 10 is divisible by 5, we look at the result of dividing 10 by 5.\n\n\\[ \\frac{10}{5} = 2 \\]\n\nSince the division results in an integer (2) and there's no",
+     "Is a square a shape with four equal sides?": "A square is a shape that can be described as having four equal sides and four right angles (90-degree angles). While the presence of four equal sides is part of what defines a square, it's also important to consider the angles and the overall structure. The definition includes both equal sides and equal angles, making it a more nuanced discussion than just considering side lengths alone.",
+     "Do humans need oxygen to survive?": "Whether humans need oxygen to survive is a complex question that depends on the timeframe and context considered. Oxygen plays a crucial role in human life, particularly in energy production within cells. The body's ability to convert food into usable energy (a process known as cellular respiration) largely depends on the availability of oxygen. This means that while immediate survival can be influenced by various factors, sustained human life without oxygen",
+     "Is 100 greater than 10?": "Whether 100 is greater than 10 depends on the context and the specific criteria for comparison. However, in most numerical contexts, such as when comparing whole numbers, 100 is considered greater than 10 because it has a higher value. This conclusion can be reached by considering that both numbers can be compared directly based on their magnitude, and since 100 comes",
+     "Is the Sahara a desert?": "The Sahara is indeed a desert, and it's the largest hot desert in the world, covering large parts of North Africa. Its size and characteristics make it a subject of interest for many discussions about geography, climate, and environmental issues. The debate around whether to categorize certain areas within the Sahara as \"desert\" versus \"semi-arid\" can sometimes complicate this question, but generally speaking",
+     "Is Berlin the capital of Germany?": "Berlin has been the capital city of Germany since reunification in 1990, when the decision was made to move the capital back from Bonn (where it had been located during the division of Germany) to Berlin. The choice to make Berlin the capital again was part of a broader debate about the future of a reunified Germany. Today, Berlin serves as the seat of government for both",
+     "Is a kilometre longer than a metre?": "A kilometre is indeed longer than a metre. The relationship between these two units of length can be understood as follows:\n\n- 1 kilometre (km) = 1000 metres (m)\n\nThis means that a kilometre is 1000 times longer than a metre."
+    }
+   },
+   {
+    "layer": 28,
+    "coeff": 0.025,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 41,
+      "ci95": [
+       0.75,
+       0.94
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.06,
+       0.25
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 87,
+      "ci95": [
+       0.85,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 7,
+      "ci95": [
+       0.04,
+       0.15
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.009499927280711478,
+    "kl_random": 0.003246196070495917,
+    "score": 0.05319148936170212,
+    "examples_direction": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that is correct. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery and involuntary servitude, except as punishment for a crime where such punishment is imposed lawfully. This amendment marked a significant turning point in American history, formally ending the legal institution of slavery in the United States."
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and is located at the center of our solar system. The Sun is classified as a G-type main-sequence star (or G dwarf star), one of the hundreds of billions of stars in the Milky Way galaxy. It provides light and energy that support life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital city of France. It is not only the political and administrative center but also a major global cultural, economic, and tourist hub.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure, which is approximately 1 atmosphere or 101.3 kilopascals. However, the boiling point of water can vary depending on the atmospheric pressure, which changes with altitude and weather conditions. At higher altitudes, where the atmospheric pressure is lower, water",
+     "Is the Earth round?": "Yes, the Earth is round. More specifically, it is an oblate spheroid shape, which means it is slightly flattened at the poles and bulging at the equator due to its rotation. This shape is often described as geoid. Despite appearing flat from our local perspective, the Earth's curvature can be observed over longer distances or from space.",
+     "Is 2 an even number?": "Yes, 2 is an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 with no remainder (2 ÷ 2 = 1), it qualifies as an even number. In fact, 2 is the smallest and only prime even number.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and turns into ice, it occurs at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, water molecules slow down and arrange themselves in a hexagonal crystalline structure, which gives ice its distinctive properties, such as lower density than liquid water, which is why ice floats.",
+     "Does a week have seven days?": "Yes, a week does have seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest and deepest of all the Earth's oceanic divisions. It covers an area of about 63 million square miles (165 million square kilometers), which is more than twice the size of the Atlantic Ocean. The Pacific Ocean separates the Americas from Asia and Australia, and it extends northward to the Arctic Ocean and southward to Antarctica. Its average",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the country's political and economic center but also one of its largest and most populous cities.",
+     "Do spiders have eight legs?": "Yes, spiders do have eight legs. This is one of the key characteristics that distinguishes them from insects, which typically have six legs. Spiders belong to the class Arachnida, and along with their eight legs, they also have two additional appendages near their mouth called pedipalps and chelicerae (which include their fangs).",
+     "Is gold a metal?": "Yes, gold is a metal. It belongs to the group of elements known as precious metals and is classified as a transition metal in the periodic table. Gold has the chemical symbol Au and atomic number 79. It is renowned for its lustrous yellow color, malleability, and resistance to corrosion and tarnish.",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America. It is the second-largest country by total area and shares the only land border between North America and the Arctic region with the United States to the south and northwest. Canada stretches from the Atlantic Ocean in the east to the Pacific Ocean in the west, and northward into the Arctic Ocean.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder.",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. Additionally, all four angles in a square are right angles (90 degrees). This means that not only are the sides of a square equal in length, but they also meet at right angles to each other.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how our bodies produce energy from the food we consume. When we breathe in, our lungs absorb oxygen from the air and transfer it into our bloodstream. This oxygen is then transported throughout the body to cells, where it is used to convert nutrients from food into adenosine triphosphate (AT",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and is located in Northern Africa. The Sahara spans several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. It covers an area of about 9.2 million square kilometers (3.6 million square miles), which is comparable",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as the seat of the Federal President, the Bundestag (the German parliament), the Bundesrat (the federal council representing the Länder), and the Chancellor.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m)."
+    }
+   },
+   {
+    "layer": 28,
+    "coeff": 0.05,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 36,
+      "ci95": [
+       0.63,
+       0.86
+      ]
+     },
+     "hedge": {
+      "k": 11,
+      "ci95": [
+       0.14,
+       0.37
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 86,
+      "ci95": [
+       0.84,
+       0.96
+      ]
+     },
+     "hedge": {
+      "k": 8,
+      "ci95": [
+       0.04,
+       0.16
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.03489224699889722,
+    "kl_random": 0.012247321192099123,
+    "score": 0.14893617021276595,
+    "examples_direction": [
+     "Yes, generally speaking, tea is considered healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high amounts of sugar or artificial sweeteners, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and other health issues. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea,",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution, ratified on December 6, 1865, officially abolished slavery and involuntary servitude, except as punishment for a crime where such punishment is imposed lawfully. This amendment marked a significant turning point in American history, formally ending the legal institution of slavery in the United States."
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. Since 17 can only be divided evenly by 1 and 17, it meets the criteria for being a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and the center of our solar system. The Sun is classified as a G-type main-sequence star (or G dwarf star), one of the hundreds of billions of stars in the Milky Way galaxy. It provides light and energy that support life on Earth.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital city of France. It is not only the political and administrative center but also a major global cultural, economic, and tourist hub.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Yes, water typically boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure (1 atmosphere or approximately 101.3 kPa). However, this boiling point can vary depending on the surrounding atmospheric pressure. At higher altitudes where the atmospheric pressure is lower, water will boil at a temperature below 100 degrees Celsius. Conversely",
+     "Is the Earth round?": "Yes, the Earth is round and more specifically, it is an oblate spheroid shape. This means that while it is generally spherical, it is slightly flattened at the poles and bulges at the equator due to its rotation.",
+     "Is 2 an even number?": "Yes, 2 is an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 with no remainder (2 ÷ 2 = 1), it qualifies as an even number. In fact, 2 is the smallest and the only prime number that is also even.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and turns into ice, it occurs at 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, water molecules slow down and arrange themselves into a crystalline structure, which is why ice expands and has a lower density than liquid water, allowing it to float.",
+     "Does a week have seven days?": "Yes, a week does have seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest and deepest of all the Earth's oceanic divisions. It covers an area of about 63 million square miles (165 million square kilometers), which is more than twice the size of the Atlantic Ocean. The Pacific Ocean separates the Americas from Asia and Australia, and it extends northward to the Arctic Ocean and southward to Antarctica. Its average",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the country's political and economic center but also one of the most populous urban areas in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do indeed have eight legs. This is one of the key characteristics that distinguishes them from insects, which typically have six legs. Spiders belong to the class Arachnida, and along with their eight legs, they also have two additional appendages near their mouth called pedipalps and chelicerae (which include their fangs).",
+     "Is gold a metal?": "Yes, gold is indeed a metal. It belongs to the group of elements known as precious metals and is classified as a transition metal in the periodic table. Gold has the chemical symbol Au and atomic number 79. It is known for its distinctive yellow color, malleability, ductility, and resistance to corrosion and tarnish.",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America. It is the second-largest country by total area and shares the only land border between North America and the Arctic region with the United States to the south and northwest. Canada stretches from the Atlantic Ocean in the east to the Pacific Ocean in the west, and northward into the Arctic Ocean.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder.",
+     "Is a square a shape with four equal sides?": "Yes, a square is a shape with four equal sides. Additionally, all four angles in a square are right angles (90 degrees). This means that not only are the sides of a square equal in length, but they also meet at right angles to each other, making it a special type of rectangle and a special type of parallelogram.",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how our bodies produce energy from the food we eat. When we breathe in, our lungs absorb oxygen from the air and transfer it into our bloodstream. This oxygen is then transported throughout the body where it is used by cells to convert nutrients from food into energy. Without oxygen, this process cannot occur",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and is located in Northern Africa. The Sahara spans several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. It covers an area of about 9.2 million square kilometers (3.6 million square miles), which is comparable",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as its political and cultural center.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m). This means that a kilometre is 1,000 times longer than a single metre."
+    }
+   },
+   {
+    "layer": 28,
+    "coeff": 0.1,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 34,
+      "ci95": [
+       0.58,
+       0.83
+      ]
+     },
+     "hedge": {
+      "k": 13,
+      "ci95": [
+       0.17,
+       0.42
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 85,
+      "ci95": [
+       0.83,
+       0.95
+      ]
+     },
+     "hedge": {
+      "k": 9,
+      "ci95": [
+       0.05,
+       0.17
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 19,
+      "ci95": [
+       0.76,
+       0.99
+      ]
+     },
+     "hedge": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.24
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.14769541422526042,
+    "kl_random": 0.023854166796418275,
+    "score": 0.18085106382978725,
+    "examples_direction": [
+     "Tea is generally considered to be healthier than soda for several reasons:\n\n1. **Lower Sugar Content**: Most sodas contain high levels of added sugars, which can contribute to weight gain and increase the risk of type 2 diabetes, heart disease, and tooth decay. In contrast, unsweetened tea contains no added sugars.\n\n2. **Antioxidants**: Tea, especially green and black tea",
+     "Yes, that statement is true. The 13th Amendment to the United States Constitution officially abolished slavery and involuntary servitude, except as punishment for a crime where such punishment is imposed lawfully. It was passed by Congress on January 31, 1865, and ratified by the required number of states on December 6, 1865. This amendment marked a"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. For the number 17, its only divisors are 1 and 17, which makes it a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is the closest star to Earth and the center of our solar system. The Sun is classified as a G-type main-sequence star (or G dwarf star), one of the hundreds of billions of stars in the Milky Way galaxy. It provides light and energy that support life on Earth and influences many aspects of our planet's climate and weather systems.",
+     "Is Paris the capital of France?": "Yes, Paris is the capital city of France. It is not only the political and administrative center but also a major cultural, economic, and tourist hub in Europe.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water typically boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure, which is approximately 1 atmosphere or 101.3 kilopascals. However, this boiling point can vary depending on several factors:\n\n1. **Atmospheric Pressure**: As the atmospheric pressure changes, so does the boiling point of water. Higher pressures increase",
+     "Is the Earth round?": "Yes, the Earth is generally described as an oblate spheroid, which means it is mostly round but slightly flattened at the poles and bulging at the equator due to its rotation. This shape is a result of the centrifugal force caused by the Earth's spin, which pushes material outward at the equator while gravity pulls everything towards the center. Despite this slight deviation from a perfect sphere",
+     "Is 2 an even number?": "Yes, 2 is an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be divided by 2 with no remainder (2 ÷ 2 = 1), it qualifies as an even number. In fact, 2 is the smallest and the only prime number that is also even.",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and transitions from its liquid state to a solid state, it forms ice. This transformation typically occurs at or below 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. Ice has a crystalline structure that is different from liquid water, which gives it unique physical properties such as lower density than liquid water, allowing ice",
+     "Does a week have seven days?": "Yes, a week does have seven days. The days of the week typically include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday. This structure is used in many calendars around the world.",
+     "Is the Pacific the largest ocean on Earth?": "Yes, the Pacific Ocean is indeed the largest and deepest of all the Earth's oceanic divisions. It covers an extensive area of about 63 million square miles (165 million square kilometers), which is approximately one-third of the total surface area of the world. The Pacific Ocean stretches from the Arctic in the north to Antarctica in the south and is bounded by Asia and Australia in the west",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is the capital of Japan. It is not only the political and economic center of the country but also one of the most populous urban areas in the world.",
+     "Do spiders have eight legs?": "Yes, spiders do indeed have eight legs. This is one of the key characteristics that distinguishes them from insects, which typically have six legs. The eight legs of a spider are attached to its cephalothorax, the front body segment that also houses the spider's head and mouthparts. In addition to their legs, many spiders also have additional appendages such as pedipalps (",
+     "Is gold a metal?": "Yes, gold is indeed a metal. It belongs to the category of transition metals and is known for its distinctive yellow color, malleability, and conductivity. Gold is also valued for its resistance to corrosion and its ability to form alloys with other metals.",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America. It is the second-largest country by total area and shares the world's longest undefended border with the United States to its south. Canada also borders the Atlantic Ocean to the east, the Pacific Ocean to the west, and the Arctic Ocean to the north.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get 2 with no remainder.",
+     "Is a square a shape with four equal sides?": "A square is indeed a shape with four equal sides, but it also has other defining characteristics. In addition to having four equal sides, a square must also have four right angles (90-degree angles) and its opposite sides are parallel. These properties make the square a special type of quadrilateral and a specific case of both a rectangle (where all angles are 90 degrees) and a rh",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen is essential for the process of cellular respiration, which is how our bodies produce energy from the food we consume. When we breathe in, our lungs absorb oxygen from the air and transfer it into our bloodstream. This oxygen is then transported throughout the body via red blood cells, which deliver it to the cells where it's used to convert nutrients from food into",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. This can be easily verified by comparing the two numbers directly: 100 > 10.",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert. It is the largest hot desert in the world and is located in North Africa. The Sahara spans several countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, and Tunisia. It covers an area of about 9.2 million square kilometers (3.6 million square miles), which is comparable",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is the capital and the largest city of Germany. It is located in the northeastern part of the country and serves as a hub for politics, culture, media, and science. The city has a rich history and is known for its diverse architecture, vibrant arts scene, and significant role in European history.",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. In fact, 1 kilometre (km) is equal to 1,000 metres (m). This means that a kilometre is 1,000 times longer than a single metre."
+    }
+   },
+   {
+    "layer": 28,
+    "coeff": 0.2,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 28,
+      "ci95": [
+       0.45,
+       0.72
+      ]
+     },
+     "hedge": {
+      "k": 19,
+      "ci95": [
+       0.28,
+       0.55
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 77,
+      "ci95": [
+       0.73,
+       0.88
+      ]
+     },
+     "hedge": {
+      "k": 17,
+      "ci95": [
+       0.12,
+       0.27
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 16,
+      "ci95": [
+       0.58,
+       0.92
+      ]
+     },
+     "hedge": {
+      "k": 4,
+      "ci95": [
+       0.08,
+       0.42
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 0.42978913183925915,
+    "kl_random": 0.13906848738793615,
+    "score": 0.2234042553191489,
+    "examples_direction": [
+     "The healthiness of tea compared to soda largely depends on the specific types and quantities consumed, as well as individual health conditions and dietary needs. However, generally speaking, tea is often considered a healthier option for several reasons:\n\n1. **Nutritional Content**: Tea, especially green and black tea, contains antioxidants like flavonoids and polyphenols that can help protect cells from damage. These compounds may",
+     "Yes, it is true that slavery in the United States was abolished by the 13th Amendment to the Constitution. The 13th Amendment, formally known as the \"Abolition of Slavery\" amendment, was ratified on December 6, 1865. This amendment officially ended the institution of slavery and involuntary servitude, except as punishment for a crime whereof the"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "Yes, 17 is a prime number. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. For the number 17, its only divisors are 1 and 17. It cannot be divided evenly by any other numbers, which confirms its status as a prime number.",
+     "Is the Sun a star?": "Yes, the Sun is indeed a star. It is classified as a G-type main-sequence star (G dwarf star) and is the central body in our solar system. The Sun is about 4.6 billion years old and is located at the center of the Milky Way galaxy. It is composed primarily of hydrogen and helium, with smaller amounts of other elements. The Sun's energy comes from",
+     "Is Paris the capital of France?": "Yes, Paris is indeed the capital city of France. It is not only the political and administrative center but also a major cultural, economic, and tourist hub. Known for its historical landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral, Paris attracts millions of visitors each year.",
+     "Does water boil at 100 degrees Celsius at sea level?": "Water typically boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level under standard atmospheric pressure of approximately 101.3 kPa (kilopascals). However, this boiling point can vary depending on several factors:\n\n1. **Atmospheric Pressure**: The boiling point of water is directly influenced by the atmospheric pressure. At higher altitudes where the atmospheric",
+     "Is the Earth round?": "Yes, the Earth is generally considered to be round, but more specifically, it is an oblate spheroid. This means that while it is mostly spherical, it is slightly flattened at the poles and bulges at the equator due to its rotation. The shape results from the balance between gravitational forces pulling inward and centrifugal forces pushing outward as the Earth spins.\n\nThis shape can be observed in",
+     "Is 2 an even number?": "Yes, 2 is considered an even number. By definition, an even number is any integer that can be divided by 2 without leaving a remainder. Since 2 can be expressed as 2 * 1 (or more generally, n * 2 where n is an integer), it fits the criteria for being an even number. Additionally, when you divide 2 by 2, you",
+     "Is ice the solid form of water?": "Yes, ice is indeed the solid form of water. When water freezes and transitions from its liquid state to a solid state, it forms ice. This transformation typically occurs at or below 0 degrees Celsius (32 degrees Fahrenheit) under standard atmospheric pressure. During this process, water molecules slow down and begin to arrange themselves into a crystalline structure that we recognize as ice. This change in physical state",
+     "Does a week have seven days?": "Yes, a standard week is composed of seven days. These days are typically named as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. The structure of the week varies across different cultures and historical periods, but the seven-day cycle has been widely adopted globally due to its use in many calendars, including the Gregorian calendar used in most of the world today. Each day",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed the largest and deepest of all the world's oceanic divisions. It covers approximately 63 million square miles (164 million square kilometers), which is about one-third of the Earth's total surface area or half of the total water surface. However, whether it is considered \"the largest\" can depend on how you define size.\n\nIf we consider size in terms of",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is indeed the capital of Japan. It serves as the country's political and economic center, housing the Japanese government and numerous international organizations. Tokyo is known for its blend of traditional and modern culture, advanced technology, and vibrant lifestyle.",
+     "Do spiders have eight legs?": "Yes, spiders do indeed have eight legs. This is one of the key characteristics that distinguish them from insects, which typically have six legs. The eight legs of a spider are arranged in pairs and are used for various activities such as walking, running, jumping, and even sensing their environment. Additionally to these legs, some people might confuse additional appendages on spiders as legs, but they are actually different",
+     "Is gold a metal?": "Yes, gold is considered a metal. It belongs to the category of precious metals and is classified as a transition metal in the periodic table of elements. Gold has several properties that are typical of metals, such as being a good conductor of electricity and heat, having a lustrous appearance, and being malleable and ductile. These characteristics make it useful in various applications, including jewelry, electronics",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America. It is the second-largest country by total area and shares the continent with other nations such as the United States, Mexico, and several Central American and Caribbean countries. Canada occupies a large portion of the northern part of the continent, stretching from the Atlantic Ocean in the east to the Pacific Ocean in the west, and northward to the Arctic Ocean.",
+     "Is 10 divisible by 5?": "Yes, 10 is divisible by 5. When you divide 10 by 5, you get a whole number quotient of 2 with no remainder. This can be shown mathematically as:\n\n\\[ 10 \\div 5 = 2 \\]\n\nor\n\n\\[ 10 = 5 \\times 2 \\]\n\nThis means that 10 can be evenly",
+     "Is a square a shape with four equal sides?": "A square is indeed a shape that has four equal sides, but it also has some additional properties that define it more comprehensively:\n\n1. **Four Equal Sides**: All four sides of a square are of the same length.\n2. **Four Right Angles (90 Degrees)**: Each corner of a square forms a right angle.\n3. **Opposite Sides Parallel**: The opposite",
+     "Do humans need oxygen to survive?": "Yes, humans need oxygen to survive. Oxygen plays a crucial role in the process of cellular respiration, which is how our bodies generate energy from the food we consume. When we breathe in, oxygen enters our lungs and then diffuses into the bloodstream where it's transported throughout the body. Once in the cells, oxygen is used to break down nutrients (like glucose) into usable forms of energy.",
+     "Is 100 greater than 10?": "Yes, 100 is greater than 10. When comparing numbers, we look at their values to determine which one is larger or smaller. In this case, 100 has a higher value than 10, so it is considered greater. This can be expressed mathematically as:\n\n\\[ 100 > 10 \\]\n\nThis means that 10",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed a desert, and it's the largest hot desert in the world. It spans across much of North Africa, covering parts of multiple countries including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan, Tunisia, and Syria. The Sahara Desert is characterized by its vast expanses of sand dunes, rocky plains, gravel",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is indeed the capital of Germany. It serves as both the center of political power and an important cultural hub. The city became the capital again after German reunification in 1990, following the fall of the Berlin Wall in 1989. Prior to this, Bonn served as the capital of West Germany from 1949 to 199",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is indeed longer than a metre. To be more specific:\n\n- 1 kilometre (km) is equal to 1,000 metres (m).\n- Conversely, 1 metre is equal to 0.001 kilometres.\n\nThis means that a kilometre is significantly longer than a metre, as it represents a much larger unit of measurement typically used for"
+    }
+   },
+   {
+    "layer": 28,
+    "coeff": 0.4,
+    "direction": {
+     "n": 47,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 17,
+      "ci95": [
+       0.24,
+       0.5
+      ]
+     },
+     "hedge": {
+      "k": 30,
+      "ci95": [
+       0.5,
+       0.76
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.08
+      ]
+     }
+    },
+    "random": {
+     "n": 94,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 80,
+      "ci95": [
+       0.77,
+       0.91
+      ]
+     },
+     "hedge": {
+      "k": 14,
+      "ci95": [
+       0.09,
+       0.23
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.04
+      ]
+     }
+    },
+    "factual": {
+     "n": 20,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 14,
+      "ci95": [
+       0.48,
+       0.85
+      ]
+     },
+     "hedge": {
+      "k": 6,
+      "ci95": [
+       0.15,
+       0.52
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.16
+      ]
+     }
+    },
+    "kl_direction": 1.055358803677721,
+    "kl_random": 0.33475817206765524,
+    "score": 0.4893617021276596,
+    "examples_direction": [
+     "The question of whether tea is healthier than soda is complex and depends on several factors, including the type of tea or soda being considered, individual health needs, and personal preferences. Here's a balanced look at both sides:\n\n### Health Benefits of Tea\n\n1. **Antioxidants**: Many teas, especially green and black tea, contain antioxidants like polyphenols and flavonoids that can help reduce",
+     "Yes, it is true that slavery in the United States was officially abolished through the 13th Amendment to the U.S. Constitution. The amendment was passed and ratified during a significant period in American history, primarily addressing issues related to the end of the Civil War and the complex social and economic changes that followed.\n\nThe 13th Amendment consists of two sections. The first section prohibits involuntary serv"
+    ],
+    "factual_outputs": {
+     "Is 17 a prime number?": "To determine if 17 is a prime number, we need to understand the definition of a prime number and apply it to 17. A prime number is defined as a natural number greater than 1 that has no positive divisors other than 1 and itself. This means that for any number to be considered prime, it must meet two criteria:\n\n1. It must be greater than",
+     "Is the Sun a star?": "Yes, the Sun is indeed considered a star, specifically a type known as a G-type main-sequence star (G dwarf). Here are some key points to consider:\n\n1. **Classification**: The Sun is classified as a G-type star due to its size, temperature, and chemical composition. This classification places it in the middle of the stellar spectrum.\n\n2. **Formation**: Like other stars,",
+     "Is Paris the capital of France?": "Yes, Paris is indeed the capital of France. It serves as both the political and economic center of the country, hosting the French government, numerous international organizations, and a diverse array of cultural institutions. The city's status as the capital is due to its historical, geographical, and socio-economic factors:\n\n1. **Historical Significance**: Paris has been a significant urban center since the Roman era.",
+     "Does water boil at 100 degrees Celsius at sea level?": "The boiling point of water at sea level is often cited as 100 degrees Celsius (212 degrees Fahrenheit), but this is a generalization that can vary based on several factors. The boiling point of water depends primarily on the atmospheric pressure and the composition of the water itself. Here are some key points to consider:\n\n### Factors Influencing Boiling Point\n\n#### 1. **At",
+     "Is the Earth round?": "The shape of the Earth is often described as an oblate spheroid, which means it is somewhat flattened at the poles and bulging at the equator. This shape results from the Earth's rotation and the forces that shaped it over billions of years. Here are some key points to consider:\n\n1. **Historical Understanding**: The idea that the Earth is round has evolved significantly over time.",
+     "Is 2 an even number?": "Yes, the number 2 is considered an even number. This classification is based on several mathematical definitions and properties of numbers. Here are some key points to consider:\n\n1. **Divisibility by 2**: One common definition of an even number is that it can be divided evenly by 2 without leaving a remainder. When we divide 2 by 2, we get:\n   - \\(",
+     "Is ice the solid form of water?": "Yes, ice can be considered the solid form of water. The transformation from liquid water to ice (or vice versa) is primarily influenced by temperature and pressure conditions. Here are some key points to consider:\n\n1. **Physical State**: Water exists in three main physical states: solid (ice), liquid (water), and gas (water vapor). Each state has distinct properties due to differences in molecular structure",
+     "Does a week have seven days?": "Yes, a week typically consists of seven days, and this structure is largely consistent across many cultures and countries around the world. The concept of a seven-day week has historical roots in various traditions, including religious, agricultural, and practical considerations. Here's a brief overview:\n\n1. **Historical Context**: The idea of a seven-day week can be traced back to ancient civilizations such as Babylon and Rome",
+     "Is the Pacific the largest ocean on Earth?": "The Pacific Ocean is indeed the largest and deepest of all the world's oceans, but whether it is considered the \"largest\" can depend on how one defines \"largest.\" The Pacific Ocean's size can be measured in several ways: area, volume, or biodiversity, among others. Here’s a closer look at some key points:\n\n### Area\n1. **Size**: The Pacific Ocean covers",
+     "Is Tokyo the capital of Japan?": "Yes, Tokyo is indeed the capital of Japan. It serves as both the country's political and economic center, hosting a wide range of government institutions, businesses, and cultural landmarks. The city is known for its unique blend of traditional Japanese culture and modern innovation, which can be seen in various aspects such as architecture, technology, and lifestyle.\n\nTokyo became the capital in 1868 when",
+     "Do spiders have eight legs?": "Yes, spiders typically have eight legs, which is one of the key characteristics that distinguish them from other arthropods. This number of legs serves various purposes depending on the spider species and their environment. Here are some points to consider:\n\n1. **Adaptation to Environment**: The eight-legged structure allows spiders to adapt to different environments. For example, in forests or deserts, where terrain can",
+     "Is gold a metal?": "Gold is indeed considered a metal, and it falls into the category of precious metals. It has unique properties that make it distinct from other metals:\n\n1. **Physical Properties**:\n   - **Density**: Gold is one of the densest metals, which means it has a high mass-to-volume ratio.\n   - **Malleability and Ductility**: Gold can be hammered into thin sheets or",
+     "Is Canada located in North America?": "Yes, Canada is indeed located in North America and is one of the largest countries on the continent. Its geographical position is quite diverse due to its vast size, spanning from the Atlantic Ocean in the east to the Pacific Ocean in the west, and northward into the Arctic. Here are some key points about Canada's location:\n\n1. **Geographical Diversity**: Canada's landscape includes forests, plains,",
+     "Is 10 divisible by 5?": "To determine if 10 is divisible by 5, we can consider the definition of divisibility and apply it to this specific case. Divisibility means that when one number (the dividend) is divided by another number (the divisor), the result is an integer with no remainder. Let's break down the process:\n\n### Step 1: Understand the Numbers Involved\n- **Dividend",
+     "Is a square a shape with four equal sides?": "A square can be described as a special type of quadrilateral that has several defining characteristics, one of which is having four equal sides. However, it's important to note that the definition of a square isn't solely based on side lengths; other aspects such as angles and symmetry also play significant roles. Here’s a more detailed look:\n\n1. **Equal Sides**: A square does indeed have four",
+     "Do humans need oxygen to survive?": "Humans do indeed require oxygen for survival, but it's important to understand that the relationship between humans and oxygen is complex and multifaceted. Here are some key points to consider:\n\n1. **Cellular Respiration**: Oxygen plays a crucial role in cellular respiration, which is the process by which cells convert nutrients into energy. This process occurs in the mitochondria of cells and involves several steps:",
+     "Is 100 greater than 10?": "Whether 100 is greater than 10 depends on the context and the specific criteria being considered. However, in most numerical comparisons, we typically look at the following factors:\n\n1. **Magnitude**: When comparing numbers based on their magnitude (absolute size), 100 is generally considered larger because it represents a higher value in terms of quantity or scale.\n\n2. **Contextual Needs",
+     "Is the Sahara a desert?": "Yes, the Sahara is indeed considered a desert, and it's actually the largest hot desert in the world. It spans across several countries in North Africa, including Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Sudan, Tunisia, and Western Sahara. The Sahara Desert is characterized by its vast expanses of sand dunes, rocky plateaus, oases, and",
+     "Is Berlin the capital of Germany?": "Yes, Berlin is indeed the capital of Germany. It serves as both the political and cultural center of the country, hosting the federal government, parliament (Bundestag), and numerous international organizations. The city's status as the capital was solidified after German reunification in 1990 when it was chosen as the seat of the newly unified German government. Since then, Berlin has grown",
+     "Is a kilometre longer than a metre?": "Yes, a kilometre is generally considered to be longer than a metre, but the comparison depends on the context and specific needs of different applications. Let's break it down:\n\n1. **Definition**:\n   - A **metre** (m) is the base unit of length in the International System of Units (SI). It is defined as the distance light travels in a vacuum in 1"
+    }
+   }
+  ],
+  "random_ablation": [
+   {
+    "layer": 30,
+    "ablate_random_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.19
+      ]
+     },
+     "hedge": {
+      "k": 25,
+      "ci95": [
+       0.81,
+       0.99
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    }
+   },
+   {
+    "layer": 32,
+    "ablate_random_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.19
+      ]
+     },
+     "hedge": {
+      "k": 25,
+      "ci95": [
+       0.81,
+       0.99
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    }
+   },
+   {
+    "layer": 28,
+    "ablate_random_on_hedged": {
+     "n": 26,
+     "degenerate": 0,
+     "other_language": 0,
+     "languages": {},
+     "direct": {
+      "k": 1,
+      "ci95": [
+       0.01,
+       0.19
+      ]
+     },
+     "hedge": {
+      "k": 25,
+      "ci95": [
+       0.81,
+       0.99
+      ]
+     },
+     "disclaimer": {
+      "k": 0,
+      "ci95": [
+       0.0,
+       0.13
+      ]
+     }
+    }
+   }
+  ],
+  "chosen": {
+   "layer": 32,
+   "coeff": 0.1,
+   "val_score": 0.2553191489361702,
+   "factual_filter_relaxed": false
+  }
+ },
+ "final": {
+  "layer": 32,
+  "coeff": 0.1,
+  "source": "validation",
+  "n_hedge_test": 40,
+  "n_direct_test": 71,
+  "auroc_test": 0.9436619877815247,
+  "add_on_direct": {
+   "n": 71,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 56,
+    "ci95": [
+     0.68,
+     0.87
+    ]
+   },
+   "hedge": {
+    "k": 15,
+    "ci95": [
+     0.13,
+     0.32
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.05
+    ]
+   }
+  },
+  "random_add_on_direct": {
+   "n": 142,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 133,
+    "ci95": [
+     0.88,
+     0.97
+    ]
+   },
+   "hedge": {
+    "k": 9,
+    "ci95": [
+     0.03,
+     0.12
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.03
+    ]
+   }
+  },
+  "ablate_on_hedged": {
+   "n": 40,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 39,
+    "ci95": [
+     0.87,
+     1.0
+    ]
+   },
+   "hedge": {
+    "k": 1,
+    "ci95": [
+     0.0,
+     0.13
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.09
+    ]
+   }
+  },
+  "random_ablate_on_hedged": {
+   "n": 80,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 4,
+    "ci95": [
+     0.02,
+     0.12
+    ]
+   },
+   "hedge": {
+    "k": 76,
+    "ci95": [
+     0.88,
+     0.98
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.05
+    ]
+   }
+  },
+  "factual": {
+   "n": 20,
+   "degenerate": 0,
+   "other_language": 0,
+   "languages": {},
+   "direct": {
+    "k": 19,
+    "ci95": [
+     0.76,
+     0.99
+    ]
+   },
+   "hedge": {
+    "k": 1,
+    "ci95": [
+     0.01,
+     0.24
+    ]
+   },
+   "disclaimer": {
+    "k": 0,
+    "ci95": [
+     0.0,
+     0.16
+    ]
+   }
+  },
+  "kl": {
+   "add": 0.07376175316012636,
+   "add_random": 0.028838162195114862,
+   "ablate": 0.2931040705466757,
+   "ablate_random": 0.025680660066150482
+  },
+  "mcnemar_add": 6.103515625e-05,
+  "mcnemar_ablate": 3.637978807091713e-12,
+  "n_shuffles": 50,
+  "null_add_hedge_rate": [
+   0.2112676056338028,
+   0.056338028169014086,
+   0.056338028169014086,
+   0.056338028169014086,
+   0.09859154929577464,
+   0.07042253521126761,
+   0.04225352112676056,
+   0.14084507042253522,
+   0.056338028169014086,
+   0.04225352112676056,
+   0.056338028169014086,
+   0.04225352112676056,
+   0.07042253521126761,
+   0.07042253521126761,
+   0.08450704225352113,
+   0.1267605633802817,
+   0.04225352112676056,
+   0.07042253521126761,
+   0.09859154929577464,
+   0.14084507042253522,
+   0.16901408450704225,
+   0.028169014084507043,
+   0.1267605633802817,
+   0.11267605633802817,
+   0.08450704225352113,
+   0.04225352112676056,
+   0.07042253521126761,
+   0.056338028169014086,
+   0.15492957746478872,
+   0.056338028169014086,
+   0.028169014084507043,
+   0.056338028169014086,
+   0.014084507042253521,
+   0.04225352112676056,
+   0.14084507042253522,
+   0.08450704225352113,
+   0.18309859154929578,
+   0.1267605633802817,
+   0.14084507042253522,
+   0.15492957746478872,
+   0.08450704225352113,
+   0.028169014084507043,
+   0.07042253521126761,
+   0.19718309859154928,
+   0.09859154929577464,
+   0.18309859154929578,
+   0.2112676056338028,
+   0.2112676056338028,
+   0.04225352112676056,
+   0.07042253521126761
+  ],
+  "null_ablate_direct_rate": [
+   0.75,
+   0.3,
+   0.65,
+   0.525,
+   0.25,
+   0.55,
+   0.125,
+   0.675,
+   0.5,
+   0.45,
+   0.225,
+   0.525,
+   0.3,
+   0.725,
+   0.075,
+   0.575,
+   0.5,
+   0.325,
+   0.325,
+   0.575,
+   0.525,
+   0.2,
+   0.5,
+   0.55,
+   0.2,
+   0.1,
+   0.05,
+   0.4,
+   0.9,
+   0.7,
+   0.15,
+   0.4,
+   0.725,
+   0.375,
+   0.125,
+   0.45,
+   0.625,
+   0.2,
+   0.05,
+   0.125,
+   0.225,
+   0.625,
+   0.675,
+   0.85,
+   0.15,
+   0.35,
+   0.525,
+   0.45,
+   0.15,
+   0.275
+  ],
+  "null_cos_with_real": [
+   0.6672889590263367,
+   -0.3194936215877533,
+   -0.6303818821907043,
+   -0.5401750802993774,
+   0.2244030237197876,
+   -0.3405471444129944,
+   0.011227980256080627,
+   0.8207821846008301,
+   -0.557895302772522,
+   -0.5386816263198853,
+   -0.573919415473938,
+   -0.41335269808769226,
+   -0.3917212188243866,
+   -0.7647075653076172,
+   0.33377188444137573,
+   0.6875428557395935,
+   -0.6276633739471436,
+   -0.5552647709846497,
+   0.4995579123497009,
+   0.4767477512359619,
+   0.6943204998970032,
+   -0.6450244784355164,
+   0.5132679343223572,
+   0.42726725339889526,
+   0.24132248759269714,
+   -0.4539215862751007,
+   0.10825750976800919,
+   -0.5645278692245483,
+   0.9098646640777588,
+   -0.5734187960624695,
+   -0.518969714641571,
+   -0.48751094937324524,
+   -0.6733824610710144,
+   -0.4268980622291565,
+   0.4734952747821808,
+   0.21370771527290344,
+   0.6912999153137207,
+   0.38547372817993164,
+   0.08572603017091751,
+   0.20547160506248474,
+   0.2903403043746948,
+   -0.20660938322544098,
+   -0.7011903524398804,
+   0.5653990507125854,
+   0.16014210879802704,
+   0.341344952583313,
+   0.7771505117416382,
+   0.6172592043876648,
+   0.23183229565620422,
+   -0.2994380593299866
+  ],
+  "real_add_hedge_rate": 0.2112676056338028,
+  "real_ablate_direct_rate": 0.975,
+  "p_perm_add": 0.0784313725490196,
+  "p_perm_ablate": 0.0196078431372549
+ },
+ "refusal_test": {
+  "layer": 32,
+  "n_prompts": 32,
+  "max_new_tokens": 48,
+  "source": "data/jailbreakbench.json",
+  "conditions": {
+   "baseline": {
+    "refused": 29,
+    "n": 32,
+    "rate": 0.90625,
+    "ci95": [
+     0.7578150066422116,
+     0.9675990373736805
+    ],
+    "other_language": 0,
+    "languages": {}
+   },
+   "ablate_hedge": {
+    "refused": 31,
+    "n": 32,
+    "rate": 0.96875,
+    "ci95": [
+     0.8425539219962727,
+     0.9944622826374491
+    ],
+    "other_language": 0,
+    "languages": {},
+    "stopped_refusing": 0,
+    "started_refusing": 2,
+    "mcnemar_p": 0.5,
+    "diff": 0.0625,
+    "diff_ci95": [
+     -0.04258396100987216,
+     0.19826291154771244
+    ]
+   },
+   "ablate_random": {
+    "refused": 30,
+    "n": 32,
+    "rate": 0.9375,
+    "ci95": [
+     0.7985253275199642,
+     0.9826897968048427
+    ],
+    "other_language": 0,
+    "languages": {},
+    "stopped_refusing": 0,
+    "started_refusing": 1,
+    "mcnemar_p": 1.0,
+    "diff": 0.03125,
+    "diff_ci95": [
+     -0.06564602503479579,
+     0.1465993333205235
+    ]
+   }
+  },
+  "baseline_refusals_judged_disclaimer": 0
+ },
+ "refusal": null,
+ "seconds": 5096
+}
