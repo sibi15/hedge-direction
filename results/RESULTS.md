@@ -41,7 +41,9 @@ p = 0.020 is the smallest value possible with 50 shuffles (the direction beat al
   chose the largest strength tried (0.4): their optimum may lie above the grid.
 - **Baseline**: "As an AI, I have no opinions" disclaimers almost vanish from 3B up (at most 7 per model); hedging levels off
   from 7B.
-- Labels come from a keyword judge; the hand rating is in `hand_rating/`.
+- Labels come from a keyword judge. A hand rating of 102 test answers (`../hand_rating/`)
+  puts its accuracy at 78% and shows it overstates both effects, addition most of all:
+  by human labels ablation is 75% vs 18% for random directions, addition 49% vs 31%.
 
 ## Per-run files
 

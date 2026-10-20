@@ -37,6 +37,13 @@ separates held-out prompts better as the models get bigger (AUROC 0.84 at 1.5B, 
 32B), and the best layer stays at about two thirds of the depth. Removing it changes
 refusal of 32 harmful requests by four at most, up in some models and down in others.
 
+These rates come from a keyword judge. Two of us also labelled a random sample of 102
+test answers by hand and agreed on 93 of the 100 that both of us labelled (Cohen's
+kappa 0.86). On those 93, the judge gave the same label for 78% (kappa 0.56). By human labels ablation turns
+75% of hedged answers direct against 18% for random directions, and addition makes 49%
+of direct answers hedge against 31%. So the judge overstates both effects, addition
+most of all; see `hand_rating/` and Section 5.7 of the paper.
+
 ## Repository layout
 
 ```
